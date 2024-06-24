@@ -1,0 +1,16 @@
+{
+    "order": "w#",
+    "id": "2024mm.w#",
+    "week": "week_label",
+    "bibleReading": "bible_reading_schedule",
+    "songs": [
+        "song1",
+        "song2",
+        "song3"
+    ],
+    "parts": {
+        "gems": [],
+        "ministry": [],
+        "living": []
+    }
+}

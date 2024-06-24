@@ -1,0 +1,36 @@
+[
+    {
+        "id": "2024mm.w#.4",
+        "time": 1000,
+        "title": "Use this for lmd discussions",
+        "class": "part-title-ministry",
+        "reference": "publication_reference",
+        "thumbnail": "lmd;",
+        "roles": [
+            "elder",
+            "ms"
+        ]
+    },
+    {
+        "id": "2024mm.w#.4",
+        "time": 3000,
+        "title": "Use_for_demonstration_parts",
+        "class": "part-title-ministry",
+        "reference": "publication_reference",
+        "thumbnail": "lmd; th",
+        "roles": [
+            "demo"
+        ]
+    },
+    {
+        "id": "2024mm.w#.6",
+        "time": 5,
+        "title": "Talk",
+        "class": "part-title-ministry",
+        "reference": "publication_reference",
+        "thumbnail": "",
+        "roles": [
+            "talk"
+        ]
+    }
+]
