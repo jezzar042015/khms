@@ -10,6 +10,7 @@ export async function s140Builder() {
     const weeks: S140PartWeeks = {}
     const congStore = useCongregationStore()
     const fileStore = useFilesStore()
+    if (!fileStore.loadedMonth) return weeks
     const sourceWeeks = fileStore.loadedMonth.content.weeks
     lang = congStore.congregation.lang
 
@@ -124,7 +125,7 @@ function gems(src: WeekItem, week: S140PartItem[]) {
                 runtime: runtime,
                 thumbnail: pattern.thumbnail,
                 reference: pattern.reference,
-                title: pattern.reference,
+                title: pattern.title ?? '',
                 autofills: [...pattern.autofills ?? []],
                 roles: [...pattern.roles ?? []],
                 label: translations.mwbs140[lang].chairman,
@@ -153,7 +154,7 @@ function ministry(src: WeekItem, week: S140PartItem[]) {
                 runtime: runtime,
                 thumbnail: pattern.thumbnail,
                 reference: pattern.reference,
-                title: pattern.reference,
+                title: pattern.title ?? '',
                 autofills: [...pattern.autofills ?? []],
                 roles: [...pattern.roles ?? []],
                 label: translations.mwbs140[lang].chairman,
@@ -194,7 +195,7 @@ function initializePartItem(pattern: any): S140PartItem {
         id: pattern.id,
         time: pattern.time,
         runtime: 0,
-        title: pattern.reference,
+        title: pattern.title ?? '',
         roles: [...pattern.roles ?? []],
         showNoTime: false,
         label: translations.mwbs140[lang].chairman,

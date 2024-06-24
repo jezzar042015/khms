@@ -5,7 +5,7 @@ import { useCongregationStore } from "./congregation";
 import { useVisitStore } from "./visits";
 import { useEventStore } from "./events";
 import { s140Builder } from "@/assets/utils/composer";
-import type { Content, LangMonth } from "@/types/files";
+import type { Content, LangMonth, S140PartWeeks } from "@/types/files";
 import type { VisitDetail } from "@/types/visit";
 
 const jsonFilesCeb = import.meta.glob('@/lib/ceb/*.json');
@@ -35,11 +35,20 @@ export const useFilesStore = defineStore('files', () => {
         { code: 'a-100', supported: true, name: "Customized Template" },
     ]);
 
-    const s140PartItems = ref({})
+    const s140PartItems = ref<S140PartWeeks>({})
 
     const periodIsInMonths = computed(() => {
         const exist = langMonths.value.find(m => m.content.period == currentPeriod.value)
         return Boolean(exist)
+    })
+
+    const weekOptions = computed(() => {
+        const month = loadedMonth.value
+        if (!month) return [];
+        return (month.content.weeks ?? []).map(w => ({
+            id: w.id,
+            name: w.week
+        }))
     })
 
     async function loadFiles() {
@@ -183,7 +192,7 @@ export const useFilesStore = defineStore('files', () => {
         loadFiles,
         langMonths, loadedMonth,
         loadMonthTemplate,
-        templates, s140PartItems
+        templates, s140PartItems, weekOptions
     }
 })
 

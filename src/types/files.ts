@@ -31,6 +31,14 @@ export interface WeekItem {
     hasEvent?: boolean
 }
 
+export interface WeekItemFeed {
+    id: string,
+    week: string,
+    bibleReading: string,
+    hasEvent: boolean | undefined
+}
+
+
 export interface WeekPartGroups {
     gems: PartItem[]
     ministry: PartItem[]
@@ -67,4 +75,5 @@ export interface S140PartItem {
     autofills?: string[]
     thumbnail?: string
     reference?: string
+    type?: string
 }

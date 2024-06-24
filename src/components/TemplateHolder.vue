@@ -7,8 +7,7 @@
                     <div>Customized Template</div>
                 </article>
                 <article v-if="isS140">
-                    <div>S140 Template</div>
-                    <!-- <SimpleTemplate /> -->
+                    <OfficialTemplate />
                 </article>
             </div>
         </div>
@@ -17,12 +16,13 @@
 
 <script setup lang="ts">
     import { computed, onMounted } from 'vue';
+    import { useCongregationStore } from '@/stores/congregation';
 
 
     import TemplateView from '@/components/layouts/TemplateView.vue'
-    import { useCongregationStore } from '@/stores/congregation';
+
     // import CustomizedTemplate from '@/components/templates/template-psp/_Customized.vue';
-    // import SimpleTemplate from '@/components/templates/template-s140/_MainTemplate.vue';
+    import OfficialTemplate from '@/components/templates/S140/AppWrapper.vue';
 
     const congStore = useCongregationStore()
 

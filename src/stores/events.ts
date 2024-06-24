@@ -23,7 +23,7 @@ export const useEventStore = defineStore('events', () => {
         return months.value.includes(fileStore.currentPeriod) ? 'Y' : 'N'
     })
 
-    const loadDetail = computed(() => {
+    const loadDetail = computed((): EventDetail | null => {
         if (!hasMonthEvent.value) return null
         const key = fileStore.currentPeriod
         return details.value[key]

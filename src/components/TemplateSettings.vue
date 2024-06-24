@@ -29,7 +29,7 @@
                 <FormSwitch v-model="hasVisit" label="Has circuit overseer's visit this month"></FormSwitch>
             </div>
             <div v-if="hasVisit" class="frm-inpts">
-                <FormSelect v-model="visitDetail.weekId" :items="weekOptions" :label="'Visit Week'"
+                <FormSelect v-model="visitDetail.weekId" :items="fileStore.weekOptions" :label="'Visit Week'"
                     :placeholder="'Select Visit Week'"></FormSelect>
                 <FormInput v-model="visitDetail.co" :placeholder="'Circuit Overseer'" :label="'Circuit Overseer'">
                 </FormInput>
@@ -46,7 +46,7 @@
                 <FormSwitch v-model="hasEvent" label="Has convention or assembly this month"></FormSwitch>
             </div>
             <div v-if="hasEvent" class="frm-inpts">
-                <FormSelect v-model="eventDetail.weekId" :items="weekOptions" :label="'Event Week'"
+                <FormSelect v-model="eventDetail.weekId" :items="fileStore.weekOptions" :label="'Event Week'"
                     :placeholder="'Select Event Week'"></FormSelect>
                 <FormSelect v-model="eventDetail.code" :items="eventStore.options" :label="'Event'"
                     :placeholder="'Select Event'" :id="'code'">
@@ -131,15 +131,6 @@
 
     const eventDetail = ref<EventDetail>({
         code: null, weekId: null, theme: null,
-    })
-
-    const weekOptions = computed(() => {
-        const month = fileStore.loadedMonth
-        if (!month) return [];
-        return (month.content.weeks ?? []).map(w => ({
-            id: w.id,
-            name: w.week
-        }))
     })
 
     function hideCongSettings() {
