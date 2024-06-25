@@ -42,7 +42,7 @@
 <script setup lang="ts">
     import { useFilesStore } from '@/stores/files';
     import { useViewStore } from '@/stores/views';
-    import { onMounted, ref } from 'vue';
+    import { ref } from 'vue';
     import IconPrinter from '../icons/IconPrinter.vue';
     import TemplateSettings from '../TemplateSettings.vue';
 
@@ -50,25 +50,22 @@
     const viewStore = useViewStore();
     const congSettingsDisplay = ref(false)
 
-    function showCongSettings() {
+    function showCongSettings(): void {
         congSettingsDisplay.value = true
     }
 
-    function hideCongSettings() {
+    function hideCongSettings(): void {
         congSettingsDisplay.value = false
     }
 
-    function print() {
+    function print(): void {
         window.print();
     }
 
-    function toStudents() {
-        viewStore.pubsList = true
+    function toStudents(): void {
+        viewStore.setView('pubs')
     }
 
-    onMounted(async () => {
-        // await fileStore.loadMonthTemplate()
-    })
 </script>
 
 

@@ -26,13 +26,17 @@ export const usePublisherStore = defineStore('publisher', () => {
         { code: "sec", display: "Secretary" },
         { code: "br", display: "Bible Reading" },
         { code: "talk", display: "Talks" },
-        { code: "demo", display: "Demos" },
+        { code: "demo", display: "Demonstration" },
         { code: "cbs", display: "CBS Conductor" },
         { code: "rdr", display: "CBS Reader" },
     ])
 
-    async function upsert(publisher: Publisher): Promise<void> {
-        if (!publisher.id) publisher.id = uid.generate()
+    async function upsert(publisher: Publisher): Promise<string> {
+        let mode = 'update'
+        if (!publisher.id) {
+            publisher.id = uid.generate()
+            mode = 'insert'
+        }
 
         const pubIndex = pubs.value.findIndex(p => p.id === publisher.id)
         if (pubIndex !== -1) {
@@ -40,6 +44,8 @@ export const usePublisherStore = defineStore('publisher', () => {
         } else {
             pubs.value.push(publisher)
         }
+
+        return mode
     }
 
     async function remove(id: string): Promise<void> {

@@ -8,7 +8,7 @@ import type { EventsDetails } from "@/types/event";
 import type { Publisher } from "@/types/publisher";
 import type { VisitsDetails } from "@/types/visit";
 
-export function HARD_STORAGE_RESET() {
+export async function HARD_STORAGE_RESET() {
     const congStore = useCongregationStore()
     const eventStore = useEventStore()
     const visitStore = useVisitStore()

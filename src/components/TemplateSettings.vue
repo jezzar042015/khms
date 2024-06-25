@@ -75,6 +75,12 @@
                             </span>
                         </label>
                     </div>
+                    <div class="action-item" @click="hardReset">
+                        Reset Data
+                        <span>
+                            <IconArrow />
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -102,7 +108,7 @@
     import { useEventStore } from '@/stores/events';
     import { useVisitStore } from '@/stores/visits';
     import { meetingTimes } from '@/assets/utils/times';
-    import { BackUp, Restore } from '@/assets/utils/backup';
+    import { BackUp, HARD_STORAGE_RESET, Restore } from '@/assets/utils/backup';
     import type { EventDetail } from '@/types/event';
     import type { VisitDetail } from '@/types/visit';
     import FormInput from './reusables/FormInput.vue';
@@ -160,6 +166,10 @@
         if (!hasEvent.value) return
         if (!eventStore.loadDetail) return
         eventDetail.value = eventStore.loadDetail
+    }
+
+    async function hardReset(): Promise<void> {
+        await HARD_STORAGE_RESET()
     }
 
     watch(

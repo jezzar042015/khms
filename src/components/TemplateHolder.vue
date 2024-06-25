@@ -3,7 +3,6 @@
         <div id="template-bg">
             <div id="fsl-mwb">
                 <article id="art-temp-psp" v-if="isCustomize">
-                    <!-- <div>Customized Template</div> -->
                     <CustomizedTemplate />
                 </article>
                 <article v-if="isS140">
@@ -15,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-    import { computed, onMounted } from 'vue';
+    import { computed } from 'vue';
     import { useCongregationStore } from '@/stores/congregation';
 
 
@@ -33,9 +32,5 @@
     const isS140 = computed(() => {
         return congStore.congregation.mwbTemplate === 's-140'
     })
-
-    // onMounted(async () => {
-    //     await fileStore.loadFiles();
-    // })
 
 </script>

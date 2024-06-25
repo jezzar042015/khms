@@ -839,6 +839,7 @@ section
   body
   {
     -webkit-print-color-adjust: exact;
+    print-color-adjust: economy;
     height: 100%;
   }
 
