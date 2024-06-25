@@ -18,15 +18,16 @@
     import { useAssignmentStore } from '@/stores/assignment';
     import { computed, ref } from 'vue';
     import { useCongregationStore } from '@/stores/congregation';
+    import type { S140PartItem } from '@/types/files';
     // import PublisherSelector from '../template-psp/PublisherSelector.vue';
 
 
     const assignmentStore = useAssignmentStore();
     const congStore = useCongregationStore();
 
-    const props = defineProps({
-        part: Object
-    })
+    const props = defineProps<{
+        part: S140PartItem
+    }>()
 
     const selector = ref({
         show: false
@@ -34,16 +35,17 @@
 
     const displayAssignee = computed(() => {
         if (!props.part?.isVisit) {
-            const partid = props.part?.id
-            const assigned = assignmentStore.get[partid];
-            return assigned ?? 'Not Assigned!';
+            // const partid = props.part?.id
+            // const assigned = assignmentStore.get[partid];
+            const assigned = ''
+            return assigned || 'Not Assigned!';
         } else {
             return props.part.co
         }
     })
 
     const canSelectPerson = computed(() => {
-        return props.part?.roles.length > 0
+        return props.part.roles ?? [].length > 0
     })
 
     const assignClasses = computed(() => {
@@ -59,13 +61,8 @@
         return `(${props.part.time} min.)`
     })
 
-    const partAssignedTo = computed(() => {
-        const partid = props.part?.id
-        const assigned = assignmentStore.get[partid];
-        return assigned
-    })
-
-    const runTime = computed(() => {
+    const runTime = computed<string | null>(() => {
+        if (!props.part.runtime) return null
         const startTime = congStore.congregation.midweekTime ?? '06:00'
         return displayTime(startTime, props.part?.runtime)
     })

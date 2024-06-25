@@ -19,17 +19,17 @@ export const useEventStore = defineStore('events', () => {
         ]
     );
 
-    const hasMonthEvent = computed(() => {
-        return months.value.includes(fileStore.currentPeriod) ? 'Y' : 'N'
+    const hasMonthEvent = computed<boolean>(() => {
+        return months.value.includes(fileStore.currentPeriod)
     })
 
-    const loadDetail = computed((): EventDetail | null => {
+    const loadDetail = computed<EventDetail | null>(() => {
         if (!hasMonthEvent.value) return null
         const key = fileStore.currentPeriod
         return details.value[key]
     })
 
-    function setEvent(detail: EventDetail, isAddEvent: boolean = true) {
+    function setEvent(detail: EventDetail, isAddEvent: boolean = true): void {
         const key = fileStore.currentPeriod
         if (isAddEvent) {
             const exist = months.value.includes(key)
@@ -42,23 +42,6 @@ export const useEventStore = defineStore('events', () => {
         }
         storeLocal()
     }
-
-    const detail = computed(() => {
-        const basic = details.value[fileStore.currentPeriod]
-        const event = options.value.find(e => e.code == basic.code)
-
-        if (!fileStore.loadedMonth) return null
-
-        const week = fileStore.loadedMonth.content.weeks.find(w => w.id == basic.weekId)
-        const colorTheme = fileStore.loadedMonth.content.theme;
-
-        return {
-            theme: basic.theme,
-            event,
-            week,
-            colorTheme,
-        }
-    })
 
     function storeLocal(): void {
         localStorage.setItem(EVENTS_STORAGE_KEY, JSON.stringify(months.value))
@@ -87,6 +70,6 @@ export const useEventStore = defineStore('events', () => {
 
     return {
         storeLocal, loadLocal, hasMonthEvent, options,
-        months, details, detail, setEvent, reset, loadDetail
+        months, details, setEvent, reset, loadDetail
     }
 })

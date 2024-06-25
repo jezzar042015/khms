@@ -26,11 +26,11 @@ export const useCongregationStore = defineStore('congregation', () => {
         { id: 2, display: "With Auxillary Class", supported: false },
     ])
 
-    const supportedLanguages = computed(() => {
+    const supportedLanguages = computed<Language[]>(() => {
         return languages.value.filter(l => l.support)
     })
 
-    const supportedClasses = computed(() => {
+    const supportedClasses = computed<MWBClass[]>(() => {
         return ministryClasses.value.filter(c => c.supported)
     })
 

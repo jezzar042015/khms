@@ -3,8 +3,8 @@
         <div id="template-bg">
             <div id="fsl-mwb">
                 <article id="art-temp-psp" v-if="isCustomize">
-                    <!-- <CustomizedTemplate /> -->
-                    <div>Customized Template</div>
+                    <!-- <div>Customized Template</div> -->
+                    <CustomizedTemplate />
                 </article>
                 <article v-if="isS140">
                     <OfficialTemplate />
@@ -21,7 +21,7 @@
 
     import TemplateView from '@/components/layouts/TemplateView.vue'
 
-    // import CustomizedTemplate from '@/components/templates/template-psp/_Customized.vue';
+    import CustomizedTemplate from '@/components/templates/A100/CustomWrapper.vue';
     import OfficialTemplate from '@/components/templates/S140/AppWrapper.vue';
 
     const congStore = useCongregationStore()

@@ -16,26 +16,26 @@
     const weekEvent = eventStore.loadDetail
 
     const weekRange = computed(() => {
-        if (!weekEvent) return null
+        if (!weekEvent) return ''
         const weekid = weekEvent.weekId
         const week = fileStore.weekOptions.find(w => w.id == weekid)
-        return week?.name
+        return week?.name ?? ''
     })
 
     const eventName = computed(() => {
-        if (!weekEvent) return null
+        if (!weekEvent) return ''
         const code = weekEvent.code
         const event = eventStore.options.find(e => e.code == code)
-        return event?.name
+        return event?.name ?? ''
     })
 
     const eventTheme = computed(() => {
-        if (!weekEvent) return null
-        return weekEvent.theme
+        if (!weekEvent) return ''
+        return weekEvent.theme ?? ''
     })
 
     const weekEventName = computed(() => {
-        if (!weekEvent) return null
+        if (!weekEvent) return ''
         const code = weekEvent.code
         return code == 'rc' ? 'Convention' : 'Assembly'
     })

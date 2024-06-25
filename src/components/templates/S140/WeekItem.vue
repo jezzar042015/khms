@@ -25,12 +25,14 @@
 <script setup lang="ts">
     import { computed } from 'vue';
     import { useFilesStore } from '@/stores/files';
+    import type { S140PartItem, WeekItemFeed } from '@/types/files';
     import PartItem from './PartItem.vue';
 
-    const props = defineProps({
-        w: Object,
-        i: Number,
-    })
+    interface S140Week {
+        w: WeekItemFeed
+        i: number
+    }
+    const props = defineProps<S140Week>()
 
     const fileStore = useFilesStore()
 
@@ -44,7 +46,7 @@
         return props.w.bibleReading
     })
 
-    const composedParts = computed(() => {
+    const composedParts = computed<S140PartItem[]>(() => {
         if (!props.w) return []
         const weekId = props.w.id;
         return fileStore.s140PartItems[weekId]

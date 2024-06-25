@@ -149,14 +149,14 @@
     };
 
     async function loadVisit() {
-        hasVisit.value = visitStore.hasMonthVisit == 'Y'
+        hasVisit.value = visitStore.hasMonthVisit
         if (!hasVisit.value) return
         if (!visitStore.loadDetail) return
         visitDetail.value = visitStore.loadDetail
     }
 
     async function loadEvent() {
-        hasEvent.value = eventStore.hasMonthEvent == 'Y'
+        hasEvent.value = eventStore.hasMonthEvent
         if (!hasEvent.value) return
         if (!eventStore.loadDetail) return
         eventDetail.value = eventStore.loadDetail

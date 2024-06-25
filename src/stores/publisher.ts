@@ -31,7 +31,7 @@ export const usePublisherStore = defineStore('publisher', () => {
         { code: "rdr", display: "CBS Reader" },
     ])
 
-    async function upsert(publisher: Publisher) {
+    async function upsert(publisher: Publisher): Promise<void> {
         if (!publisher.id) publisher.id = uid.generate()
 
         const pubIndex = pubs.value.findIndex(p => p.id === publisher.id)
@@ -42,7 +42,7 @@ export const usePublisherStore = defineStore('publisher', () => {
         }
     }
 
-    async function remove(id: string) {
+    async function remove(id: string): Promise<void> {
         const pubIndex = pubs.value.findIndex(p => p.id === id)
         pubs.value.splice(pubIndex, 1)
     }

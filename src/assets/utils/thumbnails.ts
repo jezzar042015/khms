@@ -1,5 +1,12 @@
 
-const thumbnails = {
+interface Thumbnail {
+    [key: string]: {
+        desc: string
+        thumbnail: string
+    }
+}
+
+const thumbnails: Thumbnail = {
     bt: {
         desc: "Bearing Thorough Witness",
         thumbnail: "https://cms-imgp.jw-cdn.org/img/p/bt/ASL/pt/bt_ASL_lg.jpg"

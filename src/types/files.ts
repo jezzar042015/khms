@@ -4,13 +4,13 @@ export interface ContentDefault {
     display: string;
     theme: string;
     thumbnail: string;
+    title: string;
     weeks: WeekItem[];
-    // Add other properties of content.default as needed
+    // Add other properties as needed
 }
 
 export interface Content {
     default: ContentDefault;
-    // Add other properties of content as needed
 }
 
 export interface LangMonth {
@@ -76,4 +76,6 @@ export interface S140PartItem {
     thumbnail?: string
     reference?: string
     type?: string
+    isVisit?: boolean
+    co?: string
 }

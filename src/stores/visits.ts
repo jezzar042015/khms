@@ -11,17 +11,17 @@ export const useVisitStore = defineStore('visits', () => {
     const months = ref<string[]>([])
     const fileStore = useFilesStore()
 
-    const hasMonthVisit = computed(() => {
-        return months.value.includes(fileStore.currentPeriod) ? 'Y' : 'N'
+    const hasMonthVisit = computed<boolean>(() => {
+        return months.value.includes(fileStore.currentPeriod)
     })
 
-    const loadDetail = computed(() => {
+    const loadDetail = computed<VisitDetail | null>(() => {
         if (!hasMonthVisit.value) return null
         const key = fileStore.currentPeriod
         return details.value[key]
     })
 
-    function setVisit(detail: VisitDetail, isToAdd: boolean = true) {
+    function setVisit(detail: VisitDetail, isToAdd: boolean = true): void {
         const key = fileStore.currentPeriod
         if (isToAdd) {
             const exist = months.value.includes(key)
@@ -40,7 +40,7 @@ export const useVisitStore = defineStore('visits', () => {
         localStorage.setItem(VISITS_DETAILS_KEY, JSON.stringify(details.value))
     }
 
-    async function loadLocal() {
+    async function loadLocal(): Promise<void> {
         const storeVisits = localStorage.getItem(VISITS_STORAGE_KEY)
         const storeDetails = localStorage.getItem(VISITS_DETAILS_KEY)
 

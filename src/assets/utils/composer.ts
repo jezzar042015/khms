@@ -6,7 +6,7 @@ import type { S140PartItem, S140PartWeeks, WeekItem } from "@/types/files";
 let runtime = 0;
 let lang: string = ''
 
-export async function s140Builder() {
+export async function s140Builder(): Promise<S140PartWeeks> {
     const weeks: S140PartWeeks = {}
     const congStore = useCongregationStore()
     const fileStore = useFilesStore()
@@ -128,7 +128,6 @@ function gems(src: WeekItem, week: S140PartItem[]) {
                 title: pattern.title ?? '',
                 autofills: [...pattern.autofills ?? []],
                 roles: [...pattern.roles ?? []],
-                label: translations.mwbs140[lang].chairman,
             }
 
             if ((part.roles ?? []).includes('br')) {
@@ -136,7 +135,7 @@ function gems(src: WeekItem, week: S140PartItem[]) {
             }
 
             part.runtime = runtime
-            runtime = (part.time ?? 1) + runtime
+            runtime = (part.time ?? 1) + runtime + 1
 
             week.push(part)
         }
@@ -145,82 +144,58 @@ function gems(src: WeekItem, week: S140PartItem[]) {
 
 function ministry(src: WeekItem, week: S140PartItem[]) {
     const parts = src.parts.ministry
-    for (const s in parts) {
-        if (s != '0') {
-            const pattern = parts[s]
-            const part: S140PartItem = {
-                id: pattern.id,
-                time: pattern.time,
-                runtime: runtime,
-                thumbnail: pattern.thumbnail,
-                reference: pattern.reference,
-                title: pattern.title ?? '',
-                autofills: [...pattern.autofills ?? []],
-                roles: [...pattern.roles ?? []],
-                label: translations.mwbs140[lang].chairman,
-            }
-
-            if ((part.roles ?? []).includes('demo')) {
-                part.label = translations.mwbs140[lang].demo
-            }
-
-            if ((part.roles ?? []).includes('talk')) {
-                part.label = translations.mwbs140[lang].student
-            }
-
-            part.runtime = runtime
-            runtime = (part.time ?? 1) + runtime
-
-            week.push(part)
+    for (const pattern of parts) {
+        const part: S140PartItem = {
+            id: pattern.id,
+            time: pattern.time,
+            runtime: runtime,
+            thumbnail: pattern.thumbnail,
+            reference: pattern.reference,
+            title: pattern.title ?? '',
+            autofills: [...pattern.autofills ?? []],
+            roles: [...pattern.roles ?? []],
         }
+
+        if ((part.roles ?? []).includes('demo')) {
+            part.label = translations.mwbs140[lang].demo
+        }
+
+        if ((part.roles ?? []).includes('talk')) {
+            part.label = translations.mwbs140[lang].student
+        }
+
+        part.runtime = runtime
+        runtime = (part.time ?? 1) + runtime + 1
+
+        week.push(part)
     }
 }
 
 function living(src: WeekItem, week: S140PartItem[]) {
     const parts = src.parts.living;
 
-    for (const [index, pattern] of parts.entries()) {
-        if (index !== 0) {
-            const part = initializePartItem(pattern);
-            part.label = determinePartLabel(part, pattern, index, parts.length);
-            updatePartRuntime(part);
-
-            week.push(part);
+    for (const pattern of parts) {
+        const part: S140PartItem = {
+            id: pattern.id,
+            time: pattern.time,
+            runtime: runtime,
+            thumbnail: pattern.thumbnail,
+            reference: pattern.reference,
+            title: pattern.title ?? pattern.reference,
+            autofills: [...pattern.autofills ?? []],
+            roles: [...pattern.roles ?? []],
         }
+
+        if (part.roles?.includes('cbs'))
+            part.label = translations.mwbs140[lang].conductor
+
+        if (part.id.includes('.r'))
+            part.label = pattern.alt?.replace(':', '')
+
+        part.runtime = runtime
+        runtime = (part.time ?? 0) + runtime
+
+        week.push(part)
     }
 }
 
-function initializePartItem(pattern: any): S140PartItem {
-    return {
-        id: pattern.id,
-        time: pattern.time,
-        runtime: 0,
-        title: pattern.title ?? '',
-        roles: [...pattern.roles ?? []],
-        showNoTime: false,
-        label: translations.mwbs140[lang].chairman,
-    };
-}
-
-function determinePartLabel(part: S140PartItem, pattern: any, index: number, partsLength: number): string {
-    if ((part.roles ?? []).includes('cbs')) {
-        return translations.mwbs140[lang].conductor;
-    }
-
-    if (pattern.class === 'accessory') {
-        return (pattern.alt ?? '').replace(':', '');
-    }
-
-    if (index === partsLength - 1) {
-        return translations.mwbs140[lang].chairman;
-    }
-
-    return translations.mwbs140[lang].chairman;
-}
-
-function updatePartRuntime(part: S140PartItem) {
-    if (part.time) {
-        part.runtime = runtime;
-        runtime += part.time;
-    }
-}

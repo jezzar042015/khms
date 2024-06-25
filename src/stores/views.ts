@@ -1,38 +1,52 @@
 import { defineStore } from "pinia";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import { useCongregationStore } from "./congregation";
 import { useVisitStore } from "./visits";
 import { useEventStore } from "./events";
 import { useFilesStore } from "./files";
 
 export const useViewStore = defineStore('views', () => {
-    const welcomePage = ref(false);
-    const mwbTemplate = ref(false);
-    const pubsDispayPage = ref(false);
+
+    type Views = 'welcome' | 'mwb' | 'pubs'
+    const view = ref<Views>('welcome')
 
     const congStore = useCongregationStore()
     const visitStore = useVisitStore()
     const eventStore = useEventStore()
     const fileStore = useFilesStore()
 
-    async function init() {
+    const welcomePage = computed<boolean>(() => {
+        return view.value == 'welcome'
+    })
+
+    const mwbTemplate = computed<boolean>(() => {
+        return view.value == "mwb"
+    });
+
+    const pubsList = computed<boolean>(() => {
+        return view.value == "pubs"
+    });
+
+    function setView(viewName: Views): void {
+        view.value = viewName
+    }
+
+    async function init(): Promise<boolean> {
         const congname = congStore.congregation.name
         const lang = congStore.congregation.lang
         const classId = congStore.congregation.classId
 
         if (!congname || (!lang && !classId)) {
-            welcomePage.value = true
+            setView("welcome")
         } else {
-            welcomePage.value = false
-            mwbTemplate.value = true
+            setView("mwb")
         }
 
         return !welcomePage.value
     }
 
-    async function exitWelcome() {
-        welcomePage.value = false
-        mwbTemplate.value = true
+    async function exitWelcome(): Promise<void> {
+        setView("mwb")
         await visitStore.loadLocal();
         await eventStore.loadLocal();
         await fileStore.loadFiles();
@@ -41,7 +55,8 @@ export const useViewStore = defineStore('views', () => {
 
     return {
         welcomePage, mwbTemplate,
-        pubsDispayPage,
-        init, exitWelcome
+        pubsList,
+        init, exitWelcome,
+        setView
     }
 })

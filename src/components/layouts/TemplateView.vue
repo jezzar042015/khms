@@ -63,7 +63,7 @@
     }
 
     function toStudents() {
-        viewStore.pubsDispayPage = true
+        viewStore.pubsList = true
     }
 
     onMounted(async () => {

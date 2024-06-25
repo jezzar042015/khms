@@ -37,12 +37,12 @@ export const useFilesStore = defineStore('files', () => {
 
     const s140PartItems = ref<S140PartWeeks>({})
 
-    const periodIsInMonths = computed(() => {
+    const periodIsInMonths = computed<boolean>(() => {
         const exist = langMonths.value.find(m => m.content.period == currentPeriod.value)
         return Boolean(exist)
     })
 
-    const weekOptions = computed(() => {
+    const weekOptions = computed<{ id: string, name: string }[]>(() => {
         const month = loadedMonth.value
         if (!month) return [];
         return (month.content.weeks ?? []).map(w => ({
@@ -51,7 +51,7 @@ export const useFilesStore = defineStore('files', () => {
         }))
     })
 
-    async function loadFiles() {
+    async function loadFiles(): Promise<void> {
         const lang = congStore.congregation.lang;
 
         if (!lang) return
@@ -88,7 +88,7 @@ export const useFilesStore = defineStore('files', () => {
         }
     }
 
-    async function loadMonthTemplate(monthCode?: string) {
+    async function loadMonthTemplate(monthCode?: string): Promise<void> {
 
         if (!monthCode) {
             const period = langMonths.value[0].content.period;
@@ -108,16 +108,16 @@ export const useFilesStore = defineStore('files', () => {
         await composeS140()
     }
 
-    async function composeS140() {
+    async function composeS140(): Promise<void> {
         const congStore = useCongregationStore()
         if (congStore.congregation.mwbTemplate != "s-140") return
 
         s140PartItems.value = await s140Builder()
     }
 
-    async function loadMonthEvent() {
+    async function loadMonthEvent(): Promise<void> {
         const eventStore = useEventStore()
-        const hasEvent = eventStore.hasMonthEvent === 'Y'
+        const hasEvent = eventStore.hasMonthEvent
         if (!hasEvent) return
 
         const event = eventStore.details[currentPeriod.value]
@@ -127,9 +127,9 @@ export const useFilesStore = defineStore('files', () => {
         if (eventWeek) eventWeek.hasEvent = true
     }
 
-    async function loadMonthVisit() {
+    async function loadMonthVisit(): Promise<void> {
         const visitStore = useVisitStore()
-        const hasVisit = visitStore.hasMonthVisit === 'Y'
+        const hasVisit = visitStore.hasMonthVisit
         if (!hasVisit) return
 
         const detail = visitStore.details[currentPeriod.value]
@@ -137,7 +137,7 @@ export const useFilesStore = defineStore('files', () => {
         await manageCoPart(detail)
     }
 
-    async function manageCoPart(detail: VisitDetail) {
+    async function manageCoPart(detail: VisitDetail): Promise<void> {
         if (!loadedMonth.value) return
         const targetWeek = loadedMonth.value.content.weeks.find(w => w.id == detail.weekId);
         if (!targetWeek) return

@@ -23,7 +23,7 @@
 
     const fileStore = useFilesStore()
 
-    const weeks = computed((): WeekItemFeed[] => {
+    const weeks = computed<WeekItemFeed[]>(() => {
         if (!fileStore.loadedMonth) return []
         return fileStore.loadedMonth.content.weeks.map(week => ({
             id: week.id,
