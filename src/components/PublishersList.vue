@@ -94,10 +94,13 @@
     .list-holder
     {
         flex: 1;
-        overflow-y: auto;
+        overflow: visible;
+        overflow-y: visible;
+        overflow-x: hidden;
         display: flex;
         flex-direction: column;
         gap: 4px;
+        z-index: 1;
     }
 
     .header
@@ -127,8 +130,23 @@
 
     .page-name
     {
-        font-weight: 600;
-        font-size: 1.5em
+        font-weight: 700;
+        font-size: 1.5em;
+        position: relative;
+    }
+
+    .page-name::before
+    {
+        content: "";
+        height: 15px;
+        width: 90%;
+        background-color: #3da8ea7a;
+        display: flex;
+        position: absolute;
+        z-index: -1;
+        right: 4px;
+        bottom: 0px;
+
     }
 
     .gap-3

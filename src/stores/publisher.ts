@@ -38,11 +38,11 @@ export const usePublisherStore = defineStore('publisher', () => {
             mode = 'insert'
         }
 
-        const pubIndex = pubs.value.findIndex(p => p.id === publisher.id)
-        if (pubIndex !== -1) {
-            pubs.value.splice(pubIndex, 1, publisher)
-        } else {
+        if (mode == 'insert') {
             pubs.value.push(publisher)
+        } else {
+            const pubIndex = pubs.value.findIndex(p => p.id === publisher.id)
+            pubs.value.splice(pubIndex, 1, publisher)
         }
 
         return mode
