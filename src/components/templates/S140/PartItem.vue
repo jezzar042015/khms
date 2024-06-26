@@ -62,7 +62,7 @@
     })
 
     const runTime = computed<string | null>(() => {
-        if (!props.part.runtime) return null
+        if (typeof props.part.runtime !== 'number') return null
         const startTime = congStore.congregation.midweekTime ?? '06:00'
         return displayTime(startTime, props.part?.runtime)
     })
