@@ -42,7 +42,6 @@
 
     const roleSelector = ref<HTMLElement>();
 
-
     const availableRoles = computed<PubRole[]>(() => {
         const loadable: PubRole[] = []
         const pubroles = pub.value.roles;

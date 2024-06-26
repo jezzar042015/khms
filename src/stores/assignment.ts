@@ -3,7 +3,7 @@ import { defineStore } from "pinia";
 import { computed, ref, watch } from "vue";
 import { useFilesStore } from "./files";
 
-const LOCAL_KEY_PREF = "khmsts-assign";
+const LOCAL_KEY_PREF = "khmsts-parts-";
 
 export const useAssignmentStore = defineStore('assignments', () => {
 

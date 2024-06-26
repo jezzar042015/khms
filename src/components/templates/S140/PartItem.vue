@@ -4,12 +4,13 @@
             <span v-show="part?.time" class="s140-runtime">{{ runTime }}</span>
             <span v-show="part?.time">{{ part?.title }} {{ timeLimit }}</span>
         </div>
-        <div class="assignee" v-show="canSelectPerson" @click.stop="showSelector">
+        <div class="assignee" v-show="isAssignable" @click="showSelector">
             <div :class="assignClasses">
                 <span class="s140-part-label" v-show="part?.label">{{ part?.label }}:</span>
                 {{ displayAssignee }}
             </div>
-            <!-- <PublisherSelector v-if="selector.show" :part="part" :me="selector" :assignee="partAssignedTo" /> -->
+            <AssignmentSelector v-if="selector" :part="part" :triggered="triggeredSelector" @hide="hideSelector"
+                @trigger-off="triggerOff" />
         </div>
     </div>
 </template>
@@ -19,33 +20,41 @@
     import { computed, ref } from 'vue';
     import { useCongregationStore } from '@/stores/congregation';
     import type { S140PartItem } from '@/types/files';
-    // import PublisherSelector from '../template-psp/PublisherSelector.vue';
 
+    import AssignmentSelector from '@/components/AssignmentSelector.vue'
+    import { usePublisherStore } from '@/stores/publisher';
 
     const assignmentStore = useAssignmentStore();
     const congStore = useCongregationStore();
+    const pubStore = usePublisherStore()
 
     const props = defineProps<{
         part: S140PartItem
     }>()
 
-    const selector = ref({
-        show: false
-    })
+    const selector = ref(false)
+    const triggeredSelector = ref(false)
 
     const displayAssignee = computed(() => {
         if (!props.part?.isVisit) {
-            // const partid = props.part?.id
-            // const assigned = assignmentStore.get[partid];
-            const assigned = ''
-            return assigned || 'Not Assigned!';
+            const partid: string = props.part?.id ?? ''
+            const assigned = assignmentStore.get.find(a => a.pid == partid);
+            if (!assigned) return 'Not Assigned!'
+
+            if (typeof assigned.a === 'string') {
+                const pub = pubStore.publishers.find(p => p.id == (assigned?.a))
+                return pub?.name || 'Not Assigned!'
+            } else {
+                return 'Demo Assignment'
+            }
+
         } else {
             return props.part.co
         }
     })
 
-    const canSelectPerson = computed(() => {
-        return props.part.roles ?? [].length > 0
+    const isAssignable = computed<boolean>(() => {
+        return (props.part.roles || []).length > 0
     })
 
     const assignClasses = computed(() => {
@@ -67,8 +76,17 @@
         return displayTime(startTime, props.part?.runtime)
     })
 
-    function showSelector() {
-        selector.value.show = true
+    function showSelector(): void {
+        triggeredSelector.value = true
+        selector.value = true
+    }
+
+    function triggerOff(): void {
+        triggeredSelector.value = false
+    }
+
+    function hideSelector(): void {
+        selector.value = false
     }
 
     function displayTime(startingTime: string, minutesToAdd: number) {

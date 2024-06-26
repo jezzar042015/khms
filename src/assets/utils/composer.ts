@@ -71,7 +71,7 @@ function midsong(src: WeekItem, week: S140PartItem[]) {
 
 function closing(src: WeekItem, week: S140PartItem[]) {
     const part = {
-        id: `${src.id}.op`,
+        id: `${src.id}.cp`,
         time: 4,
         title: `${translations.mwbs140[lang].song} ${src.songs[2]}`,
         roles: [
