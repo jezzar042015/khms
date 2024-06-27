@@ -29,26 +29,29 @@
                 <IconPraying />
             </span>
             <span>
-                <div class="assignee" @click.stop="showSelector">
+                <div class="assignee" @click="showSelector">
                     {{ displayAssignee }}
-
                 </div>
+                <AssignmentSelector v-if="selector" :part="prayer" :triggered="triggered" @hide="hideSelector"
+                    @trigger-off="triggerOff" />
             </span>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-    import IconCalendar from '@/components/icons/IconCalendar.vue';
-    import IconBible from '@/components/icons/IconBible.vue';
-    import IconMusicNotes from '../../icons/IconMusicNotes.vue';
-    import IconPraying from '../../icons/IconPraying.vue';
-
     import { computed, ref, watch, onMounted } from 'vue';
     import { useFilesStore } from '@/stores/files';
     import { useAssignmentStore } from '@/stores/assignment';
     import { usePublisherStore } from '@/stores/publisher';
-    import type { WeekItem } from '@/types/files';
+    import type { PartItem, WeekItem } from '@/types/files';
+
+    import IconCalendar from '@/components/icons/IconCalendar.vue';
+    import IconBible from '@/components/icons/IconBible.vue';
+    import IconMusicNotes from '../../icons/IconMusicNotes.vue';
+    import IconPraying from '../../icons/IconPraying.vue';
+    import AssignmentSelector from './AssignmentSelector.vue';
+
 
     const selector = ref(false)
     const triggered = ref(false)
@@ -61,9 +64,11 @@
         w: WeekItem
     }>()
 
-    const prayer = ref({
+    const prayer = ref<PartItem>({
         id: '',
-        roles: ['elder', 'ms', 'prayer']
+        time: 0,
+        roles: ['elder', 'ms', 'prayer'],
+
     })
 
     const displayAssignee = computed(() => {
@@ -116,3 +121,10 @@
 
 
 </script>
+
+<style scoped>
+    .assignee
+    {
+        cursor: pointer;
+    }
+</style>

@@ -11,9 +11,10 @@
         <span>
             <div v-show="part.title" :class="part.class">{{ part.title }}</div>
             <div class="generic-label">{{ part.reference }}</div>
-            <div class="assignee" @click.stop="showSelector">
+            <div class="assignee" @click="showSelector">
                 <div :class="assignClasses">{{ displayAssignee }}</div>
-                <!-- <PublisherSelector v-if="selector.show" :part="p" :me="selector" :assignee="partAssignedTo" /> -->
+                <AssignmentSelector v-if="selector" :part="partItem" :triggered="triggered" @hide="hideSelector"
+                    @trigger-off="triggerOff" />
             </div>
         </span>
     </div>
@@ -22,42 +23,46 @@
 <script setup lang="ts">
     import { computed, ref } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
-
-    import type { PartItem } from '@/types/files';
-    import thumbnails from '@/assets/utils/thumbnails';
     import { usePublisherStore } from '@/stores/publisher';
-    // // import PublisherSelector from '@/components/templates/template-psp/PublisherSelector.vue'
+    import type { PartItem } from '@/types/files';
+
+    import thumbnails from '@/assets/utils/thumbnails';
+    import AssignmentSelector from './AssignmentSelector.vue';
 
     const props = defineProps<{
         part: PartItem
     }>()
 
+    const partItem = ref<PartItem>(
+        { ...props.part }
+    )
+
+    const selector = ref(false)
+    const triggered = ref(false)
+
     const assignmentStore = useAssignmentStore();
     const pubStore = usePublisherStore()
 
     const displayAssignee = computed(() => {
-        if (!props.part?.isVisit) {
-            const partid: string = props.part?.id ?? ''
-            const assigned = assignmentStore.get.find(a => a.pid == partid);
-            if (!assigned) return 'Not Assigned!'
+        if (props.part?.isVisit) return props.part.co
 
-            if (typeof assigned.a === 'string') {
-                const pub = pubStore.publishers.find(p => p.id == (assigned?.a))
-                return pub?.name || 'Not Assigned!'
-            } else if (Array.isArray(assigned.a)) {
-                const p = []
-                const pub1 = pubStore.publishers.find(p => p.id == (assigned.a[0]))
-                const pub2 = pubStore.publishers.find(p => p.id == (assigned.a[1]))
-                if (pub1) p.push(pub1.name)
-                if (pub2) p.push(pub2.name)
-                return p.length > 0 ? p.join(' & ') : 'Not Assigned!'
-            }
+        const partid: string = props.part?.id ?? ''
+        const assigned = assignmentStore.get.find(a => a.pid == partid);
+        if (!assigned) return 'Not Assigned!'
 
-            return null
-
-        } else {
-            return props.part.co
+        if (typeof assigned.a === 'string') {
+            const pub = pubStore.publishers.find(p => p.id == (assigned?.a))
+            return pub?.name || 'Not Assigned!'
+        } else if (Array.isArray(assigned.a)) {
+            const p = []
+            const pub1 = pubStore.publishers.find(p => p.id == (assigned.a[0]))
+            const pub2 = pubStore.publishers.find(p => p.id == (assigned.a[1]))
+            if (pub1) p.push(pub1.name)
+            if (pub2) p.push(pub2.name)
+            return p.length > 0 ? p.join(' & ') : 'Not Assigned!'
         }
+
+        return null
     })
 
     const assignClasses = computed(() => {
@@ -78,18 +83,23 @@
         return `${props.part.time}m`
     })
 
-    const selector = ref({
-        show: false
-    })
-
     const itemClasses = computed<string>(() => {
         if (props.part.class == 'accessory')
             return 'accessory'
         return 'part-item'
     })
 
-    function showSelector() {
-        selector.value.show = true
+    function showSelector(): void {
+        triggered.value = true
+        selector.value = true
+    }
+
+    function hideSelector(): void {
+        selector.value = false
+    }
+
+    function triggerOff(): void {
+        triggered.value = false
     }
 
 </script>

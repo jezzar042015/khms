@@ -49,13 +49,13 @@ export interface PartItem {
     id: string
     time: number
     title?: string
-    class: string
-    thumbnail: string
-    reference: string
+    class?: string
+    thumbnail?: string
+    reference?: string
     roles: string[]
     autofills?: string[]
-    isVisit: boolean | undefined
-    co: string | undefined
+    isVisit?: boolean
+    co?: string 
     alt?: string
 }
 
