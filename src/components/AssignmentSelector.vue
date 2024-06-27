@@ -149,15 +149,44 @@
         } else {
             assignment.value.a = (assignment.value.a == id) ? '' : id
             await assignStore.upsert(assignment.value)
+            await handleAutofills(id);
+            await handleS140Prayer(id)
+        }
+    }
 
-            if (!props.part.autofills) return
-
+    async function handleAutofills(id: string): Promise<void> {
+        if (props.part.autofills) {
             for (const af of props.part.autofills) {
                 await assignStore.upsert({
-                    a: id, pid: af
+                    pid: af, a: id,
                 })
             }
         }
+    }
+
+    async function handleS140Prayer(id: string): Promise<void> {
+        const isOpenPrayer = props.part.id.endsWith('.op')
+        const isClosePrayer = props.part.id.endsWith('.cp')
+
+        if (isOpenPrayer || isClosePrayer) {
+            const weekId = getWeekId(props.part.id)
+            let a100Prayer = assignStore.get.find(p => p.pid == weekId)
+
+            if (!a100Prayer)
+                a100Prayer = { pid: weekId || '', a: ['', ''] }
+
+            if (Array.isArray(a100Prayer.a)) {
+                if (isOpenPrayer) a100Prayer.a[0] = id ?? ''
+                if (isClosePrayer) a100Prayer.a[1] = id ?? ''
+            }
+            await assignStore.upsert(a100Prayer);
+        }
+    }
+
+    function getWeekId(partId: string): string | null {
+        const regex = /^(\d+\.\d+)\.+/;
+        const match = partId.match(regex);
+        return match ? match[1] : null;
     }
 
     function prepAssignment(): void {

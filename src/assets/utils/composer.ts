@@ -109,8 +109,8 @@ function introduction(src: WeekItem, week: S140PartItem[]) {
         title: pattern.reference,
         autofills: [...pattern.autofills ?? []],
         roles: [...pattern.roles],
-        label: (hasAuxClass ? translations.mwbs140[lang].coCounselor : '')
-            + ' / ' + translations.mwbs140[lang].chairman,
+        label: (hasAuxClass ? translations.mwbs140[lang].coCounselor + ' / ' : '')
+            + translations.mwbs140[lang].chairman,
     }
 
     runtime = (part.time ?? 1) + runtime

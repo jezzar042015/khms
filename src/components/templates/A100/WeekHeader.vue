@@ -30,7 +30,7 @@
             </span>
             <span>
                 <div class="assignee" @click.stop="showSelector">
-                    {{ assigneeDisplay }}
+                    {{ displayAssignee }}
                 </div>
 
                 <!-- <PublisherSelector v-if="selector.show" :part="prayer" @mouseleave="hideSelector" :me="selector"
@@ -50,6 +50,7 @@
     import { computed, ref, watch, onMounted } from 'vue';
     import { useFilesStore } from '@/stores/files';
     import { useAssignmentStore } from '@/stores/assignment';
+    import { usePublisherStore } from '@/stores/publisher';
     import type { WeekItem } from '@/types/files';
 
     const selector = ref({
@@ -58,7 +59,7 @@
 
     const fileStore = useFilesStore()
     const assignStore = useAssignmentStore();
-
+    const pubStore = usePublisherStore()
     const props = defineProps<{
         w: WeekItem
     }>()
@@ -68,11 +69,21 @@
         roles: ['elder', 'ms', 'prayer']
     })
 
-    const assigneeDisplay = computed(() => {
-        // const partid = props.w.id
-        // const assigned = assignmentStore.getAssignments[partid];
-        // return assigned ?? 'Not Assigned!'
-        return 'Not Assigned!'
+    const displayAssignee = computed(() => {
+        const partid = props.w.id
+        const assigned = assignStore.get.find(a => a.pid == partid);
+        if (!assigned) return 'Not Assigned!'
+
+        if (Array.isArray(assigned.a)) {
+            const p = []
+            const pub1 = pubStore.publishers.find(p => p.id == (assigned.a[0]))
+            const pub2 = pubStore.publishers.find(p => p.id == (assigned.a[1]))
+            if (pub1) p.push(pub1.name)
+            if (pub2) p.push(pub2.name)
+            return p.length > 0 ? p.join(' & ') : 'Not Assigned!'
+        }
+
+        return null
     })
 
     // const assignee = computed(() => {
