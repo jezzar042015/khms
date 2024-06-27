@@ -342,7 +342,6 @@ section
 .assignee
 {
   position: relative;
-  cursor: pointer;
 }
 
 .assign-to
@@ -607,12 +606,23 @@ section
   margin: 20px 0 40px;
 }
 
-.s140-grid-col2
+.s140-grid-col2,
+.s140-grid-col3
 {
   display: grid;
+  gap: 5px;
+
+}
+.s140-grid-col2
+{
   grid-template-columns: 1fr 150px;
 }
 
+.s140-grid-col3
+{
+  grid-template-columns: 1fr 150px 150px;
+
+}
 .s140-grid-titles
 {
   display: grid;
@@ -632,7 +642,7 @@ section
 
 .s140-meetingbar
 {
-  margin: 20px 0 10px;
+  margin: 15px 0 5px;
   color: white;
   padding: 3px 8px;
   font-size: .89em;
@@ -666,9 +676,11 @@ section
 {
   position: absolute;
   right: 100%;
+  top: 4px;
   padding-right: 0px;
   color: gray;
   text-wrap: nowrap;
+  font-size: .8em;
 }
 
 .s140-break

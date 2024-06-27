@@ -1,12 +1,21 @@
 <template>
-    <div class="s140-grid-col2 s140-part-item">
+    <div :class="gridColumns">
         <div class="s140-grid-titles">
             <span v-show="part?.time" class="s140-runtime">{{ runTime }}</span>
             <span v-show="part?.time">{{ part?.title }} {{ timeLimit }}</span>
         </div>
+        <div class="assignee" v-if="hasAux1Class">
+            <span class="s140-part-label" v-show="part?.label">{{ part?.label }}:</span>
+            <div :class="assignAux1Classes" v-if="isAux1Part" @click="showAux1Selector">
+                {{ displayAux1Assignee }}
+            </div>
+            <AssignmentSelector v-if="selectorAux1 && partAux1" :part="partAux1" :triggered="triggeredSelector"
+                @hide="hideSelector" @trigger-off="triggerOff" />
+        </div>
         <div class="assignee" v-show="isAssignable" @click="showSelector">
+            <span class="s140-part-label" v-show="part?.label" v-if="!hasAux1Class"> {{
+                part?.label }}: </span>
             <div :class="assignClasses">
-                <span class="s140-part-label" v-show="part?.label">{{ part?.label }}:</span>
                 {{ displayAssignee }}
             </div>
             <AssignmentSelector v-if="selector" :part="part" :triggered="triggeredSelector" @hide="hideSelector"
@@ -16,23 +25,29 @@
 </template>
 
 <script setup lang="ts">
+    import { computed, onMounted, ref, watch } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
-    import { computed, ref } from 'vue';
     import { useCongregationStore } from '@/stores/congregation';
+    import { usePublisherStore } from '@/stores/publisher';
     import type { S140PartItem } from '@/types/files';
 
     import AssignmentSelector from '@/components/AssignmentSelector.vue'
-    import { usePublisherStore } from '@/stores/publisher';
+    import { useFilesStore } from '@/stores/files';
 
+    const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
     const congStore = useCongregationStore();
     const pubStore = usePublisherStore()
+    const fileStore = useFilesStore()
 
     const props = defineProps<{
         part: S140PartItem
     }>()
 
+    const partAux1 = ref<S140PartItem | undefined>()
+
     const selector = ref(false)
+    const selectorAux1 = ref(false)
     const triggeredSelector = ref(false)
 
     const displayAssignee = computed(() => {
@@ -44,13 +59,63 @@
             if (typeof assigned.a === 'string') {
                 const pub = pubStore.publishers.find(p => p.id == (assigned?.a))
                 return pub?.name || 'Not Assigned!'
-            } else {
-                return 'Demo Assignment'
+            } else if (Array.isArray(assigned.a)) {
+                const p = []
+                const pub1 = pubStore.publishers.find(p => p.id == (assigned.a[0]))
+                const pub2 = pubStore.publishers.find(p => p.id == (assigned.a[1]))
+                if (pub1) p.push(pub1.name)
+                if (pub2) p.push(pub2.name)
+                return p.length > 0 ? p.join(' & ') : 'Not Assigned!'
             }
+
+            return null
 
         } else {
             return props.part.co
         }
+    })
+
+    const displayAux1Assignee = computed(() => {
+        if (!partAux1.value) return 'Not Assigned!'
+
+        const partid: string = partAux1.value.id ?? ''
+        const assigned = assignmentStore.get.find(a => a.pid == partid);
+        if (!assigned) return 'Not Assigned!'
+
+        if (typeof assigned.a === 'string') {
+            const pub = pubStore.publishers.find(p => p.id == (assigned?.a))
+            return pub?.name || 'Not Assigned!'
+        } else if (Array.isArray(assigned.a)) {
+            const p = []
+            const pub1 = pubStore.publishers.find(p => p.id == (assigned.a[0]))
+            const pub2 = pubStore.publishers.find(p => p.id == (assigned.a[1]))
+            if (pub1) p.push(pub1.name)
+            if (pub2) p.push(pub2.name)
+            return p.length > 0 ? p.join(' & ') : 'Not Assigned!'
+        }
+
+        return null
+    })
+
+    const hasAux1Class = computed<boolean>(() => {
+        return congStore.congregation.classId == 2
+    })
+
+    const hasMeetingDemos = computed<boolean>(() => {
+        const weekId = getWeekId(props.part.id)
+        if (!weekId) return false
+        const weekParts = fileStore.s140PartItems[weekId]
+        const demoParts = weekParts.some(p => p.roles?.includes('demo'))
+        return demoParts
+    })
+
+    const isAux1Part = computed<boolean>(() => {
+        if (!hasAux1Class.value) return false
+        const isDemo = props.part.roles?.includes('demo') ?? false
+        const isBibleReading = props.part.roles?.includes('br') ?? false
+        const isTalk = props.part.roles?.includes('talk') ?? false
+
+        return isDemo || isTalk || (isBibleReading && hasMeetingDemos.value)
     })
 
     const isAssignable = computed<boolean>(() => {
@@ -59,8 +124,15 @@
 
     const assignClasses = computed(() => {
         return [
-            's140-person', 'relative',
+            's140-person',
             { 'faded': displayAssignee.value == 'Not Assigned!' }
+        ]
+    })
+
+    const assignAux1Classes = computed(() => {
+        return [
+            's140-person',
+            { 'faded': displayAux1Assignee.value == 'Not Assigned!' }
         ]
     })
 
@@ -76,9 +148,26 @@
         return displayTime(startTime, props.part?.runtime)
     })
 
+    const gridColumns = computed<string>(() => {
+        const minClasses = congStore.congregation.classId;
+
+        if (minClasses == 1) {
+            return 's140-grid-col2 s140-part-item'
+        } else if (minClasses == 2) {
+            return 's140-grid-col3 s140-part-item'
+        } else {
+            return 's140-part-item'
+        }
+    });
+
     function showSelector(): void {
         triggeredSelector.value = true
         selector.value = true
+    }
+
+    function showAux1Selector(): void {
+        triggeredSelector.value = true
+        selectorAux1.value = true
     }
 
     function triggerOff(): void {
@@ -87,6 +176,7 @@
 
     function hideSelector(): void {
         selector.value = false
+        selectorAux1.value = false
     }
 
     function displayTime(startingTime: string, minutesToAdd: number) {
@@ -107,5 +197,27 @@
         return `${formattedHours}:${formattedMinutes}`;
     }
 
+    function loadAux1Part(): void {
+        if (isAux1Part.value) {
+            partAux1.value = { ...props.part }
+            partAux1.value.id = `${props.part.id}${AUX1CLASSIDSUFFIX}`
+        }
+    }
+
+    function getWeekId(partId: string): string | null {
+        const regex = /^(\d+\.\d+)\.\d+/;
+        const match = partId.match(regex);
+        return match ? match[1] : null;
+    }
+
+    onMounted(() => {
+        loadAux1Part()
+    })
+
+    watch(
+        () => props.part.id,
+        () => loadAux1Part(),
+        { deep: true }
+    )
 
 </script>

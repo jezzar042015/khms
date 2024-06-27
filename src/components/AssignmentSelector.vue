@@ -26,6 +26,9 @@
                     <div :class="['item', { active: isSelected(a.id) }]" v-for="a in filteredAssignables" :key="a.id"
                         @click="setAssignment(a.id ?? '')">
                         {{ a.name }}
+                        <span class="demo-desc">
+                            {{ demoAssignment(a.id) }}
+                        </span>
                     </div>
                 </div>
             </div>
@@ -42,12 +45,15 @@
     import type { Publisher } from '@/types/publisher';
     import type { MWBAssignment } from '@/types/mwb';
 
-    const emits = defineEmits(['hide', 'triggerOff'])
+    const emits = defineEmits(['hide', 'trigger-off'])
     const pubStore = usePublisherStore()
     const assignStore = useAssignmentStore()
     const viewStore = useViewStore()
     const filter = ref('')
-    const assignment = ref<MWBAssignment>()
+    const assignment = ref<MWBAssignment>({
+        pid: '', a: ''
+    })
+
     const mouseYpos = ref<number>()
 
     const props = defineProps<{
@@ -80,7 +86,6 @@
         }
     });
 
-
     const filteredAssignables = computed<Publisher[]>(() => {
         if (!filter.value) return assignables.value
         const f = filter.value.toLowerCase()
@@ -103,23 +108,48 @@
         return assignables.value.length > 8
     })
 
+    const demoAssignment = (pubId: string | undefined): string | null => {
+        if (!props.part.roles?.includes('demo') || !Array.isArray(assignment.value.a)) {
+            return null;
+        }
+
+        const index = assignment.value.a.indexOf(pubId ?? '');
+        let result: string | null = null;
+
+        if (index === 0) {
+            result = 'Student';
+        } else if (index > 0) {
+            result = 'Assistant';
+        }
+
+        return result;
+    }
+
+
+
     function isSelected(pubId: string | undefined): boolean {
         if (!pubId || !assignment.value) return false
         if (typeof assignment.value.a === 'string') {
             return pubId === assignment.value.a
         } else {
-            return false
+            return assignment.value.a.includes(pubId)
         }
     }
 
     async function setAssignment(id: string): Promise<void> {
         const isDemo = props.part.roles?.includes('demo')
 
-        if (isDemo) {
-            assignment.value = { pid: props.part.id, a: [] }
-            console.log(assignment.value);
+        if (isDemo && Array.isArray(assignment.value.a)) {
+            if (assignment.value.a.includes(id)) {
+                assignment.value.a = assignment.value.a.filter(a => a != id)
+            } else if (assignment.value.a.length <= 1) {
+                assignment.value.a.push(id)
+            }
+
+            await assignStore.upsert(assignment.value)
+
         } else {
-            assignment.value = { pid: props.part.id, a: id }
+            assignment.value.a = (assignment.value.a == id) ? '' : id
             await assignStore.upsert(assignment.value)
 
             if (!props.part.autofills) return
@@ -134,13 +164,18 @@
 
     function prepAssignment(): void {
         const isDemo = props.part.roles?.includes('demo')
+        if (isDemo) {
+            assignment.value = { pid: props.part.id, a: [] }
+        } else {
+            assignment.value = { pid: props.part.id, a: '' }
+        }
     }
 
     function blurredSelector(event: MouseEvent): void {
         if (props.triggered) {
             mouseYpos.value = event.clientY
             setMyTransform()
-            emits("triggerOff");
+            emits("trigger-off");
             return;
         }
 
@@ -196,14 +231,21 @@
     function loadAssigned(): void {
         const partId: string = props.part?.id ?? '';
         const assigned = assignStore.get.find(a => a.pid == partId);
-        if (!assigned) return
-        if (typeof assigned.a === 'string')
+        if (assigned) {
+            // makes sure that missing pubs are removed
+            if (Array.isArray(assigned.a)) {
+                for (const id of assigned.a) {
+                    const pubExist = pubStore.publishers.some(p => p.id == id)
+                    if (!pubExist) assigned.a = assigned.a.filter(i => i != id)
+                }
+            }
             assignment.value = { pid: props.part.id, a: assigned.a }
+        }
     }
 
     onMounted(() => {
-        loadAssigned()
         prepAssignment()
+        loadAssigned()
         document.addEventListener('click', blurredSelector);
     })
 
@@ -322,19 +364,50 @@
         padding: 5px 8px;
         border-left: 5px solid rgba(197, 197, 197, 0.247);
         color: rgb(77, 77, 77);
+        position: relative;
+        cursor: pointer;
     }
+
 
     .item:hover,
     .active
     {
         color: black;
         font-weight: 600;
+    }
+
+    .item:not(.active):hover
+    {
+        border-left: 5px solid #3da8ea27;
+    }
+
+    .active
+    {
         border-left: 5px solid #3da8ea7a;
     }
 
-    .temp
+    .demo-desc
     {
-        font-size: .6em
+        font-size: .84em;
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        min-width: 100px;
+        font-weight: 400;
+        color: gray;
+        padding-left: 15px;
+    }
+
+    .demo-desc:not(:empty)::before
+    {
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 6px;
+        background: #3da8ea7a;
+        border-radius: 100%;
+        left: 0;
+        top: 40%;
     }
 
     button

@@ -28,12 +28,15 @@ export const useAssignmentStore = defineStore('assignments', () => {
     }
 
     async function upsert(assignment: MWBAssignment): Promise<void> {
-        const index = assignments.value.findIndex(a => a.pid === assignment.pid)
-
-        if (index !== -1) {
-            assignments.value.splice(index, 1, assignment)
+        if (!assignment.a || assignment.a.length == 0) {
+            assignments.value = assignments.value.filter(a => a.pid != assignment.pid)
         } else {
-            assignments.value.push(assignment);
+            const index = assignments.value.findIndex(a => a.pid === assignment.pid)
+            if (index !== -1) {
+                assignments.value.splice(index, 1, assignment)
+            } else {
+                assignments.value.push(assignment);
+            }
         }
     }
 

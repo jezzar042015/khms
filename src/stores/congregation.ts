@@ -23,7 +23,7 @@ export const useCongregationStore = defineStore('congregation', () => {
 
     const ministryClasses = ref<MWBClass[]>([
         { id: 1, display: "Main Hall Only", supported: true },
-        { id: 2, display: "With Auxillary Class", supported: false },
+        { id: 2, display: "With Auxillary Class", supported: true },
     ])
 
     const supportedLanguages = computed<Language[]>(() => {
