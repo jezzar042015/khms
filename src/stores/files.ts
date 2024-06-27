@@ -4,6 +4,7 @@ import { cloneDeep } from 'lodash';
 import { useCongregationStore } from "./congregation";
 import { useVisitStore } from "./visits";
 import { useEventStore } from "./events";
+import { useAssignmentStore } from "./assignment";
 import { s140Builder } from "@/assets/utils/composer";
 import type { Content, LangMonth, S140PartWeeks } from "@/types/files";
 import type { VisitDetail } from "@/types/visit";
@@ -16,6 +17,7 @@ const jsonFilesTl = import.meta.glob('@/lib/tl/*.json');
 export const useFilesStore = defineStore('files', () => {
 
     const congStore = useCongregationStore()
+    const assignStore = useAssignmentStore()
     const langMonths = ref<LangMonth[]>([])
     const currentPeriod = ref('')
     const loadedMonth = ref<LangMonth | undefined>({
@@ -27,6 +29,7 @@ export const useFilesStore = defineStore('files', () => {
             theme: '',
             thumbnail: '',
             weeks: [],
+            title: '',
         }
     });
 
@@ -106,6 +109,8 @@ export const useFilesStore = defineStore('files', () => {
         await loadMonthVisit()
         await loadMonthEvent()
         await composeS140()
+        await assignStore.loadMonthAssignments()
+
     }
 
     async function composeS140(): Promise<void> {
