@@ -32,7 +32,7 @@
     import { useFilesStore } from '@/stores/files';
     import type { S140PartItem } from '@/types/files';
 
-    import AssignmentSelector from '@/components/AssignmentSelector.vue'
+    import AssignmentSelector from '@/components/templates/S140/AssignmentSelector.vue'
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
@@ -46,34 +46,32 @@
 
     const partAux1 = ref<S140PartItem | undefined>()
 
-    const selector = ref(false)
-    const selectorAux1 = ref(false)
-    const triggeredSelector = ref(false)
+    const selector = ref(false);
+    const selectorAux1 = ref(false);
+    const triggeredSelector = ref(false);
 
     const displayAssignee = computed(() => {
-        if (!props.part?.isVisit) {
-            const partid: string = props.part?.id ?? ''
-            const assigned = assignmentStore.get.find(a => a.pid == partid);
-            if (!assigned) return 'Not Assigned!'
 
-            if (typeof assigned.a === 'string') {
-                const pub = pubStore.publishers.find(p => p.id == (assigned?.a))
-                return pub?.name || 'Not Assigned!'
-            } else if (Array.isArray(assigned.a)) {
-                const p = []
-                const pub1 = pubStore.publishers.find(p => p.id == (assigned.a[0]))
-                const pub2 = pubStore.publishers.find(p => p.id == (assigned.a[1]))
-                if (pub1) p.push(pub1.name)
-                if (pub2) p.push(pub2.name)
-                return p.length > 0 ? p.join(' & ') : 'Not Assigned!'
-            }
+        if (props.part?.isVisit) return props.part.co;
 
-            return null
+        const partid: string = props.part?.id ?? ''
+        const assigned = assignmentStore.get.find(a => a.pid == partid);
+        if (!assigned) return 'Not Assigned!';
 
+        if (typeof assigned.a === 'string') {
+            const pub = pubStore.publishers.find(p => p.id == (assigned?.a));
+            return pub?.name || 'Not Assigned!';
+        } else if (Array.isArray(assigned.a)) {
+            const p = [];
+            const pub1 = pubStore.publishers.find(p => p.id == (assigned.a[0]));
+            const pub2 = pubStore.publishers.find(p => p.id == (assigned.a[1]));
+            if (pub1) p.push(pub1.name);
+            if (pub2) p.push(pub2.name);
+            return p.length > 0 ? p.join(' & ') : 'Not Assigned!';
         } else {
-            return props.part.co
+            return null;
         }
-    })
+    });
 
     const displayAux1Assignee = computed(() => {
         if (!partAux1.value) return 'Not Assigned!'

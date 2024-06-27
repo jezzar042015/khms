@@ -1,6 +1,6 @@
 interface TimeOption { id: string, name: string }
 
-export async function meetingTimes(): Promise<{ id: string, name: string }[]> {
+export async function meetingTimes(): Promise<TimeOption[]> {
 
     const times = [];
     let hours = 8;

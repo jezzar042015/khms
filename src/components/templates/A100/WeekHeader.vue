@@ -31,10 +31,8 @@
             <span>
                 <div class="assignee" @click.stop="showSelector">
                     {{ displayAssignee }}
-                </div>
 
-                <!-- <PublisherSelector v-if="selector.show" :part="prayer" @mouseleave="hideSelector" :me="selector"
-                    :assignee="assignee" /> -->
+                </div>
             </span>
         </div>
     </div>
@@ -45,7 +43,6 @@
     import IconBible from '@/components/icons/IconBible.vue';
     import IconMusicNotes from '../../icons/IconMusicNotes.vue';
     import IconPraying from '../../icons/IconPraying.vue';
-    // import PublisherSelector from '@/components/templates/template-psp/PublisherSelector.vue'
 
     import { computed, ref, watch, onMounted } from 'vue';
     import { useFilesStore } from '@/stores/files';
@@ -53,13 +50,13 @@
     import { usePublisherStore } from '@/stores/publisher';
     import type { WeekItem } from '@/types/files';
 
-    const selector = ref({
-        show: false
-    })
+    const selector = ref(false)
+    const triggered = ref(false)
 
     const fileStore = useFilesStore()
     const assignStore = useAssignmentStore();
     const pubStore = usePublisherStore()
+
     const props = defineProps<{
         w: WeekItem
     }>()
@@ -86,23 +83,22 @@
         return null
     })
 
-    // const assignee = computed(() => {
-    //     const partid = props.w.id
-    //     const assigned = assignmentStore.getAssignments[partid];
-    //     return assigned
-    // })
-
     const bg = computed<{ background: string } | null>(() => {
         if (!fileStore.loadedMonth) return null
         return { background: fileStore.loadedMonth.content.theme }
     })
 
     function showSelector(): void {
-        selector.value.show = true
+        triggered.value = true
+        selector.value = true
     }
 
     function hideSelector(): void {
-        selector.value.show = false
+        selector.value = false
+    }
+
+    function triggerOff(): void {
+        triggered.value = false
     }
 
     watch(
