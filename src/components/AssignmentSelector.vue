@@ -125,8 +125,6 @@
         return result;
     }
 
-
-
     function isSelected(pubId: string | undefined): boolean {
         if (!pubId || !assignment.value) return false
         if (typeof assignment.value.a === 'string') {

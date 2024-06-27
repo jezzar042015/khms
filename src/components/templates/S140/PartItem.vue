@@ -29,10 +29,10 @@
     import { useAssignmentStore } from '@/stores/assignment';
     import { useCongregationStore } from '@/stores/congregation';
     import { usePublisherStore } from '@/stores/publisher';
+    import { useFilesStore } from '@/stores/files';
     import type { S140PartItem } from '@/types/files';
 
     import AssignmentSelector from '@/components/AssignmentSelector.vue'
-    import { useFilesStore } from '@/stores/files';
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
@@ -114,8 +114,10 @@
         const isDemo = props.part.roles?.includes('demo') ?? false
         const isBibleReading = props.part.roles?.includes('br') ?? false
         const isTalk = props.part.roles?.includes('talk') ?? false
+        const isIntro = props.part.id.endsWith('.0')
 
-        return isDemo || isTalk || (isBibleReading && hasMeetingDemos.value)
+        return isDemo || isTalk || (isBibleReading && hasMeetingDemos.value
+            || (isIntro && hasMeetingDemos.value))
     })
 
     const isAssignable = computed<boolean>(() => {
@@ -199,8 +201,12 @@
 
     function loadAux1Part(): void {
         if (isAux1Part.value) {
-            partAux1.value = { ...props.part }
-            partAux1.value.id = `${props.part.id}${AUX1CLASSIDSUFFIX}`
+            const isIntro = props.part.id.endsWith('.0')
+            partAux1.value = {
+                id: `${props.part.id}${AUX1CLASSIDSUFFIX}`,
+                title: 'Auxy Class 1 | ' + (isIntro ? 'Counselor' : props.part.title),
+                roles: [...props.part.roles ?? []],
+            }
         }
     }
 

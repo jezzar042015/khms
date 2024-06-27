@@ -100,6 +100,8 @@ function header(src: WeekItem, partCode: string, week: S140PartItem[]) {
 
 function introduction(src: WeekItem, week: S140PartItem[]) {
     const pattern = src.parts.gems[0]
+    const congStore = useCongregationStore()
+    const hasAuxClass = congStore.congregation.classId > 1
     const part: S140PartItem = {
         id: pattern.id,
         time: pattern.time,
@@ -107,7 +109,8 @@ function introduction(src: WeekItem, week: S140PartItem[]) {
         title: pattern.reference,
         autofills: [...pattern.autofills ?? []],
         roles: [...pattern.roles],
-        label: translations.mwbs140[lang].chairman,
+        label: (hasAuxClass ? translations.mwbs140[lang].coCounselor : '')
+            + ' / ' + translations.mwbs140[lang].chairman,
     }
 
     runtime = (part.time ?? 1) + runtime
