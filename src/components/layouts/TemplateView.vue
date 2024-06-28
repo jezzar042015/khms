@@ -25,6 +25,14 @@
                     <button @click="toStudents">Publishers</button>
                 </div>
 
+                <div id="slips" v-if="!viewStore.assignmentSlips">
+                    <button @click="toAssignmentSlips">Assignment Slips</button>
+                </div>
+
+                <div id="slips" v-if="!viewStore.mwbTemplate">
+                    <button @click="toMwbTemplates">Schedules</button>
+                </div>
+
                 <div class="cong-form no-print">
                     <lord-icon src="https://cdn.lordicon.com/lecprnjb.json" trigger="hover" colors="primary:#e6e6e6"
                         @click.stop="showCongSettings">
@@ -66,6 +74,14 @@
         viewStore.setView('pubs')
     }
 
+    function toAssignmentSlips(): void {
+        viewStore.setView('slips')
+    }
+
+    function toMwbTemplates(): void {
+        viewStore.setView('mwb')
+    }
+
 </script>
 
 
@@ -96,7 +112,7 @@
     .actions
     {
         display: flex;
-        gap: 20px;
+        gap: 10px;
         align-items: center
     }
 
@@ -132,7 +148,8 @@
     }
 
     #printer,
-    #students
+    #students,
+    #slips
     {
         display: flex;
         align-items: flex-end;
@@ -158,10 +175,11 @@
         height: auto;
     }
 
-    #students button
+    #students button,
+    #slips button
     {
         border: 1px solid #3DA8EA;
-        padding: 7px 25px;
+        padding: 7px 15px;
         font-size: small;
         border-radius: 4px;
         background: transparent;
@@ -175,7 +193,8 @@
         background: #3288bd;
     }
 
-    #students button:hover
+    #students button:hover,
+    #slips button:hover
     {
         color: white;
         background: #3DA8EA;

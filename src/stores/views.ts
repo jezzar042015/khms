@@ -7,7 +7,7 @@ import { useFilesStore } from "./files";
 
 export const useViewStore = defineStore('views', () => {
 
-    type Views = 'welcome' | 'mwb' | 'pubs'
+    type Views = 'welcome' | 'mwb' | 'pubs' | 'slips'
     const view = ref<Views>('welcome')
 
     const congStore = useCongregationStore()
@@ -27,6 +27,10 @@ export const useViewStore = defineStore('views', () => {
         return view.value == "pubs"
     });
 
+    const assignmentSlips = computed<boolean>(() => {
+        return view.value == "slips"
+    });
+
     function setView(viewName: Views): void {
         view.value = viewName
     }
@@ -39,7 +43,7 @@ export const useViewStore = defineStore('views', () => {
         if (!congname || (!lang && !classId)) {
             setView("welcome")
         } else {
-            setView("mwb")
+            setView("slips")
         }
 
         return !welcomePage.value
@@ -55,7 +59,7 @@ export const useViewStore = defineStore('views', () => {
 
     return {
         welcomePage, mwbTemplate,
-        pubsList,
+        pubsList, assignmentSlips,
         init, exitWelcome,
         setView
     }

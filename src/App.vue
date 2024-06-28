@@ -3,6 +3,7 @@
     <AppWelcome v-if="viewStore.welcomePage" />
     <TemplateHolder v-if="viewStore.mwbTemplate" />
     <PublishersList v-if="viewStore.pubsList" />
+    <AssignmentSlips v-if="viewStore.assignmentSlips" />
   </div>
 
   <SmallScreen />
@@ -22,6 +23,8 @@
   import AppWelcome from './components/AppWelcome.vue';
   import TemplateHolder from './components/TemplateHolder.vue';
   import PublishersList from '@/components/PublishersList.vue'
+  import AssignmentSlips from '@/components/AssignmentSlips.vue'
+
 
   const congStore = useCongregationStore()
   const pubsStore = usePublisherStore()

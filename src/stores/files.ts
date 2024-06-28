@@ -6,7 +6,7 @@ import { useVisitStore } from "./visits";
 import { useEventStore } from "./events";
 import { useAssignmentStore } from "./assignment";
 import { s140Builder } from "@/assets/utils/composer";
-import type { Content, LangMonth, S140PartWeeks } from "@/types/files";
+import type { Content, LangMonth, PartItem, S140PartWeeks } from "@/types/files";
 import type { VisitDetail } from "@/types/visit";
 
 const jsonFilesCeb = import.meta.glob('@/lib/ceb/*.json');
@@ -52,6 +52,27 @@ export const useFilesStore = defineStore('files', () => {
             id: w.id,
             name: w.week
         }))
+    })
+
+    const studentsParts = computed<PartItem[]>(() => {
+        let list: PartItem[] = []
+        if (!loadedMonth.value) return list
+        const hasAux = congStore.congregation.classId == 2
+
+        for (const week of loadedMonth.value.content.weeks) {
+            const br = week.parts.gems.find(p => p.roles.includes('br'))
+            if (br) list.push({ ...br })
+            if (br && hasAux) {
+                const brAssistant = { ...br }
+                brAssistant.id = `${brAssistant.id}.ax1`
+                list.push(brAssistant)
+            }
+
+            const demos = week.parts.ministry.filter(p => p.roles.includes('demo') || p.roles.includes('talk'))
+            list = [...list, ...demos]
+        }
+
+        return list
     })
 
     async function loadFiles(): Promise<void> {
@@ -194,7 +215,7 @@ export const useFilesStore = defineStore('files', () => {
 
     return {
         currentPeriod,
-        loadFiles,
+        loadFiles, studentsParts,
         langMonths, loadedMonth,
         loadMonthTemplate,
         templates, s140PartItems, weekOptions
