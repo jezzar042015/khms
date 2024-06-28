@@ -50,7 +50,7 @@
     import IconBible from '@/components/icons/IconBible.vue';
     import IconMusicNotes from '../../icons/IconMusicNotes.vue';
     import IconPraying from '../../icons/IconPraying.vue';
-    import AssignmentSelector from './AssignmentSelector.vue';
+    import AssignmentSelector from '@/components/AssignmentSelector.vue';
 
 
     const selector = ref(false)
@@ -65,10 +65,10 @@
     }>()
 
     const prayer = ref<PartItem>({
-        id: '',
+        id: props.w.id,
         time: 0,
-        roles: ['elder', 'ms', 'prayer'],
-
+        roles: ['elder', 'ms', 'prayers'],
+        title: 'Opening & Closing Prayers',
     })
 
     const displayAssignee = computed(() => {
@@ -85,7 +85,7 @@
             return p.length > 0 ? p.join(' & ') : 'Not Assigned!'
         }
 
-        return null
+        return 'Not Assigned!'
     })
 
     const bg = computed<{ background: string } | null>(() => {

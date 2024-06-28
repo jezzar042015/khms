@@ -27,7 +27,8 @@
     import type { PartItem } from '@/types/files';
 
     import thumbnails from '@/assets/utils/thumbnails';
-    import AssignmentSelector from './AssignmentSelector.vue';
+    import AssignmentSelector from '@/components/AssignmentSelector.vue';
+
 
     const props = defineProps<{
         part: PartItem

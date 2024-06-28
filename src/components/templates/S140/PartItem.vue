@@ -32,7 +32,7 @@
     import { useFilesStore } from '@/stores/files';
     import type { S140PartItem } from '@/types/files';
 
-    import AssignmentSelector from '@/components/templates/S140/AssignmentSelector.vue'
+    import AssignmentSelector from '@/components/AssignmentSelector.vue'
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();

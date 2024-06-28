@@ -34,10 +34,14 @@ export const useAssignmentStore = defineStore('assignments', () => {
             const index = assignments.value.findIndex(a => a.pid === assignment.pid)
             if (index !== -1) {
                 assignments.value.splice(index, 1, assignment)
-            } else {
+            } else if (assignment.pid !== '') {
                 assignments.value.push(assignment);
             }
         }
+    }
+
+    async function remove(id: string): Promise<void> {
+        assignments.value = assignments.value.filter(a => a.pid != id)
     }
 
     function storeLocal(): void {
@@ -97,6 +101,7 @@ export const useAssignmentStore = defineStore('assignments', () => {
         resetCurrent,
         resetAll,
         fetchAllLocal,
-        restore
+        restore,
+        remove
     }
 })

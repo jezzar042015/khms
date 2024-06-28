@@ -2,6 +2,12 @@
     <div class="s140-week">
         <div :class="gridColumns">
             <div class="s140-week-title">{{ week }} | {{ reading }}</div>
+            <div v-show="hasAuxClass" class="classrooms">
+                <span class="classlabel" v-show="hasMeetingDemos">Auxillary Class</span>
+            </div>
+            <div class="classrooms">
+                <span class="classlabel" v-show="hasAuxClass">Main Hall</span>
+            </div>
         </div>
 
         <template v-for="part in composedParts" :key="part.id">
@@ -43,12 +49,23 @@
         return props.w.week
     })
 
-    const gridColumns = computed<string>(() => {
-        const minClasses = congStore.congregation.classId;
+    const hasAuxClass = computed<boolean>(() => {
+        return congStore.congregation.classId == 2
+    })
 
-        if (minClasses == 1) {
+    const hasMeetingDemos = computed<boolean>(() => {
+        const weekId = props.w.id
+        if (!weekId) return false
+        const weekParts = fileStore.s140PartItems[weekId]
+        if (!weekParts) return false
+        const demoParts = weekParts.some(p => p.roles?.includes('demo'))
+        return demoParts
+    })
+
+    const gridColumns = computed<string>(() => {
+        if (!hasAuxClass.value) {
             return 's140-grid-col2'
-        } else if (minClasses == 2) {
+        } else if (hasAuxClass.value) {
             return 's140-grid-col3'
         } else {
             return ''
@@ -67,3 +84,22 @@
     })
 
 </script>
+
+<style scoped>
+    .classrooms
+    {
+        text-align: left;
+        font-size: .8em;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+    }
+
+    .classlabel
+    {
+        padding: 0px 10px 2.5px;
+        min-width: 80%;
+        border-bottom: 2px solid grey
+    }
+</style>

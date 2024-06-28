@@ -349,6 +349,7 @@ section
   font-weight: 600;
   cursor: pointer;
   transition: ease .3s;
+  font-size: .98em;
   color: rgb(58, 58, 58);
 }
 

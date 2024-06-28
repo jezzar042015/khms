@@ -1,9 +1,9 @@
 <template>
-    <div class="assign-selector" ref="assignSelector">
+    <div :class="selectorClasses" ref="assignSelector" @click.stop="">
         <div class="wrapper">
-            <span class="arrow" ref="arrow"></span>
+            <span :class="arrowClasses" ref="arrow"></span>
             <div>
-                <div class="desc">{{ part.title }}</div>
+                <div class="desc">{{ titleDisplay }}</div>
                 <div class="alias" v-if="!noAssignables">{{ participantAlias }}</div>
                 <div class="noalias" v-else>
                     <p>No students or participants have been added yet that can be assigned for this part. Please check
@@ -24,7 +24,7 @@
             <div class="list-wrapper">
                 <div class="list">
                     <div :class="['item', { active: isSelected(a.id) }]" v-for="a in filteredAssignables" :key="a.id"
-                        @click="setAssignment(a.id ?? '')">
+                        @click.stop="setAssignment(a.id ?? '')">
                         {{ a.name }}
                         <span class="demo-desc">
                             {{ demoAssignment(a.id) }}
@@ -41,23 +41,29 @@
     import { usePublisherStore } from '@/stores/publisher';
     import { useAssignmentStore } from '@/stores/assignment';
     import { useViewStore } from '@/stores/views';
-    import type { S140PartItem } from '@/types/files';
+    import { useCongregationStore } from '@/stores/congregation';
+    import type { S140PartItem, PartItem } from '@/types/files';
     import type { Publisher } from '@/types/publisher';
     import type { MWBAssignment } from '@/types/mwb';
 
+    type A100Position = 'right' | 'left'
     const emits = defineEmits(['hide', 'trigger-off'])
     const pubStore = usePublisherStore()
     const assignStore = useAssignmentStore()
     const viewStore = useViewStore()
+    const congStore = useCongregationStore()
+
     const filter = ref('')
     const assignment = ref<MWBAssignment>({
         pid: '', a: ''
     })
 
-    const mouseYpos = ref<number>()
+    const mouseYpos = ref<number>(0)
+    const mouseXpos = ref<number>(0)
+    const a100Pos = ref<A100Position>('right')
 
     const props = defineProps<{
-        part: S140PartItem,
+        part: S140PartItem | PartItem,
         triggered: boolean,
     }>()
 
@@ -65,12 +71,14 @@
     const arrow = ref<HTMLElement | null>(null)
 
     const participantAlias = computed<string>(() => {
-        if (noAssignables.value) return '';
+        if (noAssignables.value) return 'No Assignables';
 
         const roles = props.part.roles || [];
 
         if (roles.includes('demo')) {
             return 'Select Students';
+        } else if (roles.includes('prayers')) {
+            return 'Select brothers to pray'
         } else if (roles.includes('talk')) {
             return 'Select Talk Student';
         } else if (roles.includes('cbs')) {
@@ -86,6 +94,33 @@
         }
     });
 
+    const selectorClasses = computed<string>(() => {
+        const is140 = congStore.congregation.mwbTemplate == 's-140'
+        const a100Class = a100Pos.value === 'left' ? ' ona100-right' : ' ona100-left';
+        return 'assign-selector' + (is140 ? ' ons140' : a100Class)
+    })
+
+    const arrowClasses = computed<string>(() => {
+        const is140 = congStore.congregation.mwbTemplate == 's-140'
+        const a100Class = a100Pos.value === 'left' ? ' arrow-left' : ' arrow-right';
+        return 'arrow' + (is140 ? ' arrow-right' : a100Class)
+    })
+
+    const isOpenPrayer = computed<boolean>(() => {
+        return props.part.id.endsWith('.op')
+    })
+
+    const isClosingPrayer = computed<boolean>(() => {
+        return props.part.id.endsWith('.cp')
+    })
+
+    const titleDisplay = computed<string>(() => {
+        if (isOpenPrayer.value) return 'Opening Prayer'
+        if (isClosingPrayer.value) return 'Closing Prayer'
+
+        return props.part.title ?? ''
+    })
+
     const filteredAssignables = computed<Publisher[]>(() => {
         if (!filter.value) return assignables.value
         const f = filter.value.toLowerCase()
@@ -95,9 +130,15 @@
     const assignables = computed<Publisher[]>(() => {
         if (!props.part.roles) return pubStore.publishers
 
-        return pubStore.publishers.filter(publisher =>
+        const list = pubStore.publishers.filter(publisher =>
             publisher.roles.some(role => props.part.roles?.includes(role))
         )
+
+        return list.sort((a, b) => {
+            const pa = +(assignment.value.a?.includes(a.id || '') || false);
+            const pb = +(assignment.value.a?.includes(b.id || '') || false);
+            return pb - pa;
+        });
     })
 
     const noAssignables = computed<boolean>(() => {
@@ -136,21 +177,27 @@
 
     async function setAssignment(id: string): Promise<void> {
         const isDemo = props.part.roles?.includes('demo')
+        const arePrayers = props.part.roles?.includes('prayers')
+        let added: boolean = true;
 
-        if (isDemo && Array.isArray(assignment.value.a)) {
+        if ((isDemo || arePrayers) && Array.isArray(assignment.value.a)) {
             if (assignment.value.a.includes(id)) {
+                added = false
                 assignment.value.a = assignment.value.a.filter(a => a != id)
             } else if (assignment.value.a.length <= 1) {
                 assignment.value.a.push(id)
+            } else {
+                added = false
             }
 
             await assignStore.upsert(assignment.value)
-
+            await handlePrayers(id, added)
         } else {
             assignment.value.a = (assignment.value.a == id) ? '' : id
+            added = assignment.value.a !== ''
             await assignStore.upsert(assignment.value)
             await handleAutofills(id);
-            await handleS140Prayer(id)
+            await handleS140Prayer(id, added);
         }
     }
 
@@ -164,11 +211,9 @@
         }
     }
 
-    async function handleS140Prayer(id: string): Promise<void> {
-        const isOpenPrayer = props.part.id.endsWith('.op')
-        const isClosePrayer = props.part.id.endsWith('.cp')
+    async function handleS140Prayer(id: string, isAdded: boolean): Promise<void> {
 
-        if (isOpenPrayer || isClosePrayer) {
+        if (isOpenPrayer.value || isClosingPrayer.value) {
             const weekId = getWeekId(props.part.id)
             let a100Prayer = assignStore.get.find(p => p.pid == weekId)
 
@@ -176,10 +221,30 @@
                 a100Prayer = { pid: weekId || '', a: ['', ''] }
 
             if (Array.isArray(a100Prayer.a)) {
-                if (isOpenPrayer) a100Prayer.a[0] = id ?? ''
-                if (isClosePrayer) a100Prayer.a[1] = id ?? ''
+                if (isOpenPrayer.value) a100Prayer.a[0] = isAdded ? id ?? '' : ''
+                if (isClosingPrayer.value && isAdded) a100Prayer.a[1] = isAdded ? id ?? '' : ''
             }
             await assignStore.upsert(a100Prayer);
+        }
+    }
+
+    async function handlePrayers(id: string, isAdded: boolean): Promise<void> {
+        const arePrayers = props.part.roles?.includes('prayers') && Array.isArray(assignment.value.a)
+
+        if (arePrayers) {
+            const weekId = getWeekId(props.part.id + '.1')
+            const i = assignment.value.a.indexOf(id)
+            const prayer = { pid: '', a: '' }
+
+            if (isAdded) {
+                if (i === 0) prayer.pid = weekId + '.op'
+                if (i === 1) prayer.pid = weekId + '.cp'
+                prayer.a = id
+                await assignStore.upsert(prayer);
+            } else {
+                const p = assignStore.get.find(pry => (pry.pid.includes('.op') || pry.pid.includes('.cp')) && pry.a == id)
+                if (p) assignStore.remove(p.pid)
+            }
         }
     }
 
@@ -191,7 +256,8 @@
 
     function prepAssignment(): void {
         const isDemo = props.part.roles?.includes('demo')
-        if (isDemo) {
+        const arePrayers = props.part.roles?.includes('prayers')
+        if (isDemo || arePrayers) {
             assignment.value = { pid: props.part.id, a: [] }
         } else {
             assignment.value = { pid: props.part.id, a: '' }
@@ -200,9 +266,11 @@
 
     function blurredSelector(event: MouseEvent): void {
         if (props.triggered) {
-            mouseYpos.value = event.clientY
-            setMyTransform()
             emits("trigger-off");
+            mouseYpos.value = event.clientY
+            mouseXpos.value = event.clientX
+            setOnA100Position()
+            setMyTransform()
             return;
         }
 
@@ -210,6 +278,12 @@
             emits('hide')
         }
     };
+
+    function setOnA100Position(): void {
+        const viewportWidth = window.innerWidth;
+        const per = Math.round(mouseXpos.value / viewportWidth * 100)
+        a100Pos.value = per > 60 ? 'right' : 'left'
+    }
 
     function setMyTransform(): void {
         if (!assignSelector.value) return
@@ -287,6 +361,7 @@
         position: absolute;
         min-width: 325px;
         width: auto;
+        color: black;
         height: 350px;
         min-height: 100px;
         max-height: 400px;
@@ -294,12 +369,57 @@
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         padding: 15px 15px;
         z-index: 1;
-        right: calc(100%);
         transform: translateY(-50%);
         overflow: visible;
         font-size: 16px;
         border-radius: 3px;
         transition: fade 1s;
+    }
+
+    .ons140
+    {
+        right: calc(100%);
+    }
+
+    .ona100-left
+    {
+        right: calc(108%);
+    }
+
+    .ona100-right
+    {
+        left: calc(108%);
+    }
+
+    .wrapper
+    {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+    }
+
+    .arrow
+    {
+        position: absolute;
+        background: white;
+        height: 20px;
+        width: 20px;
+        top: 43%;
+        content: "";
+        transform: rotate(45deg);
+        z-index: -3;
+    }
+
+    .arrow-right
+    {
+        right: -20.5px;
+    }
+
+    .arrow-left
+    {
+        left: -20.5px;
     }
 
     .alias
@@ -346,28 +466,6 @@
         background: rgba(235, 235, 235, 0.336);
         margin-bottom: 10px;
         outline: none;
-    }
-
-    .wrapper
-    {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        z-index: 1;
-    }
-
-    .arrow
-    {
-        position: absolute;
-        background: white;
-        height: 20px;
-        width: 20px;
-        right: -20.5px;
-        top: 43%;
-        content: "";
-        transform: rotate(45deg);
-        z-index: -3;
     }
 
     .list-wrapper
