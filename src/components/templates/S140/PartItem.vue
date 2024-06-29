@@ -5,7 +5,7 @@
             <span v-show="part?.time">{{ part?.title }} {{ timeLimit }}</span>
         </div>
         <div class="assignee" v-if="hasAux1Class">
-            <span class="s140-part-label" v-show="part?.label">{{ part?.label }}:</span>
+            <span class="s140-part-label" v-show="showLabel">{{ part?.label }}:</span>
             <div :class="assignAux1Classes" v-if="isAux1Part" @click="showAux1Selector">
                 {{ displayAux1Assignee }}
             </div>
@@ -13,7 +13,7 @@
                 @hide="hideSelector" @trigger-off="triggerOff" />
         </div>
         <div class="assignee" v-show="isAssignable" @click="showSelector">
-            <span class="s140-part-label" v-show="part?.label" v-if="!hasAux1Class"> {{
+            <span class="s140-part-label" v-show="showLabel" v-if="!hasAux1Class"> {{
                 part?.label }}: </span>
             <div :class="assignClasses">
                 {{ displayAssignee }}
@@ -50,6 +50,10 @@
     const selectorAux1 = ref(false);
     const triggeredSelector = ref(false);
 
+    const isDemo = computed(() => props.part.roles?.includes('demo'))
+    const isBibleReading = computed(() => props.part.roles?.includes('br'))
+    const isTalk = computed(() => props.part.roles?.includes('talk'))
+
     const displayAssignee = computed(() => {
 
         const isVisit = props.part.roles?.includes('co')
@@ -62,15 +66,20 @@
         if (typeof assigned.a === 'string') {
             const pub = pubStore.publishers.find(p => p.id == (assigned?.a));
             return pub?.name || 'Not Assigned!';
-        } else if (Array.isArray(assigned.a)) {
+
+        } else if (isDemo.value) {
             const p = [];
             const pub1 = pubStore.publishers.find(p => p.id == (assigned.a[0]));
             const pub2 = pubStore.publishers.find(p => p.id == (assigned.a[1]));
             if (pub1) p.push(pub1.name);
             if (pub2) p.push(pub2.name);
             return p.length > 0 ? p.join(' & ') : 'Not Assigned!';
+
+        } else if (isTalk.value || isBibleReading.value) {
+            const pub = pubStore.publishers.find(p => p.id == (assigned.a[0]));
+            return pub ? pub.name : ''
+
         } else {
-            console.log(typeof assigned.a);
             return null;
         }
     });
@@ -111,12 +120,9 @@
 
     const isAux1Part = computed<boolean>(() => {
         if (!hasAux1Class.value) return false
-        const isDemo = props.part.roles?.includes('demo') ?? false
-        const isBibleReading = props.part.roles?.includes('br') ?? false
-        const isTalk = props.part.roles?.includes('talk') ?? false
         const isIntro = props.part.id.endsWith('.0')
 
-        return isDemo || isTalk || (isBibleReading && hasMeetingDemos.value
+        return isDemo.value || isTalk.value || (isBibleReading.value && hasMeetingDemos.value
             || (isIntro && hasMeetingDemos.value))
     })
 
@@ -161,6 +167,12 @@
             return 's140-part-item'
         }
     });
+
+    const showLabel = computed(() => {
+        const hasLabel = Boolean(props.part?.label)
+        const hasVisit = props.part.roles?.includes('co')
+        return (hasLabel && !hasVisit)
+    })
 
     function showSelector(): void {
         triggeredSelector.value = true

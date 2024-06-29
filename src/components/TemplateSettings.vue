@@ -88,7 +88,8 @@
             <div class="form-subtitle">Support & Questions</div>
             <div class="frm-inpts">
                 <div>
-                    Do you need assistance or have any questions? Are there any features you would like to request?
+                    Do you need assistance or have any questions? Are there any features you would like to suggest to
+                    improve the program?
                 </div>
                 <a href="https://m.me/312885485248553" target="_blank">
                     <lord-icon src="https://cdn.lordicon.com/ayhtotha.json" trigger="hover" colors="primary:#ffffff">

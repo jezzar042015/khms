@@ -630,7 +630,7 @@ section
 {
   display: grid;
   grid-template-columns: 50px 1fr;
-  font-weight: 600;
+  font-weight: 500;
   color: #555;
   align-items: flex-start;
 }

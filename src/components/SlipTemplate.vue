@@ -26,7 +26,7 @@
                 <div class="infoline">
                     <span class="bold">Part no.: </span>
                     <span class="line">
-                        <span class="field bold">{{ part.title }}</span>
+                        <span class="field bold">{{ partNum }}</span>
                     </span>
                 </div>
             </div>
@@ -85,15 +85,17 @@
     const assignStore = useAssignmentStore()
     const pubStore = usePublisherStore()
     const fileStore = useFilesStore()
-    const isDemo = computed(() => {
-        return props.part.roles.includes('demo')
-    })
+
+    const isDemo = computed(() => props.part.roles?.includes('demo'))
+    const isBibleReading = computed(() => props.part.roles?.includes('br'))
+    const isTalk = computed(() => props.part.roles?.includes('talk'))
 
     const studentName = computed(() => {
         const part = assignStore.get.find(p => p.pid == props.part.id)
         if (!part) return null
 
-        const pubid = (isDemo.value) ? part.a[0] : part.a
+        const areStudents = (isDemo.value || isBibleReading.value || isTalk)
+        const pubid = (areStudents) ? part.a[0] : part.a
         const pub = pubStore.publishers.find(p => p.id == pubid)
         return pub?.name
     })
@@ -102,7 +104,8 @@
         const part = assignStore.get.find(p => p.pid == props.part.id)
         if (!part) return null
 
-        const pubid = (isDemo.value) ? part.a[1] : `${part.a}.ast`
+        const areStudents = (isDemo.value || isBibleReading.value || isTalk)
+        const pubid = (areStudents) ? part.a[1] : part.a
         const pub = pubStore.publishers.find(p => p.id == pubid)
         return pub?.name
     })
@@ -119,6 +122,12 @@
         return week?.name
     })
 
+    const partNum = computed(() => {
+        const title = props.part.title ?? ''
+        const perPos = title.indexOf('.')
+        const partNum = title.substring(0, perPos)
+        return /^-?\d+(\.\d+)?$/.test(partNum) ? `#${title.substring(0, perPos)}` : title;
+    })
     const boxMain = computed(() => {
         return ['checkbox', { 'checked': classAssignment.value == 'main' }]
     })
@@ -178,7 +187,7 @@
         height: 30px;
         left: -10px;
         top: -10px;
-        stroke: #070777c4;
+        fill: #070750;
     }
 
     .classesheader
@@ -228,7 +237,7 @@
 
     .field
     {
-        min-width: 260px;
+        min-width: 250px;
         display: inline;
         color: #070777c4;
     }

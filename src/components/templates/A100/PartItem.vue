@@ -44,6 +44,10 @@
     const assignmentStore = useAssignmentStore();
     const pubStore = usePublisherStore()
 
+    const isDemo = computed(() => props.part.roles?.includes('demo'))
+    const isBibleReading = computed(() => props.part.roles?.includes('br'))
+    const isTalk = computed(() => props.part.roles?.includes('talk'))
+
     const displayAssignee = computed(() => {
         if (props.part?.isVisit) return props.part.co
 
@@ -52,18 +56,24 @@
         if (!assigned) return 'Not Assigned!'
 
         if (typeof assigned.a === 'string') {
-            const pub = pubStore.publishers.find(p => p.id == (assigned?.a))
-            return pub?.name || 'Not Assigned!'
-        } else if (Array.isArray(assigned.a)) {
-            const p = []
-            const pub1 = pubStore.publishers.find(p => p.id == (assigned.a[0]))
-            const pub2 = pubStore.publishers.find(p => p.id == (assigned.a[1]))
-            if (pub1) p.push(pub1.name)
-            if (pub2) p.push(pub2.name)
-            return p.length > 0 ? p.join(' & ') : 'Not Assigned!'
-        }
+            const pub = pubStore.publishers.find(p => p.id == (assigned?.a));
+            return pub?.name || 'Not Assigned!';
 
-        return null
+        } else if (isDemo.value) {
+            const p = [];
+            const pub1 = pubStore.publishers.find(p => p.id == (assigned.a[0]));
+            const pub2 = pubStore.publishers.find(p => p.id == (assigned.a[1]));
+            if (pub1) p.push(pub1.name);
+            if (pub2) p.push(pub2.name);
+            return p.length > 0 ? p.join(' & ') : 'Not Assigned!';
+
+        } else if (isTalk.value || isBibleReading.value) {
+            const pub = pubStore.publishers.find(p => p.id == (assigned.a[0]));
+            return pub ? pub.name : ''
+
+        } else {
+            return null;
+        }
     })
 
     const assignClasses = computed(() => {

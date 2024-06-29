@@ -27,7 +27,7 @@
                         @click.stop="setAssignment(a.id ?? '')">
                         {{ a.name }}
                         <span class="demo-desc">
-                            {{ demoAssignment(a.id) }}
+                            {{ studentOrAssistant(a.id) }}
                         </span>
                     </div>
                 </div>
@@ -149,8 +149,8 @@
         return assignables.value.length > 8
     })
 
-    const demoAssignment = (pubId: string | undefined): string | null => {
-        if (!props.part.roles?.includes('demo') || !Array.isArray(assignment.value.a)) {
+    const studentOrAssistant = (pubId: string | undefined): string | null => {
+        if (!Array.isArray(assignment.value.a) || arePrayers.value) {
             return null;
         }
 
@@ -166,6 +166,11 @@
         return result;
     }
 
+    const isDemo = computed(() => props.part.roles?.includes('demo'))
+    const isBibleReading = computed(() => props.part.roles?.includes('br'))
+    const isTalk = computed(() => props.part.roles?.includes('talk'))
+    const arePrayers = computed(() => props.part.roles?.includes('prayers'))
+
     function isSelected(pubId: string | undefined): boolean {
         if (!pubId || !assignment.value) return false
         if (typeof assignment.value.a === 'string') {
@@ -176,11 +181,10 @@
     }
 
     async function setAssignment(id: string): Promise<void> {
-        const isDemo = props.part.roles?.includes('demo')
-        const arePrayers = props.part.roles?.includes('prayers')
+
         let added: boolean = true;
 
-        if ((isDemo || arePrayers) && Array.isArray(assignment.value.a)) {
+        if ((isDemo.value || arePrayers.value || isBibleReading.value || isTalk.value) && Array.isArray(assignment.value.a)) {
             if (assignment.value.a.includes(id)) {
                 added = false
                 assignment.value.a = assignment.value.a.filter(a => a != id)
@@ -229,9 +233,7 @@
     }
 
     async function handlePrayers(id: string, isAdded: boolean): Promise<void> {
-        const arePrayers = props.part.roles?.includes('prayers') && Array.isArray(assignment.value.a)
-
-        if (arePrayers) {
+        if (arePrayers.value) {
             const weekId = getWeekId(props.part.id + '.1')
             const i = assignment.value.a.indexOf(id)
             const prayer = { pid: '', a: '' }
@@ -255,9 +257,7 @@
     }
 
     function prepAssignment(): void {
-        const isDemo = props.part.roles?.includes('demo')
-        const arePrayers = props.part.roles?.includes('prayers')
-        if (isDemo || arePrayers) {
+        if (isDemo.value || isBibleReading.value || isTalk.value || arePrayers.value) {
             assignment.value = { pid: props.part.id, a: [] }
         } else {
             assignment.value = { pid: props.part.id, a: '' }

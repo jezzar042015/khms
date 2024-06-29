@@ -5,7 +5,7 @@
                 <div class="header-main">
                     <div class="flex-row gap-3">
                         <div class="page-name">Publishers List</div>
-                        <div><input type="search" name="" id="filter" v-model="filter" placeholder="Filter Publisher">
+                        <div><input type="search" name="" id="filter" v-model="filter" placeholder="Filter Publishers">
                         </div>
                     </div>
                     <div>
