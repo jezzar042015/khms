@@ -740,6 +740,10 @@ section
 
 @media only screen and (max-width: 928px)
 {
+  #s140
+    {
+      font-size: 15px;
+    }
   .set-wrappers
   {
     padding-left: 25px;
@@ -755,6 +759,21 @@ section
 
 @media only screen and (max-width: 828px)
 {
+  #s140
+    {
+      font-size: 14px;
+    }
+  
+    .s140-grid-col2
+    {
+      grid-template-columns: 1fr 120px;
+    }
+  
+    .s140-grid-col3
+    {
+      grid-template-columns: 1fr 120px 120px;
+  
+    }
   #fsl-mwb
   {
     padding: 30px;

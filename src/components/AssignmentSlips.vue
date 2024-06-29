@@ -31,4 +31,28 @@
         grid-auto-rows: 540px;
         gap: 10px;
     }
+
+    @media only screen and (max-width: 1025px)
+    {
+        #grid-slips
+        {
+            padding: 20px 60px;
+        }
+    }
+
+    @media only screen and (max-width: 928px)
+    {
+        #grid-slips
+        {
+            padding: 20px 10px;
+        }
+    }
+
+    @media only screen and (max-width: 828px)
+    {
+        #grid-slips
+        {
+            padding: 10px 0px;
+        }
+    }
 </style>

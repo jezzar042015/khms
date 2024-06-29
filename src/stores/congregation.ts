@@ -11,7 +11,7 @@ export const useCongregationStore = defineStore('congregation', () => {
         lang: '',
         midweekTime: '18:00',
         classId: 1,
-        mwbTemplate: 'a-100'
+        mwbTemplate: 's-140'
     })
 
     const languages = ref<Language[]>([
@@ -45,8 +45,8 @@ export const useCongregationStore = defineStore('congregation', () => {
                 name: '',
                 lang: '',
                 midweekTime: '18:00',
-                classId: 0,
-                mwbTemplate: 'a-100'
+                classId: 1,
+                mwbTemplate: 's-140'
             }
         } else {
             congregation.value = JSON.parse(stored)
