@@ -34,7 +34,7 @@
                         "id": "202409.1.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024321/sign/art/202024321_sign_sqs_lg.jpg",
-                        "title": "Ipakita ang Pag-ibig Mo sa Maluwalhating Pangalan ni Jehova",
+                        "title": "1. Ipakita ang Pag-ibig Mo sa Maluwalhating Pangalan ni Jehova",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -45,7 +45,7 @@
                         "id": "202409.1.2",
                         "time": 10,
                         "reference": "Aw 80:1",
-                        "title": "Espirituwal na Hiyas",
+                        "title": "2. Espirituwal na Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -56,7 +56,7 @@
                         "id": "202409.1.3",
                         "time": 4,
                         "reference": "Aw 79:1-80:7 (th tun-anan 10)",
-                        "title": "Pagbabasa ng Bibliya",
+                        "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -67,7 +67,7 @@
                     {
                         "id": "202409.1.4",
                         "time": 1,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "4. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 4: #4",
                         "thumbnail": "lmd",
@@ -78,7 +78,7 @@
                     {
                         "id": "202409.1.5",
                         "time": 3,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "5. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 4: #3",
                         "thumbnail": "lmd",
@@ -89,7 +89,7 @@
                     {
                         "id": "202409.1.6",
                         "time": 2,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "6. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 3: #3",
                         "thumbnail": "lmd",
@@ -100,7 +100,7 @@
                     {
                         "id": "202409.1.7",
                         "time": 5,
-                        "title": "Pagdalaw-Muli",
+                        "title": "7. Pagdalaw-Muli",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 8: #3",
                         "thumbnail": "lmd",
@@ -113,7 +113,7 @@
                     {
                         "id": "202409.1.8",
                         "time": 15,
-                        "title": "“Pababanalin Nila ang Pangalan Ko”",
+                        "title": "8. “Pababanalin Nila ang Pangalan Ko”",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwbcov/201905/univ/art/jwbcov_univ_201905_wss_06_lg.jpg",
                         "roles": [
@@ -180,7 +180,7 @@
                         "id": "202409.2.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024322/univ/art/202024322_univ_sqs_lg.jpg",
-                        "title": "Pahalagahan ang mga Pribilehiyo Mo",
+                        "title": "1. Pahalagahan ang mga Pribilehiyo Mo",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -191,7 +191,7 @@
                         "id": "202409.2.2",
                         "time": 10,
                         "reference": "Aw 82:3",
-                        "title": "Espirituwal na Hiyas",
+                        "title": "2. Espirituwal na Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -202,7 +202,7 @@
                         "id": "202409.2.3",
                         "time": 4,
                         "reference": "Aw 82:1-83:18 (th tun-anan 2)",
-                        "title": "Pagbabasa ng Bibliya",
+                        "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -213,7 +213,7 @@
                     {
                         "id": "202409.2.4",
                         "time": 7,
-                        "title": "May Empatiya—Ang Ginawa ni Jesus",
+                        "title": "4. May Empatiya—Ang Ginawa ni Jesus",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 9: #1-2.",
                         "thumbnail": "lmd",
@@ -225,7 +225,7 @@
                     {
                         "id": "202409.2.5",
                         "time": 8,
-                        "title": "May Empatiya—Tularan si Jesus",
+                        "title": "5. May Empatiya—Tularan si Jesus",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 9: #3-5 at “Tingnan Din.”",
                         "thumbnail": "lmd",
@@ -239,7 +239,7 @@
                     {
                         "id": "202409.2.6",
                         "time": 15,
-                        "title": "Lokal na Pangangailangan",
+                        "title": "6. Lokal na Pangangailangan",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -248,7 +248,7 @@
                     {
                         "id": "202409.2.7",
                         "time": 30,
-                        "title": "Pag-aaral ng Kongregasyon sa Bibliya",
+                        "title": "7. Pag-aaral ng Kongregasyon sa Bibliya",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kab. 15 ¶8-12, kahon sa p. 118",
@@ -304,7 +304,7 @@
                         "id": "202409.3.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024323/univ/art/202024323_univ_sqs_lg.jpg",
-                        "title": "Makakatulong ang Panalangin Para Makapagtiis",
+                        "title": "1. Makakatulong ang Panalangin Para Makapagtiis",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -315,7 +315,7 @@
                         "id": "202409.3.2",
                         "time": 10,
                         "reference": "Aw 86:11",
-                        "title": "Espirituwal na Hiyas",
+                        "title": "2. Espirituwal na Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -326,7 +326,7 @@
                         "id": "202409.3.3",
                         "time": 4,
                         "reference": "Aw 86:1-87:7 (th tun-anan 12)",
-                        "title": "Pagbabasa ng Bibliya",
+                        "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -337,7 +337,7 @@
                     {
                         "id": "202409.3.4",
                         "time": 3,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "4. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 3: #5",
                         "thumbnail": "lmd",
@@ -348,7 +348,7 @@
                     {
                         "id": "202409.3.5",
                         "time": 4,
-                        "title": "Pagdalaw-Muli",
+                        "title": "5. Pagdalaw-Muli",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 7: #4",
                         "thumbnail": "lmd",
@@ -359,7 +359,7 @@
                     {
                         "id": "202409.3.6",
                         "time": 5,
-                        "title": "Paggawa ng mga Alagad",
+                        "title": "6. Paggawa ng mga Alagad",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 10: #4",
                         "thumbnail": "lff",
@@ -372,7 +372,7 @@
                     {
                         "id": "202409.3.7",
                         "time": 5,
-                        "title": "Huwag Tumigil",
+                        "title": "7. Huwag Tumigil",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/501600124/univ/art/501600124_univ_wsr_lg.jpg",
                         "roles": [
@@ -383,7 +383,7 @@
                     {
                         "id": "202409.3.8",
                         "time": 10,
-                        "title": "Patuloy na Mag-alok ng Bible Study!",
+                        "title": "8. Patuloy na Mag-alok ng Bible Study!",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024323/univ/art/202024323_univ_cnt_2_xs.jpg",
                         "roles": [
@@ -449,7 +449,7 @@
                     "id": "202409.4.1",
                     "time": 10,
                     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024324/univ/art/202024324_univ_sqs_lg.jpg",
-                    "title": "Pinakamaganda ang Pamamahala ni Jehova",
+                    "title": "1. Pinakamaganda ang Pamamahala ni Jehova",
                     "class": "part-title-gems",
                     "roles": [
                         "elder",
@@ -460,7 +460,7 @@
                     "id": "202409.4.2",
                     "time": 10,
                     "reference": "Aw 89:37",
-                    "title": "Espirituwal na Hiyas",
+                    "title": "2. Espirituwal na Hiyas",
                     "class": "part-title-gems",
                     "roles": [
                         "elder",
@@ -470,7 +470,7 @@
                 {
                     "id": "202409.4.3",
                     "time": 4,
-                    "title": "Pagbabasa ng Bibliya",
+                    "title": "3. Pagbabasa ng Bibliya",
                     "reference": "Aw 89:​1-24 (th tun-anan 11)",
                     "class": "part-title-gems",
                     "roles": [
@@ -481,7 +481,7 @@
                     {
                         "id": "202409.4.4",
                         "time": 3,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "4. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 5: #5",
                         "thumbnail": "lmd",
@@ -492,7 +492,7 @@
                     {
                         "id": "202409.4.5",
                         "time": 4,
-                        "title": "Pagdalaw-Muli",
+                        "title": "5. Pagdalaw-Muli",
                         "class": "part-title-ministry",
                         "reference": "th tun-anan 9",
                         "thumbnail": "th",
@@ -503,7 +503,7 @@
                     {
                         "id": "202409.4.6",
                         "time": 5,
-                        "title": "Ipaliwanag ang Paniniwala Mo",
+                        "title": "6. Ipaliwanag ang Paniniwala Mo",
                         "class": "part-title-ministry",
                         "reference": "ijwbq 181—Tema: Bahin sa Unsa ang Bibliya? (th tun-anan 2)",
                         "thumbnail": "th",
@@ -516,7 +516,7 @@
                     {
                         "id": "202409.4.7",
                         "time": 10,
-                        "title": "Pinakamabuti ang mga Pamantayan ni Jehova",
+                        "title": "7. Pinakamabuti ang mga Pamantayan ni Jehova",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024324/univ/art/202024324_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -527,7 +527,7 @@
                     {
                         "id": "202409.4.8",
                         "time": 5,
-                        "title": "Lokal na Pangangailangan",
+                        "title": "8. Lokal na Pangangailangan",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -591,7 +591,7 @@
                     {
                         "id": "202409.5.1",
                         "time": 10,
-                        "title": "Magtiwala kay Jehova Para Humaba ang Buhay Mo",
+                        "title": "1. Magtiwala kay Jehova Para Humaba ang Buhay Mo",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024325/univ/art/202024325_univ_sqs_lg.jpg",
                         "class": "part-title-gems",
                         "roles": [
@@ -603,7 +603,7 @@
                         "id": "202409.5.2",
                         "time": 10,
                         "reference": "Aw 91:11",
-                        "title": "Espirituwal na Hiyas",
+                        "title": "2. Espirituwal na Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -614,7 +614,7 @@
                         "id": "202409.5.3",
                         "time": 4,
                         "reference": "Aw 91:​1-16 (th tun-anan 10)",
-                        "title": "Pagbabasa ng Bibliya",
+                        "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -625,7 +625,7 @@
                     {
                         "id": "202409.5.4",
                         "time": 3,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "4. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 1: #3",
                         "thumbnail": "lmd",
@@ -636,7 +636,7 @@
                     {
                         "id": "202409.5.5",
                         "time": 4,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "5. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 1: #4",
                         "thumbnail": "lmd",
@@ -647,7 +647,7 @@
                     {
                         "id": "202409.5.6",
                         "time": 5,
-                        "title": "Pahayag",
+                        "title": "6. Pahayag",
                         "class": "part-title-ministry",
                         "reference": "lmd apendise A: #5 (th tun-anan 14)",
                         "thumbnail": "lmd",
@@ -660,7 +660,7 @@
                     {
                         "id": "202409.5.7",
                         "time": 5,
-                        "title": "Pahalagahan ang Laki ng Pagtitiis ng Diyos—Pananaw ni Jehova sa Panahon",
+                        "title": "7. Pahalagahan ang Laki ng Pagtitiis ng Diyos—Pananaw ni Jehova sa Panahon",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwbcov23/univ/art/jwbcov23_univ_wss_06_lg.jpg",
                         "class": "part-title-living",
                         "roles": [
@@ -671,7 +671,7 @@
                     {
                         "id": "202409.5.8",
                         "time": 10,
-                        "title": "Mga Nagawa ng Organisasyon Para sa Setyembre",
+                        "title": "8. Mga Nagawa ng Organisasyon Para sa Setyembre",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep22/univ/art/com-rep22_univ_wss_03_lg.jpg",
                         "roles": [

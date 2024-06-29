@@ -34,7 +34,7 @@
                         "id": "202407.1.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024241/univ/art/202024241_univ_sqs_lg.jpg",
-                        "title": "Binibigo ni Jehova ang Kaaway ng mga Lingkod Niya",
+                        "title": "1. Binibigo ni Jehova ang Kaaway ng mga Lingkod Niya",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -45,7 +45,7 @@
                         "id": "202407.1.2",
                         "time": 10,
                         "reference": "Aw 57:7​",
-                        "title": "Espirituwal na Hiyas",
+                        "title": "2. Espirituwal na Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -56,7 +56,7 @@
                         "id": "202407.1.3",
                         "time": 4,
                         "reference": "Aw 59:​1-17 (th 12)",
-                        "title": "Pagbabasa ng Bibliya",
+                        "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -67,7 +67,7 @@
                     {
                         "id": "202407.1.4",
                         "time": 7,
-                        "title": "Matiyaga—Ang Ginawa ni Pablo",
+                        "title": "4. Matiyaga—Ang Ginawa ni Pablo",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 7: #1-2",
                         "thumbnail": "lmd",
@@ -79,7 +79,7 @@
                     {
                         "id": "202407.1.5",
                         "time": 8,
-                        "title": "Matiyaga—Tularan si Pablo",
+                        "title": "5. Matiyaga—Tularan si Pablo",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 7: #3-5 at “Tingnan Din.”",
                         "thumbnail": "lmd",
@@ -93,7 +93,7 @@
                     {
                         "id": "202407.1.6",
                         "time": 15,
-                        "title": "Lokal na Pangangailangan",
+                        "title": "6. Lokal na Pangangailangan",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -102,7 +102,7 @@
                     {
                         "id": "202407.1.7",
                         "time": 30,
-                        "title": "Pag-aaral ng Kongregasyon sa Bibliya",
+                        "title": "7. Pag-aaral ng Kongregasyon sa Bibliya",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kab. 12 ¶1-6, kahon sa p. 96",
@@ -158,7 +158,7 @@
                         "id": "202407.2.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024242/univ/art/202024242_univ_sqs_lg.jpg",
-                        "title": "Pinapanatag, Pinoprotektahan, at Pinapatatag Tayo ni Jehova",
+                        "title": "1. Pinapanatag, Pinoprotektahan, at Pinapatatag Tayo ni Jehova",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -169,7 +169,7 @@
                         "id": "202407.2.2",
                         "time": 10,
                         "reference": "Aw 62:11​",
-                        "title": "Espirituwal na Hiyas",
+                        "title": "2. Espirituwal na Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -180,7 +180,7 @@
                         "id": "202407.2.3",
                         "time": 4,
                         "reference": "Aw 60:1-61:8 (th 10)",
-                        "title": "Pagbabasa ng Bibliya",
+                        "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -191,7 +191,7 @@
                     {
                         "id": "202407.2.4",
                         "time": 3,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "4. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd 2:3",
                         "thumbnail": "lmd",
@@ -202,7 +202,7 @@
                     {
                         "id": "202407.2.5",
                         "time": 4,
-                        "title": "Pagdalaw-Muli",
+                        "title": "5. Pagdalaw-Muli",
                         "class": "part-title-ministry",
                         "reference": "lmd 7:4",
                         "thumbnail": "lmd",
@@ -213,7 +213,7 @@
                     {
                         "id": "202407.2.6",
                         "time": 5,
-                        "title": "Pahayag",
+                        "title": "6. Pahayag",
                         "class": "part-title-ministry",
                         "reference": "w22.02 4-5 ¶7-10 (th aralin 20)",
                         "thumbnail": "th",
@@ -226,7 +226,7 @@
                     {
                         "id": "202407.2.7",
                         "time": 10,
-                        "title": "Walang “Makapaghihiwalay sa Atin sa Pag-ibig ng Diyos”",
+                        "title": "7. Walang “Makapaghihiwalay sa Atin sa Pag-ibig ng Diyos”",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwb-088/univ/art/jwb-088_univ_wss_08_lg.jpg",
                         "roles": [
@@ -237,7 +237,7 @@
                     {
                         "id": "202407.2.8",
                         "time": 5,
-                        "title": "Maging Kaibigan ni Jehova—Mga Gagawin Para Mabautismuhan",
+                        "title": "8. Maging Kaibigan ni Jehova—Mga Gagawin Para Mabautismuhan",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/501600137/univ/art/501600137_univ_wsr_lg.jpg",
                         "class": "part-title-living",
                         "roles": [
@@ -248,7 +248,7 @@
                     {
                         "id": "202407.2.9",
                         "time": 30,
-                        "title": "Pag-aaral ng Kongregasyon sa Bibliya",
+                        "title": "9. Pag-aaral ng Kongregasyon sa Bibliya",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kab. 12 ¶7-13, kahon sa p. 97",
@@ -304,7 +304,7 @@
                         "id": "202407.3.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024243/univ/art/202024243_univ_sqs_lg.jpg",
-                        "title": "“Ang Iyong Tapat na Pag-ibig ay Mas Mabuti Kaysa sa Buhay”",
+                        "title": "1. “Ang Iyong Tapat na Pag-ibig ay Mas Mabuti Kaysa sa Buhay”",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -315,7 +315,7 @@
                         "id": "202407.3.2",
                         "time": 10,
                         "reference": "Aw 64:3​",
-                        "title": "Espirituwal na Hiyas",
+                        "title": "2. Espirituwal na Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -326,7 +326,7 @@
                         "id": "202407.3.3",
                         "time": 4,
                         "reference": "Aw 63:1-64:10 (th aralin 12)",
-                        "title": "Pagbabasa ng Bibliya",
+                        "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -337,7 +337,7 @@
                     {
                         "id": "202407.3.4",
                         "time": 2,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "4. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd 3:4",
                         "thumbnail": "lmd",
@@ -348,7 +348,7 @@
                     {
                         "id": "202407.3.5",
                         "time": 2,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "5. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd 2:4",
                         "thumbnail": "lmd",
@@ -359,7 +359,7 @@
                     {
                         "id": "202407.3.6",
                         "time": 3,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "6. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd 1:5",
                         "thumbnail": "lmd",
@@ -370,7 +370,7 @@
                     {
                         "id": "202407.3.7",
                         "time": 4,
-                        "title": "Ipaliwanag ang Paniniwala Mo",
+                        "title": "7. Ipaliwanag ang Paniniwala Mo",
                         "class": "part-title-ministry",
                         "reference": "ijwfq 51​ (lmd 4:3)",
                         "thumbnail": "lmd",
@@ -383,7 +383,7 @@
                     {
                         "id": "202407.3.8",
                         "time": 15,
-                        "title": "Kung Paano Natin Maipapakita na Mahal Natin ang Diyos",
+                        "title": "8. Kung Paano Natin Maipapakita na Mahal Natin ang Diyos",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024243/univ/art/202024243_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -394,7 +394,7 @@
                     {
                         "id": "202407.3.9",
                         "time": 30,
-                        "title": "Pag-aaral ng Kongregasyon sa Bibliya",
+                        "title": "9. Pag-aaral ng Kongregasyon sa Bibliya",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kab. 12 ¶14-20",
@@ -450,7 +450,7 @@
                         "id": "202407.4.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024244/univ/art/202024244_univ_sqs_lg.jpg",
-                        "title": "Si Jehova ang Nagdadala ng Pasan Natin Araw-araw",
+                        "title": "1. Si Jehova ang Nagdadala ng Pasan Natin Araw-araw",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -461,7 +461,7 @@
                         "id": "202407.4.2",
                         "time": 10,
                         "reference": "Aw 68:18​​",
-                        "title": "Espirituwal na Hiyas",
+                        "title": "2. Espirituwal na Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -472,7 +472,7 @@
                         "id": "202407.4.3",
                         "time": 4,
                         "reference": "Aw 66:​1-20 (th 11)",
-                        "title": "Pagbabasa ng Bibliya",
+                        "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -483,7 +483,7 @@
                     {
                         "id": "202407.4.4",
                         "time": 3,
-                        "title": "Pagpapasimula ng Pakikipag-usap",
+                        "title": "4. Pagpapasimula ng Pakikipag-usap",
                         "class": "part-title-ministry",
                         "reference": "lmd 5:3",
                         "thumbnail": "lmd",
@@ -494,7 +494,7 @@
                     {
                         "id": "202407.4.5",
                         "time": 4,
-                        "title": "Pagdalaw-Muli",
+                        "title": "5. Pagdalaw-Muli",
                         "class": "part-title-ministry",
                         "reference": "lmd 9:3",
                         "thumbnail": "lmd",
@@ -505,7 +505,7 @@
                     {
                         "id": "202407.4.6",
                         "time": 5,
-                        "title": "Paggawa ng mga Alagad",
+                        "title": "6. Paggawa ng mga Alagad",
                         "class": "part-title-ministry",
                         "reference": "lff aralin 15: intro at #1-3 (th 8)",
                         "thumbnail": "lff",
@@ -518,7 +518,7 @@
                     {
                         "id": "202407.4.7",
                         "time": 15,
-                        "title": "Mapapagaan Mo Ba ang Pasan ng Iba?",
+                        "title": "7. Mapapagaan Mo Ba ang Pasan ng Iba?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024244/univ/art/202024244_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -529,7 +529,7 @@
                     {
                         "id": "202407.4.8",
                         "time": 30,
-                        "title": "Pag-aaral ng Kongregasyon sa Bibliya",
+                        "title": "8. Pag-aaral ng Kongregasyon sa Bibliya",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kab. 13 ¶1-7, intro sa seksiyon 5, at kahon sa p. 103",
@@ -585,7 +585,7 @@
                         "id": "202407.5.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024245/univ/art/202024245_univ_sqs_lg.jpg",
-                        "title": "Inihula sa Awit 69 ang mga Pangyayari sa Buhay ni Jesus",
+                        "title": "1. Inihula sa Awit 69 ang mga Pangyayari sa Buhay ni Jesus",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -596,7 +596,7 @@
                         "id": "202407.5.2",
                         "time": 10,
                         "reference": "Aw 69:30, 31​​​",
-                        "title": "Espirituwal na Hiyas",
+                        "title": "2. Espirituwal na Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -607,7 +607,7 @@
                         "id": "202407.5.3",
                         "time": 4,
                         "reference": "Aw 69:​1-25 (th 2)",
-                        "title": "Pagbabasa ng Bibliya",
+                        "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -618,7 +618,7 @@
                     {
                         "id": "202407.5.4",
                         "time": 7,
-                        "title": "Matiisin—Ang Ginawa ni Jesus",
+                        "title": "4. Matiisin—Ang Ginawa ni Jesus",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 8: #1-2",
                         "thumbnail": "lmd",
@@ -630,7 +630,7 @@
                     {
                         "id": "202407.5.5",
                         "time": 8,
-                        "title": "Matiisin—Tularan si Jesus",
+                        "title": "5. Matiisin—Tularan si Jesus",
                         "class": "part-title-ministry",
                         "reference": "lmd aralin 8: #3-5 at “Tingnan Din.”",
                         "thumbnail": "lmd",
@@ -644,7 +644,7 @@
                     {
                         "id": "202407.5.6",
                         "time": 5,
-                        "title": "Lokal na Pangangailangan",
+                        "title": "6. Lokal na Pangangailangan",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -653,7 +653,7 @@
                     {
                         "id": "202407.5.7",
                         "time": 10,
-                        "title": "Mga Prinsipyo Para sa Gabi ng Pampamilyang Pagsamba",
+                        "title": "7. Mga Prinsipyo Para sa Gabi ng Pampamilyang Pagsamba",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024245/sign/art/202024245_sign_cnt_2_lg.jpg",
                         "roles": [
@@ -664,7 +664,7 @@
                     {
                         "id": "202407.5.8",
                         "time": 30,
-                        "title": "Pag-aaral ng Kongregasyon sa Bibliya",
+                        "title": "8. Pag-aaral ng Kongregasyon sa Bibliya",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kab. 13 ¶8-16, kahon sa p. 105",

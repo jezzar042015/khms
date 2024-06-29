@@ -52,7 +52,8 @@
 
     const displayAssignee = computed(() => {
 
-        if (props.part?.isVisit) return props.part.co;
+        const isVisit = props.part.roles?.includes('co')
+        if (isVisit) return props.part.co;
 
         const partid: string = props.part?.id ?? ''
         const assigned = assignmentStore.get.find(a => a.pid == partid);
@@ -69,6 +70,7 @@
             if (pub2) p.push(pub2.name);
             return p.length > 0 ? p.join(' & ') : 'Not Assigned!';
         } else {
+            console.log(typeof assigned.a);
             return null;
         }
     });

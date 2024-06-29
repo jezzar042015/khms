@@ -34,7 +34,7 @@
                         "id": "202409.1.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024321/sign/art/202024321_sign_sqs_lg.jpg",
-                        "title": "Magpakita hin Gugma Para ha Mahimayaon nga Ngaran ni Jehova",
+                        "title": "1. Magpakita hin Gugma Para ha Mahimayaon nga Ngaran ni Jehova",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -45,7 +45,7 @@
                         "id": "202409.1.2",
                         "time": 10,
                         "reference": "Sal 80:1",
-                        "title": "Espirituwal nga mga Hiyas",
+                        "title": "2. Espirituwal nga mga Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -56,7 +56,7 @@
                         "id": "202409.1.3",
                         "time": 4,
                         "reference": "Sal 79:1-80:7 (th aradman 10)",
-                        "title": "Pagbasa ha Biblia",
+                        "title": "3. Pagbasa ha Biblia",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -67,7 +67,7 @@
                     {
                         "id": "202409.1.4",
                         "time": 1,
-                        "title": "Pagtikang ha Pakiistorya",
+                        "title": "4. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 4 punto 4",
                         "thumbnail": "lmd",
@@ -78,7 +78,7 @@
                     {
                         "id": "202409.1.5",
                         "time": 3,
-                        "title": "Pagtikang ha Pakiistorya",
+                        "title": "5. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 4 punto 3",
                         "thumbnail": "lmd",
@@ -89,7 +89,7 @@
                     {
                         "id": "202409.1.6",
                         "time": 2,
-                        "title": "Pagtikang ha Pakiistorya",
+                        "title": "6. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 3 punto 3",
                         "thumbnail": "lmd",
@@ -100,7 +100,7 @@
                     {
                         "id": "202409.1.7",
                         "time": 5,
-                        "title": "Pagbalik-Bisita",
+                        "title": "7. Pagbalik-Bisita",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 8 punto 3",
                         "thumbnail": "lmd",
@@ -113,7 +113,7 @@
                     {
                         "id": "202409.1.8",
                         "time": 15,
-                        "title": "“Babaraanon Nira an Akon Ngaran”",
+                        "title": "8. “Babaraanon Nira an Akon Ngaran”",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwbcov/201905/univ/art/jwbcov_univ_201905_wss_06_lg.jpg",
                         "roles": [
@@ -180,7 +180,7 @@
                         "id": "202409.2.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024322/univ/art/202024322_univ_sqs_lg.jpg",
-                        "title": "Apresyara an mga Pribilehiyo nga May-ada Ka",
+                        "title": "1. Apresyara an mga Pribilehiyo nga May-ada Ka",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -191,7 +191,7 @@
                         "id": "202409.2.2",
                         "time": 10,
                         "reference": "Sal 82:3",
-                        "title": "Espirituwal nga mga Hiyas",
+                        "title": "2. Espirituwal nga mga Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -202,7 +202,7 @@
                         "id": "202409.2.3",
                         "time": 4,
                         "reference": "Sal 82:1-83:18 (th aradman 2)",
-                        "title": "Pagbasa ha Biblia",
+                        "title": "3. Pagbasa ha Biblia",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -213,7 +213,7 @@
                     {
                         "id": "202409.2.4",
                         "time": 7,
-                        "title": "Empatiya—An Ginbuhat ni Jesus",
+                        "title": "4. Empatiya—An Ginbuhat ni Jesus",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 9 punto 1-2",
                         "thumbnail": "lmd",
@@ -225,7 +225,7 @@
                     {
                         "id": "202409.2.5",
                         "time": 8,
-                        "title": "Empatiya—Subara hi Jesus",
+                        "title": "5. Empatiya—Subara hi Jesus",
                         "class": "part-title-ministry",
                         "reference": "lmd leksyon 9 punto 3-5 ngan “Kitaa Liwat”",
                         "thumbnail": "lmd",
@@ -239,7 +239,7 @@
                     {
                         "id": "202409.2.6",
                         "time": 15,
-                        "title": "Lokal nga mga Panginahanglan",
+                        "title": "6. Lokal nga mga Panginahanglan",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -248,7 +248,7 @@
                     {
                         "id": "202409.2.7",
                         "time": 30,
-                        "title": "Pag-aram ha Biblia han Kongregasyon",
+                        "title": "7. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 15 ¶8-12, kahon ha p. 134",
@@ -304,7 +304,7 @@
                         "id": "202409.3.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024323/univ/art/202024323_univ_sqs_lg.jpg",
-                        "title": "An Pag-ampo Nabulig ha Aton nga Makapailob",
+                        "title": "1. An Pag-ampo Nabulig ha Aton nga Makapailob",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -315,7 +315,7 @@
                         "id": "202409.3.2",
                         "time": 10,
                         "reference": "Sal 86:11",
-                        "title": "Espirituwal nga mga Hiyas",
+                        "title": "2. Espirituwal nga mga Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -326,7 +326,7 @@
                         "id": "202409.3.3",
                         "time": 4,
                         "reference": "Sal 86:1-87:7 (th aradman 12)",
-                        "title": "Pagbasa ha Biblia",
+                        "title": "3. Pagbasa ha Biblia",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -337,7 +337,7 @@
                     {
                         "id": "202409.3.4",
                         "time": 3,
-                        "title": "Pagtikang ha Pakiistorya",
+                        "title": "4. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 3 punto 5",
                         "thumbnail": "lmd",
@@ -348,7 +348,7 @@
                     {
                         "id": "202409.3.5",
                         "time": 4,
-                        "title": "Pagbalik-Bisita",
+                        "title": "5. Pagbalik-Bisita",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 7 punto 4",
                         "thumbnail": "lmd",
@@ -359,7 +359,7 @@
                     {
                         "id": "202409.3.6",
                         "time": 5,
-                        "title": "Panhimo hin Disipulo",
+                        "title": "6. Panhimo hin Disipulo",
                         "class": "part-title-ministry",
                         "reference": "lff leksyon 15 punto 5 (lmd leksiyon 10 punto 4)",
                         "thumbnail": "lff",
@@ -372,7 +372,7 @@
                     {
                         "id": "202409.3.7",
                         "time": 5,
-                        "title": "Ayaw Pag-undang",
+                        "title": "7. Ayaw Pag-undang",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/501600124/univ/art/501600124_univ_wsr_lg.jpg",
                         "roles": [
@@ -383,7 +383,7 @@
                     {
                         "id": "202409.3.8",
                         "time": 10,
-                        "title": "Padayon nga Magtanyag hin mga Pag-aram ha Biblia!",
+                        "title": "8. Padayon nga Magtanyag hin mga Pag-aram ha Biblia!",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024323/univ/art/202024323_univ_cnt_2_xs.jpg",
                         "roles": [
@@ -450,7 +450,7 @@
                         "id": "202409.4.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024324/univ/art/202024324_univ_sqs_lg.jpg",
-                        "title": "An Pagmando ni Jehova Amo an Pinakamaopay",
+                        "title": "1. An Pagmando ni Jehova Amo an Pinakamaopay",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -461,7 +461,7 @@
                         "id": "202409.4.2",
                         "time": 10,
                         "reference": "Sal 89:37",
-                        "title": "Espirituwal nga mga Hiyas",
+                        "title": "2. Espirituwal nga mga Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -471,7 +471,7 @@
                     {
                         "id": "202409.4.3",
                         "time": 4,
-                        "title": "Pagbasa ha Biblia",
+                        "title": "3. Pagbasa ha Biblia",
                         "reference": "Sal 89:​1-24 (th aradman 11)",
                         "class": "part-title-gems",
                         "roles": [
@@ -483,7 +483,7 @@
                     {
                         "id": "202409.4.4",
                         "time": 3,
-                        "title": "Pagtikang ha Pakiistorya",
+                        "title": "4. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 5 punto 5",
                         "thumbnail": "lmd",
@@ -494,7 +494,7 @@
                     {
                         "id": "202409.4.5",
                         "time": 4,
-                        "title": "Pagbalik-Bisita",
+                        "title": "5. Pagbalik-Bisita",
                         "class": "part-title-ministry",
                         "reference": "th aradman 9",
                         "thumbnail": "th",
@@ -505,7 +505,7 @@
                     {
                         "id": "202409.4.6",
                         "time": 5,
-                        "title": "Pagsaysay han Imo mga Gintotoohan",
+                        "title": "6. Pagsaysay han Imo mga Gintotoohan",
                         "class": "part-title-ministry",
                         "reference": " ijwbq-TG 181 (th aradman 2)",
                         "thumbnail": "th",
@@ -518,7 +518,7 @@
                     {
                         "id": "202409.4.7",
                         "time": 10,
-                        "title": "An mga Suruklan ni Jehova Amo an Pinakamaopay",
+                        "title": "7. An mga Suruklan ni Jehova Amo an Pinakamaopay",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024324/univ/art/202024324_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -529,7 +529,7 @@
                     {
                         "id": "202409.4.8",
                         "time": 5,
-                        "title": "Lokal nga mga Panginahanglan",
+                        "title": "8. Lokal nga mga Panginahanglan",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -594,7 +594,7 @@
                     {
                         "id": "202409.5.1",
                         "time": 10,
-                        "title": "Basi Humilawig an Imo Kinabuhi, Sarig kan Jehova",
+                        "title": "1. Basi Humilawig an Imo Kinabuhi, Sarig kan Jehova",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024325/univ/art/202024325_univ_sqs_lg.jpg",
                         "class": "part-title-gems",
                         "roles": [
@@ -606,7 +606,7 @@
                         "id": "202409.5.2",
                         "time": 10,
                         "reference": "Sal 91:11",
-                        "title": "Espirituwal nga mga Hiyas",
+                        "title": "2. Espirituwal nga mga Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -617,7 +617,7 @@
                         "id": "202409.5.3",
                         "time": 4,
                         "reference": "Sal 91:​1-16 (th aradman 10)",
-                        "title": "Pagbasa ha Biblia",
+                        "title": "3. Pagbasa ha Biblia",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -628,7 +628,7 @@
                     {
                         "id": "202409.5.4",
                         "time": 3,
-                        "title": "Pagtikang ha Pakiistorya",
+                        "title": "4. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 1 punto 3",
                         "thumbnail": "lmd",
@@ -639,7 +639,7 @@
                     {
                         "id": "202409.5.5",
                         "time": 4,
-                        "title": "Pagtikang ha Pakiistorya",
+                        "title": "5. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 1 punto 4",
                         "thumbnail": "lmd",
@@ -650,7 +650,7 @@
                     {
                         "id": "202409.5.6",
                         "time": 5,
-                        "title": "Pahayag",
+                        "title": "6. Pahayag",
                         "class": "part-title-ministry",
                         "reference": "lmd apendise A punto 5 (th aradman 14)",
                         "thumbnail": "lmd",
@@ -663,7 +663,7 @@
                     {
                         "id": "202409.5.7",
                         "time": 5,
-                        "title": "Pabilhi an Hura nga Pagpailob han Dios—An Panhunahuna ni Jehova ha Panahon",
+                        "title": "7. Pabilhi an Hura nga Pagpailob han Dios—An Panhunahuna ni Jehova ha Panahon",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwbcov23/univ/art/jwbcov23_univ_wss_06_lg.jpg",
                         "class": "part-title-living",
                         "roles": [
@@ -674,7 +674,7 @@
                     {
                         "id": "202409.5.8",
                         "time": 10,
-                        "title": "Mga Nahimo han Organisasyon Para ha Septyembre",
+                        "title": "8. Mga Nahimo han Organisasyon Para ha Septyembre",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep22/univ/art/com-rep22_univ_wss_03_lg.jpg",
                         "class": "part-title-living",
                         "roles": [

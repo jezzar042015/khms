@@ -34,7 +34,7 @@
                         "id": "202410.1.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024326/univ/art/202024326_univ_sqs_lg.jpg",
-                        "title": "Ang Pag-alagad Kang Jehova ang Pinakamaayong Paagi sa Pagkinabuhi",
+                        "title": "1. Ang Pag-alagad Kang Jehova ang Pinakamaayong Paagi sa Pagkinabuhi",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -45,7 +45,7 @@
                         "id": "202410.1.2",
                         "time": 10,
                         "reference": "Sal 92:5",
-                        "title": "Espirituwal nga mga Bahandi",
+                        "title": "2. Espirituwal nga mga Bahandi",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -56,7 +56,7 @@
                         "id": "202410.1.3",
                         "time": 4,
                         "reference": "Sal 94:​1-23 (th tun-anan 5)",
-                        "title": "Pagbasa sa Bibliya",
+                        "title": "3. Pagbasa sa Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -67,7 +67,7 @@
                     {
                         "id": "202410.1.4",
                         "time": 4,
-                        "title": "Dihang Magsugod ug Panag-estorya",
+                        "title": "4. Dihang Magsugod ug Panag-estorya",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 5 punto 3",
                         "thumbnail": "lmd",
@@ -78,7 +78,7 @@
                     {
                         "id": "202410.1.5",
                         "time": 3,
-                        "title": "Dihang Magbalikduaw",
+                        "title": "5. Dihang Magbalikduaw",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 8 punto 4",
                         "thumbnail": "lmd",
@@ -89,7 +89,7 @@
                     {
                         "id": "202410.1.6",
                         "time": 5,
-                        "title": "Dihang Maghimog Tinun-an",
+                        "title": "6. Dihang Maghimog Tinun-an",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 12 punto 5",
                         "thumbnail": "lmd",
@@ -102,7 +102,7 @@
                     {
                         "id": "202410.1.7",
                         "time": 15,
-                        "title": "Tabang Para sa mga Batan-on nga Nalumsan sa Kabalaka",
+                        "title": "7. Tabang Para sa mga Batan-on nga Nalumsan sa Kabalaka",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024326/univ/art/202024326_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -113,7 +113,7 @@
                     {
                         "id": "202410.1.8",
                         "time": 30,
-                        "title": "Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 16 ¶6-9, kahon sa p. 132",
@@ -169,7 +169,7 @@
                         "id": "202410.2.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024327/univ/art/202024327_univ_sqs_lg.jpg",
-                        "title": "'Imantala ang Maayong Balita'!",
+                        "title": "1. 'Imantala ang Maayong Balita'!",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -180,7 +180,7 @@
                         "id": "202410.2.2",
                         "time": 10,
                         "reference": "Sal 96:1",
-                        "title": "Espirituwal nga mga Bahandi",
+                        "title": "2. Espirituwal nga mga Bahandi",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -191,7 +191,7 @@
                         "id": "202410.2.3",
                         "time": 4,
                         "reference": "Sal 98:1–99:9 (th tun-anan 11)",
-                        "title": "Pagbasa sa Bibliya",
+                        "title": "3. Pagbasa sa Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -202,7 +202,7 @@
                     {
                         "id": "202410.2.4",
                         "time": 7,
-                        "title": "Determinado—Ang Gihimo ni Jesus",
+                        "title": "4. Determinado—Ang Gihimo ni Jesus",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 10 punto 1-2",
                         "thumbnail": "lmd",
@@ -214,7 +214,7 @@
                     {
                         "id": "202410.2.5",
                         "time": 8,
-                        "title": "Determinado—Sundoga si Jesus",
+                        "title": "5. Determinado—Sundoga si Jesus",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 10 punto 3-5 ug “Tan-awa Sab.”",
                         "thumbnail": "lmd",
@@ -228,7 +228,7 @@
                     {
                         "id": "202410.2.6",
                         "time": 15,
-                        "title": "Lokal nga mga Panginahanglan",
+                        "title": "6. Lokal nga mga Panginahanglan",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -237,7 +237,7 @@
                     {
                         "id": "202410.2.7",
                         "time": 30,
-                        "title": "Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "7. Pagtuon sa Kongregasyon sa Bibliya",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 16 ¶10-18",
@@ -293,7 +293,7 @@
                         "id": "202410.3.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024328/univ/art/202024328_univ_sqs_lg.jpg",
-                        "title": "Ipakita ang Imong Apresasyon sa Maunongong Gugma ni Jehova",
+                        "title": "1. Ipakita ang Imong Apresasyon sa Maunongong Gugma ni Jehova",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -304,7 +304,7 @@
                         "id": "202410.3.2",
                         "time": 10,
                         "reference": "Sal 102:6",
-                        "title": "Espirituwal nga mga Bahandi",
+                        "title": "2. Espirituwal nga mga Bahandi",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -315,7 +315,7 @@
                         "id": "202410.3.3",
                         "time": 4,
                         "reference": "Sal 102:​1-28 (th tun-anan 12)",
-                        "title": "Pagbasa sa Bibliya",
+                        "title": "3. Pagbasa sa Bibliya",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -326,7 +326,7 @@
                     {
                         "id": "202410.3.4",
                         "time": 3,
-                        "title": "Dihang Magsugod ug Panag-estorya",
+                        "title": "4. Dihang Magsugod ug Panag-estorya",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 2 punto 3",
                         "thumbnail": "lmd",
@@ -337,7 +337,7 @@
                     {
                         "id": "202410.3.5",
                         "time": 5,
-                        "title": "Dihang Magbalikduaw",
+                        "title": "5. Dihang Magbalikduaw",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 9 punto 4",
                         "thumbnail": "lmd",
@@ -348,7 +348,7 @@
                     {
                         "id": "202410.3.6",
                         "time": 4,
-                        "title": "Pagpatin-aw sa Imong Tinuohan",
+                        "title": "6. Pagpatin-aw sa Imong Tinuohan",
                         "class": "part-title-ministry",
                         "reference": "ijwbq 129 (th tun-anan 8)",
                         "thumbnail": "th",
@@ -361,7 +361,7 @@
                     {
                         "id": "202410.3.7",
                         "time": 15,
-                        "title": "‘Ako Nangupot Pag-ayo Kanimo; Ikaw Naghawid Kanako’",
+                        "title": "7. ‘Ako Nangupot Pag-ayo Kanimo; Ikaw Naghawid Kanako’",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwb-085/univ/art/jwb-085_univ_wss_12_lg.jpg",
                         "roles": [
@@ -372,7 +372,7 @@
                     {
                         "id": "202410.3.8",
                         "time": 30,
-                        "title": "Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 17 ¶1-7",
@@ -428,7 +428,7 @@
                         "id": "202410.4.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024329/univ/art/202024329_univ_sqs_lg.jpg",
-                        "title": "“Ginahinumdoman Niya nga Kita Abog”",
+                        "title": "1. “Ginahinumdoman Niya nga Kita Abog”",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -439,7 +439,7 @@
                         "id": "202410.4.2",
                         "time": 10,
                         "reference": "Sal 104:24",
-                        "title": "Espirituwal nga mga Bahandi",
+                        "title": "2. Espirituwal nga mga Bahandi",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -449,7 +449,7 @@
                     {
                         "id": "202410.4.3",
                         "time": 4,
-                        "title": "Pagbasa sa Bibliya",
+                        "title": "3. Pagbasa sa Bibliya",
                         "reference": "Sal 104:​1-24 (th tun-anan 11)",
                         "class": "part-title-gems",
                         "roles": [
@@ -461,7 +461,7 @@
                     {
                         "id": "202410.4.4",
                         "time": 3,
-                        "title": "Dihang Magsugod ug Panag-estorya",
+                        "title": "4. Dihang Magsugod ug Panag-estorya",
                         "class": "part-title-ministry",
                         "reference": "lmd leksiyon 3 punto 4",
                         "thumbnail": "lmd",
@@ -472,7 +472,7 @@
                     {
                         "id": "202410.4.5",
                         "time": 4,
-                        "title": "Dihang Magbalikduaw",
+                        "title": "5. Dihang Magbalikduaw",
                         "class": "part-title-ministry",
                         "reference": "th tun-anan 9",
                         "thumbnail": "th",
@@ -483,7 +483,7 @@
                     {
                         "id": "202410.4.6",
                         "time": 5,
-                        "title": "Pakigpulong",
+                        "title": "6. Pakigpulong",
                         "class": "part-title-ministry",
                         "reference": "lmd apendise A punto 6 (th tun-anan 1)",
                         "thumbnail": "th",
@@ -496,7 +496,7 @@
                     {
                         "id": "202410.4.7",
                         "time": 15,
-                        "title": "Nahibalo ba Ka sa Imong Limitasyon?",
+                        "title": "7. Nahibalo ba Ka sa Imong Limitasyon?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024329/univ/art/202024329_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -507,7 +507,7 @@
                     {
                         "id": "202410.4.8",
                         "time": 30,
-                        "title": "Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 17 ¶8-12, kahon sa p. 137",

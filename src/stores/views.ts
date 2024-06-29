@@ -43,7 +43,7 @@ export const useViewStore = defineStore('views', () => {
         if (!congname || (!lang && !classId)) {
             setView("welcome")
         } else {
-            setView("slips")
+            setView("mwb")
         }
 
         return !welcomePage.value

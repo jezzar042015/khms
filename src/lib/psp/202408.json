@@ -34,7 +34,7 @@
                         "id": "202408.1.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024246/sign/art/202024246_sign_sqs_lg.jpg",
-                        "title": "“Tell the Next Generation” About God’s Power",
+                        "title": "1. “Tell the Next Generation” About God’s Power",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -45,7 +45,7 @@
                         "id": "202408.1.2",
                         "time": 10,
                         "reference": "Ps 72:7​",
-                        "title": "Spiritual Gems",
+                        "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -56,7 +56,7 @@
                         "id": "202408.1.3",
                         "time": 4,
                         "reference": "Ps 71:1-16 (th study 5)",
-                        "title": "Bible Reading",
+                        "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -67,7 +67,7 @@
                     {
                         "id": "202408.1.4",
                         "time": 3,
-                        "title": "Starting a Conversation",
+                        "title": "4. Starting a Conversation",
                         "class": "part-title-ministry",
                         "reference": "lmd 4:5",
                         "thumbnail": "lmd",
@@ -78,7 +78,7 @@
                     {
                         "id": "202408.1.5",
                         "time": 4,
-                        "title": "Following Up",
+                        "title": "5. Following Up",
                         "class": "part-title-ministry",
                         "reference": "lmd 8:4",
                         "thumbnail": "lmd",
@@ -89,7 +89,7 @@
                     {
                         "id": "202408.1.6",
                         "time": 5,
-                        "title": "Explaining Your Beliefs",
+                        "title": "6. Explaining Your Beliefs",
                         "class": "part-title-ministry",
                         "reference": "ijwfq 34​ (th Study 17)",
                         "thumbnail": "th",
@@ -102,7 +102,7 @@
                     {
                         "id": "202408.1.7",
                         "time": 15,
-                        "title": "Ideas for Family Worship",
+                        "title": "7. Ideas for Family Worship",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024246/sign/art/202024246_sign_cnt_2_xs.jpg",
                         "roles": [
@@ -113,7 +113,7 @@
                     {
                         "id": "202408.1.8",
                         "time": 30,
-                        "title": "Congregation Bible Study",
+                        "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "lfb",
                         "reference": "lfb Lesson 43; Section 8",
@@ -161,7 +161,7 @@
                         "id": "202408.2.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024247/univ/art/202024247_univ_sqs_lg.jpg",
-                        "title": "What if We Envy Those Not Serving God?",
+                        "title": "1. What if We Envy Those Not Serving God?",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -172,7 +172,7 @@
                         "id": "202408.2.2",
                         "time": 10,
                         "reference": "Ps 74:10, 18, 23​",
-                        "title": "Spiritual Gems",
+                        "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -183,7 +183,7 @@
                         "id": "202408.2.3",
                         "time": 4,
                         "reference": "Ps 74:1-12 (th study 10)",
-                        "title": "Bible Reading",
+                        "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -194,7 +194,7 @@
                     {
                         "id": "202408.2.4",
                         "time": 3,
-                        "title": "Starting a Conversation",
+                        "title": "4. Starting a Conversation",
                         "class": "part-title-ministry",
                         "reference": "lmd 2:4",
                         "thumbnail": "lmd",
@@ -205,7 +205,7 @@
                     {
                         "id": "202408.2.5",
                         "time": 4,
-                        "title": "Following Up",
+                        "title": "5. Following Up",
                         "class": "part-title-ministry",
                         "reference": "lmd 8:3",
                         "thumbnail": "lmd",
@@ -216,7 +216,7 @@
                     {
                         "id": "202408.2.6",
                         "time": 5,
-                        "title": "Talk",
+                        "title": "6. Talk",
                         "class": "part-title-ministry",
                         "reference": "ijwbq 89 (th study 14)",
                         "thumbnail": "th",
@@ -229,7 +229,7 @@
                     {
                         "id": "202408.2.7",
                         "time": 15,
-                        "title": "Local Needs",
+                        "title": "7. Local Needs",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -238,7 +238,7 @@
                     {
                         "id": "202408.2.8",
                         "time": 30,
-                        "title": "Congregation Bible Study",
+                        "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "lfb",
                         "reference": "lfb Lesson 44; Lesson 45",
@@ -286,7 +286,7 @@
                         "id": "202408.3.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024248/sign/art/202024248_sign_sqs_lg.jpg",
-                        "title": "Do Not Be Boastful​—Why?",
+                        "title": "1. Do Not Be Boastful​—Why?",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -297,7 +297,7 @@
                         "id": "202408.3.2",
                         "time": 10,
                         "reference": "Ps 76:10​",
-                        "title": "Spiritual Gems",
+                        "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -308,7 +308,7 @@
                         "id": "202408.3.3",
                         "time": 4,
                         "reference": "Ps 75:1-76:5 (th study 11)",
-                        "title": "Bible Reading",
+                        "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -319,7 +319,7 @@
                     {
                         "id": "202408.3.4",
                         "time": 3,
-                        "title": "Starting a Conversation",
+                        "title": "4. Starting a Conversation",
                         "class": "part-title-ministry",
                         "reference": "lmd 1:4",
                         "thumbnail": "lmd",
@@ -330,7 +330,7 @@
                     {
                         "id": "202408.3.5",
                         "time": 4,
-                        "title": "Starting a Conversation",
+                        "title": "5. Starting a Conversation",
                         "class": "part-title-ministry",
                         "reference": "lmd 2:5",
                         "thumbnail": "lmd",
@@ -341,7 +341,7 @@
                     {
                         "id": "202408.3.6",
                         "time": 5,
-                        "title": "Making Disciples",
+                        "title": "6. Making Disciples",
                         "class": "part-title-ministry",
                         "reference": "lff 15:4 (lmd 11:3)",
                         "thumbnail": "lff",
@@ -354,7 +354,7 @@
                     {
                         "id": "202408.3.7",
                         "time": 7,
-                        "title": "Be Loyal When Praised",
+                        "title": "7. Be Loyal When Praised",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwbv/202007/univ/art/mwbv_univ_202007_wss_03_lg.jpg",
                         "roles": [
@@ -365,7 +365,7 @@
                     {
                         "id": "202408.3.8",
                         "time": 8,
-                        "title": "Special Campaign to Start Bible Studies in September using Enjoy Life Forever!",
+                        "title": "8. Special Campaign to Start Bible Studies in September using Enjoy Life Forever!",
                         "class": "part-title-living",
                         "thumbnail": "lff",
                         "roles": [
@@ -375,7 +375,7 @@
                     {
                         "id": "202408.3.9",
                         "time": 30,
-                        "title": "Congregation Bible Study",
+                        "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "lfb",
                         "reference": "lfb Lesson 46; Lesson 47",
@@ -423,7 +423,7 @@
                         "id": "202408.4.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024249/univ/art/202024249_univ_sqs_lg.jpg",
-                        "title": "Israel’s Unfaithfulness​—A Warning Example",
+                        "title": "1. Israel’s Unfaithfulness​—A Warning Example",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -433,7 +433,7 @@
                     {
                         "id": "202408.4.2",
                         "time": 10,
-                        "title": "Spiritual Gems",
+                        "title": "2. Spiritual Gems",
                         "reference": "Ps 78:14, 52, 53​",
                         "class": "part-title-gems",
                         "roles": [
@@ -445,7 +445,7 @@
                         "id": "202408.4.3",
                         "time": 4,
                         "reference": "Ps 78:1-16 (th study 5)",
-                        "title": "Bible Reading",
+                        "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -456,7 +456,7 @@
                     {
                         "id": "202408.4.4",
                         "time": 3,
-                        "title": "Starting a Conversation",
+                        "title": "4. Starting a Conversation",
                         "class": "part-title-ministry",
                         "reference": "lmd 5:5",
                         "thumbnail": "lmd",
@@ -467,7 +467,7 @@
                     {
                         "id": "202408.4.5",
                         "time": 3,
-                        "title": "Starting a Conversation",
+                        "title": "5. Starting a Conversation",
                         "class": "part-title-ministry",
                         "reference": "lmd 5:4",
                         "thumbnail": "lmd",
@@ -478,7 +478,7 @@
                     {
                         "id": "202408.4.6",
                         "time": 1,
-                        "title": "Starting a Conversation",
+                        "title": "6. Starting a Conversation",
                         "class": "part-title-ministry",
                         "reference": "lmd 2:5",
                         "thumbnail": "lmd",
@@ -489,7 +489,7 @@
                     {
                         "id": "202408.4.7",
                         "time": 1,
-                        "title": "Starting a Conversation",
+                        "title": "7. Starting a Conversation",
                         "class": "part-title-ministry",
                         "reference": "lmd 2:4",
                         "thumbnail": "lmd",
@@ -502,7 +502,7 @@
                     {
                         "id": "202408.4.8",
                         "time": 15,
-                        "title": "Learn From the Example of Philip the Evangelizer",
+                        "title": "8. Learn From the Example of Philip the Evangelizer",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024249/univ/art/202024249_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -513,7 +513,7 @@
                     {
                         "id": "202408.4.9",
                         "time": 30,
-                        "title": "Congregation Bible Study",
+                        "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "lfb",
                         "reference": "lfb Lesson 48; Lesson 49",

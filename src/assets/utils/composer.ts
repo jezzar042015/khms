@@ -106,7 +106,7 @@ function introduction(src: WeekItem, week: S140PartItem[]) {
         id: pattern.id,
         time: pattern.time,
         runtime: runtime,
-        title: pattern.reference,
+        title: pattern.reference ?? '',
         autofills: [...pattern.autofills ?? []],
         roles: [...pattern.roles],
         label: (hasAuxClass ? translations.mwbs140[lang].coCounselor + ' / ' : '')
@@ -184,7 +184,7 @@ function living(src: WeekItem, week: S140PartItem[]) {
             runtime: runtime,
             thumbnail: pattern.thumbnail,
             reference: pattern.reference,
-            title: pattern.title ?? pattern.reference,
+            title: pattern.title ?? pattern.reference ?? '',
             autofills: [...pattern.autofills ?? []],
             roles: [...pattern.roles ?? []],
         }
@@ -194,6 +194,12 @@ function living(src: WeekItem, week: S140PartItem[]) {
 
         if (part.id.includes('.r'))
             part.label = pattern.alt?.replace(':', '')
+
+        if (pattern.isVisit) {
+            part.roles?.push('co');
+            part.title = "1st Service Talk: " + (part.title ?? '');
+            part.co = pattern.co;
+        }
 
         part.runtime = runtime
         runtime = (part.time ?? 0) + runtime

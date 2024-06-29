@@ -24,7 +24,7 @@ export const usePublisherStore = defineStore('publisher', () => {
         { code: "cobe", display: "Coordinator" },
         { code: "so", display: "Service Overseer" },
         { code: "sec", display: "Secretary" },
-        { code: "br", display: "Bible Reading" },
+        { code: "br", display: "3. Bible Reading" },
         { code: "talk", display: "Talks" },
         { code: "demo", display: "Demonstration" },
         { code: "cbs", display: "CBS Conductor" },
