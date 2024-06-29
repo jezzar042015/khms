@@ -4,9 +4,9 @@
             <div id="fsl-mwb">
                 <article>
                     <div id="grid-slips">
-                        <div v-for="part in fileStore.studentsParts" :key="part.id">
+                        <template v-for="part in fileStore.studentsParts" :key="part.id">
                             <SlipTemplate :part="part" />
-                        </div>
+                        </template>
                     </div>
                 </article>
             </div>
@@ -25,10 +25,10 @@
 <style scoped>
     #grid-slips
     {
-        padding: 60px;
+        padding: 20px 90px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: 540px;
-        gap: 50px;
+        gap: 10px;
     }
 </style>

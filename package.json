@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
-    "test:unit": "vitest",
+    "test:unit": "vitest --ui",
     "test:e2e": "playwright test",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
@@ -15,6 +15,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@testing-library/vue": "^8.1.0",
     "lodash": "^4.17.21",
     "pinia": "^2.1.7",
     "short-unique-id": "^5.2.0",
@@ -30,6 +31,7 @@
     "@types/node": "^20.14.5",
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "@vitest/ui": "^1.6.0",
     "@vue/eslint-config-prettier": "^9.0.0",
     "@vue/eslint-config-typescript": "^13.0.0",
     "@vue/test-utils": "^2.4.6",

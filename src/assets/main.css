@@ -614,6 +614,7 @@ section
   gap: 5px;
 
 }
+
 .s140-grid-col2
 {
   grid-template-columns: 1fr 150px;
@@ -624,6 +625,7 @@ section
   grid-template-columns: 1fr 150px 150px;
 
 }
+
 .s140-grid-titles
 {
   display: grid;
@@ -876,6 +878,11 @@ section
     border: none;
   }
 
+    #grid-slips .slip-wrapper:nth-child(4n+3),
+    #grid-slips .slip-wrapper:nth-child(4n+4)
+    {
+      page-break-after: always;
+    }
 
 }
 
