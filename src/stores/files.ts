@@ -67,7 +67,6 @@ export const useFilesStore = defineStore('files', () => {
             list = [...list, ...students]
 
             if (hasAux) {
-                console.log(week.id, students.length);
 
                 if (br && students.length > 0) {
                     const brAssistant = { ...br }
