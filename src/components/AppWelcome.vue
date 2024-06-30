@@ -90,7 +90,7 @@
         transform: rotate(-15deg);
         z-index: 1;
         position: absolute;
-        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        background: linear-gradient(135deg, #3DA8EA, #430888);
         top: 10px;
         left: -25px;
     }
