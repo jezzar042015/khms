@@ -85,9 +85,9 @@ export const useAssignmentStore = defineStore('assignments', () => {
         }
     }
 
-    async function restore(data: { key: string, stored: any }[]): Promise<void> {
+    async function restore(data: { key: string, stored: string }[]): Promise<void> {
         for (const record of data) {
-            localStorage.setItem(record.key, record.stored);
+            localStorage.setItem(record.key, JSON.stringify(record.stored));
         }
     }
 
