@@ -106,7 +106,8 @@
             return pub ? pub.name : ''
 
         } else {
-            return null;
+            const pub = pubStore.publishers.find(p => p.id == assigned.a);
+            return pub ? pub.name : 'Not Assigned!'
         }
     })
 
