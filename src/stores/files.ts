@@ -62,14 +62,32 @@ export const useFilesStore = defineStore('files', () => {
         for (const week of loadedMonth.value.content.weeks) {
             const br = week.parts.gems.find(p => p.roles.includes('br'))
             if (br) list.push({ ...br })
-            if (br && hasAux) {
-                const brAssistant = { ...br }
-                brAssistant.id = `${brAssistant.id}.ax1`
-                list.push(brAssistant)
-            }
 
-            const demos = week.parts.ministry.filter(p => p.roles.includes('demo') || p.roles.includes('talk'))
-            list = [...list, ...demos]
+            const students = week.parts.ministry.filter(p => p.roles.includes('demo') || p.roles.includes('talk'))
+            list = [...list, ...students]
+
+            if (hasAux) {
+                console.log(week.id, students.length);
+
+                if (br && students.length > 0) {
+                    const brAssistant = { ...br }
+                    brAssistant.id = `${brAssistant.id}.ax1`
+                    list.push(brAssistant)
+                }
+
+                if (students) {
+                    const auxlist: PartItem[] = []
+
+                    for (const student of students) {
+                        const s = { ...student }
+                        s.id = `${student.id}.ax1`
+                        auxlist.push(s)
+                    }
+
+                    list = [...list, ...auxlist]
+                }
+
+            }
         }
 
         return list
