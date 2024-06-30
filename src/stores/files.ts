@@ -1,4 +1,4 @@
-import { computed, ref, watch } from "vue";
+import { computed, ref, watch, watchEffect } from "vue";
 import { defineStore } from "pinia";
 import { cloneDeep } from 'lodash';
 import { useCongregationStore } from "./congregation";
@@ -54,43 +54,53 @@ export const useFilesStore = defineStore('files', () => {
         }))
     })
 
-    const studentsParts = computed<PartItem[]>(() => {
-        let list: PartItem[] = []
-        if (!loadedMonth.value) return list
-        const hasAux = congStore.congregation.classId == 2
+    const studentsParts = ref<PartItem[]>([]);
+
+    watchEffect(async () => {
+        const list: PartItem[] = [];
+        if (!loadedMonth.value) {
+            studentsParts.value = list;
+            return;
+        }
+
+        const hasAux = congStore.congregation.classId === 2;
 
         for (const week of loadedMonth.value.content.weeks) {
-            const br = week.parts.gems.find(p => p.roles.includes('br'))
-            if (br) list.push({ ...br })
+            const br = week.parts.gems.find(p => p.roles.includes('br'));
+            if (br) list.push({ ...br });
 
-            const students = week.parts.ministry.filter(p => p.roles.includes('demo') || p.roles.includes('talk'))
-            list = [...list, ...students]
+            const students = week.parts.ministry.filter(p => p.roles.includes('demo') || p.roles.includes('talk'));
+            list.push(...students);
 
             if (hasAux) {
-
-                if (br && students.length > 0) {
-                    const brAssistant = { ...br }
-                    brAssistant.id = `${brAssistant.id}.ax1`
-                    list.push(brAssistant)
-                }
-
-                if (students) {
-                    const auxlist: PartItem[] = []
-
-                    for (const student of students) {
-                        const s = { ...student }
-                        s.id = `${student.id}.ax1`
-                        auxlist.push(s)
-                    }
-
-                    list = [...list, ...auxlist]
-                }
-
+                const auxStudents = await auxiliaryStudentParts(br, students);
+                list.push(...auxStudents);
             }
         }
 
-        return list
-    })
+        studentsParts.value = list;
+    });
+
+    const auxiliaryStudentParts = async (br: PartItem | undefined, students: PartItem[]): Promise<PartItem[]> => {
+        const list: PartItem[] = [];
+
+        if (br && students.length > 0) {
+            const brAssistant = { ...br };
+            brAssistant.id = `${brAssistant.id}.ax1`;
+            list.push(brAssistant);
+        }
+
+        if (students) {
+            for (const student of students) {
+                const s = { ...student };
+                s.id = `${student.id}.ax1`;
+                list.push(s);
+            }
+        }
+
+        return list;
+    };
+
 
     async function loadFiles(): Promise<void> {
         const lang = congStore.congregation.lang;
