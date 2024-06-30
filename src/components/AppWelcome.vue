@@ -14,7 +14,8 @@
                     Let’s Get Started!
                 </div>
                 <div class="inputs">
-                    <FormInput v-model="congStore.congregation.name" label="Congregation or Group Name" />
+                    <FormInput v-model="congStore.congregation.name" label="Congregation or Group Name"
+                        :placeholder="'Name for schedule headers'" />
                     <FormSelect v-model="congStore.congregation.lang" label="Meeting Language"
                         :items="congStore.supportedLanguages" :id="'code'" :display="'lang'"
                         :placeholder="'Select Meeting Language'" />
@@ -69,7 +70,7 @@
 
     #form
     {
-        background: white;
+        background: linear-gradient(125deg, #ffffff, #fcfcfc, #d5c8e4c5, #b982f75b);
         position: relative;
         height: 100%;
         width: 100%;
@@ -90,7 +91,7 @@
         transform: rotate(-15deg);
         z-index: 1;
         position: absolute;
-        background: linear-gradient(135deg, #3DA8EA, #430888);
+        background: linear-gradient(135deg, #3DA8EA, #1e033d);
         top: 10px;
         left: -25px;
     }
@@ -103,9 +104,12 @@
 
     #message
     {
-        color: #3DA8EA;
+        /* color: #3DA8EA; */
         font-size: 22px;
         font-weight: 600;
+        background: linear-gradient(135deg, #3DA8EA, #34004d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .shoutout
@@ -119,14 +123,14 @@
 
     button
     {
-        background: #3DA8EA;
+        background: #215d83;
         border: none;
         color: white;
         font-size: 12px;
         padding: 10px 35px;
         border-radius: 50px;
         cursor: pointer;
-        transition: ease-in-out .5s;
+        transition: ease-in-out .2s;
         margin-top: 10px;
     }
 
