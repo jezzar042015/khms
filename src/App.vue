@@ -5,7 +5,6 @@
     <PublishersList v-if="viewStore.pubsList" />
     <AssignmentSlips v-if="viewStore.assignmentSlips" />
   </div>
-
   <SmallScreen />
 </template>
 
@@ -24,7 +23,6 @@
   import TemplateHolder from './components/TemplateHolder.vue';
   import PublishersList from '@/components/PublishersList.vue'
   import AssignmentSlips from '@/components/AssignmentSlips.vue'
-
 
   const congStore = useCongregationStore()
   const pubsStore = usePublisherStore()

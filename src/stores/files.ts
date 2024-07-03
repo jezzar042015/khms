@@ -237,7 +237,7 @@ export const useFilesStore = defineStore('files', () => {
 
     watch(
         () => congStore.congregation.mwbTemplate,
-        () => composeS140()
+        async () => await composeS140()
     )
 
     return {
