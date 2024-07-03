@@ -21,13 +21,13 @@
     const viewStore = useViewStore()
 
     interface Props {
-        settings: AlertSettings,
+        settings?: AlertSettings,
     }
 
     const props = withDefaults(
         defineProps<Props>(),
         {
-            settings: {
+            settings: () => ({
                 confirm: true,
                 confirmText: 'OK',
                 header: 'Header',
@@ -35,9 +35,9 @@
                 msg: 'Message',
                 cancel: true,
                 cancelText: 'Cancel',
-            }
+            })
         }
-    )
+    );
 
     function close() {
         viewStore.setPopAlert(false)
@@ -79,8 +79,8 @@
         border-radius: 3px;
     }
 
-    .btn-cancel
-    {}
+    /* .btn-cancel
+    {} */
 
     .btn-confirm
     {
