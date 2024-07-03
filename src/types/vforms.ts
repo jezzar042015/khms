@@ -10,11 +10,11 @@ export interface FormCongSettings {
 }
 
 export interface AlertSettings {
-    confirm: boolean
-    confirmText: string
-    header: string
-    icon: AlertIcons
-    msg: string
-    cancel: boolean
-    cancelText: string
+    confirm?: boolean
+    confirmText?: string
+    header?: string
+    icon?: AlertIcons
+    msg?: string
+    cancel?: boolean
+    cancelText?: string
 }
