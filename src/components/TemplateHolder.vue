@@ -18,7 +18,6 @@
     import { useCongregationStore } from '@/stores/congregation';
 
     import TemplateView from '@/components/layouts/TemplateView.vue'
-
     import CustomizedTemplate from '@/components/templates/A100/CustomWrapper.vue';
     import OfficialTemplate from '@/components/templates/S140/AppWrapper.vue';
 

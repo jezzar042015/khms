@@ -1,6 +1,6 @@
 <template>
     <teleport to='body'>
-        <div class="modal-bg" v-if="viewStore.popUpAlert">
+        <div class="modal-bg" v-if="viewStore.popUpAlert" @click.prevent.stop>
             <div class="modal">
                 <slot></slot>
             </div>
@@ -38,5 +38,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        max-width: 25%;
+        gap: 10px;
     }
 </style>

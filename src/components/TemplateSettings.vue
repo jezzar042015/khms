@@ -100,6 +100,7 @@
         </div>
 
     </div>
+    <AlertMessage :settings="alertSettings" />
 </template>
 
 <script setup lang="ts">
@@ -108,20 +109,35 @@
     import { useFilesStore } from '@/stores/files';
     import { useEventStore } from '@/stores/events';
     import { useVisitStore } from '@/stores/visits';
+    import { useViewStore } from '@/stores/views';
     import { meetingTimes } from '@/assets/utils/times';
     import { BackUp, HARD_STORAGE_RESET, Restore } from '@/assets/utils/backup';
     import type { EventDetail } from '@/types/event';
     import type { VisitDetail } from '@/types/visit';
+    import type { AlertIcons, AlertSettings } from '@/types/vforms';
     import FormInput from './reusables/FormInput.vue';
     import FormSelect from './reusables/FormSelect.vue';
     import FormSwitch from './reusables/FormSwitch.vue';
     import IconArrow from './icons/IconArrow.vue';
+    import AlertMessage from './AlertMessage.vue';
+
+
+    const alertSettings = ref<AlertSettings>({
+        confirm: true,
+        confirmText: 'OK',
+        header: 'Header',
+        icon: 'none' as AlertIcons,
+        msg: 'Message',
+        cancel: false,
+        cancelText: 'Cancel',
+    })
 
     const emits = defineEmits(['hideMe']);
     const congStore = useCongregationStore()
     const fileStore = useFilesStore()
     const eventStore = useEventStore()
     const visitStore = useVisitStore()
+    const viewStore = useViewStore()
 
     const timeOptions = ref<{ id: string; name: string; }[]>([])
     const hasVisit = ref(false)
@@ -173,6 +189,12 @@
         await HARD_STORAGE_RESET()
     }
 
+    async function warnAlert(msg: string, header: string = '') {
+        alertSettings.value.msg = msg
+        alertSettings.value.header = header
+        viewStore.setPopAlert(true)
+    }
+
     watch(
         () => hasVisit.value,
         () => visitStore.setVisit(visitDetail.value, hasVisit.value)
@@ -181,6 +203,20 @@
     watch(
         () => hasEvent.value,
         () => eventStore.setEvent(eventDetail.value, hasEvent.value)
+    )
+
+    watch(
+        () => [
+            congStore.congregation.mwbTemplate,
+            congStore.congregation.classId
+        ],
+        () => {
+            if ((congStore.congregation.classId > 1) && congStore.congregation.mwbTemplate === 'a-100') {
+                const header = 'Auxiliary Class'
+                const msg = 'Sorry! Customized template is not fully supported on scheduling midweek meetings with auxiliary classes.'
+                warnAlert(msg, header)
+            }
+        }
     )
 
     onMounted(async () => {

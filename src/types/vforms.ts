@@ -1,3 +1,5 @@
+export type AlertIcons = 'warning' | 'success' | 'error' | 'info' | 'none'
+
 export interface FormCongSettings {
     showLabels: boolean,
     PhCong: string,
@@ -7,14 +9,12 @@ export interface FormCongSettings {
     showSubtitle: boolean,
 }
 
-type AlertIcons = 'warning' | 'success' | 'danger' | 'info' | 'none'
-
 export interface AlertSettings {
-    header: string | undefined
-    msg: string
-    confirm: boolean
-    confirmText: string | undefined
-    cancel: boolean
-    cancelText: string | undefined
-    icon: AlertIcons
+    header?: string;
+    msg: string;
+    confirm: boolean;
+    confirmText?: string;
+    cancel: boolean;
+    cancelText?: string;
+    icon: AlertIcons;
 }
