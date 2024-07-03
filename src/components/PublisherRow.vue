@@ -216,7 +216,7 @@
         stroke: #ffff;
     }
 
-    .row:hover .remove-pub
+    .row:hover div .remove-pub
     {
         display: inline-flex;
     }
