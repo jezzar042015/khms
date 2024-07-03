@@ -39,14 +39,14 @@ export const usePublisherStore = defineStore('publisher', () => {
             mode = 'insert'
         } else if (publisher.name) {
             mode = 'update'
-        } 
+        }
 
         if (mode === 'insert' && publisher.id) {
             pubs.value.push(publisher)
         } else if (mode === 'update') {
             const pubIndex = pubs.value.findIndex(p => p.id === publisher.id)
             pubs.value.splice(pubIndex, 1, publisher)
-        } 
+        }
 
         return mode
     }
@@ -66,7 +66,19 @@ export const usePublisherStore = defineStore('publisher', () => {
             pubs.value = []
         } else {
             pubs.value = JSON.parse(stored)
+            await cleanup()
         }
+    }
+
+    async function cleanup() {
+        const clone = [...pubs.value]
+        const size = clone.length
+        for (let i = size - 1; i >= 0; i--) {
+            const pub = clone[i];
+            if (!pub.id) clone.splice(i, 1)
+        }
+
+        pubs.value = clone;
     }
 
     async function reset(): Promise<void> {
