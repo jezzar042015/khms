@@ -9,6 +9,7 @@ export const useViewStore = defineStore('views', () => {
 
     type Views = 'welcome' | 'mwb' | 'pubs' | 'slips'
     const view = ref<Views>('welcome')
+    const popUpAlert = ref(false)
 
     const congStore = useCongregationStore()
     const visitStore = useVisitStore()
@@ -33,6 +34,10 @@ export const useViewStore = defineStore('views', () => {
 
     function setView(viewName: Views): void {
         view.value = viewName
+    }
+
+    function setPopAlert(show: boolean) {
+        popUpAlert.value = show
     }
 
     async function init(): Promise<boolean> {
@@ -61,6 +66,6 @@ export const useViewStore = defineStore('views', () => {
         welcomePage, mwbTemplate,
         pubsList, assignmentSlips,
         init, exitWelcome,
-        setView
+        setView, popUpAlert, setPopAlert
     }
 })
