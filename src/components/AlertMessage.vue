@@ -7,7 +7,8 @@
             {{ settings.msg }}
         </div>
         <div class="footer">
-            <button class="btn-confirm" @click.stop="close" v-if="settings.confirm">{{ settings.confirmText }}</button>
+            <button class="btn-confirm" @click.stop="confirmed" v-if="settings.confirm">{{ settings.confirmText
+                }}</button>
             <button class="btn-cancel" @click.stop="close" v-if="settings.cancel">{{ settings.cancelText }}</button>
         </div>
     </PopAlert>
@@ -24,6 +25,7 @@
         settings?: AlertSettings,
     }
 
+    const emits = defineEmits(['confirm'])
     const props = withDefaults(
         defineProps<Props>(),
         {
@@ -42,23 +44,34 @@
     function close() {
         viewStore.setPopAlert(false)
     }
+
+    function confirmed() {
+        emits('confirm')
+        close()
+    }
 </script>
 
 <style scoped>
+
     .header
     {
         text-wrap: nowrap;
         color: rgb(48, 48, 48);
         padding: 0px 10px 0px 10px;
+    }
 
+    .header:empty
+    {
+        padding: 0px;
+        display: none;
     }
 
     .msg
     {
-        font-size: 1.15em;
+        font-size: 1.1em;
         font-weight: 400;
         color: rgb(20, 20, 20);
-        padding: 20px 10px 10px 10px;
+        padding: 10px;
     }
 
     .footer
@@ -67,23 +80,27 @@
         padding: 0px 10px 0px;
         justify-content: end;
         align-items: baseline;
+        gap: 10px
     }
 
     .btn-confirm,
     .btn-cancel
     {
-        padding: 8px 35px;
+        padding: 8px 30px;
         cursor: pointer;
         border: none;
-        color: white;
         border-radius: 3px;
+        font-size: .8em;
     }
 
-    /* .btn-cancel
-    {} */
+    .btn-cancel
+    {
+        color: gray;
+    }
 
     .btn-confirm
     {
+        color: white;
         background: #3DA8EA;
     }
 </style>
