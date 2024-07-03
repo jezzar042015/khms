@@ -151,6 +151,15 @@
         padding: 25px;
         width: 100%;
         height: 100%;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+        transition: box-shadow .2s;
+    }
+
+    .slip-wrapper:hover
+    {
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+        scale: 1.01;
+        z-index: 2;
     }
 
     .wrapper
@@ -265,6 +274,14 @@
     {
         font-size: .89em;
         font-weight: 400;
+    }
+
+    @media print
+    {
+        .slip-wrapper
+        {
+            box-shadow: none;
+        }
     }
 
 </style>
