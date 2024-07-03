@@ -4,7 +4,7 @@
             <div class="pubname">{{ pub.name }}</div>
             <div class="r-title">Assign Roles</div>
             <div class="list">
-                <div class="role" v-for="role in availableRoles" :key="role.code" @click="addRole(role.code)">
+                <div class="role" v-for="role in availableRoles" :key="role.code" @click.stop="addRole(role.code)">
                     <span class="icon">
                         <IconPlus />
                     </span>
