@@ -32,18 +32,21 @@ export const usePublisherStore = defineStore('publisher', () => {
     ])
 
     async function upsert(publisher: Publisher): Promise<string> {
-        let mode = 'update'
-        if (!publisher.id) {
+        let mode = ''
+
+        if (!publisher.id && publisher.name) {
             publisher.id = uid.generate()
             mode = 'insert'
-        }
+        } else if (publisher.name) {
+            mode = 'update'
+        } 
 
-        if (mode == 'insert') {
+        if (mode === 'insert' && publisher.id) {
             pubs.value.push(publisher)
-        } else {
+        } else if (mode === 'update') {
             const pubIndex = pubs.value.findIndex(p => p.id === publisher.id)
             pubs.value.splice(pubIndex, 1, publisher)
-        }
+        } 
 
         return mode
     }

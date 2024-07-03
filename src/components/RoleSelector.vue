@@ -102,7 +102,7 @@
 
     watch(
         () => props.publisher,
-        (newPublisher) => {
+        async (newPublisher) => {
             pub.value.id = newPublisher.id;
             pub.value.name = newPublisher.name;
             pub.value.roles = newPublisher.roles;
