@@ -21,12 +21,13 @@
                 <PublisherRow :pub="newPublisher" />
                 <transition-group name="publishers">
                     <template v-for="pub in filteredList" :key="pub.id">
-                        <PublisherRow :pub="pub" />
+                        <PublisherRow :pub="pub" @request-remove="confirmDelete" />
                     </template>
                 </transition-group>
             </div>
         </div>
     </div>
+    <AlertMessage :settings="alert" @confirm="removePublisher" />
 </template>
 
 <script setup lang="ts">
@@ -34,8 +35,10 @@
     import { usePublisherStore } from '@/stores/publisher';
     import { useViewStore } from '@/stores/views';
     import type { Publisher } from '@/types/publisher';
-
+    import type { AlertSettings } from '@/types/vforms';
     import PublisherRow from '@/components/PublisherRow.vue'
+    import AlertMessage from '@/components/AlertMessage.vue'
+    const alert = ref<AlertSettings>({})
 
     const viewStore = useViewStore()
     const pubStore = usePublisherStore()
@@ -45,6 +48,7 @@
         roles: ['demo']
     })
 
+    const targetPub = ref<Publisher | null>(null)
     const filter = ref<string | null>('')
 
     const filteredList = computed<Publisher[]>(() => {
@@ -57,6 +61,29 @@
 
     function toSchedules(): void {
         viewStore.setView('mwb')
+    }
+
+    async function confirmDelete(pub: Publisher) {
+        targetPub.value = pub
+        await showAlert()
+    }
+
+    async function showAlert() {
+        alert.value.header = 'Confirm Delete'
+        alert.value.msg =
+            `You can't undo this action! 
+            Are you sure to delete '${targetPub.value?.name}' from the publishers list?`
+        alert.value.cancel = true
+        alert.value.cancelText = "Don't Delete"
+        alert.value.confirm = true
+        alert.value.confirmText = 'Delete'
+        viewStore.setPopAlert(true)
+    }
+
+    async function removePublisher(): Promise<void> {
+        const id = targetPub.value?.id
+        if (!id) return
+        pubStore.remove(id)
     }
 </script>
 

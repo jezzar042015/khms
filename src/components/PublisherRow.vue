@@ -1,7 +1,7 @@
 <template>
     <div class="row grid-col">
         <div>
-            <span class="remove-pub" v-if="!isNewPub" @click="removePublisher">
+            <span class="remove-pub" v-if="!isNewPub" @click="requestDelete">
                 <IconMinus />
             </span>
             <input type="text" placeholder="Add publisher here" v-model="publisher.name" @blur="upsert"
@@ -20,6 +20,7 @@
                 </span>
             </span>
         </div>
+
     </div>
 </template>
 
@@ -28,12 +29,14 @@
     import { usePublisherStore } from '@/stores/publisher';
     import type { Publisher } from '@/types/publisher';
 
+
     import RoleSelector from '@/components/RoleSelector.vue'
     import IconPlus from '@/components/icons/IconPlus.vue'
     import IconMinus from '@/components/icons/IconMinus.vue'
 
     const roleSelectorDisplay = ref(false);
 
+    const emits = defineEmits(['request-remove'])
     const props = defineProps<{
         pub: Publisher
     }>()
@@ -67,6 +70,10 @@
         return displays
     })
 
+    function requestDelete() {
+        emits('request-remove', publisher.value)
+    }
+
     function showRoleSelector(): void {
         hasTriggeredSelector.value = true;
         roleSelectorDisplay.value = true;
@@ -96,11 +103,7 @@
         await pubStore.upsert(publisher.value)
     }
 
-    async function removePublisher(): Promise<void> {
-        const id = publisher.value.id
-        if (!id) return
-        pubStore.remove(id)
-    }
+
 
 </script>
 

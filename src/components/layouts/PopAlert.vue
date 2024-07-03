@@ -38,7 +38,15 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        max-width: 25%;
         gap: 10px;
+        margin: auto 10px;
+    }
+
+    @media only screen and (min-width:700px)
+    {
+        .modal
+        {
+            max-width: 500px;
+        }
     }
 </style>
