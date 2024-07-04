@@ -2,6 +2,7 @@ import { useAssignmentStore } from "@/stores/assignment";
 import { useCongregationStore } from "@/stores/congregation";
 import { useEventStore } from "@/stores/events";
 import { usePublisherStore } from "@/stores/publisher";
+import { useViewStore } from "@/stores/views";
 import { useVisitStore } from "@/stores/visits";
 import type { Congregation } from "@/types/congregation";
 import type { EventsDetails } from "@/types/event";
@@ -14,12 +15,14 @@ export async function HARD_STORAGE_RESET() {
     const visitStore = useVisitStore()
     const assignStore = useAssignmentStore()
     const pubStore = usePublisherStore()
+    const viewStore = useViewStore()
 
-    congStore.reset()
-    pubStore.reset()
-    eventStore.reset()
-    visitStore.reset()
-    assignStore.resetAll()
+    congStore.reset();
+    pubStore.reset();
+    eventStore.reset();
+    visitStore.reset();
+    assignStore.resetAll();
+    viewStore.setView("welcome");
 }
 
 export async function BackUp() {
