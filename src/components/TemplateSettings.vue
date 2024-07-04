@@ -60,7 +60,7 @@
             <div class="form-subtitle">Back-up & Restore</div>
             <div>
                 <div class="actions">
-                    <div class="action-item" @click="BackUp">
+                    <div class="action-item" @click="backup">
                         Create Backup
                         <span>
                             <IconArrow />
@@ -69,7 +69,7 @@
                     <div class="action-item">
                         <label for="fileInput" class="file-label">
                             Restore Backup
-                            <input type="file" id="fileInput" accept=".txt" @change="Restore" />
+                            <input type="file" id="fileInput" accept=".txt" @change="restore" />
                             <span>
                                 <IconArrow />
                             </span>
@@ -100,7 +100,7 @@
         </div>
 
     </div>
-    <AlertMessage :settings="alerts" @confirm="HARD_STORAGE_RESET" />
+    <AlertMessage :settings="alerts" @confirm="execConfirm" />
 </template>
 
 <script setup lang="ts">
@@ -112,6 +112,7 @@
     import { useViewStore } from '@/stores/views';
     import { meetingTimes } from '@/assets/utils/times';
     import { BackUp, HARD_STORAGE_RESET, Restore } from '@/assets/utils/backup';
+    import { useToast } from 'vue-toast-notification';
     import type { EventDetail } from '@/types/event';
     import type { VisitDetail } from '@/types/visit';
     import type { AlertIcons, AlertSettings } from '@/types/vforms';
@@ -121,12 +122,15 @@
     import IconArrow from './icons/IconArrow.vue';
     import AlertMessage from './AlertMessage.vue';
 
-
+    type ConfirmActions = 'none' | 'reset'
+    const $toast = useToast();
     const alerts = ref<AlertSettings>({
         confirm: true,
         confirmText: 'OK',
         icon: 'none' as AlertIcons,
     })
+
+    const alertAction = ref<ConfirmActions>('none')
 
     const emits = defineEmits(['hideMe']);
     const congStore = useCongregationStore()
@@ -185,21 +189,40 @@
         resetConfirmation()
     }
 
-    async function warnAlert(msg: string, header: string = '', cancel: boolean = false) {
+    async function warnAlert(msg: string, header: string = '', cancel: boolean = false, confirmText: string = '', cancelText: string = '') {
         alerts.value.msg = msg
         alerts.value.header = header
         alerts.value.cancel = cancel
-        alerts.value.cancelText = "DON'T RESET"
-        alerts.value.confirmText = 'RESET'
+        alerts.value.cancelText = cancelText || "Cancel"
+        alerts.value.confirmText = confirmText || 'OK'
         viewStore.setPopAlert(true)
     }
 
     async function resetConfirmation() {
+        alertAction.value = 'reset'
         warnAlert(
             "All of your data will be wiped-out from your browser's storage. Are you sure to reset anyway?",
             'Reseting App',
-            true
+            true, "RESET", "DON'T RESET"
         )
+    }
+
+    async function backup() {
+        await BackUp()
+        $toast.success('Backup Created!', { position: 'top-right' })
+    }
+
+    async function restore($evt: Event) {
+        await Restore($evt)
+        $toast.success('Backup Restored!', { position: 'top-right' })
+    }
+
+    async function execConfirm() {
+        if (alertAction.value === 'reset') {
+            HARD_STORAGE_RESET()
+        } else if (alertAction.value === 'none') {
+            //  Do nothing
+        }
     }
 
     watch(
@@ -219,9 +242,10 @@
         ],
         () => {
             if ((congStore.congregation.classId > 1) && congStore.congregation.mwbTemplate === 'a-100') {
+                alertAction.value = 'none'
                 const header = 'Auxiliary Class'
                 const msg = 'Sorry! Customized template is not fully supported on scheduling midweek meetings with auxiliary classes.'
-                warnAlert(msg, header)
+                warnAlert(msg, header, false)
             }
         }
     )

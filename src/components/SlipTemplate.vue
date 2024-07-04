@@ -1,5 +1,8 @@
 <template>
-    <div class="slip-wrapper">
+    <div class="slip-wrapper" ref="slip">
+        <div class="shooter" @click="capture" v-show="shooter">
+            <IconCamera />
+        </div>
         <div class="wrapper">
             <div class="slip-title bold">
                 OUR CHRISTIAN LIFE AND MINISTRY MEETING ASSIGNMENT
@@ -68,23 +71,29 @@
 </template>
 
 <script setup lang="ts">
-    import { computed } from 'vue';
+    import { computed, ref } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
     import { usePublisherStore } from '@/stores/publisher';
     import { useFilesStore } from '@/stores/files';
+    import { useToast } from 'vue-toast-notification';
     import type { PartItem } from '@/types/files';
+    import domtoimage from 'dom-to-image';
     import IconCheck from './icons/IconCheck.vue';
+    import IconCamera from './icons/IconCamera.vue';
 
-
+    const $toast = useToast();
     const props = defineProps<{
         part: PartItem
     }>()
 
     type Classrooms = 'main' | 'aux1' | 'aux2'
 
+
     const assignStore = useAssignmentStore()
     const pubStore = usePublisherStore()
     const fileStore = useFilesStore()
+    const slip = ref<HTMLElement>()
+    const shooter = ref(true)
 
     const isDemo = computed(() => props.part.roles?.includes('demo'))
     const isBibleReading = computed(() => props.part.roles?.includes('br'))
@@ -140,12 +149,29 @@
         return ['checkbox', { 'checked': classAssignment.value == 'aux2' }]
     })
 
+    async function capture() {
 
+        if (!slip.value) return;
+        const element = slip.value;
+
+        try {
+            shooter.value = false
+            const dataUrl = await domtoimage.toPng(element);
+            const blob = await (await fetch(dataUrl)).blob();
+            const item = new ClipboardItem({ 'image/png': blob });
+            await navigator.clipboard.write([item]);
+            shooter.value = true
+            $toast.info('Assignment slip is copied in your clipboard!', { position: 'top', duration: 5000 })
+        } catch (error) {
+            console.error('Failed to capture image and copy to clipboard:', error);
+        }
+    }
 </script>
 
 <style scoped>
     .slip-wrapper
     {
+        background-color: white;
         border: 1px solid rgba(128, 128, 128, 0.205);
         font-size: 16px;
         padding: 25px;
@@ -153,6 +179,36 @@
         height: 100%;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
         transition: box-shadow .2s;
+        position: relative;
+    }
+
+    .shooter
+    {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 1;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity .5s;
+    }
+
+    .shooter svg
+    {
+        height: 34px;
+        width: 34px;
+        opacity: .4;
+        transition: opacity .2s;
+    }
+
+    .shooter svg:hover
+    {
+        opacity: .9;
+    }
+
+    .slip-wrapper:hover .shooter
+    {
+        opacity: .2;
     }
 
     .slip-wrapper:hover
@@ -160,6 +216,7 @@
         box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
         scale: 1.01;
         z-index: 2;
+        background-color: white;
     }
 
     .wrapper
@@ -168,6 +225,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        background-color: white;
     }
 
     .slip-title
@@ -278,9 +336,15 @@
 
     @media print
     {
+
         .slip-wrapper
         {
             box-shadow: none;
+        }
+
+        .shooter
+        {
+            display: none;
         }
     }
 
