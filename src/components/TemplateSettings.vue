@@ -100,7 +100,7 @@
         </div>
 
     </div>
-    <AlertMessage :settings="alertSettings" />
+    <AlertMessage :settings="alerts" @confirm="HARD_STORAGE_RESET" />
 </template>
 
 <script setup lang="ts">
@@ -122,14 +122,10 @@
     import AlertMessage from './AlertMessage.vue';
 
 
-    const alertSettings = ref<AlertSettings>({
+    const alerts = ref<AlertSettings>({
         confirm: true,
         confirmText: 'OK',
-        header: 'Header',
         icon: 'none' as AlertIcons,
-        msg: 'Message',
-        cancel: false,
-        cancelText: 'Cancel',
     })
 
     const emits = defineEmits(['hideMe']);
@@ -186,13 +182,24 @@
     }
 
     async function hardReset(): Promise<void> {
-        await HARD_STORAGE_RESET()
+        resetConfirmation()
     }
 
-    async function warnAlert(msg: string, header: string = '') {
-        alertSettings.value.msg = msg
-        alertSettings.value.header = header
+    async function warnAlert(msg: string, header: string = '', cancel: boolean = false) {
+        alerts.value.msg = msg
+        alerts.value.header = header
+        alerts.value.cancel = cancel
+        alerts.value.cancelText = "DON'T RESET"
+        alerts.value.confirmText = 'RESET'
         viewStore.setPopAlert(true)
+    }
+
+    async function resetConfirmation() {
+        warnAlert(
+            "All of your data will be wiped-out from your browser's storage. Are you sure to reset anyway?",
+            'Reseting App',
+            true
+        )
     }
 
     watch(
