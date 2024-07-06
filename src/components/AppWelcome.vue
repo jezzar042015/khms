@@ -86,7 +86,6 @@
     {
         height: 100%;
         width: 100%;
-        background: #3DA8EA;
         border-radius: 20px;
         transform: rotate(-15deg);
         z-index: 1;
@@ -104,11 +103,11 @@
 
     #message
     {
-        /* color: #3DA8EA; */
         font-size: 22px;
         font-weight: 600;
         background: linear-gradient(135deg, #3DA8EA, #34004d);
         -webkit-background-clip: text;
+        background-clip: border-box;
         -webkit-text-fill-color: transparent;
     }
 

@@ -1,7 +1,12 @@
 <template>
     <div class="slip-wrapper" ref="slip">
-        <div class="shooter" @click="capture" v-show="shooter">
-            <IconCamera />
+        <div class="actions">
+            <div class="action-item" @click="download" v-show="shooter" style="padding-top: 4px;">
+                <IconDownload />
+            </div>
+            <div class="action-item" @click="capture" v-show="shooter">
+                <IconCamera />
+            </div>
         </div>
         <div class="wrapper">
             <div class="slip-title bold">
@@ -80,6 +85,7 @@
     import domtoimage from 'dom-to-image';
     import IconCheck from './icons/IconCheck.vue';
     import IconCamera from './icons/IconCamera.vue';
+    import IconDownload from './icons/IconDownload.vue';
 
     const $toast = useToast();
     const props = defineProps<{
@@ -166,6 +172,36 @@
             console.error('Failed to capture image and copy to clipboard:', error);
         }
     }
+
+    async function download() {
+        if (!slip.value) return;
+        const element = slip.value;
+        try {
+            shooter.value = false
+            const dataUrl = await domtoimage.toPng(element);
+            const blob = await (await fetch(dataUrl)).blob();
+            const options = {
+                types: [
+                    {
+                        description: 'PNG file',
+                        accept: {
+                            'image/png': ['.png'],
+                        },
+                    },
+                ],
+            };
+
+            const handle: FileSystemFileHandle = await (window as any).showSaveFilePicker(options);
+            const writableStream = await handle.createWritable();
+            await writableStream.write(blob);
+            await writableStream.close();
+            shooter.value = true
+            $toast.info('Assignment slip was successfully downloaded!', { position: 'top', duration: 5000 })
+        } catch (error) {
+            $toast.warning('Assignment slip was not downloaded!', { position: 'top', duration: 5000 })
+            shooter.value = true
+        }
+    }
 </script>
 
 <style scoped>
@@ -182,33 +218,44 @@
         position: relative;
     }
 
-    .shooter
+    .actions
     {
+        display: flex;
         position: absolute;
         bottom: 10px;
         right: 10px;
         z-index: 1;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .action-item
+    {
         cursor: pointer;
         opacity: 0;
         transition: opacity .5s;
+        display: flex;
+        align-items: center;
+        align-content: center;
     }
 
-    .shooter svg
+    .action-item svg
     {
+        align-self: center;
         height: 34px;
         width: 34px;
         opacity: .4;
         transition: opacity .2s;
     }
 
-    .shooter svg:hover
+    .action-item svg:hover
     {
-        opacity: .9;
+        opacity: 1;
     }
 
-    .slip-wrapper:hover .shooter
+    .slip-wrapper:hover .action-item
     {
-        opacity: .2;
+        opacity: .4;
     }
 
     .slip-wrapper:hover
@@ -342,7 +389,7 @@
             box-shadow: none;
         }
 
-        .shooter
+        .actions
         {
             display: none;
         }

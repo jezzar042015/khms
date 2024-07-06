@@ -16,8 +16,8 @@
 
 <script setup lang="ts">
     import { useViewStore } from '@/stores/views';
-    import PopAlert from '@/components/layouts/PopAlert.vue'
     import type { AlertIcons, AlertSettings } from '@/types/vforms';
+    import PopAlert from '@/components/layouts/PopAlert.vue'
 
     const viewStore = useViewStore()
 
