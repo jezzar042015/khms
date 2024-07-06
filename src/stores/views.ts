@@ -4,12 +4,14 @@ import { useCongregationStore } from "./congregation";
 import { useVisitStore } from "./visits";
 import { useEventStore } from "./events";
 import { useFilesStore } from "./files";
+import { prefs } from "@/assets/utils/prefs";
 
 export const useViewStore = defineStore('views', () => {
 
     type Views = 'welcome' | 'mwb' | 'pubs' | 'slips'
     const view = ref<Views>('welcome')
     const popUpAlert = ref(false)
+    const cams = ref(false)
 
     const congStore = useCongregationStore()
     const visitStore = useVisitStore()
@@ -51,6 +53,8 @@ export const useViewStore = defineStore('views', () => {
             setView("mwb")
         }
 
+        await prefs.read()
+
         return !welcomePage.value
     }
 
@@ -66,6 +70,6 @@ export const useViewStore = defineStore('views', () => {
         welcomePage, mwbTemplate,
         pubsList, assignmentSlips,
         init, exitWelcome,
-        setView, popUpAlert, setPopAlert
+        setView, popUpAlert, setPopAlert, cams
     }
 })
