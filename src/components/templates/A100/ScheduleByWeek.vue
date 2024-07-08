@@ -17,7 +17,7 @@
                     <PartItem :part="part" />
                 </template>
                 <template v-if="viewStore.cams">
-                    <TechAssignments />
+                    <TechAssignments :weekId="w.id" />
                 </template>
             </div>
         </div>

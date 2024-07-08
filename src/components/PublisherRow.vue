@@ -27,6 +27,7 @@
 <script setup lang="ts">
     import { computed, ref } from 'vue';
     import { usePublisherStore } from '@/stores/publisher';
+    import { useViewStore } from '@/stores/views';
     import type { Publisher } from '@/types/publisher';
 
 
@@ -43,6 +44,7 @@
 
     const hasTriggeredSelector = ref(false);
     const pubStore = usePublisherStore()
+    const viewStore = useViewStore()
 
     const publisher = ref<Publisher>({
         id: props.pub.id,
@@ -56,11 +58,12 @@
 
     const rolesDisplay = computed<{ code: string, display: string }[]>(() => {
         const pubRoles = publisher.value.roles
+
         if (!pubRoles) return []
         const displays = []
 
         for (const code of pubRoles) {
-            const role = pubStore.roles.find(r => r.code == code)
+            const role = rolesLibrary.value.find(r => r.code == code)
             if (role) displays.push({
                 code: code,
                 display: role.display
@@ -68,6 +71,18 @@
         }
 
         return displays
+    })
+
+    const rolesLibrary = computed(() => {
+        const specialRoles = pubStore.specialRoles
+        const filtered = [];
+
+        for (const role of specialRoles) {
+            if (viewStore.cams && ['cam', 'intr'].includes(role.code))
+                filtered.push(role)
+        }
+
+        return [...pubStore.roles, ...filtered]
     })
 
     function requestDelete() {

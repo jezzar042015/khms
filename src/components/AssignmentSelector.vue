@@ -1,5 +1,5 @@
 <template>
-    <div :class="selectorClasses" ref="assignSelector" @click.stop="">
+    <div :class="selectorClasses" ref="assignSelector" @click.stop>
         <div class="wrapper">
             <span :class="arrowClasses" ref="arrow"></span>
             <div>
@@ -87,6 +87,10 @@
             return 'Select Student Reader';
         } else if (roles.includes('rdr')) {
             return 'Select Reader';
+        } else if (roles.includes('cam')) {
+            return 'Select Camera Operator';
+        } else if (roles.includes('intr')) {
+            return 'Select Interpreters';
         } else if (roles.includes('elder') || roles.includes('ms')) {
             return 'Select brother to handle';
         } else {
@@ -150,7 +154,7 @@
     })
 
     const studentOrAssistant = (pubId: string | undefined): string | null => {
-        if (!Array.isArray(assignment.value.a) || arePrayers.value) {
+        if (!Array.isArray(assignment.value.a) || arePrayers.value || areInterpreters.value) {
             return null;
         }
 
@@ -170,6 +174,7 @@
     const isBibleReading = computed(() => props.part.roles?.includes('br'))
     const isTalk = computed(() => props.part.roles?.includes('talk'))
     const arePrayers = computed(() => props.part.roles?.includes('prayers'))
+    const areInterpreters = computed(() => props.part.roles?.includes('intr'))
 
     function isSelected(pubId: string | undefined): boolean {
         if (!pubId || !assignment.value) return false
@@ -184,7 +189,7 @@
 
         let added: boolean = true;
 
-        if ((isDemo.value || arePrayers.value || isBibleReading.value || isTalk.value) && Array.isArray(assignment.value.a)) {
+        if ((isDemo.value || arePrayers.value || areInterpreters.value || isBibleReading.value || isTalk.value) && Array.isArray(assignment.value.a)) {
             if (assignment.value.a.includes(id)) {
                 added = false
                 assignment.value.a = assignment.value.a.filter(a => a != id)
@@ -257,7 +262,7 @@
     }
 
     function prepAssignment(): void {
-        if (isDemo.value || isBibleReading.value || isTalk.value || arePrayers.value) {
+        if (isDemo.value || areInterpreters.value || isBibleReading.value || isTalk.value || arePrayers.value) {
             assignment.value = { pid: props.part.id, a: [] }
         } else {
             assignment.value = { pid: props.part.id, a: '' }

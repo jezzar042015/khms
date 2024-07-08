@@ -31,6 +31,11 @@ export const usePublisherStore = defineStore('publisher', () => {
         { code: "rdr", display: "CBS Reader" },
     ])
 
+    const specialRoles = ref<PubRole[]>([
+        { code: "cam", display: "Camera Operator" },
+        { code: "intr", display: "Interpreter" },
+    ])
+
     async function upsert(publisher: Publisher): Promise<string> {
         let mode = ''
 
@@ -93,7 +98,7 @@ export const usePublisherStore = defineStore('publisher', () => {
     )
 
     return {
-        roles, publishers, pubs,
+        roles, specialRoles, publishers, pubs,
         // actions
         loadLocal, upsert, reset, remove
     }

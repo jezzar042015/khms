@@ -124,7 +124,7 @@ export const useFilesStore = defineStore('files', () => {
                     const content: Content = await jsonfiles[filePath]() as Content;
 
                     if (content.default.publish) {
-                        langMonths.value.unshift({
+                        langMonths.value.push({
                             name: fileName,
                             content: content.default
                         });
