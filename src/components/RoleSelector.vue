@@ -25,8 +25,10 @@
     import type { Publisher } from '@/types/publisher';
     import type { PubRole } from '@/types/pubrole';
     import IconPlus from '@/components/icons/IconPlus.vue'
+    import { useViewStore } from '@/stores/views';
 
     const pubStore = usePublisherStore()
+    const viewStore = useViewStore()
     const emit = defineEmits(['hideMe', 'triggerOff'])
 
     const props = defineProps<{
@@ -44,13 +46,25 @@
 
     const availableRoles = computed<PubRole[]>(() => {
         const loadable: PubRole[] = []
-        const pubroles = pub.value.roles;
+        const pubroles = pub.value.roles
+        const allRoles = [...pubStore.roles, ...specialRoles.value] as PubRole[]
 
-        for (const role of pubStore.roles) {
+        for (const role of allRoles) {
             if (!pubroles.includes(role.code))
                 loadable.push(role)
         }
         return loadable
+    })
+
+    const specialRoles = computed(() => {
+        const specialRoles = pubStore.specialRoles
+        const filtered = [];
+
+        for (const role of specialRoles) {
+            if (viewStore.cams && ['cam', 'intr'].includes(role.code))
+                filtered.push(role)
+        }
+        return filtered
     })
 
     const noAssignableRoles = computed<boolean>(() => {
