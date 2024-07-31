@@ -568,7 +568,7 @@ section
 
 #s140
 {
-  font-size: 17px;
+  font-size: 18px;
   height: fit-content;
 }
 
@@ -669,7 +669,7 @@ section
 
 .s140-person
 {
-  font-size: .9em;
+  font-size: .85em;
   font-weight: 500;
   padding: 3px 0 3px 20px;
   cursor: pointer;

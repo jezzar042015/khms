@@ -41,7 +41,7 @@ async function buildWeekParts(source: WeekItem, composableWeek: S140PartItem[]) 
 function opening(src: WeekItem, week: S140PartItem[]) {
     const part = {
         id: `${src.id}.op`,
-        time: 4,
+        time: 3,
         title: `${translations.mwbs140[lang].song} ${src.songs[0]}`,
         roles: [
             'elder', 'ms'
@@ -58,7 +58,7 @@ function opening(src: WeekItem, week: S140PartItem[]) {
 function midsong(src: WeekItem, week: S140PartItem[]) {
     const part = {
         id: `${src.id}.ms`,
-        time: 4,
+        time: 3,
         title: `${translations.mwbs140[lang].song} ${src.songs[1]}`,
         roles: [],
         showNoTime: true,
@@ -72,7 +72,7 @@ function midsong(src: WeekItem, week: S140PartItem[]) {
 function closing(src: WeekItem, week: S140PartItem[]) {
     const part = {
         id: `${src.id}.cp`,
-        time: 4,
+        time: 3,
         title: `${translations.mwbs140[lang].song} ${src.songs[2]}`,
         roles: [
             'elder', 'ms'
