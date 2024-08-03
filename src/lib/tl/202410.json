@@ -55,7 +55,7 @@
                     {
                         "id": "202410.1.3",
                         "time": 4,
-                        "reference": "Aw 94:​1-23 (th tun-anan 5)",
+                        "reference": "Aw 94:​1-23 (th aralin 5)",
                         "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
@@ -190,7 +190,7 @@
                     {
                         "id": "202410.2.3",
                         "time": 4,
-                        "reference": "Aw 98:1-99:9 (th tun-anan 11)",
+                        "reference": "Aw 98:1-99:9 (th aralin 11)",
                         "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
@@ -314,7 +314,7 @@
                     {
                         "id": "202410.3.3",
                         "time": 4,
-                        "reference": "Aw 102:​1-28 (th tun-anan 12)",
+                        "reference": "Aw 102:​1-28 (th aralin 12)",
                         "title": "3. Pagbabasa ng Bibliya",
                         "class": "part-title-gems",
                         "roles": [
@@ -350,7 +350,7 @@
                         "time": 4,
                         "title": "6. Ipaliwanag ang Paniniwala Mo",
                         "class": "part-title-ministry",
-                        "reference": "ijwbq 129 (th tun-anan 8)",
+                        "reference": "ijwbq 129 (th aralin 8)",
                         "thumbnail": "th",
                         "roles": [
                             "demo"
@@ -450,7 +450,7 @@
                         "id": "202410.4.3",
                         "time": 4,
                         "title": "3. Pagbabasa ng Bibliya",
-                        "reference": "Aw 104:​1-24 (th tun-anan 11)",
+                        "reference": "Aw 104:​1-24 (th aralin 11)",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -474,7 +474,7 @@
                         "time": 4,
                         "title": "5. Pagdalaw-Muli",
                         "class": "part-title-ministry",
-                        "reference": "th tun-anan 9",
+                        "reference": "th aralin 9",
                         "thumbnail": "th",
                         "roles": [
                             "demo"
@@ -485,7 +485,7 @@
                         "time": 5,
                         "title": "6. Pahayag",
                         "class": "part-title-ministry",
-                        "reference": "lmd apendise A: #6 (th tun-anan 1)",
+                        "reference": "lmd apendise A: #6 (th aralin 1)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"

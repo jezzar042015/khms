@@ -15,7 +15,7 @@ const translations: Translations = {
         },
         tl: {
             title: 'Iskedyul ng Pulong sa Gitnang Sanlinggo',
-            song: 'Awit',
+            song: 'Awit Blg.',
             gems: 'KAYAMANAN MULA SA SALITA NG DIYOS',
             ministry: 'MAGING MAHUSAY SA MINISTERYO',
             living: 'PAMUMUHAY BILANG KRISTIYANO',

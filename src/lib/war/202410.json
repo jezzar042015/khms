@@ -21,7 +21,7 @@
                     {
                         "id": "202410.1.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Introduksyon",
                         "roles": [
                             "elder",
                             "ms"
@@ -69,7 +69,7 @@
                         "time": 4,
                         "title": "4. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 5 punto 3",
+                        "reference": "lmd leksyon 5 punto 3",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -80,7 +80,7 @@
                         "time": 3,
                         "title": "5. Pagbalik-Bisita",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 8 punto 4",
+                        "reference": "lmd leksyon 8 punto 4",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -91,7 +91,7 @@
                         "time": 5,
                         "title": "6. Panhimo hin Disipulo",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 12 punto 5",
+                        "reference": "lmd leksyon 12 punto 5",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -156,7 +156,7 @@
                     {
                         "id": "202410.2.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Introduksyon",
                         "roles": [
                             "elder",
                             "ms"
@@ -204,7 +204,7 @@
                         "time": 7,
                         "title": "4. Pagin Determinado—An Ginbuhat ni Jesus",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 10 punto 1-2",
+                        "reference": "lmd leksyon 10 punto 1-2",
                         "thumbnail": "lmd",
                         "roles": [
                             "elder",
@@ -237,7 +237,7 @@
                     {
                         "id": "202410.2.7",
                         "time": 30,
-                        "title": "7. Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "7. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 16 ¶10-18",
@@ -280,7 +280,7 @@
                     {
                         "id": "202410.3.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Introduksyon",
                         "roles": [
                             "elder",
                             "ms"
@@ -328,7 +328,7 @@
                         "time": 3,
                         "title": "4. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 2 punto 3",
+                        "reference": "lmd leksyon 2 punto 3",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -339,7 +339,7 @@
                         "time": 5,
                         "title": "5. Pagbalik-Bisita",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 9 punto 4",
+                        "reference": "lmd leksyon 9 punto 4",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -372,7 +372,7 @@
                     {
                         "id": "202410.3.8",
                         "time": 30,
-                        "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "8. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 17 ¶1-7",
@@ -415,7 +415,7 @@
                     {
                         "id": "202410.4.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Introduksyon",
                         "roles": [
                             "elder",
                             "ms"
@@ -463,7 +463,7 @@
                         "time": 3,
                         "title": "4. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 3 punto 4",
+                        "reference": "lmd leksyon 3 punto 4",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -507,7 +507,7 @@
                     {
                         "id": "202410.4.8",
                         "time": 30,
-                        "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "8. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 17 ¶8-12, kahon ha p. 155",
