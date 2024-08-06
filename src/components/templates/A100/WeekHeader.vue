@@ -44,6 +44,7 @@
     import { useFilesStore } from '@/stores/files';
     import { useAssignmentStore } from '@/stores/assignment';
     import { usePublisherStore } from '@/stores/publisher';
+    import { useWeeklyDate } from '@/composables/weeklyDate';
     import type { PartItem, WeekItem } from '@/types/files';
 
     import IconCalendar from '@/components/icons/IconCalendar.vue';
@@ -51,7 +52,6 @@
     import IconMusicNotes from '../../icons/IconMusicNotes.vue';
     import IconPraying from '../../icons/IconPraying.vue';
     import AssignmentSelector from '@/components/AssignmentSelector.vue';
-    import { format } from 'date-fns';
 
     const selector = ref(false)
     const triggered = ref(false)
@@ -89,14 +89,8 @@
     })
 
     const midweekDate = computed(() => {
-        const midweekDay = 4
-        if (midweekDay < 0) return props.w.week
-
-        const firstMonday = new Date(fileStore.loadedMonth?.content.firstMonday ?? '')
-        const weekindex = Number(props.w.id.split(".")[1])
-        const offset = (weekindex - 1) * 7
-        const date = firstMonday.setDate(firstMonday.getDate() + (offset + midweekDay))
-        return format(date, 'MMMM d')
+        if (!props.w.id) return ''
+        return useWeeklyDate(props.w.id, props.w.week)
     })
 
     const bg = computed<{ background: string } | null>(() => {

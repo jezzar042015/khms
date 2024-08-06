@@ -10,6 +10,7 @@ export const useCongregationStore = defineStore('congregation', () => {
         name: '',
         lang: '',
         midweekTime: '18:00',
+        midweekDay: -1,
         classId: 1,
         mwbTemplate: 's-140'
     })
@@ -24,6 +25,17 @@ export const useCongregationStore = defineStore('congregation', () => {
     const ministryClasses = ref<MWBClass[]>([
         { id: 1, display: "Main Hall Only", supported: true },
         { id: 2, display: "With Auxillary Class", supported: true },
+    ])
+
+    const mwbMeetingDays = ref([
+        { id: -1, label: 'Not Set' },
+        { id: 0, label: 'Monday' },
+        { id: 1, label: 'Tuesday' },
+        { id: 2, label: 'Wednesday' },
+        { id: 3, label: 'Thursday' },
+        { id: 4, label: 'Friday' },
+        { id: 5, label: 'Saturday' },
+        { id: 6, label: 'Sunday' },
     ])
 
     const supportedLanguages = computed<Language[]>(() => {
@@ -45,6 +57,7 @@ export const useCongregationStore = defineStore('congregation', () => {
                 name: '',
                 lang: '',
                 midweekTime: '18:00',
+                midweekDay: -1,
                 classId: 1,
                 mwbTemplate: 's-140'
             }
@@ -67,6 +80,7 @@ export const useCongregationStore = defineStore('congregation', () => {
     return {
         congregation,
         supportedLanguages, supportedClasses,
+        mwbMeetingDays,
         ministryClasses,
         loadLocal,
         reset
