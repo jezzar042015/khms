@@ -5,7 +5,7 @@
                 <IconCalendar />
             </span>
             <span class="week-date">
-                {{ w.week }}
+                {{ midweekDate }}
             </span>
         </div>
         <div class="week-sched">
@@ -51,7 +51,7 @@
     import IconMusicNotes from '../../icons/IconMusicNotes.vue';
     import IconPraying from '../../icons/IconPraying.vue';
     import AssignmentSelector from '@/components/AssignmentSelector.vue';
-
+    import { format } from 'date-fns';
 
     const selector = ref(false)
     const triggered = ref(false)
@@ -86,6 +86,17 @@
         }
 
         return 'Not Assigned!'
+    })
+
+    const midweekDate = computed(() => {
+        const midweekDay = 4
+        if (midweekDay < 0) return props.w.week
+
+        const firstMonday = new Date(fileStore.loadedMonth?.content.firstMonday ?? '')
+        const weekindex = Number(props.w.id.split(".")[1])
+        const offset = (weekindex - 1) * 7
+        const date = firstMonday.setDate(firstMonday.getDate() + (offset + midweekDay))
+        return format(date, 'MMMM d')
     })
 
     const bg = computed<{ background: string } | null>(() => {
