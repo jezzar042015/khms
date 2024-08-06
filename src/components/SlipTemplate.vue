@@ -86,6 +86,7 @@
     import IconCheck from './icons/IconCheck.vue';
     import IconCamera from './icons/IconCamera.vue';
     import IconDownload from './icons/IconDownload.vue';
+    import { useWeeklyDate } from '@/composables/weeklyDate';
 
     const $toast = useToast();
     const props = defineProps<{
@@ -134,7 +135,7 @@
         const weeks = fileStore.weekOptions
         const weekId = props.part.id.substring(0, 8);
         const week = weeks.find(w => w.id == weekId)
-        return week?.name
+        return useWeeklyDate(weekId, week?.name ?? '', true)
     })
 
     const partNum = computed(() => {

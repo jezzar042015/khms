@@ -6,6 +6,7 @@ export interface ContentDefault {
     thumbnail: string;
     title: string;
     weeks: WeekItem[];
+    firstMonday: string
     // Add other properties as needed
 }
 

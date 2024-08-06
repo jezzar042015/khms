@@ -2,6 +2,7 @@ export interface Congregation {
     name: string,
     lang: string,
     midweekTime: string,
+    midweekDay: number,
     classId: number,
     mwbTemplate: string,
 }

@@ -5,7 +5,7 @@
                 <IconCalendar />
             </span>
             <span class="week-date">
-                {{ w.week }}
+                {{ midweekDate }}
             </span>
         </div>
         <div class="week-sched">
@@ -44,6 +44,7 @@
     import { useFilesStore } from '@/stores/files';
     import { useAssignmentStore } from '@/stores/assignment';
     import { usePublisherStore } from '@/stores/publisher';
+    import { useWeeklyDate } from '@/composables/weeklyDate';
     import type { PartItem, WeekItem } from '@/types/files';
 
     import IconCalendar from '@/components/icons/IconCalendar.vue';
@@ -51,7 +52,6 @@
     import IconMusicNotes from '../../icons/IconMusicNotes.vue';
     import IconPraying from '../../icons/IconPraying.vue';
     import AssignmentSelector from '@/components/AssignmentSelector.vue';
-
 
     const selector = ref(false)
     const triggered = ref(false)
@@ -86,6 +86,11 @@
         }
 
         return 'Not Assigned!'
+    })
+
+    const midweekDate = computed(() => {
+        if (!props.w.id) return ''
+        return useWeeklyDate(props.w.id, props.w.week)
     })
 
     const bg = computed<{ background: string } | null>(() => {

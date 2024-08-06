@@ -30,6 +30,7 @@ export const useFilesStore = defineStore('files', () => {
             thumbnail: '',
             weeks: [],
             title: '',
+            firstMonday: '',
         }
     });
 

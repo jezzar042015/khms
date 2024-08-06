@@ -1,7 +1,7 @@
 export interface EventDetail {
-    code: string | null;
-    weekId: string | null;
-    theme: string | null;
+    code: string | undefined;
+    weekId: string | undefined;
+    theme: string | undefined;
 }
 
 export interface EventsDetails {

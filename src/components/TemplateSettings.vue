@@ -18,6 +18,9 @@
             <FormSelect v-model="congStore.congregation.mwbTemplate" :items="fileStore.templates" :id="'code'"
                 :label="'Schedule Template'">
             </FormSelect>
+            <FormSelect v-model="congStore.congregation.midweekDay" :items="congStore.mwbMeetingDays" :display="'label'"
+                :label="'Midweek Day'">
+            </FormSelect>
             <FormSelect v-show="isS140" v-model="congStore.congregation.midweekTime" :items="timeOptions"
                 :label="'Midweek Start Time'">
             </FormSelect>
@@ -149,11 +152,11 @@
     })
 
     const visitDetail = ref<VisitDetail>({
-        weekId: null, talk: null, sjj: null, co: null,
+        weekId: undefined, talk: undefined, sjj: undefined, co: undefined,
     })
 
     const eventDetail = ref<EventDetail>({
-        code: null, weekId: null, theme: null,
+        code: undefined, weekId: undefined, theme: undefined,
     })
 
     function hideCongSettings() {
