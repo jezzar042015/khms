@@ -1,8 +1,8 @@
 export interface VisitDetail {
-    weekId: string | null;
-    talk: string | null;
-    sjj: string | null;
-    co: string | null;
+    weekId: string | undefined;
+    talk: string | undefined;
+    sjj: string | undefined;
+    co: string | undefined;
 }
 
 export interface VisitsDetails {

@@ -1,7 +1,7 @@
 <template>
     <div class="s140-week">
         <div :class="gridColumns">
-            <div class="s140-week-title">{{ week }} | {{ reading }}</div>
+            <div class="s140-week-title">{{ midweekDate }} | {{ reading }}</div>
             <div v-show="hasAuxClass" class="classrooms">
                 <span class="classlabel" v-show="hasMeetingDemos">Auxillary Class</span>
             </div>
@@ -34,6 +34,7 @@
     import { useCongregationStore } from '@/stores/congregation';
     import type { S140PartItem, WeekItemFeed } from '@/types/files';
     import PartItem from './PartItem.vue';
+    import { useWeeklyDate } from '@/composables/weeklyDate';
 
     interface S140Week {
         w: WeekItemFeed
@@ -51,6 +52,11 @@
 
     const hasAuxClass = computed<boolean>(() => {
         return congStore.congregation.classId == 2
+    })
+
+    const midweekDate = computed(() => {
+        if (!props.w.id) return ''
+        return useWeeklyDate(props.w.id, props.w.week)
     })
 
     const hasMeetingDemos = computed<boolean>(() => {

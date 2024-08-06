@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@testing-library/vue": "^8.1.0",
-    "date-fns": "^3.6.0",
     "dom-to-image": "^2.6.0",
     "lodash": "^4.17.21",
     "pinia": "^2.1.7",

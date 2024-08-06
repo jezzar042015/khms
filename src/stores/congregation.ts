@@ -35,7 +35,7 @@ export const useCongregationStore = defineStore('congregation', () => {
         { id: 3, label: 'Thursday' },
         { id: 4, label: 'Friday' },
         { id: 5, label: 'Saturday' },
-        { id: 6, label: 'Sunday' },
+        // { id: 6, label: 'Sunday' },
     ])
 
     const supportedLanguages = computed<Language[]>(() => {
