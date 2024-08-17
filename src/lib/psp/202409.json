@@ -3,7 +3,7 @@
     "display": "September 2024",
     "title": "Our Christian Life and Ministry Meeting Schedule",
     "theme": "#A66340",
-    "publish": false,
+    "publish": true,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202409/univ/art/mwb_univ_202409_lg.jpg",
     "firstMonday": "2024-09-02",
     "weeks": [
@@ -45,7 +45,7 @@
                     {
                         "id": "202409.1.2",
                         "time": 10,
-                        "reference": "Ps 80:1",
+                        "reference": "Ps 79:9",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -56,7 +56,7 @@
                     {
                         "id": "202409.1.3",
                         "time": 4,
-                        "reference": "Ps 79:0-13 (th study 10)",
+                        "reference": "Ps 79:1-13 (th 10)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -128,7 +128,7 @@
                         "title": "Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "lfb",
-                        "reference": "lfb 48 & 49",
+                        "reference": "lfb Lesson 50, Section 9; Lesson 51",
                         "roles": [
                             "cbs"
                         ]
@@ -194,7 +194,7 @@
                     {
                         "id": "202409.2.3",
                         "time": 4,
-                        "reference": "Ps 82:1-83:18 (th study 2)",
+                        "reference": "Ps 83:5-18 (th 2)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -244,7 +244,7 @@
                         "title": "7. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "lfb",
-                        "reference": "lfb 50, Section 9, 51",
+                        "reference": "lfb Lesson 5; Lesson 53 ",
                         "roles": [
                             "cbs"
                         ]
@@ -299,7 +299,7 @@
                     {
                         "id": "202409.3.2",
                         "time": 10,
-                        "reference": "Ps 86:11",
+                        "reference": "Ps 85:6",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -310,7 +310,7 @@
                     {
                         "id": "202409.3.3",
                         "time": 4,
-                        "reference": "Ps 86:0-17 (th study 12)",
+                        "reference": "Ps 86:1-16 (th 12)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -382,7 +382,7 @@
                         "title": "Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "lfb",
-                        "reference": "lfb 52 & 53",
+                        "reference": "lfb Lesson 54; Lesson 55",
                         "roles": [
                             "cbs"
                         ]
@@ -448,7 +448,7 @@
                     "id": "202409.4.3",
                     "time": 4,
                     "title": "3. Bible Reading",
-                    "reference": "Ps 89:1-16 (th study 11)",
+                    "reference": "Ps 89:1-16 (th 11)",
                     "class": "part-title-gems",
                     "roles": [
                         "br"
@@ -482,7 +482,7 @@
                         "time": 5,
                         "title": "6. Explaining Your Beliefs",
                         "class": "part-title-ministry",
-                        "reference": "lff 1:1-2 (th study 2)",
+                        "reference": "lff 1:1-2 (th 2)",
                         "thumbnail": "lff",
                         "roles": [
                             "talk"
@@ -516,7 +516,7 @@
                         "title": "Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "lfb",
-                        "reference": "lfb 54 & 55",
+                        "reference": "lfb Lesson 56; Section 10; Lesson 57",
                         "roles": [
                             "cbs"
                         ]
@@ -571,7 +571,7 @@
                     {
                         "id": "202409.5.2",
                         "time": 10,
-                        "reference": "Ps 91:11",
+                        "reference": "Ps 90:8",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -582,7 +582,7 @@
                     {
                         "id": "202409.5.3",
                         "time": 4,
-                        "reference": "Ps 91:1-16 (th study 10)",
+                        "reference": "Ps 91:1-16 (th 10)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -653,7 +653,7 @@
                         "title": "Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "lfb",
-                        "reference": "lfb 56, Section 10, 57",
+                        "reference": "lfb Lesson 58, Lesson 59",
                         "roles": [
                             "cbs"
                         ]
