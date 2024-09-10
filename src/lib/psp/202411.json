@@ -134,14 +134,6 @@
                         ]
                     },
                     {
-                        "id": "202411.1.9.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
-                        ]
-                    },
-                    {
                         "id": "202411.1.10",
                         "time": 3,
                         "reference": "Concluding Comments",
@@ -255,14 +247,6 @@
                         "reference": "bt kap. 18 ¶1-5, mga p. 142, 144",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202411.2.7.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {
@@ -393,14 +377,6 @@
                         ]
                     },
                     {
-                        "id": "202411.3.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
-                        ]
-                    },
-                    {
                         "id": "202411.3.9",
                         "time": 3,
                         "reference": "Concluding Comments",
@@ -525,14 +501,6 @@
                         "reference": "bt kap. 18 ¶16-24",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202411.4.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {

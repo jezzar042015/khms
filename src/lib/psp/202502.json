@@ -133,14 +133,6 @@
                         ]
                     },
                     {
-                        "id": "202502.1.9.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
-                        ]
-                    },
-                    {
                         "id": "202502.1.10",
                         "time": 3,
                         "reference": "Concluding Comments",
@@ -264,14 +256,6 @@
                         "reference": "bt kap. 22 ¶7-14, p. 174, 177",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202502.2.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {
@@ -412,14 +396,6 @@
                         ]
                     },
                     {
-                        "id": "202502.3.9.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
-                        ]
-                    },
-                    {
                         "id": "202502.3.10",
                         "time": 3,
                         "reference": "Concluding Comments",
@@ -544,14 +520,6 @@
                         "reference": "bt kap. 23 ¶1-8 8",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202502.4.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {

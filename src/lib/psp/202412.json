@@ -113,14 +113,6 @@
                         ]
                     },
                     {
-                        "id": "202412.1.7.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
-                        ]
-                    },
-                    {
                         "id": "202412.1.8",
                         "time": 3,
                         "reference": "Concluding Comments",
@@ -255,14 +247,6 @@
                         ]
                     },
                     {
-                        "id": "202412.2.9.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
-                        ]
-                    },
-                    {
                         "id": "202412.2.10",
                         "time": 3,
                         "reference": "Concluding Comments",
@@ -387,14 +371,6 @@
                         "reference": "bt kap. 19 ¶14-20, p. 152",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202412.3.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {
@@ -525,14 +501,6 @@
                         ]
                     },
                     {
-                        "id": "202412.4.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
-                        ]
-                    },
-                    {
                         "id": "202412.4.9",
                         "time": 3,
                         "reference": "Concluding Comments",
@@ -657,14 +625,6 @@
                         "reference": "bt kap. 20 ¶8-12, p. 161",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202412.5.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {
