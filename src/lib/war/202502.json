@@ -1,7 +1,7 @@
 {
     "period": "202502",
     "display": "Pebrero 2025",
-    "title": "Eskedyul sa Atong Kristohanong Kinabuhi ug Ministeryo nga Tigom",
+    "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
     "theme": "#6B8500",
     "publish": false,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025007/univ/art/202025007_univ_sqs_lg.jpg",
@@ -22,7 +22,7 @@
                     {
                         "id": "202502.1.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Introduksyon",
                         "roles": [
                             "elder",
                             "ms"
@@ -46,7 +46,7 @@
                         "id": "202502.1.2",
                         "time": 10,
                         "reference": "Sal 145:​15, 16",
-                        "title": "2. Espirituwal nga mga Bahandi",
+                        "title": "2. Espirituwal nga mga Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -56,8 +56,8 @@
                     {
                         "id": "202502.1.3",
                         "time": 4,
-                        "reference": "Sal 144:​1-15 (th tun-anan 11)",
-                        "title": "3. Pagbasa sa Bibliya",
+                        "reference": "Sal 144:​1-15 (th aradman 11)",
+                        "title": "3. Pagbasa ha Biblia",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -68,9 +68,9 @@
                     {
                         "id": "202502.1.4",
                         "time": 4,
-                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "title": "4. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 1 punto 5",
+                        "reference": "lmd leksyon 1 punto 5",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -79,9 +79,9 @@
                     {
                         "id": "202502.1.5",
                         "time": 4,
-                        "title": "5. Dihang Magbalikduaw",
+                        "title": "5. Pagbalik-Bisita",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 7 punto 4",
+                        "reference": "lmd leksyon 7 punto 4",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -90,9 +90,9 @@
                     {
                         "id": "202502.1.6",
                         "time": 4,
-                        "title": "6. Pakigpulong",
+                        "title": "6. Pahayag",
                         "class": "part-title-ministry",
-                        "reference": "lmd apendise A punto 7 (th tun-anan 1)",
+                        "reference": "lmd apendise A punto 7 (th aradman 1)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"
@@ -124,7 +124,7 @@
                     {
                         "id": "202502.1.9",
                         "time": 30,
-                        "title": "9. Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "9. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 22 ¶1-6",
@@ -135,7 +135,7 @@
                     {
                         "id": "202502.1.9.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Magbabasa:",
                         "roles": [
                             "rdr"
                         ]
@@ -167,7 +167,7 @@
                     {
                         "id": "202502.2.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Introduksyon",
                         "roles": [
                             "elder",
                             "ms"
@@ -191,7 +191,7 @@
                         "id": "202502.2.2",
                         "time": 10,
                         "reference": "Sal 148:​1, 10",
-                        "title": "2. Espirituwal nga mga Bahandi",
+                        "title": "2. Espirituwal nga mga Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -201,8 +201,8 @@
                     {
                         "id": "202502.2.3",
                         "time": 4,
-                        "reference": "Sal 148:1-149:9 (th tun-anan 11)",
-                        "title": "3. Pagbasa sa Bibliya",
+                        "reference": "Sal 148:1-149:9 (th aradman 11)",
+                        "title": "3. Pagbasa ha Biblia",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -213,9 +213,9 @@
                     {
                         "id": "202502.2.4",
                         "time": 3,
-                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "title": "4. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 2 punto 5",
+                        "reference": "lmd leksyon 2 punto 5",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -224,9 +224,9 @@
                     {
                         "id": "202502.2.5",
                         "time": 4,
-                        "title": "5. Dihang Magsugod ug Panag-estorya",
+                        "title": "5. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 4 punto 3",
+                        "reference": "lmd leksyon 4 punto 3",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -235,9 +235,9 @@
                     {
                         "id": "202502.2.6",
                         "time": 5,
-                        "title": "6. Pakigpulong",
+                        "title": "6. Pahayag",
                         "class": "part-title-ministry",
-                        "reference": "w19.03 10 ¶7-11 (th tun-anan 14)",
+                        "reference": "w19.03 10 ¶7-11 (th aradman 14)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"
@@ -258,7 +258,7 @@
                     {
                         "id": "202502.2.8",
                         "time": 30,
-                        "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "8. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 22 ¶7-14, kahon sa p. 174, 177",
@@ -269,7 +269,7 @@
                     {
                         "id": "202502.2.8.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Magbabasa:",
                         "roles": [
                             "rdr"
                         ]
@@ -290,7 +290,7 @@
             "order": "3",
             "id": "202502.3",
             "week": "Pebrero 17-23",
-            "bibleReading": "PROVERBIO 1",
+            "bibleReading": "PROBERBIOS 1",
             "songs": [
                 "88",
                 "89",
@@ -301,7 +301,7 @@
                     {
                         "id": "202502.3.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Introduksyon",
                         "roles": [
                             "elder",
                             "ms"
@@ -325,7 +325,7 @@
                         "id": "202502.3.2",
                         "time": 10,
                         "reference": "Pr 1:22",
-                        "title": "2. Espirituwal nga mga Bahandi",
+                        "title": "2. Espirituwal nga mga Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -335,8 +335,8 @@
                     {
                         "id": "202502.3.3",
                         "time": 4,
-                        "reference": "Pr 1:​1-23 (th tun-anan 10)",
-                        "title": "3. Pagbasa sa Bibliya",
+                        "reference": "Pr 1:​1-23 (th aradman 10)",
+                        "title": "3. Pagbasa ha Biblia",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -347,9 +347,9 @@
                     {
                         "id": "202502.3.4",
                         "time": 2,
-                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "title": "4. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 6 punto 5",
+                        "reference": "lmd leksyon 6 punto 5",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -358,9 +358,9 @@
                     {
                         "id": "202502.3.5",
                         "time": 2,
-                        "title": "5. Dihang Magsugod ug Panag-estorya",
+                        "title": "5. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 1 punto 5",
+                        "reference": "lmd leksyon 1 punto 5",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -369,9 +369,9 @@
                     {
                         "id": "202502.3.6",
                         "time": 2,
-                        "title": "6. Dihang Magbalikduaw",
+                        "title": "6. Pagbalik-Bisita",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 9 punto 5",
+                        "reference": "lmd leksyon 9 punto 5",
                         "thumbnail": "th",
                         "roles": [
                             "demo"
@@ -380,9 +380,9 @@
                     {
                         "id": "202502.3.7",
                         "time": 5,
-                        "title": "7. Dihang Maghimog Tinun-an",
+                        "title": "7. Panhimo hin Disipulo",
                         "class": "part-title-ministry",
-                        "reference": "lff leksiyon 16 punto 6 (th tun-anan 3)",
+                        "reference": "lff leksyon 16 punto 6 (th aradman 3)",
                         "thumbnail": "th",
                         "roles": [
                             "demo"
@@ -403,7 +403,7 @@
                     {
                         "id": "202502.3.9",
                         "time": 30,
-                        "title": "9. Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "9. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 22 ¶15-21",
@@ -414,7 +414,7 @@
                     {
                         "id": "202502.3.9.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Magbabasa:",
                         "roles": [
                             "rdr"
                         ]
@@ -435,7 +435,7 @@
             "order": "4",
             "id": "202502.4",
             "week": "Pebrero 24-Marso 2",
-            "bibleReading": "PROVERBIO 2",
+            "bibleReading": "PROBERBIOS 2",
             "songs": [
                 "35",
                 "96",
@@ -446,7 +446,7 @@
                     {
                         "id": "202502.4.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Introduksyon",
                         "roles": [
                             "elder",
                             "ms"
@@ -470,7 +470,7 @@
                         "id": "202502.4.2",
                         "time": 10,
                         "reference": "Pr 2:7",
-                        "title": "2. Espirituwal nga mga Bahandi",
+                        "title": "2. Espirituwal nga mga Hiyas",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -480,8 +480,8 @@
                     {
                         "id": "202502.4.3",
                         "time": 4,
-                        "title": "3. Pagbasa sa Bibliya",
-                        "reference": "Pr 2:​1-22 (th tun-anan 12)",
+                        "title": "3. Pagbasa ha Biblia",
+                        "reference": "Pr 2:​1-22 (th aradman 12)",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -492,9 +492,9 @@
                     {
                         "id": "202502.4.4",
                         "time": 4,
-                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "title": "4. Pagtikang ha Pakiistorya",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 1 punto 3",
+                        "reference": "lmd leksyon 1 punto 3",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -503,9 +503,9 @@
                     {
                         "id": "202502.4.5",
                         "time": 3,
-                        "title": "5. Dihang Magbalikduaw",
+                        "title": "5. Pagbalik-Bisita",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 9 punto 3",
+                        "reference": "lmd leksyon 9 punto 3",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -514,9 +514,9 @@
                     {
                         "id": "202502.4.6",
                         "time": 5,
-                        "title": "6. Pakigpulong",
+                        "title": "6. Pahayag",
                         "class": "part-title-ministry",
-                        "reference": "lmd apendise A punto 8 (th tun-anan 13)",
+                        "reference": "lmd apendise A punto 8 (th aradman 13)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"
@@ -538,7 +538,7 @@
                     {
                         "id": "202502.4.8",
                         "time": 30,
-                        "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "8. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 23 ¶1-8 ug intro sa seksiyon 8",
@@ -549,7 +549,7 @@
                     {
                         "id": "202502.4.8.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Magbabasa:",
                         "roles": [
                             "rdr"
                         ]

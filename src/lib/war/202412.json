@@ -115,7 +115,7 @@
                     {
                         "id": "202412.1.7.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Magbabasa:",
                         "roles": [
                             "rdr"
                         ]
@@ -257,7 +257,7 @@
                     {
                         "id": "202412.2.9.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Magbabasa:",
                         "roles": [
                             "rdr"
                         ]
@@ -392,7 +392,7 @@
                     {
                         "id": "202412.3.8.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Magbabasa:",
                         "roles": [
                             "rdr"
                         ]
@@ -527,7 +527,7 @@
                     {
                         "id": "202412.4.8.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Magbabasa:",
                         "roles": [
                             "rdr"
                         ]
@@ -629,7 +629,7 @@
                         "time": 5,
                         "title": "6. Panhimo hin Disipulo",
                         "class": "part-title-ministry",
-                        "reference": "lff leksyon 16 intro ug punto 1-3 (lmd leksyon 11 punto 3)",
+                        "reference": "lff leksyon 16 introduksyon ngan punto 1-3 (lmd leksyon 11 punto 3)",
                         "thumbnail": "lff",
                         "roles": [
                             "demo"
@@ -662,7 +662,7 @@
                     {
                         "id": "202412.5.8.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Magbabasa:",
                         "roles": [
                             "rdr"
                         ]

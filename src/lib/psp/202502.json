@@ -1,7 +1,7 @@
 {
     "period": "202502",
-    "display": "Pebrero 2025",
-    "title": "Eskedyul sa Atong Kristohanong Kinabuhi ug Ministeryo nga Tigom",
+    "display": "February 2025",
+    "title": "Our Christian Life and Ministry Meeting Schedule",
     "theme": "#6B8500",
     "publish": false,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025007/univ/art/202025007_univ_sqs_lg.jpg",
@@ -10,8 +10,8 @@
         {
             "order": "1",
             "id": "202502.1",
-            "week": "Pebrero 3-9",
-            "bibleReading": "SALMO 144-146",
+            "week": "February 3-9",
+            "bibleReading": "PSALM 144-146",
             "songs": [
                 "145",
                 "59",
@@ -22,7 +22,7 @@
                     {
                         "id": "202502.1.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Opening Comments",
                         "roles": [
                             "elder",
                             "ms"
@@ -45,8 +45,8 @@
                     {
                         "id": "202502.1.2",
                         "time": 10,
-                        "reference": "Sal 145:​15, 16",
-                        "title": "2. Espirituwal nga mga Bahandi",
+                        "reference": "Ps 145:​15, 16",
+                        "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -56,8 +56,8 @@
                     {
                         "id": "202502.1.3",
                         "time": 4,
-                        "reference": "Sal 144:​1-15 (th tun-anan 11)",
-                        "title": "3. Pagbasa sa Bibliya",
+                        "reference": "Ps 144:​1-15 (th 11)",
+                        "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -68,9 +68,9 @@
                     {
                         "id": "202502.1.4",
                         "time": 4,
-                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "title": "4. Starting a Conversation",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 1 punto 5",
+                        "reference": "lmd 1:5",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -79,9 +79,9 @@
                     {
                         "id": "202502.1.5",
                         "time": 4,
-                        "title": "5. Dihang Magbalikduaw",
+                        "title": "5. Following Up",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 7 punto 4",
+                        "reference": "lmd 7:4",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -90,9 +90,9 @@
                     {
                         "id": "202502.1.6",
                         "time": 4,
-                        "title": "6. Pakigpulong",
+                        "title": "6. Talk",
                         "class": "part-title-ministry",
-                        "reference": "lmd apendise A punto 7 (th tun-anan 1)",
+                        "reference": "lmd Appendex A:7 (th 1)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"
@@ -114,7 +114,7 @@
                     {
                         "id": "202502.1.8",
                         "time": 5,
-                        "title": "8. Lokal nga mga Panginahanglan",
+                        "title": "8. Local Needs",
                         "class": "part-title-living",
                         "roles": [
                             "elder",
@@ -124,7 +124,7 @@
                     {
                         "id": "202502.1.9",
                         "time": 30,
-                        "title": "9. Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 22 ¶1-6",
@@ -135,7 +135,7 @@
                     {
                         "id": "202502.1.9.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "",
                         "roles": [
                             "rdr"
                         ]
@@ -143,7 +143,7 @@
                     {
                         "id": "202502.1.10",
                         "time": 3,
-                        "reference": "Konklusyon",
+                        "reference": "Concluding Comments",
                         "roles": [
                             "elder",
                             "ms"
@@ -155,8 +155,8 @@
         {
             "order": "2",
             "id": "202502.2",
-            "week": "Pebrero 10-16",
-            "bibleReading": "SALMO 147-150",
+            "week": "February 10-16",
+            "bibleReading": "PSALM 147-150",
             "songs": [
                 "12",
                 "159",
@@ -167,7 +167,7 @@
                     {
                         "id": "202502.2.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Opening Comments",
                         "roles": [
                             "elder",
                             "ms"
@@ -190,8 +190,8 @@
                     {
                         "id": "202502.2.2",
                         "time": 10,
-                        "reference": "Sal 148:​1, 10",
-                        "title": "2. Espirituwal nga mga Bahandi",
+                        "reference": "Ps 148:​1, 10",
+                        "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -201,8 +201,8 @@
                     {
                         "id": "202502.2.3",
                         "time": 4,
-                        "reference": "Sal 148:1-149:9 (th tun-anan 11)",
-                        "title": "3. Pagbasa sa Bibliya",
+                        "reference": "Ps 148:1-149:9 (th 11)",
+                        "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -213,9 +213,9 @@
                     {
                         "id": "202502.2.4",
                         "time": 3,
-                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "title": "4. Starting a Conversation",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 2 punto 5",
+                        "reference": "lmd 2:5",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -224,9 +224,9 @@
                     {
                         "id": "202502.2.5",
                         "time": 4,
-                        "title": "5. Dihang Magsugod ug Panag-estorya",
+                        "title": "5. Starting a Conversation",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 4 punto 3",
+                        "reference": "lmd 4:3",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -235,9 +235,9 @@
                     {
                         "id": "202502.2.6",
                         "time": 5,
-                        "title": "6. Pakigpulong",
+                        "title": "6. Talk",
                         "class": "part-title-ministry",
-                        "reference": "w19.03 10 ¶7-11 (th tun-anan 14)",
+                        "reference": "w19.03 10 ¶7-11 (th 14)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"
@@ -258,7 +258,7 @@
                     {
                         "id": "202502.2.8",
                         "time": 30,
-                        "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 22 ¶7-14, kahon sa p. 174, 177",
@@ -269,7 +269,7 @@
                     {
                         "id": "202502.2.8.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "",
                         "roles": [
                             "rdr"
                         ]
@@ -277,7 +277,7 @@
                     {
                         "id": "202502.2.9",
                         "time": 3,
-                        "reference": "Konklusyon",
+                        "reference": "Concluding Comments",
                         "roles": [
                             "elder",
                             "ms"
@@ -289,8 +289,8 @@
         {
             "order": "3",
             "id": "202502.3",
-            "week": "Pebrero 17-23",
-            "bibleReading": "PROVERBIO 1",
+            "week": "February 17-23",
+            "bibleReading": "PROVERBS 1",
             "songs": [
                 "88",
                 "89",
@@ -301,7 +301,7 @@
                     {
                         "id": "202502.3.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Opening Comments",
                         "roles": [
                             "elder",
                             "ms"
@@ -325,7 +325,7 @@
                         "id": "202502.3.2",
                         "time": 10,
                         "reference": "Pr 1:22",
-                        "title": "2. Espirituwal nga mga Bahandi",
+                        "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -335,8 +335,8 @@
                     {
                         "id": "202502.3.3",
                         "time": 4,
-                        "reference": "Pr 1:​1-23 (th tun-anan 10)",
-                        "title": "3. Pagbasa sa Bibliya",
+                        "reference": "Pr 1:​1-23 (th 10)",
+                        "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -347,9 +347,9 @@
                     {
                         "id": "202502.3.4",
                         "time": 2,
-                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "title": "4. Starting a Conversation",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 6 punto 5",
+                        "reference": "lmd 6:5",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -358,9 +358,9 @@
                     {
                         "id": "202502.3.5",
                         "time": 2,
-                        "title": "5. Dihang Magsugod ug Panag-estorya",
+                        "title": "5. Starting a Conversation",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 1 punto 5",
+                        "reference": "lmd 1:5",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -369,9 +369,9 @@
                     {
                         "id": "202502.3.6",
                         "time": 2,
-                        "title": "6. Dihang Magbalikduaw",
+                        "title": "6. Following Up",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 9 punto 5",
+                        "reference": "lmd 9:5",
                         "thumbnail": "th",
                         "roles": [
                             "demo"
@@ -380,9 +380,9 @@
                     {
                         "id": "202502.3.7",
                         "time": 5,
-                        "title": "7. Dihang Maghimog Tinun-an",
+                        "title": "7. Making Disciples",
                         "class": "part-title-ministry",
-                        "reference": "lff leksiyon 16 punto 6 (th tun-anan 3)",
+                        "reference": "lff 16:6 (th 3)",
                         "thumbnail": "th",
                         "roles": [
                             "demo"
@@ -393,7 +393,7 @@
                     {
                         "id": "202502.3.8",
                         "time": 15,
-                        "title": "8. Lokal nga mga Panginahanglan",
+                        "title": "8. Local Needs",
                         "class": "part-title-living",
                         "roles": [
                             "elder",
@@ -403,7 +403,7 @@
                     {
                         "id": "202502.3.9",
                         "time": 30,
-                        "title": "9. Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 22 ¶15-21",
@@ -414,7 +414,7 @@
                     {
                         "id": "202502.3.9.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "",
                         "roles": [
                             "rdr"
                         ]
@@ -422,7 +422,7 @@
                     {
                         "id": "202502.3.10",
                         "time": 3,
-                        "reference": "Konklusyon",
+                        "reference": "Concluding Comments",
                         "roles": [
                             "elder",
                             "ms"
@@ -434,8 +434,8 @@
         {
             "order": "4",
             "id": "202502.4",
-            "week": "Pebrero 24-Marso 2",
-            "bibleReading": "PROVERBIO 2",
+            "week": "February 24-March 2",
+            "bibleReading": "PROVERBS 2",
             "songs": [
                 "35",
                 "96",
@@ -446,7 +446,7 @@
                     {
                         "id": "202502.4.0",
                         "time": 1,
-                        "reference": "Introduksiyon",
+                        "reference": "Opening Comments",
                         "roles": [
                             "elder",
                             "ms"
@@ -470,7 +470,7 @@
                         "id": "202502.4.2",
                         "time": 10,
                         "reference": "Pr 2:7",
-                        "title": "2. Espirituwal nga mga Bahandi",
+                        "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -480,8 +480,8 @@
                     {
                         "id": "202502.4.3",
                         "time": 4,
-                        "title": "3. Pagbasa sa Bibliya",
-                        "reference": "Pr 2:​1-22 (th tun-anan 12)",
+                        "title": "3. Bible Reading",
+                        "reference": "Pr 2:​1-22 (th 12)",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -492,9 +492,9 @@
                     {
                         "id": "202502.4.4",
                         "time": 4,
-                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "title": "4. Starting a Conversation",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 1 punto 3",
+                        "reference": "lmd 1:3",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -503,9 +503,9 @@
                     {
                         "id": "202502.4.5",
                         "time": 3,
-                        "title": "5. Dihang Magbalikduaw",
+                        "title": "5. Following Up",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 9 punto 3",
+                        "reference": "lmd 9:3",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -514,9 +514,9 @@
                     {
                         "id": "202502.4.6",
                         "time": 5,
-                        "title": "6. Pakigpulong",
+                        "title": "6. Talk",
                         "class": "part-title-ministry",
-                        "reference": "lmd apendise A punto 8 (th tun-anan 13)",
+                        "reference": "lmd Appendex A:8 (th 13)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"
@@ -538,7 +538,7 @@
                     {
                         "id": "202502.4.8",
                         "time": 30,
-                        "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+                        "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
                         "reference": "bt kap. 23 ¶1-8 ug intro sa seksiyon 8",
@@ -549,7 +549,7 @@
                     {
                         "id": "202502.4.8.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "",
                         "roles": [
                             "rdr"
                         ]
@@ -557,7 +557,7 @@
                     {
                         "id": "202502.4.9",
                         "time": 3,
-                        "reference": "Konklusyon",
+                        "reference": "Concluding Comments",
                         "roles": [
                             "elder",
                             "ms"
