@@ -15,7 +15,8 @@
     "format": "prettier --write src/",
     "translate-ceb-tl": "node auto-translator/ceb-tl.js",
     "translate-ceb-war": "node auto-translator/ceb-war.js",
-    "translate-ceb-psp": "node auto-translator/ceb-psp.js"
+    "translate-ceb-psp": "node auto-translator/ceb-psp.js",
+    "translate-ceb-all": "node auto-translator/ceb-all.js"
   },
   "dependencies": {
     "@testing-library/vue": "^8.1.0",
