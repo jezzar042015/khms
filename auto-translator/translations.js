@@ -81,84 +81,97 @@ export const translations = [
         tl: "Pag-aaral ng Kongregasyon sa Bibliya",
         psp: "Congregation Bible Study",
         war: "Pag-aram ha Biblia han Kongregasyon",
-        search: "whole",
     },
     {
         ceb: "Tigbasa:",
         tl: "Tagabasa:",
         psp: "",
         war: "Magbabasa:",
-        search: "whole",
     },
     {
         ceb: " punto ",
         tl: ": #",
         psp: ":",
         war: " punto ",
-        search: "whole",
     },
     {
         ceb: " leksiyon ",
         tl: " aralin ",
         psp: " ",
         war: " leksyon ",
-        search: "whole",
+    },
+    {
+        ceb: " kahon sa ",
+        tl: " kahon sa ",
+        psp: " ",
+        war: " kahon ha ",
+    },
+    {
+        ceb: " ug intro sa seksiyon ",
+        tl: " at intro ng seksiyon ",
+        psp: " ",
+        war: " ngan introduksyon ha seksyon ",
+    },
+    {
+        ceb: " bt kap. ",
+        tl: " bt kab. ",
+        psp: " ",
+        war: " bt kap. ",
     },
     {
         ceb: " artikulo ",
         tl: " artikulo ",
         psp: " ",
         war: " artikulo ",
-        search: "whole",
     },
     {
         ceb: " tun-anan ",
         tl: " aralin ",
         psp: " ",
         war: " aradman ",
-        search: "whole",
+
     },
     {
         ceb: " intro ug ",
         tl: ": intro at ",
         psp: " Title, ",
         war: " introduksyon ngan ",
-        search: "whole",
+
     },
     {
         ceb: "SALMO ",
         tl: "AWIT ",
         psp: "PSALM ",
         war: "SALMO ",
-        search: "whole",
+
     },
     {
         ceb: "Sal ",
         tl: "Aw ",
         psp: "Ps ",
         war: "Sal ",
-        search: "whole",
+
     },
     {
         ceb: "PROVERBIO ",
         tl: "KAWIKAAN ",
         psp: "PROVERBS ",
         war: "PROBERBIOS ",
-        search: "whole",
+
     },
     {
         ceb: "Pr ",
         tl: "Kaw ",
         psp: "Pr ",
         war: "Pr ",
-        search: "whole",
+
     },
     {
         ceb: "apendise ",
         tl: "apendise ",
         psp: "Appendex ",
         war: "apendise ",
-        search: "whole",
+
     },
     {
         ceb: 'Enero',
