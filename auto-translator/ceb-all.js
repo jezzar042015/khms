@@ -1,6 +1,6 @@
-import { translateCebToFSL } from "./ceb-psp";
-import { translateCebToTagalog } from "./ceb-tl";
-import { translateCebToWaray } from "./ceb-war";
+import { translateCebToFSL } from "./ceb-psp.js";
+import { translateCebToTagalog } from "./ceb-tl.js";
+import { translateCebToWaray } from "./ceb-war.js";
 
 await translateCebToFSL()
 await translateCebToTagalog()
