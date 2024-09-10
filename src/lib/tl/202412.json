@@ -115,7 +115,7 @@
                     {
                         "id": "202412.1.7.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Tagabasa:",
                         "roles": [
                             "rdr"
                         ]
@@ -257,7 +257,7 @@
                     {
                         "id": "202412.2.9.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Tagabasa:",
                         "roles": [
                             "rdr"
                         ]
@@ -359,7 +359,7 @@
                         "time": 5,
                         "title": "6. Ipaliwanag ang Paniniwala Mo",
                         "class": "part-title-ministry",
-                        "reference": "ijwbq 157 (lmd aralin 3 punto 3)",
+                        "reference": "ijwbq 157 (lmd aralin 3: #3)",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -392,7 +392,7 @@
                     {
                         "id": "202412.3.8.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Tagabasa:",
                         "roles": [
                             "rdr"
                         ]
@@ -494,7 +494,7 @@
                         "time": 5,
                         "title": "6. Paggawa ng mga Alagad",
                         "class": "part-title-ministry",
-                        "reference": "lmd leksiyon 12: #4",
+                        "reference": "lmd aralin 12: #4",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -527,7 +527,7 @@
                     {
                         "id": "202412.4.8.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Tagabasa:",
                         "roles": [
                             "rdr"
                         ]
@@ -629,7 +629,7 @@
                         "time": 5,
                         "title": "6. Paggawa ng mga Alagad",
                         "class": "part-title-ministry",
-                        "reference": "lff leksiyon 16 intro ug punto 1-3 (lmd aralin 11: #3)",
+                        "reference": "lff leksiyon 16 intro ug: #1-3 (lmd aralin 11: #3)",
                         "thumbnail": "lff",
                         "roles": [
                             "demo"
@@ -662,7 +662,7 @@
                     {
                         "id": "202412.5.8.r",
                         "class": "accessory",
-                        "alt": "Tigbasa:",
+                        "alt": "Tagabasa:",
                         "roles": [
                             "rdr"
                         ]

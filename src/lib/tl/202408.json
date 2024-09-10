@@ -3,7 +3,7 @@
     "display": "Agosto 2024",
     "title": "Eskedyul sa Ating Buhay at Ministeryong Kristianong Pulong",
     "theme": "#89510c",
-    "publish": true,
+    "publish": false,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202407/ASL/pt/mwb_ASL_202407_lg.jpg",
     "firstMonday": "2024-08-05",
     "weeks": [
@@ -100,7 +100,7 @@
                     {
                         "id": "202408.1.7",
                         "time": 15,
-                        "title": "7. Mga Ideya Para sa Pampamilyang Pagsamba",
+                        "title": "7. Gusto ni Jehova na Maging Masaya Ka",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024246/sign/art/202024246_sign_cnt_2_xs.jpg",
                         "roles": [
