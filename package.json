@@ -13,7 +13,8 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "translate-ceb-tl": "node auto-translator/ceb-tl.js"
+    "translate-ceb-tl": "node auto-translator/ceb-tl.js",
+    "translate-ceb-war": "node auto-translator/ceb-war.js"
   },
   "dependencies": {
     "@testing-library/vue": "^8.1.0",
