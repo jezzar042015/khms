@@ -45,7 +45,6 @@ export async function replace(content, searchText, replaceText) {
 export async function write(filePath, content) {
   try {
     await fs.writeFile(filePath, content, 'utf-8');
-    console.log(`File successfully written: ${filePath}`);
   } catch (error) {
     console.error(`Error writing file ${filePath}:`, error);
     throw error;

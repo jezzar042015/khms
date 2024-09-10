@@ -1,10 +1,10 @@
 import { translate } from "./translator.js"
 
 const source = { code: 'ceb', display: "Cebuano" }
-const target = { code: 'tl', display: "Tagalog" }
+const target = { code: 'psp', display: "FSL" }
 
-await translateCebToTagalog()
+await translateCebToFSL()
 
-export async function translateCebToTagalog() {
+export async function translateCebToFSL() {
     await translate(source, target)
 }
