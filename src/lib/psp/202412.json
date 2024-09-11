@@ -3,7 +3,7 @@
     "display": "December 2024",
     "title": "Our Christian Life and Ministry Meeting Schedule",
     "theme": "#af7703",
-    "publish": false,
+    "publish": true,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024409/univ/art/202024409_univ_sqs_lg.jpg",
     "firstMonday": "2024-12-02",
     "weeks": [
@@ -35,7 +35,7 @@
                         "id": "202412.1.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024405/univ/art/202024405_univ_sqs_lg.jpg",
-                        "title": "1. Unsay Akong Ikabalos Kang Jehova?",
+                        "title": "1. With What Will We Repay Jehovah?",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -45,7 +45,7 @@
                     {
                         "id": "202412.1.2",
                         "time": 10,
-                        "reference": "Ps 116:15",
+                        "reference": "Ps 118:6, 29​",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -68,7 +68,7 @@
                     {
                         "id": "202412.1.4",
                         "time": 7,
-                        "title": "4. Prangka—Ang Gihimo ni Jesus",
+                        "title": "4. Courage​—What Jesus Did",
                         "class": "part-title-ministry",
                         "reference": "lmd 12:1-2",
                         "thumbnail": "lmd",
@@ -80,9 +80,9 @@
                     {
                         "id": "202412.1.5",
                         "time": 8,
-                        "title": "5. Prangka—Sundoga si Jesus",
+                        "title": "5. Courage​—Imitate Jesus",
                         "class": "part-title-ministry",
-                        "reference": "lmd 12:3-5 ug “Tan-awa Sab.”",
+                        "reference": "lmd 12:3-5, See Also",
                         "thumbnail": "lmd",
                         "roles": [
                             "elder",
@@ -106,8 +106,8 @@
                         "time": 30,
                         "title": "7. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 19 ¶1-5, mga p. 149-150",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 78; Lesson 79",
                         "roles": [
                             "cbs"
                         ]
@@ -152,7 +152,7 @@
                         "id": "202412.2.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024406/univ/art/202024406_univ_sqs_lg.jpg",
-                        "title": "1. “Sa Unsang Paagi Mahuptang Hinlo sa Batan-ong Lalaki ang Iyang Alagianan?”",
+                        "title": "1. “How Can a Young Man Keep His Path Clean?”",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -162,7 +162,7 @@
                     {
                         "id": "202412.2.2",
                         "time": 10,
-                        "reference": "Ps 119",
+                        "reference": "Ps 119:28",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -173,7 +173,7 @@
                     {
                         "id": "202412.2.3",
                         "time": 4,
-                        "reference": "Ps 119:​1-32 (th 5)",
+                        "reference": "Ps 119:1-24 (th 5)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -209,7 +209,7 @@
                         "time": 5,
                         "title": "6. Talk",
                         "class": "part-title-ministry",
-                        "reference": "ijwyp 83 (th 20)",
+                        "reference": "w17.09 1:15-18 (th 20)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"
@@ -220,7 +220,8 @@
                     {
                         "id": "202412.2.7",
                         "time": 10,
-                        "title": "7. Mga Nalampos sa Organisasyon Para sa December",
+                        "title": "7. Organizational Accomplishments for December",
+                        "thumbnail": "https://assetsnffrgf-a.akamaihd.net/assets/m/mwbv/univ/202109/art/mwbv_univ_202109_lss_03_lg.jpg",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -240,8 +241,8 @@
                         "time": 30,
                         "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 19 ¶6-13",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 80; Lesson 81; Lesson 82",
                         "roles": [
                             "cbs"
                         ]
@@ -286,7 +287,7 @@
                         "id": "202412.3.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024407/univ/art/202024407_univ_sqs_lg.jpg",
-                        "title": "1. Kon Unsaon Paglahutay sa Kalisdanan",
+                        "title": "1. How to Endure Affliction",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -296,7 +297,7 @@
                     {
                         "id": "202412.3.2",
                         "time": 10,
-                        "reference": "Ps 119:96",
+                        "reference": "Ps 119:112​",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -307,7 +308,7 @@
                     {
                         "id": "202412.3.3",
                         "time": 4,
-                        "reference": "Ps 119:​57-80 (th 12)",
+                        "reference": "Ps 119:57-77 (th 12)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -354,7 +355,7 @@
                     {
                         "id": "202412.3.7",
                         "time": 15,
-                        "title": "7. Tabangan Ta ni Jehova nga Makalahutay",
+                        "title": "7. Jehovah Helps Us to Endure",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024407/univ/art/202024407_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -367,8 +368,8 @@
                         "time": 30,
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 19 ¶14-20, p. 152",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 83; Lesson 84; Lesson 85",
                         "roles": [
                             "cbs"
                         ]
@@ -412,8 +413,8 @@
                     {
                         "id": "202412.4.1",
                         "time": 10,
-                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024408/univ/art/202024408_univ_sqs_lg.jpg",
-                        "title": "1. Kon Unsaon nga Malikayan ang Kasakit ug Kagul-anan",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024408/sign/art/202024408_sign_sqs_lg.jpg",
+                        "title": "1. How to Avoid Unnecessary Heartache",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -435,7 +436,7 @@
                         "id": "202412.4.3",
                         "time": 4,
                         "title": "3. Bible Reading",
-                        "reference": "Ps 119:​121-152 (th 2)",
+                        "reference": "Ps 119:129-152 (th 2)",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -481,9 +482,9 @@
                     {
                         "id": "202412.4.7",
                         "time": 15,
-                        "title": "7. Ayawg Tugoti nga Mag-antos Ka Tungod Lang sa Kuwarta",
+                        "title": "7. Don’t Let Money Cause Unnecessary Pains",
                         "class": "part-title-living",
-                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024408/univ/art/202024408_univ_cnt_3_lg.jpg",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024408/univ/art/202024408_univ_cnt_2_lg.jpg",
                         "roles": [
                             "elder",
                             "ms"
@@ -494,8 +495,8 @@
                         "time": 30,
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 20 ¶1-7, 7",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 86; Section 13; Lesson 87",
                         "roles": [
                             "cbs"
                         ]
@@ -540,7 +541,7 @@
                         "id": "202412.5.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024409/univ/art/202024409_univ_sqs_lg.jpg",
-                        "title": "1. Sila Nagpugas Uban ang mga Luha, Pero Miani Uban ang Kalipay",
+                        "title": "1. They Sowed With Tears, but Reaped With Joy",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -550,7 +551,7 @@
                     {
                         "id": "202412.5.2",
                         "time": 10,
-                        "reference": "Ps 124:​2-5",
+                        "reference": "Ps 123:​1-4",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -562,7 +563,7 @@
                         "id": "202412.5.3",
                         "time": 4,
                         "title": "3. Bible Reading",
-                        "reference": "Ps 124:1–126:6 (th 5)",
+                        "reference": "Ps 124:1-125:5 (th 5)",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -597,7 +598,7 @@
                         "time": 5,
                         "title": "6. Making Disciples",
                         "class": "part-title-ministry",
-                        "reference": "lff 16 intro ug:1-3 (lmd 11:3)",
+                        "reference": "lff 16:Title, 1-3 (lmd 11:3)",
                         "thumbnail": "lff",
                         "roles": [
                             "demo"
@@ -608,7 +609,7 @@
                     {
                         "id": "202412.5.7",
                         "time": 15,
-                        "title": "7. Kalipayi ang mga Saad sa Diyos",
+                        "title": "7. Take Delight in God’s Promises",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024409/univ/art/202024409_univ_cnt_3_lg.jpg",
                         "roles": [
@@ -621,8 +622,8 @@
                         "time": 30,
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 20 ¶8-12, p. 161",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 88; Lesson 89",
                         "roles": [
                             "cbs"
                         ]

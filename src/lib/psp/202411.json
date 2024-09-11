@@ -3,7 +3,7 @@
     "display": "November 2024",
     "title": "Our Christian Life and Ministry Meeting Schedule",
     "theme": "#af7703",
-    "publish": false,
+    "publish": true,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024409/univ/art/202024409_univ_sqs_lg.jpg",
     "firstMonday": "2024-11-04",
     "weeks": [
@@ -35,7 +35,7 @@
                         "id": "202411.1.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024401/univ/art/202024401_univ_sqs_lg.jpg",
-                        "title": "1. “Siya Mahinumdom sa Iyang Pakigsaad Hangtod sa Hangtod”",
+                        "title": "1. “He Remembers His Covenant Forever”",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -56,7 +56,7 @@
                     {
                         "id": "202411.1.3",
                         "time": 4,
-                        "reference": "Ps 105:​24-45 (th 5)",
+                        "reference": "Ps 105:26-43 (th 5)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -114,7 +114,7 @@
                     {
                         "id": "202411.1.8",
                         "time": 15,
-                        "title": "8. Pagpakita sa Inyong Gugma",
+                        "title": "8. Expressions of Your Love",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024401/univ/art/202024401_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -127,8 +127,8 @@
                         "time": 30,
                         "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 17 ¶13-19",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Section 11; Lesson 68; Lesson 69",
                         "roles": [
                             "cbs"
                         ]
@@ -173,7 +173,7 @@
                         "id": "202411.2.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024402/univ/art/202024402_univ_sqs_lg.jpg",
-                        "title": "1. “Gikalimtan Nila ang Diyos nga Ilang Manluluwas”",
+                        "title": "1. “They Forgot God Their Savior”",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -194,7 +194,7 @@
                     {
                         "id": "202411.2.3",
                         "time": 4,
-                        "reference": "Ps 106:​21-48 (th 10)",
+                        "reference": "Ps 106:21-38 (th 10)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -206,7 +206,7 @@
                     {
                         "id": "202411.2.4",
                         "time": 7,
-                        "title": "4. Simple—Ang Gihimo ni Jesus",
+                        "title": "4. Simplicity​—What Jesus Did",
                         "class": "part-title-ministry",
                         "reference": "lmd 11:1-2",
                         "thumbnail": "lmd",
@@ -218,9 +218,9 @@
                     {
                         "id": "202411.2.5",
                         "time": 8,
-                        "title": "5. Simple—Sundoga si Jesus",
+                        "title": "5. Simplicity​—Imitate Jesus",
                         "class": "part-title-ministry",
-                        "reference": "lmd 11:3-5 ug “Tan-awa Sab.”",
+                        "reference": "lmd 11:3-5, See Also",
                         "thumbnail": "lmd",
                         "roles": [
                             "elder",
@@ -243,8 +243,8 @@
                         "time": 30,
                         "title": "7. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 18 ¶1-5, mga p. 142, 144",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 70; Lesson 71; Lesson 72",
                         "roles": [
                             "cbs"
                         ]
@@ -289,7 +289,7 @@
                         "id": "202411.3.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024403/univ/art/202024403_univ_sqs_lg.jpg",
-                        "title": "1. “Magpasalamat Kamo Kang Jehova, kay Siya Maayo”",
+                        "title": "1. “Give Thanks to Jehovah, for He Is Good”",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -299,7 +299,7 @@
                     {
                         "id": "202411.3.2",
                         "time": 10,
-                        "reference": "Ps 108:9",
+                        "reference": "Ps 108:13",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -310,7 +310,7 @@
                     {
                         "id": "202411.3.3",
                         "time": 4,
-                        "reference": "Ps 107:​1-28 (th 5)",
+                        "reference": "Ps 107:​1-15 (th 5)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -346,7 +346,7 @@
                         "time": 5,
                         "title": "6. Talk",
                         "class": "part-title-ministry",
-                        "reference": "ijwyp 90 (th 14)",
+                        "reference": "w21.02 8:17-19 (th 14)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"
@@ -357,7 +357,7 @@
                     {
                         "id": "202411.3.7",
                         "time": 15,
-                        "title": "7. Moawit Ta Aron Pasalamatan si Jehova",
+                        "title": "7. We Sing to Thank Jehovah",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024403/univ/art/202024403_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -370,8 +370,8 @@
                         "time": 30,
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 18 ¶6-15",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 73; Section 12; Lesson 74",
                         "roles": [
                             "cbs"
                         ]
@@ -416,7 +416,7 @@
                         "id": "202411.4.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024404/univ/art/202024404_univ_sqs_lg.jpg",
-                        "title": "1. Suportahi si Jesus, ang Hari!",
+                        "title": "1. Support Jesus, the King!",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -426,7 +426,7 @@
                     {
                         "id": "202411.4.2",
                         "time": 10,
-                        "reference": "Ps 110:4",
+                        "reference": "Ps 110:10",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -438,7 +438,7 @@
                         "id": "202411.4.3",
                         "time": 4,
                         "title": "3. Bible Reading",
-                        "reference": "Ps 109:​1-26 (th 2)",
+                        "reference": "Ps 109:​1-17 (th 2)",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -473,7 +473,7 @@
                         "time": 5,
                         "title": "6. Making Disciples",
                         "class": "part-title-ministry",
-                        "reference": "lff 15:6 ug Ang Uban Moingon (lmd 11:3)",
+                        "reference": "lff 15:6, Some People Say (lmd 11:3)",
                         "thumbnail": "lff",
                         "roles": [
                             "demo"
@@ -484,7 +484,7 @@
                     {
                         "id": "202411.4.7",
                         "time": 15,
-                        "title": "7. Sa Unsang Paagi Maunongon Natong Masuportahan ang Gingharian?",
+                        "title": "7. How Can We Loyally Support the Kingdom?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024404/univ/art/202024404_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -497,8 +497,8 @@
                         "time": 30,
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 18 ¶16-24",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 75; Lesson 76; Lesson 77",
                         "roles": [
                             "cbs"
                         ]
