@@ -3,7 +3,7 @@
     "display": "January 2025",
     "title": "Our Christian Life and Ministry Meeting Schedule",
     "theme": "#6B8500",
-    "publish": false,
+    "publish": true,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025007/univ/art/202025007_univ_sqs_lg.jpg",
     "firstMonday": "2025-01-06",
     "weeks": [
@@ -35,7 +35,7 @@
                         "id": "202501.1.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025001/univ/art/202025001_univ_sqs_lg.jpg",
-                        "title": "1. Mga Ginikanan—Padayong Atimana ang Inyong Bililhong Panulondon",
+                        "title": "1. Parents​—Continue to Care for Your Precious Inheritance",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -45,7 +45,7 @@
                     {
                         "id": "202501.1.2",
                         "time": 10,
-                        "reference": "Ps 128:3",
+                        "reference": "Ps 131:1, 2​",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -56,7 +56,7 @@
                     {
                         "id": "202501.1.3",
                         "time": 4,
-                        "reference": "Ps 132:​1-18 (th 2)",
+                        "reference": "Ps 132:​1-16 (th 2)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -103,7 +103,7 @@
                     {
                         "id": "202501.1.7",
                         "time": 15,
-                        "title": "7. Mga Ginikanan—Gigamit ba Ninyo Kining Epektibo Kaayong Paagi sa Pagtudlo sa Inyong mga Anak?",
+                        "title": "7. Parents—Are You Using This Powerful Teaching Tool",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025001/univ/art/202025001_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -116,8 +116,8 @@
                         "time": 30,
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 20 ¶13-20",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 90; Lesson 91",
                         "roles": [
                             "cbs"
                         ]
@@ -162,7 +162,7 @@
                         "id": "202501.2.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025002/univ/art/202025002_univ_sqs_lg.jpg",
-                        "title": "1. “Ang Atong Ginoo Labaw kay sa Tanang Ubang Diyos”",
+                        "title": "1. “Our Lord Is Greater Than All Other Gods”",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -172,7 +172,7 @@
                     {
                         "id": "202501.2.2",
                         "time": 10,
-                        "reference": "Ps 135:​1, 5",
+                        "reference": "Ps 136:​1",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -183,7 +183,7 @@
                     {
                         "id": "202501.2.3",
                         "time": 4,
-                        "reference": "Ps 135:​1-21 (th 11)",
+                        "reference": "Ps 135:​1-18 (th 11)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -219,7 +219,7 @@
                         "time": 5,
                         "title": "6. Explaining Your Beliefs",
                         "class": "part-title-ministry",
-                        "reference": "ijwfq 7 (th 12)",
+                        "reference": "lff 19:1-3 (th 12)",
                         "thumbnail": "th",
                         "roles": [
                             "demo"
@@ -241,8 +241,8 @@
                         "time": 30,
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 21 ¶1-7, p. 166",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 92; Lesson 93; Section 14",
                         "roles": [
                             "cbs"
                         ]
@@ -287,7 +287,7 @@
                         "id": "202501.3.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025003/univ/art/202025003_univ_sqs_lg.jpg",
-                        "title": "1. Ayawg Tugoti ang Kakulba nga Mopugong Nimo sa Pagkomento",
+                        "title": "1. Do Not Let Nervousness Hold You Back",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -297,7 +297,7 @@
                     {
                         "id": "202501.3.2",
                         "time": 10,
-                        "reference": "Ps 139:​21, 22",
+                        "reference": "Ps 139:​23, 24",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -322,7 +322,7 @@
                         "time": 3,
                         "title": "4. Starting a Conversation",
                         "class": "part-title-ministry",
-                        "reference": "lmd 2:5",
+                        "reference": "lmd 2:3",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -333,7 +333,7 @@
                         "time": 4,
                         "title": "5. Making Disciples",
                         "class": "part-title-ministry",
-                        "reference": "lmd 8:3",
+                        "reference": "lmd 10:3",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -344,7 +344,7 @@
                         "time": 5,
                         "title": "6. Talk",
                         "class": "part-title-ministry",
-                        "reference": "ijwyp 105 (th 16)",
+                        "reference": "w24.04 16:1, 4-10​ (th 16)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"
@@ -355,7 +355,7 @@
                     {
                         "id": "202501.3.7",
                         "time": 15,
-                        "title": "7. Magmalamposon Ka sa Ministeryo Bisag Maulawon Ka",
+                        "title": "7. You Can Thrive in Your Ministry Despite Being Shy",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025003/univ/art/202025003_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -368,8 +368,8 @@
                         "time": 30,
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 21 ¶8-13, p. 169",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 94; Lesson 95",
                         "roles": [
                             "cbs"
                         ]
@@ -414,7 +414,7 @@
                         "id": "202501.4.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025004/univ/art/202025004_univ_sqs_lg.jpg",
-                        "title": "1. Lihok Uyon sa Imong mga Pag-ampo Alang sa Tabang",
+                        "title": "1. Act in Harmony With Your Pleas for Help",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -424,7 +424,7 @@
                     {
                         "id": "202501.4.2",
                         "time": 10,
-                        "reference": "Ps 140:3",
+                        "reference": "Ps 141:1, 2",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -482,7 +482,7 @@
                     {
                         "id": "202501.4.7",
                         "time": 15,
-                        "title": "7. Pangandam sa mga Situwasyon nga Nagkinahanglag Medikal nga Pag-atiman o Operasyon",
+                        "title": "7. Be Prepared for Situations That Require Medical or Surgical Care",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025004/univ/art/202025004_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -495,8 +495,8 @@
                         "time": 30,
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 21 ¶14-22",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 96; Lesson 97",
                         "roles": [
                             "cbs"
                         ]

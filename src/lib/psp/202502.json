@@ -3,7 +3,7 @@
     "display": "February 2025",
     "title": "Our Christian Life and Ministry Meeting Schedule",
     "theme": "#6B8500",
-    "publish": false,
+    "publish": true,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025007/univ/art/202025007_univ_sqs_lg.jpg",
     "firstMonday": "2025-02-03",
     "weeks": [
@@ -35,7 +35,7 @@
                         "id": "202502.1.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025005/univ/art/202025005_univ_sqs_lg.jpg",
-                        "title": "1. “Malipayon ang Katawhan Kansang Diyos mao si Jehova!”",
+                        "title": "1. “Happy Is the People Whose God Is Jehovah!”",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -103,7 +103,7 @@
                     {
                         "id": "202502.1.7",
                         "time": 10,
-                        "title": "7. Gusto ni Jehova nga Magmalipayon Ka",
+                        "title": "7. Jehovah Wants You to Be Happy",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025005/univ/art/202025005_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -126,8 +126,8 @@
                         "time": 30,
                         "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 22 ¶1-6",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 98; Lesson 99",
                         "roles": [
                             "cbs"
                         ]
@@ -172,7 +172,7 @@
                         "id": "202502.2.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025006/univ/art/202025006_univ_sqs_lg.jpg",
-                        "title": "1. Daghan Tag Rason sa Pagdayeg Kang Jah",
+                        "title": "1. We Have Many Reasons to Praise Jah",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -182,7 +182,7 @@
                     {
                         "id": "202502.2.2",
                         "time": 10,
-                        "reference": "Ps 148:​1, 10",
+                        "reference": "Ps 148:12, 13",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -193,7 +193,7 @@
                     {
                         "id": "202502.2.3",
                         "time": 4,
-                        "reference": "Ps 148:1-149:9 (th 11)",
+                        "reference": "Ps 148:1-14 (th 11)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -229,7 +229,7 @@
                         "time": 5,
                         "title": "6. Talk",
                         "class": "part-title-ministry",
-                        "reference": "w19.03 10 ¶7-11 (th 14)",
+                        "reference": "w19.03 11:7-11​ (th 14)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"
@@ -240,7 +240,7 @@
                     {
                         "id": "202502.2.7",
                         "time": 15,
-                        "title": "7. Tinuig nga Report sa Pag-alagad",
+                        "title": "7. Annual Service Report",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025006/univ/art/202025006_univ_cnt_3_lg.jpg",
                         "class": "part-title-living",
                         "roles": [
@@ -252,8 +252,8 @@
                         "time": 30,
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 22 ¶7-14, p. 174, 177",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 100; Lesson 101",
                         "roles": [
                             "cbs"
                         ]
@@ -298,7 +298,7 @@
                         "id": "202502.3.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025007/univ/art/202025007_univ_sqs_lg.jpg",
-                        "title": "1. Mga Batan-on—Kang Kinsa Mo Maminaw?",
+                        "title": "1. Youths​—To Whom Will You Listen?",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -319,7 +319,7 @@
                     {
                         "id": "202502.3.3",
                         "time": 4,
-                        "reference": "Pr 1:​1-23 (th 10)",
+                        "reference": "Pr 1:​1-14 (th 10)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -389,8 +389,8 @@
                         "time": 30,
                         "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
-                        "thumbnail": "bt",
-                        "reference": "bt kap. 22 ¶15-21",
+                        "thumbnail": "lfb",
+                        "reference": "lfb Lesson 102; Lesson 103",
                         "roles": [
                             "cbs"
                         ]
@@ -435,7 +435,7 @@
                         "id": "202502.4.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025008/univ/art/202025008_univ_sqs_lg.jpg",
-                        "title": "1. Nganong Angay Gyod Kang Magkugi sa Personal nga Pagtuon?",
+                        "title": "1. Why Put Your Heart Into Personal Study?",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -445,7 +445,7 @@
                     {
                         "id": "202502.4.2",
                         "time": 10,
-                        "reference": "Pr 2:7",
+                        "reference": "Pr 2:4, 5",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -457,7 +457,7 @@
                         "id": "202502.4.3",
                         "time": 4,
                         "title": "3. Bible Reading",
-                        "reference": "Pr 2:​1-22 (th 12)",
+                        "reference": "Pr 2:​1-15 (th 12)",
                         "class": "part-title-gems",
                         "roles": [
                             "br"
@@ -503,7 +503,7 @@
                     {
                         "id": "202502.4.7",
                         "time": 15,
-                        "title": "7. Gusto ba Kang Mangitag Natagong Bahandi?",
+                        "title": "7. Are You a Treasure Hunter?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025008/univ/art/202025008_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -517,7 +517,7 @@
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 23 ¶1-8 8",
+                        "reference": "bt A Letter From the Governing Body; 1:1-7",
                         "roles": [
                             "cbs"
                         ]
