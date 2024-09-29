@@ -12,6 +12,7 @@ export const useViewStore = defineStore('views', () => {
     const view = ref<Views>('welcome')
     const popUpAlert = ref(false)
     const cams = ref(false)
+    const audience = ref(false)
 
     const congStore = useCongregationStore()
     const visitStore = useVisitStore()
@@ -70,6 +71,7 @@ export const useViewStore = defineStore('views', () => {
         welcomePage, mwbTemplate,
         pubsList, assignmentSlips,
         init, exitWelcome,
-        setView, popUpAlert, setPopAlert, cams
+        setView, setPopAlert,
+        popUpAlert, cams, audience
     }
 })

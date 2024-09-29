@@ -132,7 +132,8 @@
     })
 
     const isAssignable = computed<boolean>(() => {
-        return (props.part.roles || []).length > 0
+        const hasRoles = (props.part.roles || []).length > 0;
+        return hasRoles
     })
 
     const assignClasses = computed(() => {

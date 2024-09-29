@@ -2,6 +2,7 @@ import translations from "./translations";
 import { useFilesStore } from "@/stores/files";
 import { useCongregationStore } from "@/stores/congregation";
 import type { S140PartItem, S140PartWeeks, WeekItem } from "@/types/files";
+import { useViewStore } from "@/stores/views";
 
 let runtime = 0;
 let lang: string = ''
@@ -99,9 +100,11 @@ function header(src: WeekItem, partCode: string, week: S140PartItem[]) {
 }
 
 function introduction(src: WeekItem, week: S140PartItem[]) {
-    const pattern = src.parts.gems[0]
-    const congStore = useCongregationStore()
-    const hasAuxClass = congStore.congregation.classId > 1
+    const pattern = src.parts.gems[0];
+    const congStore = useCongregationStore();
+    const viewStore = useViewStore();
+    const hasAuxClass = congStore.congregation.classId > 1;
+
     const part: S140PartItem = {
         id: pattern.id,
         time: pattern.time,
@@ -112,6 +115,8 @@ function introduction(src: WeekItem, week: S140PartItem[]) {
         label: (hasAuxClass ? translations.mwbs140[lang].coCounselor + ' / ' : '')
             + translations.mwbs140[lang].chairman,
     }
+
+    if (viewStore.audience) part.roles?.push('audible')
 
     runtime = (part.time ?? 1) + runtime
     week.push(part)
