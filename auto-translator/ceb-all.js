@@ -6,4 +6,14 @@ import { setTitles } from "./translate.titles.js";
 await translateCebToFSL()
 await translateCebToTagalog()
 await translateCebToWaray()
-await setTitles()
+await setTitles(
+    [
+        'psp',
+        'tl',
+        'war',
+    ],
+    [
+        '202503',
+        '202504',
+    ]
+)

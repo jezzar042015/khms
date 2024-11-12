@@ -35,7 +35,7 @@
                         "id": "202504.1.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025086/univ/art/202025086_univ_sqs_lg.jpg",
-                        "title": "1. Paminaw sa Kaalam ni Jesus",
+                        "title": "1. Listen to Wisdom Personified",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -122,14 +122,6 @@
                         ]
                     },
                     {
-                        "id": "202504.1.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
-                        ]
-                    },
-                    {
                         "id": "202504.1.9",
                         "time": 3,
                         "reference": "Concluding Comments",
@@ -169,7 +161,7 @@
                         "id": "202504.2.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025088/univ/art/202025088_univ_sqs_lg.jpg",
-                        "title": "1. Mahimong Maalamon, Dili Mabiaybiayon",
+                        "title": "1. Be a Wise Person, Not a Ridiculer",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -237,7 +229,7 @@
                     {
                         "id": "202504.2.7",
                         "time": 15,
-                        "title": "7. Ang Imo Bang Pribilehiyo Nakapahimo Nimong Espesyal?",
+                        "title": "7. Do Privileges Make You Privileged?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwb/202006/univ/art/jwb_univ_202006_wss_10_lg.jpg",
                         "roles": [
@@ -253,14 +245,6 @@
                         "reference": "bt kap. 25 ¶5-7, p. 200",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202504.2.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {
@@ -303,7 +287,7 @@
                         "id": "202504.3.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025089/univ/art/202025089_univ_sqs_lg.jpg",
-                        "title": "1. Sa Unsang Paagi Ta Tinuod nga Magmalipayon?",
+                        "title": "1. What Makes for a Truly Rich Life?",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -371,7 +355,7 @@
                     {
                         "id": "202504.3.7",
                         "time": 7,
-                        "title": "7. Unsang mga Panalangin ang Makahatag ug Kalipay sa mga Alagad sa Diyos?",
+                        "title": "7. What Blessings Make God’s Servants Rich?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025089/univ/art/202025089_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -382,7 +366,7 @@
                     {
                         "id": "202504.3.8",
                         "time": 8,
-                        "title": "8. 2025 nga Update sa Local Design/Construction Program",
+                        "title": "8. 2025 Update on the Local Design/​Construction Program",
                         "class": "part-title-living",
                         "thumbnail": "",
                         "roles": [
@@ -399,14 +383,6 @@
                         "reference": "bt kap. 25 ¶8-13, p. 201",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202504.3.9.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {
@@ -449,7 +425,7 @@
                         "id": "202504.4.1",
                         "time": 10,
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025090/univ/art/202025090_univ_sqs_lg.jpg",
-                        "title": "1. Ayaw nag Isulti!",
+                        "title": "1. Don’t Say It!",
                         "class": "part-title-gems",
                         "roles": [
                             "elder",
@@ -517,7 +493,7 @@
                     {
                         "id": "202504.4.7",
                         "time": 15,
-                        "title": "7. Ayawg Tugoti nga ang Imong Sinultihan Makabungkag sa Kalinaw",
+                        "title": "7. Don’t Let Your Tongue Be a Peace Wrecker",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025090/univ/art/202025090_univ_cnt_2_lg.jpg",
                         "roles": [
@@ -533,14 +509,6 @@
                         "reference": "bt kap. 25 ¶14-21",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202504.4.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {

@@ -1,4 +1,5 @@
 import { getFiles, read, replace, write } from "./files-scanner.js";
+import { printer } from "./printer.js";
 import { translations } from "./translations.js";
 
 export async function translate(source, target) {
@@ -45,11 +46,3 @@ export async function translate(source, target) {
     printer('')
 }
 
-function printer(target, color = "default") {
-    const colors = {
-        default: '\x1b[0m',
-        green: '\x1b[32m%s\x1b[0m',
-        magenta: '\x1b[35m'
-    }
-    console.log(colors[color], target);
-}
