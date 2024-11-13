@@ -334,6 +334,39 @@ section
   font-size: smaller;
 }
 
+.image-50
+{
+  clip-path: inset(0 50% 0 0);
+  width: 160% !important;
+}
+
+.image-33
+{
+  clip-path: inset(0 66.67% 0 0);
+  width: 250% !important;
+}
+
+.image-center
+{
+  width: 135% !important;
+  clip-path: inset(0 20.5% 0 20.5%);
+  object-fit: cover;
+  margin-left: -28%;
+}
+
+.image-sqr-right
+{
+  width: 140% !important;
+  clip-path: inset(0 0 0 42%);
+  object-fit: cover;
+  margin-left: -60%;
+}
+
+.part-thumbnail
+{
+  display: flex;
+  align-items: center;
+}
 .part-thumbnail img
 {
   width: 80%;
@@ -742,7 +775,7 @@ section
 {
   #s140
   {
-      font-size: 15px;
+    font-size: 15px;
     }
 
   .set-wrappers
@@ -762,18 +795,18 @@ section
 {
   #s140
   {
-      font-size: 14px;
+    font-size: 14px;
     }
-  
+    
     .s140-grid-col2
     {
       grid-template-columns: 1fr 120px;
     }
-  
+    
     .s140-grid-col3
     {
       grid-template-columns: 1fr 120px 120px;
-  
+    
     }
 
   #fsl-mwb

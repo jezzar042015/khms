@@ -52,6 +52,7 @@ export interface PartItem {
     title?: string
     class?: string
     thumbnail?: string
+    thumbnailMode?: 'w-50' | 'w-1/3' | 'sqr-c' | 'sqr-r'
     reference?: string
     roles: string[]
     autofills?: string[]

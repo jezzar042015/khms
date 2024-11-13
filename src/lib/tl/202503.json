@@ -3,7 +3,7 @@
     "display": "Marso 2025",
     "title": "Eskedyul sa Ating Buhay at Ministeryong Kristianong Pulong",
     "theme": "#933a07",
-    "publish": false,
+    "publish": true,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025082/univ/art/202025082_univ_sqs_lg.jpg",
     "firstMonday": "2025-03-03",
     "weeks": [
@@ -106,6 +106,7 @@
                         "title": "7. Ipakitang Nagtitiwala Ka sa Organisasyon ni Jehova",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025081/univ/art/202025081_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-r",
                         "roles": [
                             "elder",
                             "ms"
@@ -387,6 +388,7 @@
                         "title": "7. Pananatiling Malinis sa Panahon ng Pakikipagligawan at Pakikipagkasintahan",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025083/univ/art/202025083_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"
@@ -668,6 +670,7 @@
                         "title": "7. Ibang Pagkakataon (Luc 4:6)",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwb/202010/univ/art/jwb_univ_202010_wss_16_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"

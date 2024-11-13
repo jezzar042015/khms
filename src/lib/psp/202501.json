@@ -106,6 +106,7 @@
                         "title": "7. Parents—Are You Using This Powerful Teaching Tool",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025001/univ/art/202025001_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "w-50",
                         "roles": [
                             "elder",
                             "ms"
@@ -358,6 +359,7 @@
                         "title": "7. You Can Thrive in Your Ministry Despite Being Shy",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025003/univ/art/202025003_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"
@@ -485,6 +487,7 @@
                         "title": "7. Be Prepared for Situations That Require Medical or Surgical Care",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025004/univ/art/202025004_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"

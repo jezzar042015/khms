@@ -106,6 +106,7 @@
                         "title": "7. Jehovah Wants You to Be Happy",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025005/univ/art/202025005_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"
@@ -242,6 +243,7 @@
                         "time": 15,
                         "title": "7. Annual Service Report",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025006/univ/art/202025006_univ_cnt_3_lg.jpg",
+                        "thumbnailMode": "sqr-r",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -506,6 +508,7 @@
                         "title": "7. Are You a Treasure Hunter?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025008/univ/art/202025008_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-r",
                         "roles": [
                             "elder",
                             "ms"

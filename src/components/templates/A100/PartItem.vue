@@ -3,7 +3,7 @@
         <span>{{ time }}</span>
         <span v-if="part.thumbnail">
             <div class="part-thumbnail">
-                <img :src="thumbnail ?? ''" alt="">
+                <img :src="thumbnail ?? ''" alt="" :class="thumbnailImageClass">
             </div>
         </span>
         <span v-else class="thumbnail-alt">{{ part.alt }}</span>
@@ -87,6 +87,17 @@
         if (!props.part.thumbnail) return null
         const tn = thumbnails[props.part.thumbnail]
         return (tn) ? tn.thumbnail : props.part.thumbnail
+    });
+
+    const thumbnailImageClass = computed(() => {
+        const modes = {
+            'w-50': 'image-50',
+            'w-1/3': 'image-33',
+            'sqr-c': 'image-center',
+            'sqr-r': 'image-sqr-right'
+        };
+
+        return props.part.thumbnailMode ? modes[props.part.thumbnailMode] || null : null;
     });
 
     const time = computed<string | null>(() => {

@@ -106,6 +106,7 @@
                         "title": "7. Mga Kag-anak—Ginagamit ba Niyo Inin Epektibo nga Garamiton ha Pagtutdo?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025001/univ/art/202025001_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "w-50",
                         "roles": [
                             "elder",
                             "ms"
@@ -374,6 +375,7 @@
                         "title": "7. Mahimo Ka Mag-enjoy ha Imo Pag-alagad Bisan Kon Awdanon Ka",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025003/univ/art/202025003_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"
@@ -509,6 +511,7 @@
                         "title": "7. Magin Andam ha mga Sitwasyon nga Nagkikinahanglan hin Medikal nga Pagtambal o Operasyon",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025004/univ/art/202025004_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"

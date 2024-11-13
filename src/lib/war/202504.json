@@ -3,7 +3,7 @@
     "display": "Abril 2025",
     "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
     "theme": "#933a07",
-    "publish": false,
+    "publish": true,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025082/univ/art/202025082_univ_sqs_lg.jpg",
     "firstMonday": "2025-04-07",
     "weeks": [
@@ -116,7 +116,7 @@
                         "title": "8. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 25 ¶1-4, kahon ha p. 199",
+                        "reference": "bt kap. 25 ¶1-4, kahon ha p. 227",
                         "roles": [
                             "cbs"
                         ]
@@ -240,6 +240,7 @@
                         "title": "7. Nagigin Mas Importante Ka ba Tungod han Imo mga Pribilehiyo?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwb/202006/univ/art/jwb_univ_202006_wss_10_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder"
                         ]
@@ -250,7 +251,7 @@
                         "title": "8. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 25 ¶5-7, kahon ha p. 200",
+                        "reference": "bt kap. 25 ¶5-7, kahon ha p. 228",
                         "roles": [
                             "cbs"
                         ]
@@ -374,6 +375,7 @@
                         "title": "7. Ano nga mga Bendisyon an Nagpapariko ha mga Alagad han Dios?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025089/univ/art/202025089_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "w-1/3",
                         "roles": [
                             "elder",
                             "ms"
@@ -396,7 +398,7 @@
                         "title": "9. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 25 ¶8-13, kahon ha p. 201",
+                        "reference": "bt kap. 25 ¶8-13, kahon ha p. 229",
                         "roles": [
                             "cbs"
                         ]
@@ -520,6 +522,7 @@
                         "title": "7. Ayaw Tuguti an Imo Dila nga Makawara han Kamurayawan",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025090/univ/art/202025090_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "w-50",
                         "roles": [
                             "elder"
                         ]

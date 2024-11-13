@@ -106,6 +106,7 @@
                         "title": "7. Karuyag ni Jehova nga Magin Malipayon Ka",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025005/univ/art/202025005_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"
@@ -250,6 +251,7 @@
                         "time": 15,
                         "title": "7. Tinuig nga Report han Pag-alagad",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025006/univ/art/202025006_univ_cnt_3_lg.jpg",
+                        "thumbnailMode": "sqr-r",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -530,6 +532,7 @@
                         "title": "7. Karuyag Mo ba Mamiling hin Nakatago nga Bahandi?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025008/univ/art/202025008_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-r",
                         "roles": [
                             "elder",
                             "ms"

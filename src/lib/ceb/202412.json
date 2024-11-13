@@ -229,6 +229,8 @@
                         "id": "202412.2.7",
                         "time": 10,
                         "title": "7. Mga Nalampos sa Organisasyon Para sa Disyembre",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep23/univ/art/com-rep23_univ_wss_02_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "class": "part-title-living",
                         "roles": [
                             "elder"
@@ -373,6 +375,7 @@
                         "title": "7. Tabangan Ta ni Jehova nga Makalahutay",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024407/univ/art/202024407_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "w-50",
                         "roles": [
                             "elder",
                             "ms"
@@ -507,7 +510,8 @@
                         "time": 15,
                         "title": "7. Ayawg Tugoti nga Mag-antos Ka Tungod Lang sa Kuwarta",
                         "class": "part-title-living",
-                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024408/univ/art/202024408_univ_cnt_3_lg.jpg",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024408/univ/art/202024408_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"
@@ -643,6 +647,7 @@
                         "title": "7. Kalipayi ang mga Saad sa Diyos",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202024409/univ/art/202024409_univ_cnt_3_lg.jpg",
+                        "thumbnailMode": "sqr-r",
                         "roles": [
                             "elder",
                             "ms"

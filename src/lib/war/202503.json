@@ -3,7 +3,7 @@
     "display": "Marso 2025",
     "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
     "theme": "#933a07",
-    "publish": false,
+    "publish": true,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025082/univ/art/202025082_univ_sqs_lg.jpg",
     "firstMonday": "2025-03-03",
     "weeks": [
@@ -106,6 +106,7 @@
                         "title": "7. Ipakita an Pagsarig ha Organisasyon ni Jehova",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025081/univ/art/202025081_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-r",
                         "roles": [
                             "elder",
                             "ms"
@@ -117,7 +118,7 @@
                         "title": "8. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 23 ¶9-15, mga kahon ha p. 184, 186",
+                        "reference": "bt kap. 23 ¶9-15, mga kahon ha p. 210, 212",
                         "roles": [
                             "cbs"
                         ]
@@ -263,7 +264,7 @@
                         "title": "9. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 23 ¶16-19, kahon ha p. 188",
+                        "reference": "bt kap. 23 ¶16-19, kahon ha p. 214",
                         "roles": [
                             "cbs"
                         ]
@@ -387,6 +388,7 @@
                         "title": "7. Kon Paonan-o Makakapabilin nga Limpyo ha Moral Kon Nakikig-date",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025083/univ/art/202025083_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"
@@ -544,7 +546,7 @@
                         "title": "9. Pag-aram ha Biblia han Kongregasyon",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 24 ¶7-12, kahon ha p. 193",
+                        "reference": "bt kap. 24 ¶7-12, kahon ha p. 221",
                         "roles": [
                             "cbs"
                         ]
@@ -668,6 +670,7 @@
                         "title": "7. Lain nga Kombinyente nga Panahon (Lu 4:6)",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwb/202010/univ/art/jwb_univ_202010_wss_16_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"

@@ -106,6 +106,7 @@
                         "title": "7. Mga Ginikanan—Gigamit ba Ninyo Kining Epektibo Kaayong Paagi sa Pagtudlo sa Inyong mga Anak?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025001/univ/art/202025001_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "w-50",
                         "roles": [
                             "elder",
                             "ms"
@@ -374,6 +375,7 @@
                         "title": "7. Magmalamposon Ka sa Ministeryo Bisag Maulawon Ka",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025003/univ/art/202025003_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"
@@ -509,6 +511,7 @@
                         "title": "7. Pangandam sa mga Situwasyon nga Nagkinahanglag Medikal nga Pag-atiman o Operasyon",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025004/univ/art/202025004_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"
