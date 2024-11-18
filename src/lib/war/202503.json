@@ -241,7 +241,8 @@
                         "time": 10,
                         "title": "7. Mga Nahimo han Organisasyon Para ha Marso",
                         "class": "part-title-living",
-                        "thumbnail": "",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep23/univ/art/com-rep23_univ_wss_04_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"
