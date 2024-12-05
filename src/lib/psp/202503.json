@@ -3,7 +3,7 @@
     "display": "March 2025",
     "title": "Our Christian Life and Ministry Meeting Schedule",
     "theme": "#933a07",
-    "publish": false,
+    "publish": true,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025082/univ/art/202025082_univ_sqs_lg.jpg",
     "firstMonday": "2025-03-03",
     "weeks": [
@@ -34,7 +34,7 @@
                     {
                         "id": "202503.1.1",
                         "time": 10,
-                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025081/univ/art/202025081_univ_sqs_lg.jpg",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025081/sign/art/202025081_sign_sqs_lg.jpg",
                         "title": "1. Demonstrate Trust in Jehovah",
                         "class": "part-title-gems",
                         "roles": [
@@ -92,7 +92,7 @@
                         "time": 5,
                         "title": "6. Talk",
                         "class": "part-title-ministry",
-                        "reference": "w11 3/15 14 ¶7-10 (th 20)",
+                        "reference": "w11 3/15 2:7-10​ (th 20)",
                         "thumbnail": "th",
                         "roles": [
                             "talk"
@@ -118,7 +118,7 @@
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 23 ¶9-15, mga p. 184, 186",
+                        "reference": "bt 1:8-15",
                         "roles": [
                             "cbs"
                         ]
@@ -184,7 +184,7 @@
                     {
                         "id": "202503.2.3",
                         "time": 4,
-                        "reference": "Pr 4:​1-18 (th 12)",
+                        "reference": "Pr 4:​1-15 (th 12)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -220,7 +220,7 @@
                         "time": 5,
                         "title": "6. Explaining Your Beliefs",
                         "class": "part-title-ministry",
-                        "reference": "ijwfq 19 (lmd 3:4)",
+                        "reference": "ijwfq 59 (lmd 3:4)",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -257,7 +257,7 @@
                         "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 23 ¶16-19, p. 188",
+                        "reference": "bt 1:16-21, Box",
                         "roles": [
                             "cbs"
                         ]
@@ -323,7 +323,7 @@
                     {
                         "id": "202503.3.3",
                         "time": 4,
-                        "reference": "Pr 5:​1-23 (th 5)",
+                        "reference": "Pr 5:​1-14 (th 5)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -359,7 +359,7 @@
                         "time": 5,
                         "title": "6. Making Disciples",
                         "class": "part-title-ministry",
-                        "reference": "lff 16 sumaryo, review, ug sulayi kini (lmd 11:4)",
+                        "reference": "lff 16 summary, review, and goal (lmd 11:4)",
                         "thumbnail": "lmd",
                         "roles": [
                             "demo"
@@ -385,7 +385,7 @@
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 24 ¶1-6",
+                        "reference": "bt Section 1; 2:1-7",
                         "roles": [
                             "cbs"
                         ]
@@ -440,7 +440,7 @@
                     {
                         "id": "202503.4.2",
                         "time": 10,
-                        "reference": "Pr 6:​16-19",
+                        "reference": "Pr 6:​16, 17",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -451,7 +451,7 @@
                     {
                         "id": "202503.4.3",
                         "time": 4,
-                        "reference": "Pr 6:​1-26 (th 10)",
+                        "reference": "Pr 6:​1-15 (th 10)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -523,7 +523,7 @@
                         "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 24 ¶7-12, p. 193",
+                        "reference": "bt 2:8-15",
                         "roles": [
                             "cbs"
                         ]
@@ -578,7 +578,7 @@
                     {
                         "id": "202503.5.2",
                         "time": 10,
-                        "reference": "Pr 7:3",
+                        "reference": "Pr 7:7",
                         "title": "2. Spiritual Gems",
                         "class": "part-title-gems",
                         "roles": [
@@ -651,7 +651,7 @@
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 24 ¶13-21",
+                        "reference": "bt 2:16-23",
                         "roles": [
                             "cbs"
                         ]
