@@ -45,6 +45,7 @@
     import type { S140PartItem, PartItem } from '@/types/files';
     import type { Publisher } from '@/types/publisher';
     import type { MWBAssignment } from '@/types/mwb';
+    import { useToast } from 'vue-toast-notification';
 
     type A100Position = 'right' | 'left'
     const emits = defineEmits(['hide', 'trigger-off'])
@@ -53,6 +54,7 @@
     const viewStore = useViewStore()
     const congStore = useCongregationStore()
 
+    const $toast = useToast();
     const filter = ref('')
     const assignment = ref<MWBAssignment>({
         pid: '', a: ''
@@ -190,18 +192,22 @@
         let added: boolean = true;
 
         if ((isDemo.value || arePrayers.value || areInterpreters.value || isBibleReading.value || isTalk.value) && Array.isArray(assignment.value.a)) {
-            if (assignment.value.a.includes(id)) {
+            // dual assignment parts
+            if (assignment.value.a.includes(id)) { // if person is already assigned
                 added = false
                 assignment.value.a = assignment.value.a.filter(a => a != id)
-            } else if (assignment.value.a.length <= 1) {
+            } else if (assignment.value.a.length <= 1) { // if still have a slot
                 assignment.value.a.push(id)
-            } else {
+            } else { // if the slot is full
+                $toast.error('Remove existing assignments before adding new ones', { position: 'top', duration: 10000 })
                 added = false
             }
 
             await assignStore.upsert(assignment.value)
             await handlePrayers(id, added)
+
         } else {
+            // single assignment parts
             assignment.value.a = (assignment.value.a == id) ? '' : id
             added = assignment.value.a !== ''
             await assignStore.upsert(assignment.value)

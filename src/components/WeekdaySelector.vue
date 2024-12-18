@@ -37,7 +37,7 @@
         margin-top: 8px;
         background: white;
         box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 4px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: 400;
         text-transform: none;
         padding: 1em;

@@ -12,6 +12,7 @@ export const useViewStore = defineStore('views', () => {
     const view = ref<Views>('welcome')
     const popUpAlert = ref(false)
     const cams = ref(false)
+    const survey = ref(false)
 
     const congStore = useCongregationStore()
     const visitStore = useVisitStore()
@@ -42,6 +43,10 @@ export const useViewStore = defineStore('views', () => {
         popUpAlert.value = show
     }
 
+    function exitSurvey() {
+        survey.value = false
+    }
+
     async function init(): Promise<boolean> {
         const congname = congStore.congregation.name
         const lang = congStore.congregation.lang
@@ -70,6 +75,8 @@ export const useViewStore = defineStore('views', () => {
         welcomePage, mwbTemplate,
         pubsList, assignmentSlips,
         init, exitWelcome,
-        setView, popUpAlert, setPopAlert, cams
+        setView, popUpAlert, setPopAlert, cams,
+        survey, exitSurvey,
+
     }
 })

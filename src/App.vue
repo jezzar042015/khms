@@ -4,6 +4,7 @@
     <TemplateHolder v-if="viewStore.mwbTemplate" />
     <PublishersList v-if="viewStore.pubsList" />
     <AssignmentSlips v-if="viewStore.assignmentSlips" />
+    <UserSurvey v-if="viewStore.survey" @exit-me="viewStore.exitSurvey" />
   </div>
   <SmallScreen />
 </template>
@@ -23,6 +24,8 @@
   import TemplateHolder from './components/TemplateHolder.vue';
   import PublishersList from '@/components/PublishersList.vue'
   import AssignmentSlips from '@/components/AssignmentSlips.vue'
+  import UserSurvey from './components/announcements/UserSurvey.vue';
+  import { useSurveysStore } from './stores/survey';
 
   const congStore = useCongregationStore()
   const pubsStore = usePublisherStore()
@@ -30,6 +33,7 @@
   const eventStore = useEventStore()
   const viewStore = useViewStore()
   const fileStore = useFilesStore()
+  const surveyStore = useSurveysStore()
 
   async function loadLocals() {
     await congStore.loadLocal();
@@ -42,6 +46,7 @@
     await eventStore.loadLocal();
     await fileStore.loadFiles();
     await fileStore.loadMonthTemplate();
+    await surveyStore.load()
   }
 
   onMounted(async () => {
