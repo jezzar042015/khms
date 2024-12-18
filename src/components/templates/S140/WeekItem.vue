@@ -1,7 +1,14 @@
 <template>
     <div class="s140-week">
         <div :class="gridColumns">
-            <div class="s140-week-title">{{ midweekDate }} | {{ reading }}</div>
+            <div class="s140-week-title">
+                <span class="s140-week-date">
+                    <span @click="showDaySelector">{{ midweekDate }}</span>
+                    <WeekdaySelector v-if="onDaySelection" ref="daySelector" @hide-selector="hideDaySelector" />
+                </span>
+                <span> &nbsp;|&nbsp; </span>
+                <span>{{ reading }}</span>
+            </div>
             <div v-show="hasAuxClass" class="classrooms">
                 <span class="classlabel" v-show="hasMeetingDemos">Auxillary Class</span>
             </div>
@@ -29,12 +36,14 @@
 </template>
 
 <script setup lang="ts">
-    import { computed } from 'vue';
+    import { computed, ref } from 'vue';
     import { useFilesStore } from '@/stores/files';
     import { useCongregationStore } from '@/stores/congregation';
+    import { useWeeklyDate } from '@/composables/weeklyDate';
     import type { S140PartItem, WeekItemFeed } from '@/types/files';
     import PartItem from './PartItem.vue';
-    import { useWeeklyDate } from '@/composables/weeklyDate';
+    import WeekdaySelector from '@/components/WeekdaySelector.vue';
+    import { onClickOutside } from '@vueuse/core'
 
     interface S140Week {
         w: WeekItemFeed
@@ -89,6 +98,18 @@
         return fileStore.s140PartItems[weekId]
     })
 
+    // midweek day selector
+
+    const onDaySelection = ref(false)
+    const daySelector = ref(null)
+    const showDaySelector = () => {
+        onDaySelection.value = true
+    }
+    const hideDaySelector = () => {
+        onDaySelection.value = false
+    }
+
+    onClickOutside(daySelector, event => hideDaySelector())
 </script>
 
 <style scoped>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="s140-header">
-            <div class="s140-header-cong">{{ congStore.congregation.name }}</div>
+            <input type="text" class="s140-header-cong" v-model="congStore.congregation.name">
             <div class="s140-header-title">{{ title }}</div>
         </div>
         <div class="s140-hr"> </div>

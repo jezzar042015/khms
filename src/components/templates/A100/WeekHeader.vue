@@ -4,8 +4,9 @@
             <span class="icon">
                 <IconCalendar />
             </span>
-            <span class="week-date">
+            <span class="week-date relative" @click="showDaySelector">
                 {{ midweekDate }}
+                <WeekdaySelector ref="midweekDaySelector" v-if="onDaySelection" @hide-selector="hideDaySelector" />
             </span>
         </div>
         <div class="week-sched">
@@ -45,6 +46,7 @@
     import { useAssignmentStore } from '@/stores/assignment';
     import { usePublisherStore } from '@/stores/publisher';
     import { useWeeklyDate } from '@/composables/weeklyDate';
+    import { onClickOutside } from '@vueuse/core';
     import type { PartItem, WeekItem } from '@/types/files';
 
     import IconCalendar from '@/components/icons/IconCalendar.vue';
@@ -52,6 +54,7 @@
     import IconMusicNotes from '../../icons/IconMusicNotes.vue';
     import IconPraying from '../../icons/IconPraying.vue';
     import AssignmentSelector from '@/components/AssignmentSelector.vue';
+    import WeekdaySelector from '@/components/WeekdaySelector.vue';
 
     const selector = ref(false)
     const triggered = ref(false)
@@ -110,6 +113,21 @@
     function triggerOff(): void {
         triggered.value = false
     }
+
+    // week day selector
+    const onDaySelection = ref(false)
+    const midweekDaySelector = ref(null)
+
+    const showDaySelector = () => {
+        onDaySelection.value = true
+    }
+    const hideDaySelector = () => {
+        onDaySelection.value = false
+    }
+
+    onClickOutside(midweekDaySelector, e => {
+        hideDaySelector()
+    })
 
     watch(
         () => props.w,

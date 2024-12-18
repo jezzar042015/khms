@@ -302,6 +302,14 @@ section
 .week-date
 {
   text-transform: uppercase;
+  transition: .1s ease-in-out all;
+}
+
+.week-date:hover
+{
+  color: #9fdaff;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .icon
@@ -367,6 +375,7 @@ section
   display: flex;
   align-items: center;
 }
+
 .part-thumbnail img
 {
   width: 80%;
@@ -623,6 +632,10 @@ section
 .s140-header-cong
 {
   font-weight: 600;
+  font-size: 1.3rem;
+  width: 50%;
+  border: none;
+  outline: none;
 }
 
 .s140-hr
@@ -698,6 +711,23 @@ section
   font-weight: 700;
   font-size: 1.2em;
   padding: 3px 8px 5px 0px;
+}
+
+.s140-week-date
+{
+  transition: all ease-in-out .1s;
+  cursor: pointer;
+  position: relative;
+}
+
+.s140-week-date:hover
+{
+  color: #3DA8EA;
+}
+
+.weekday-selector
+{
+  position: absolute;
 }
 
 .s140-person
@@ -776,7 +806,7 @@ section
   #s140
   {
     font-size: 15px;
-    }
+  }
 
   .set-wrappers
   {
@@ -796,18 +826,18 @@ section
   #s140
   {
     font-size: 14px;
-    }
-    
-    .s140-grid-col2
-    {
-      grid-template-columns: 1fr 120px;
-    }
-    
-    .s140-grid-col3
-    {
-      grid-template-columns: 1fr 120px 120px;
-    
-    }
+  }
+
+  .s140-grid-col2
+  {
+    grid-template-columns: 1fr 120px;
+  }
+
+  .s140-grid-col3
+  {
+    grid-template-columns: 1fr 120px 120px;
+
+  }
 
   #fsl-mwb
   {
@@ -932,11 +962,11 @@ section
     border: none;
   }
 
-    #grid-slips .slip-wrapper:nth-child(4n+3),
-    #grid-slips .slip-wrapper:nth-child(4n+4)
-    {
-      page-break-after: always;
-    }
+  #grid-slips .slip-wrapper:nth-child(4n+3),
+  #grid-slips .slip-wrapper:nth-child(4n+4)
+  {
+    page-break-after: always;
+  }
 
 
 }
