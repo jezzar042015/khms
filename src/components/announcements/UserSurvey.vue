@@ -2,8 +2,8 @@
     <div class="bg-dark">
         <div class="wrap">
             <p>Hi there!</p>
-            <p>Thank you for using our app to manage your meeting assignments. We’d love to hear your quick feedback on
-                how we can make it even better for you!</p>
+            <p>Thank you for using this app to manage your meeting assignments. We’d love to hear your quick feedback on
+                how we can make it even better!</p>
             <div class="buttons">
                 <button class="take-survey" @click="gotoSurvey">Send a Feedback</button>
                 <button @click="storeDeclines">Not this time</button>
