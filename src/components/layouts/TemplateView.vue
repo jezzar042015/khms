@@ -88,7 +88,7 @@
     }
 
     function toHelp(): void {
-        window.open('https://jezzar042015.github.io/khms-help/')
+        window.location.href = 'https://jezzar042015.github.io/khms-help/'
     }
 
 </script>
