@@ -18,6 +18,7 @@
   import { useEventStore } from './stores/events';
   import { useViewStore } from './stores/views';
   import { useFilesStore } from './stores/files';
+  import { useSurveysStore } from './stores/survey';
 
   import SmallScreen from './components/layouts/SmallScreen.vue';
   import AppWelcome from './components/AppWelcome.vue';
@@ -25,7 +26,6 @@
   import PublishersList from '@/components/PublishersList.vue'
   import AssignmentSlips from '@/components/AssignmentSlips.vue'
   import UserSurvey from './components/announcements/UserSurvey.vue';
-  import { useSurveysStore } from './stores/survey';
 
   const congStore = useCongregationStore()
   const pubsStore = usePublisherStore()

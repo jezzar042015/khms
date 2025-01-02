@@ -33,6 +33,10 @@
                     <button @click="toMwbTemplates">Schedules</button>
                 </div>
 
+                <div class="no-print" v-if="false">
+                    <IconHelp class="icon-base" />
+                </div>
+
                 <div class="cong-form no-print">
                     <lord-icon src="https://cdn.lordicon.com/lecprnjb.json" trigger="hover" colors="primary:#e6e6e6"
                         @click.stop="showCongSettings">
@@ -53,6 +57,7 @@
     import { ref } from 'vue';
     import IconPrinter from '../icons/IconPrinter.vue';
     import TemplateSettings from '../TemplateSettings.vue';
+    import IconHelp from '../icons/IconHelp.vue';
 
     const fileStore = useFilesStore();
     const viewStore = useViewStore();
@@ -200,6 +205,15 @@
         background: #3DA8EA;
     }
 
+    .icon-base
+    {
+        cursor: pointer;
+        opacity: .6;
+        width: 27px;
+        height: 27px;
+        transition: ease-in-out .2s;
+    }
+
     lord-icon
     {
         cursor: pointer;
@@ -208,7 +222,8 @@
         height: 25px
     }
 
-    lord-icon:hover
+    lord-icon:hover,
+    .icon-base:hover
     {
         opacity: .8;
     }
