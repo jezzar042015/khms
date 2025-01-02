@@ -33,7 +33,7 @@
                     <button @click="toMwbTemplates">Schedules</button>
                 </div>
 
-                <div class="no-print" v-if="false">
+                <div class="no-print" @click.stop="toHelp">
                     <IconHelp class="icon-base" />
                 </div>
 
@@ -85,6 +85,10 @@
 
     function toMwbTemplates(): void {
         viewStore.setView('mwb')
+    }
+
+    function toHelp(): void {
+        window.open('https://jezzar042015.github.io/khms-help/')
     }
 
 </script>
@@ -208,9 +212,9 @@
     .icon-base
     {
         cursor: pointer;
-        opacity: .6;
-        width: 27px;
-        height: 27px;
+        opacity: .4;
+        width: 28px;
+        height: 28px;
         transition: ease-in-out .2s;
     }
 
