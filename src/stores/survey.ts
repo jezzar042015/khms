@@ -28,7 +28,6 @@ export const useSurveysStore = defineStore('surveys', () => {
         if (data?.value?.lastDeclined) {
             const lastDeclined = new Date(data.value.lastDeclined)
             hasDeclinedToday = !isOlder(lastDeclined)
-            console.log(hasDeclinedToday);
         }
 
         // exclude new users
@@ -60,9 +59,6 @@ export const useSurveysStore = defineStore('surveys', () => {
         const today = new Date();
         today.setHours(0, 0, 0, 0);
         date.setHours(0, 0, 0, 0);
-        console.log(today, date);
-
-
         return date < today;
     }
 

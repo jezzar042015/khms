@@ -63,26 +63,20 @@
             <div class="form-subtitle">Back-up & Restore</div>
             <div>
                 <div class="actions">
+
                     <div class="action-item" @click="backup">
                         Create Backup
-                        <span>
-                            <IconArrow />
-                        </span>
                     </div>
+
                     <div class="action-item">
                         <label for="fileInput" class="file-label">
                             Restore Backup
                             <input type="file" id="fileInput" accept=".txt" @change="restore" />
-                            <span>
-                                <IconArrow />
-                            </span>
                         </label>
                     </div>
+
                     <div class="action-item" @click="hardReset">
                         Reset Data
-                        <span>
-                            <IconArrow />
-                        </span>
                     </div>
                 </div>
             </div>
@@ -122,7 +116,6 @@
     import FormInput from './reusables/FormInput.vue';
     import FormSelect from './reusables/FormSelect.vue';
     import FormSwitch from './reusables/FormSwitch.vue';
-    import IconArrow from './icons/IconArrow.vue';
     import AlertMessage from './AlertMessage.vue';
 
     type ConfirmActions = 'none' | 'reset'
@@ -325,18 +318,19 @@
     {
         padding: 10px 0;
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+        justify-content: space-between;
+        gap: 8px;
     }
 
     .action-item
     {
-        padding: 10px 20px;
+        padding: 10px 10px;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
-        border: 1px rgba(250, 250, 250, 0.582) solid;
+        flex: 1;
         border-radius: 4px;
+        border: 1px rgb(218, 218, 218) solid;
     }
 
     .file-label
