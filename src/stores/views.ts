@@ -13,6 +13,7 @@ export const useViewStore = defineStore('views', () => {
     const popUpAlert = ref(false)
     const cams = ref(false)
     const survey = ref(false)
+    const help = ref(false)
 
     const congStore = useCongregationStore()
     const visitStore = useVisitStore()
@@ -76,7 +77,7 @@ export const useViewStore = defineStore('views', () => {
         pubsList, assignmentSlips,
         init, exitWelcome,
         setView, popUpAlert, setPopAlert, cams,
-        survey, exitSurvey,
+        survey, help, exitSurvey,
 
     }
 })
