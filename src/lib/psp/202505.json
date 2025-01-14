@@ -1,0 +1,575 @@
+{
+    "period": "202505",
+    "display": "May 2025",
+    "title": "Our Christian Life and Ministry Meeting Schedule",
+    "theme": "#4C6C51",
+    "publish": false,
+    "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025166/univ/art/202025166_univ_sqs_lg.jpg",
+    "firstMonday": "2025-05-05",
+    "weeks": [
+        {
+            "order": "1",
+            "id": "202505.1",
+            "week": "May 5-11",
+            "bibleReading": "PROVERBS 12",
+            "songs": [
+                "101",
+                "21",
+                "57"
+            ],
+            "parts": {
+                "gems": [
+                    {
+                        "id": "202505.1.0",
+                        "time": 1,
+                        "reference": "Opening Comments",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ],
+                        "autofills": [
+                            "202505.1.10"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.1",
+                        "time": 10,
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025161/univ/art/202025161_univ_sqs_lg.jpg",
+                        "title": "1. Hard Work Is Rewarding",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.2",
+                        "time": 10,
+                        "reference": "Pr 12:16",
+                        "title": "2. Spiritual Gems",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.3",
+                        "time": 4,
+                        "reference": "Pr 12:​1-20 (th 5)",
+                        "title": "3. Bible Reading",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "br"
+                        ]
+                    }
+                ],
+                "ministry": [
+                    {
+                        "id": "202505.1.4",
+                        "time": 2,
+                        "title": "4. Starting a Conversation",
+                        "class": "part-title-ministry",
+                        "reference": "lmd 1:4",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.5",
+                        "time": 3,
+                        "title": "5. Starting a Conversation",
+                        "class": "part-title-ministry",
+                        "reference": "lmd 5:4",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.6",
+                        "time": 3,
+                        "title": "6. Following Up",
+                        "class": "part-title-ministry",
+                        "reference": "lmd 9:3",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.7",
+                        "time": 3,
+                        "title": "7. Explaining Your Beliefs",
+                        "class": "part-title-ministry",
+                        "reference": "ijwfq 3 (lmd 4:3)",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    }
+                ],
+                "living": [
+                    {
+                        "id": "202505.1.8",
+                        "time": 15,
+                        "title": "8. Facing Economic Uncertainty With Jehovah’s Help",
+                        "class": "part-title-living",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025161/univ/art/202025161_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-r",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.9",
+                        "time": 30,
+                        "title": "9. Congregation Bible Study",
+                        "class": "part-title-living",
+                        "thumbnail": "bt",
+                        "reference": "bt kap. 26 ¶1-8, mga p. 204, 208",
+                        "roles": [
+                            "cbs"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.9.r",
+                        "class": "accessory",
+                        "alt": "",
+                        "roles": [
+                            "rdr"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.10",
+                        "time": 3,
+                        "reference": "Concluding Comments",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "order": "2",
+            "id": "202505.2",
+            "week": "May 12-18",
+            "bibleReading": "PROVERBS 13",
+            "songs": [
+                "34",
+                "77",
+                "43"
+            ],
+            "parts": {
+                "gems": [
+                    {
+                        "id": "202505.2.0",
+                        "time": 1,
+                        "reference": "Opening Comments",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ],
+                        "autofills": [
+                            "202505.2.10"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.1",
+                        "time": 10,
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025162/univ/art/202025162_univ_sqs_lg.jpg",
+                        "title": "1. Do Not Be Fooled by “the Lamp of the Wicked”",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.2",
+                        "time": 10,
+                        "reference": "Pr 13:24",
+                        "title": "2. Spiritual Gems",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.3",
+                        "time": 4,
+                        "reference": "Pr 13:​1-17 (th 10)",
+                        "title": "3. Bible Reading",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "br"
+                        ]
+                    }
+                ],
+                "ministry": [
+                    {
+                        "id": "202505.2.4",
+                        "time": 3,
+                        "title": "4. Starting a Conversation",
+                        "class": "part-title-ministry",
+                        "reference": "lmd 2:5",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.5",
+                        "time": 4,
+                        "title": "5. Starting a Conversation",
+                        "class": "part-title-ministry",
+                        "reference": "lmd 2:3",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.6",
+                        "time": 5,
+                        "title": "6. Talk",
+                        "class": "part-title-ministry",
+                        "reference": "lmd Appendex A:9 (th 16)",
+                        "thumbnail": "th",
+                        "roles": [
+                            "talk"
+                        ]
+                    }
+                ],
+                "living": [
+                    {
+                        "id": "202505.2.7",
+                        "time": 8,
+                        "title": "7. “The Light of the Righteous Shines Brightly”",
+                        "class": "part-title-living",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025162/univ/art/202025162_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-r",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.8",
+                        "time": 7,
+                        "title": "8. Local Needs",
+                        "class": "part-title-living",
+                        "roles": [
+                            "elder"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.9",
+                        "time": 30,
+                        "title": "9. Congregation Bible Study",
+                        "class": "part-title-living",
+                        "thumbnail": "bt",
+                        "reference": "bt kap. 26 ¶9-17",
+                        "roles": [
+                            "cbs"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.9.r",
+                        "class": "accessory",
+                        "alt": "",
+                        "roles": [
+                            "rdr"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.10",
+                        "time": 3,
+                        "reference": "Concluding Comments",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "order": "3",
+            "id": "202505.3",
+            "week": "May 19-25",
+            "bibleReading": "PROVERBS 14",
+            "songs": [
+                "89",
+                "126",
+                "116"
+            ],
+            "parts": {
+                "gems": [
+                    {
+                        "id": "202505.3.0",
+                        "time": 1,
+                        "reference": "Opening Comments",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ],
+                        "autofills": [
+                            "202505.3.9"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.1",
+                        "time": 10,
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025163/univ/art/202025163_univ_sqs_lg.jpg",
+                        "title": "1. Ponder Each Step When a Disaster Strikes",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.2",
+                        "time": 10,
+                        "reference": "Pr 14:17",
+                        "title": "2. Spiritual Gems",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.3",
+                        "time": 4,
+                        "reference": "Pr 14:​1-21 (th 11)",
+                        "title": "3. Bible Reading",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "br"
+                        ]
+                    }
+                ],
+                "ministry": [
+                    {
+                        "id": "202505.3.4",
+                        "time": 3,
+                        "title": "4. Starting a Conversation",
+                        "class": "part-title-ministry",
+                        "reference": "lmd 3:3",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.5",
+                        "time": 4,
+                        "title": "5. Following Up",
+                        "class": "part-title-ministry",
+                        "reference": "lmd 9:4",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.6",
+                        "time": 5,
+                        "title": "6. Making Disciples",
+                        "class": "part-title-ministry",
+                        "reference": "th 19",
+                        "thumbnail": "th",
+                        "roles": [
+                            "demo"
+                        ]
+                    }
+                ],
+                "living": [
+                    {
+                        "id": "202505.3.7",
+                        "time": 15,
+                        "title": "7. Remain Prepared for a Disaster",
+                        "class": "part-title-living",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025163/univ/art/202025163_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.8",
+                        "time": 30,
+                        "title": "8. Congregation Bible Study",
+                        "class": "part-title-living",
+                        "thumbnail": "bt",
+                        "reference": "bt kap. 26 ¶18-22, p. 209",
+                        "roles": [
+                            "cbs"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.8.r",
+                        "class": "accessory",
+                        "alt": "",
+                        "roles": [
+                            "rdr"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.9",
+                        "time": 3,
+                        "reference": "Concluding Comments",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "order": "4",
+            "id": "202505.4",
+            "week": "May 16-June 1",
+            "bibleReading": "PROVERBS 15",
+            "songs": [
+                "102",
+                "155",
+                "100"
+            ],
+            "parts": {
+                "gems": [
+                    {
+                        "id": "202505.4.0",
+                        "time": 1,
+                        "reference": "Opening Comments",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ],
+                        "autofills": [
+                            "202505.4.9"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.1",
+                        "time": 10,
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025164/univ/art/202025164_univ_sqs_lg.jpg",
+                        "title": "1. Help Others to Have a Cheerful Heart",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.2",
+                        "time": 10,
+                        "reference": "Pr 15:22",
+                        "title": "2. Spiritual Gems",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.3",
+                        "time": 4,
+                        "reference": "Pr 15:​1-21 (th 2)",
+                        "title": "3. Bible Reading",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "br"
+                        ]
+                    }
+                ],
+                "ministry": [
+                    {
+                        "id": "202505.4.4",
+                        "time": 3,
+                        "title": "4. Starting a Conversation",
+                        "class": "part-title-ministry",
+                        "reference": "lmd 1:5",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.5",
+                        "time": 4,
+                        "title": "5. Starting a Conversation",
+                        "class": "part-title-ministry",
+                        "reference": "lmd 2:4",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.6",
+                        "time": 5,
+                        "title": "6. Making Disciples",
+                        "class": "part-title-ministry",
+                        "reference": "th 4",
+                        "thumbnail": "th",
+                        "roles": [
+                            "demo"
+                        ]
+                    }
+                ],
+                "living": [
+                    {
+                        "id": "202505.4.7",
+                        "time": 15,
+                        "title": "7. We Can Have a Cheerful Heart Despite Our Trials",
+                        "class": "part-title-living",
+                        "thumbnail": "",
+                        "thumbnailMode": "sqr-c",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.8",
+                        "time": 30,
+                        "title": "8. Congregation Bible Study",
+                        "class": "part-title-living",
+                        "thumbnail": "bt",
+                        "reference": "bt kap. 27 ¶1-9",
+                        "roles": [
+                            "cbs"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.8.r",
+                        "class": "accessory",
+                        "alt": "",
+                        "roles": [
+                            "rdr"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.9",
+                        "time": 3,
+                        "reference": "Concluding Comments",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
