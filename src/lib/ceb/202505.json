@@ -1,0 +1,575 @@
+{
+    "period": "202505",
+    "display": "Mayo 2025",
+    "title": "Eskedyul sa Atong Kristohanong Kinabuhi ug Ministeryo nga Tigom",
+    "theme": "#4C6C51",
+    "publish": true,
+    "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025166/univ/art/202025166_univ_sqs_lg.jpg",
+    "firstMonday": "2025-05-05",
+    "weeks": [
+        {
+            "order": "1",
+            "id": "202505.1",
+            "week": "Mayo 5-11",
+            "bibleReading": "PROVERBIO 12",
+            "songs": [
+                "101",
+                "21",
+                "57"
+            ],
+            "parts": {
+                "gems": [
+                    {
+                        "id": "202505.1.0",
+                        "time": 1,
+                        "reference": "Introduksiyon",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ],
+                        "autofills": [
+                            "202505.1.10"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.1",
+                        "time": 10,
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025161/univ/art/202025161_univ_sqs_lg.jpg",
+                        "title": "1. Ang Pagkugi Naay Dakong Ganti",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.2",
+                        "time": 10,
+                        "reference": "Pr 12:16",
+                        "title": "2. Espirituwal nga mga Bahandi",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.3",
+                        "time": 4,
+                        "reference": "Pr 12:​1-20 (th tun-anan 5)",
+                        "title": "3. Pagbasa sa Bibliya",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "br"
+                        ]
+                    }
+                ],
+                "ministry": [
+                    {
+                        "id": "202505.1.4",
+                        "time": 2,
+                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "class": "part-title-ministry",
+                        "reference": "lmd leksiyon 1 punto 4",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.5",
+                        "time": 3,
+                        "title": "5. Dihang Magsugod ug Panag-estorya",
+                        "class": "part-title-ministry",
+                        "reference": "lmd leksiyon 5 punto 4",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.6",
+                        "time": 3,
+                        "title": "6. Dihang Magbalikduaw",
+                        "class": "part-title-ministry",
+                        "reference": "lmd leksiyon 9 punto 3",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.7",
+                        "time": 3,
+                        "title": "7. Pagpatin-aw sa Imong Tinuohan",
+                        "class": "part-title-ministry",
+                        "reference": "ijwfq artikulo 3 (lmd leksiyon 4 punto 3)",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    }
+                ],
+                "living": [
+                    {
+                        "id": "202505.1.8",
+                        "time": 15,
+                        "title": "8. Makaya Nimo ang Problema sa Pinansiyal sa Tabang ni Jehova",
+                        "class": "part-title-living",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025161/univ/art/202025161_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-r",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.9",
+                        "time": 30,
+                        "title": "9. Pagtuon sa Kongregasyon sa Bibliya",
+                        "class": "part-title-living",
+                        "thumbnail": "bt",
+                        "reference": "bt kap. 26 ¶1-8, mga kahon sa p. 204, 208",
+                        "roles": [
+                            "cbs"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.9.r",
+                        "class": "accessory",
+                        "alt": "Tigbasa:",
+                        "roles": [
+                            "rdr"
+                        ]
+                    },
+                    {
+                        "id": "202505.1.10",
+                        "time": 3,
+                        "reference": "Konklusyon",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "order": "2",
+            "id": "202505.2",
+            "week": "Mayo 12-18",
+            "bibleReading": "PROVERBIO 13",
+            "songs": [
+                "34",
+                "77",
+                "43"
+            ],
+            "parts": {
+                "gems": [
+                    {
+                        "id": "202505.2.0",
+                        "time": 1,
+                        "reference": "Introduksiyon",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ],
+                        "autofills": [
+                            "202505.2.10"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.1",
+                        "time": 10,
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025162/univ/art/202025162_univ_sqs_lg.jpg",
+                        "title": "1. Ayawg Pailad sa “Lampara sa Daotan”",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.2",
+                        "time": 10,
+                        "reference": "Pr 13:24",
+                        "title": "2. Espirituwal nga mga Bahandi",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.3",
+                        "time": 4,
+                        "reference": "Pr 13:​1-17 (th tun-anan 10)",
+                        "title": "3. Pagbasa sa Bibliya",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "br"
+                        ]
+                    }
+                ],
+                "ministry": [
+                    {
+                        "id": "202505.2.4",
+                        "time": 3,
+                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "class": "part-title-ministry",
+                        "reference": "lmd leksiyon 2 punto 5",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.5",
+                        "time": 4,
+                        "title": "5. Dihang Magsugod ug Panag-estorya",
+                        "class": "part-title-ministry",
+                        "reference": "lmd leksiyon 2 punto 3",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.6",
+                        "time": 5,
+                        "title": "6. Pakigpulong",
+                        "class": "part-title-ministry",
+                        "reference": "lmd apendise A punto 9 (th tun-anan 16)",
+                        "thumbnail": "th",
+                        "roles": [
+                            "talk"
+                        ]
+                    }
+                ],
+                "living": [
+                    {
+                        "id": "202505.2.7",
+                        "time": 8,
+                        "title": "7. “Ang Suga sa Matarong Hayag Kaayo”",
+                        "class": "part-title-living",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025162/univ/art/202025162_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-r",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.8",
+                        "time": 7,
+                        "title": "8. Lokal nga mga Panginahanglan",
+                        "class": "part-title-living",
+                        "roles": [
+                            "elder"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.9",
+                        "time": 30,
+                        "title": "9. Pagtuon sa Kongregasyon sa Bibliya",
+                        "class": "part-title-living",
+                        "thumbnail": "bt",
+                        "reference": "bt kap. 26 ¶9-17",
+                        "roles": [
+                            "cbs"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.9.r",
+                        "class": "accessory",
+                        "alt": "Tigbasa:",
+                        "roles": [
+                            "rdr"
+                        ]
+                    },
+                    {
+                        "id": "202505.2.10",
+                        "time": 3,
+                        "reference": "Konklusyon",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "order": "3",
+            "id": "202505.3",
+            "week": "Mayo 19-25",
+            "bibleReading": "PROVERBIO 14",
+            "songs": [
+                "89",
+                "126",
+                "116"
+            ],
+            "parts": {
+                "gems": [
+                    {
+                        "id": "202505.3.0",
+                        "time": 1,
+                        "reference": "Introduksiyon",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ],
+                        "autofills": [
+                            "202505.3.9"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.1",
+                        "time": 10,
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025163/univ/art/202025163_univ_sqs_lg.jpg",
+                        "title": "1. Hunahunaa Pag-ayo ang Imong Himoon Panahon sa Kalamidad",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.2",
+                        "time": 10,
+                        "reference": "Pr 14:17",
+                        "title": "2. Espirituwal nga mga Bahandi",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.3",
+                        "time": 4,
+                        "reference": "Pr 14:​1-21 (th tun-anan 11)",
+                        "title": "3. Pagbasa sa Bibliya",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "br"
+                        ]
+                    }
+                ],
+                "ministry": [
+                    {
+                        "id": "202505.3.4",
+                        "time": 3,
+                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "class": "part-title-ministry",
+                        "reference": "lmd leksiyon 3 punto 3",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.5",
+                        "time": 4,
+                        "title": "5. Dihang Magbalikduaw",
+                        "class": "part-title-ministry",
+                        "reference": "lmd leksiyon 9 punto 4",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.6",
+                        "time": 5,
+                        "title": "6. Dihang Maghimog Tinun-an",
+                        "class": "part-title-ministry",
+                        "reference": "th tun-anan 19",
+                        "thumbnail": "th",
+                        "roles": [
+                            "demo"
+                        ]
+                    }
+                ],
+                "living": [
+                    {
+                        "id": "202505.3.7",
+                        "time": 15,
+                        "title": "7. Pangandam sa Kalamidad",
+                        "class": "part-title-living",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025163/univ/art/202025163_univ_cnt_2_lg.jpg",
+                        "thumbnailMode": "sqr-c",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.8",
+                        "time": 30,
+                        "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+                        "class": "part-title-living",
+                        "thumbnail": "bt",
+                        "reference": "bt kap. 26 ¶18-22, kahon sa p. 209",
+                        "roles": [
+                            "cbs"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.8.r",
+                        "class": "accessory",
+                        "alt": "Tigbasa:",
+                        "roles": [
+                            "rdr"
+                        ]
+                    },
+                    {
+                        "id": "202505.3.9",
+                        "time": 3,
+                        "reference": "Konklusyon",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "order": "4",
+            "id": "202505.4",
+            "week": "Mayo 16-Hunyo 1",
+            "bibleReading": "PROVERBIO 15",
+            "songs": [
+                "102",
+                "155",
+                "100"
+            ],
+            "parts": {
+                "gems": [
+                    {
+                        "id": "202505.4.0",
+                        "time": 1,
+                        "reference": "Introduksiyon",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ],
+                        "autofills": [
+                            "202505.4.9"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.1",
+                        "time": 10,
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025164/univ/art/202025164_univ_sqs_lg.jpg",
+                        "title": "1. Tabangi ang Uban nga Magmalipayon",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.2",
+                        "time": 10,
+                        "reference": "Pr 15:22",
+                        "title": "2. Espirituwal nga mga Bahandi",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.3",
+                        "time": 4,
+                        "reference": "Pr 15:​1-21 (th tun-anan 2)",
+                        "title": "3. Pagbasa sa Bibliya",
+                        "class": "part-title-gems",
+                        "roles": [
+                            "br"
+                        ]
+                    }
+                ],
+                "ministry": [
+                    {
+                        "id": "202505.4.4",
+                        "time": 3,
+                        "title": "4. Dihang Magsugod ug Panag-estorya",
+                        "class": "part-title-ministry",
+                        "reference": "lmd leksiyon 1 punto 5",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.5",
+                        "time": 4,
+                        "title": "5. Dihang Magsugod ug Panag-estorya",
+                        "class": "part-title-ministry",
+                        "reference": "lmd leksiyon 2 punto 4",
+                        "thumbnail": "lmd",
+                        "roles": [
+                            "demo"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.6",
+                        "time": 5,
+                        "title": "6. Dihang Maghimog Tinun-an",
+                        "class": "part-title-ministry",
+                        "reference": "th tun-anan 4",
+                        "thumbnail": "th",
+                        "roles": [
+                            "demo"
+                        ]
+                    }
+                ],
+                "living": [
+                    {
+                        "id": "202505.4.7",
+                        "time": 15,
+                        "title": "7. Magmalipayon Ta Bisan pa sa mga Kalisdanan",
+                        "class": "part-title-living",
+                        "thumbnail": "",
+                        "thumbnailMode": "sqr-c",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.8",
+                        "time": 30,
+                        "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+                        "class": "part-title-living",
+                        "thumbnail": "bt",
+                        "reference": "bt kap. 27 ¶1-9",
+                        "roles": [
+                            "cbs"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.8.r",
+                        "class": "accessory",
+                        "alt": "Tigbasa:",
+                        "roles": [
+                            "rdr"
+                        ]
+                    },
+                    {
+                        "id": "202505.4.9",
+                        "time": 3,
+                        "reference": "Konklusyon",
+                        "roles": [
+                            "elder",
+                            "ms"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
