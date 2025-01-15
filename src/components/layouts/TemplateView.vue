@@ -37,10 +37,18 @@
                     <IconHelp class="icon-base" />
                 </div>
 
+                <div class="no-print relative">
+                    <IconBell class="icon-bell" />
+                    <AlertBadge />
+                    <NotificationPane />
+                </div>
+
                 <div class="cong-form no-print">
+
                     <lord-icon src="https://cdn.lordicon.com/lecprnjb.json" trigger="hover" colors="primary:#e6e6e6"
                         @click.stop="showCongSettings">
                     </lord-icon>
+
                     <template v-if="congSettingsDisplay">
                         <TemplateSettings @hide-me="hideCongSettings" />
                     </template>
@@ -56,8 +64,11 @@
     import { useViewStore } from '@/stores/views';
     import { ref } from 'vue';
     import IconPrinter from '../icons/IconPrinter.vue';
+    import IconBell from '../icons/IconBell.vue';
     import TemplateSettings from '../TemplateSettings.vue';
     import IconHelp from '../icons/IconHelp.vue';
+    import AlertBadge from '../reusables/AlertBadge.vue';
+    import NotificationPane from '../NotificationPane.vue';
 
     const fileStore = useFilesStore();
     const viewStore = useViewStore();
@@ -218,6 +229,15 @@
         transition: ease-in-out .2s;
     }
 
+    .icon-bell
+    {
+        cursor: pointer;
+        opacity: .4;
+        width: 32px;
+        height: 32px;
+        transition: ease-in-out .2s;
+    }
+
     lord-icon
     {
         cursor: pointer;
@@ -227,7 +247,8 @@
     }
 
     lord-icon:hover,
-    .icon-base:hover
+    .icon-base:hover,
+    .icon-bell:hover
     {
         opacity: .8;
     }
