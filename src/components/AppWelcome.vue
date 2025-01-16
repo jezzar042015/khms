@@ -48,6 +48,8 @@
 
         return hasClass && hasLang
     })
+
+
 </script>
 
 <style scoped>

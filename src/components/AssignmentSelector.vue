@@ -6,12 +6,11 @@
                 <div class="desc">{{ titleDisplay }}</div>
                 <div class="alias" v-if="!noAssignables">{{ participantAlias }}</div>
                 <div class="noalias" v-else>
-                    <p>No students or participants have been added yet that can be assigned for this part. Please check
-                        the publishers
-                        list:</p>
+                    <p>No students or participants have been added yet who can be assigned to this part. Please check
+                        the publishers list:</p>
                     <ul>
                         <li>Has the publisher been added?</li>
-                        <li>If added, do they have the correct roles assigned?</li>
+                        <li>If they have been added, do they have the correct roles assigned?</li>
                     </ul>
 
                     <button @click="viewStore.setView('pubs')">Check Publishers</button>

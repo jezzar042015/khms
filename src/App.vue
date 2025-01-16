@@ -19,6 +19,7 @@
   import { useViewStore } from './stores/views';
   import { useFilesStore } from './stores/files';
   import { useSurveysStore } from './stores/survey';
+  import { useRouterStore } from './stores/router';
 
   import SmallScreen from './components/layouts/SmallScreen.vue';
   import AppWelcome from './components/AppWelcome.vue';
@@ -34,6 +35,7 @@
   const viewStore = useViewStore()
   const fileStore = useFilesStore()
   const surveyStore = useSurveysStore()
+  const router = useRouterStore()
 
   async function loadLocals() {
     await congStore.loadLocal();
@@ -50,6 +52,10 @@
   }
 
   onMounted(async () => {
+    router.loadParams()
     await loadLocals()
+    router.pruneParams()
   })
+
+
 </script>
