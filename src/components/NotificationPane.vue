@@ -11,7 +11,7 @@
                     <IconBell v-if="item.icon == 'new'" />
                 </div>
                 <div>
-                    <div class="noti-subheader" @mouseover="readMe(item.id)">
+                    <div class="noti-subheader" @mouseover="readMe(item)" @click="readMe(item)">
                         <div>
                             {{ item.subheader }}
                         </div>
@@ -30,9 +30,9 @@
 </template>
 
 <script setup lang="ts">
+    import type { Notification } from '@/types/notification';
     import { onMounted, ref } from 'vue';
     import { useNotificationsStore } from '@/stores/notifications';
-    import type { Notification } from '@/types/notification';
     import { useTimeAgo, onClickOutside } from '@vueuse/core';
     import { useRouterStore } from '@/stores/router';
     import IconHelp from './icons/IconHelp.vue';
@@ -60,8 +60,9 @@
         return item?.unread
     }
 
-    const readMe = (id: string) => {
-        notificationStore.newReadAlerts([id])
+    const readMe = (item: Notification) => {
+        if (!item.unread) return
+        notificationStore.newReadAlerts([item.id])
     }
 
     onClickOutside(pane, event => notificationStore.displayPane = false)
