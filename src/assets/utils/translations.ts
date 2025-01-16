@@ -1,7 +1,7 @@
 const translations: Translations = {
     mwbs140: {
         war: {
-            title: 'Eskedyul han Katirok ha Midweek',
+            title: 'Midweek nga Katirok',
             song: 'Karantahon',
             gems: 'MGA BAHANDI TIKANG HA PULONG HAN DIOS',
             ministry: 'MAGIN MAS EPEKTIBO HA MINISTERYO',
@@ -14,7 +14,7 @@ const translations: Translations = {
             conductor: 'Magdudumara'
         },
         tl: {
-            title: 'Iskedyul ng Pulong sa Gitnang Sanlinggo',
+            title: 'Gitnang Sanlinggong Pulong',
             song: 'Awit Blg.',
             gems: 'KAYAMANAN MULA SA SALITA NG DIYOS',
             ministry: 'MAGING MAHUSAY SA MINISTERYO',

@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="no-print relative">
-                    <IconBell class="icon-bell" />
+                    <IconBell class="icon-bell" @click="displayAlerts" />
                     <AlertBadge />
                     <NotificationPane />
                 </div>
@@ -69,9 +69,11 @@
     import IconHelp from '../icons/IconHelp.vue';
     import AlertBadge from '../reusables/AlertBadge.vue';
     import NotificationPane from '../NotificationPane.vue';
+    import { useNotificationsStore } from '@/stores/notifications';
 
     const fileStore = useFilesStore();
     const viewStore = useViewStore();
+    const notiStore = useNotificationsStore()
     const congSettingsDisplay = ref(false)
 
     function showCongSettings(): void {
@@ -102,6 +104,9 @@
         window.location.href = 'https://jezzar042015.github.io/khms-help/'
     }
 
+    function displayAlerts() {
+        notiStore.displayPane = !notiStore.displayPane
+    }
 </script>
 
 

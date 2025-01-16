@@ -5,5 +5,6 @@ export interface Notification {
     subheader: string
     isLink: boolean
     link?: string
-    isUnread?: boolean
+    unread?: boolean
+    icon: 'new' | 'help'
 }
