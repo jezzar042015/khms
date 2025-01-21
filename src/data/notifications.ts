@@ -2,9 +2,18 @@ import type { Notification } from "@/types/notification"
 
 const notifications: Notification[] = [
     {
+        id: 'b9',
+        date: '2025-01-21T00:00:00-08:25',
+        title: "Changing the Local Needs Part",
+        subheader: 'New Tutorial',
+        isLink: true,
+        link: 'https://jezzar042015.github.io/khms-help/?view=help&item=5',
+        icon: "help"
+    },
+    {
         id: 'b1',
         date: '2025-01-15',
-        title: "Changing the Schedule for a Circuit Overseer's Visit",
+        title: "Changing the Schedule for a CO's Visit",
         subheader: 'New Tutorial',
         isLink: true,
         link: 'https://jezzar042015.github.io/khms-help/?view=help&item=1',

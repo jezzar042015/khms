@@ -20,7 +20,8 @@
                             {{ ts(item.date) }}
                         </div>
                     </div>
-                    <div :class="['noti-title', { 'is-link': item.link }]" @click="gotoLink(item.link)">
+                    <div :class="['noti-title', { 'is-link': item.link }, { 'unread-title': isUnread(item) }]"
+                        @click="gotoLink(item.link)">
                         {{ item.title }}
                     </div>
                 </div>
@@ -65,7 +66,7 @@
         notificationStore.newReadAlerts([item.id])
     }
 
-    onClickOutside(pane, event => notificationStore.displayPane = false)
+    onClickOutside(pane, () => notificationStore.displayPane = false)
 
     onMounted(() => {
         notificationStore.clearStorage()
@@ -92,6 +93,12 @@
         font-weight: 600;
     }
 
+    .noti-title
+    {
+        font-weight: 400;
+        font-size: 1em;
+    }
+
     .list
     {
         display: flex;
@@ -104,8 +111,9 @@
     }
 
     .unread,
-    .unread>.noti-title
+    .unread-title
     {
+        color: #008ee6;
         font-weight: 600;
     }
 
@@ -146,11 +154,6 @@
         text-decoration: underline;
     }
 
-    .noti-title
-    {
-        font-weight: 400;
-        font-size: 1em;
-    }
 
     .noti-subheader
     {

@@ -28,7 +28,7 @@
         display: flex;
         align-items: center;
         justify-items: center;
-        background-color: red;
+        background-color: rgb(255, 0, 34);
         padding: 1px 5px;
         border-radius: 10px;
         font-size: .80em;
