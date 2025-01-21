@@ -2,6 +2,24 @@ import type { Notification } from "@/types/notification"
 
 const notifications: Notification[] = [
     {
+        id: 'a1',
+        date: '2025-01-22T00:00:00-00:00',
+        title: "OCLM - May 2025 (Filipino Sign Language)",
+        subheader: 'Schedule is added',
+        link: '?month=202505&lang=psp',
+        isLink: true,
+        icon: "new"
+    },
+    {
+        id: 'a2',
+        date: '2025-01-22T00:00:00-00:00',
+        title: "OCLM - June 2025 (Filipino Sign Language)",
+        subheader: 'Schedule is added',
+        link: '?month=202506&lang=psp',
+        isLink: true,
+        icon: "new"
+    },
+    {
         id: 'b9',
         date: '2025-01-21T00:00:00-08:25',
         title: "Changing the Local Needs Part",

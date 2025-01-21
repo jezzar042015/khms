@@ -666,8 +666,10 @@
                     {
                         "id": "202506.5.8",
                         "time": 10,
-                        "title": "8. Mga Nalampos sa Organisasyon Para sa Hunyo",
+                        "title": "8. Mga Nagawa ng Organisasyon Para sa Hunyo",
                         "class": "part-title-living",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep23/univ/art/com-rep23_univ_wss_06_lg.jpg",
+                        "thumbnailMode": "sqr-r",
                         "roles": [
                             "elder"
                         ]

@@ -3,7 +3,7 @@
     "display": "May 2025",
     "title": "Our Christian Life and Ministry Meeting Schedule",
     "theme": "#4C6C51",
-    "publish": false,
+    "publish": true,
     "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025166/univ/art/202025166_univ_sqs_lg.jpg",
     "firstMonday": "2025-05-05",
     "weeks": [
@@ -56,7 +56,7 @@
                     {
                         "id": "202505.1.3",
                         "time": 4,
-                        "reference": "Pr 12:​1-20 (th 5)",
+                        "reference": "Pr 12:1-12 (th 5)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -129,17 +129,9 @@
                         "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 26 ¶1-8, mga p. 204, 208",
+                        "reference": "bt 4, Box 2",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202505.1.9.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {
@@ -203,7 +195,7 @@
                     {
                         "id": "202505.2.3",
                         "time": 4,
-                        "reference": "Pr 13:​1-17 (th 10)",
+                        "reference": "Pr 13:​1-15 (th 10)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -274,19 +266,11 @@
                         "title": "9. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 26 ¶9-17",
+                        "reference": "bt 4, Box 3",
                         "roles": [
                             "cbs"
                         ],
                         "writtable": true
-                    },
-                    {
-                        "id": "202505.2.9.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
-                        ]
                     },
                     {
                         "id": "202505.2.10",
@@ -349,7 +333,7 @@
                     {
                         "id": "202505.3.3",
                         "time": 4,
-                        "reference": "Pr 14:​1-21 (th 11)",
+                        "reference": "Pr 14:​1-15 (th 11)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -411,17 +395,9 @@
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 26 ¶18-22, p. 209",
+                        "reference": "bt 4:9-12, Box 1",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202505.3.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {
@@ -485,7 +461,7 @@
                     {
                         "id": "202505.4.3",
                         "time": 4,
-                        "reference": "Pr 15:​1-21 (th 2)",
+                        "reference": "Pr 15:​1-15 (th 2)",
                         "title": "3. Bible Reading",
                         "class": "part-title-gems",
                         "roles": [
@@ -547,17 +523,9 @@
                         "title": "8. Congregation Bible Study",
                         "class": "part-title-living",
                         "thumbnail": "bt",
-                        "reference": "bt kap. 27 ¶1-9",
+                        "reference": "bt 4:13-20",
                         "roles": [
                             "cbs"
-                        ]
-                    },
-                    {
-                        "id": "202505.4.8.r",
-                        "class": "accessory",
-                        "alt": "",
-                        "roles": [
-                            "rdr"
                         ]
                     },
                     {
