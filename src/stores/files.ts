@@ -20,6 +20,7 @@ export const useFilesStore = defineStore('files', () => {
     const assignStore = useAssignmentStore()
     const langMonths = ref<LangMonth[]>([])
     const currentPeriod = ref('')
+
     const loadedMonth = ref<LangMonth | undefined>({
         name: '',
         content: {
@@ -33,6 +34,29 @@ export const useFilesStore = defineStore('files', () => {
             firstMonday: '',
         }
     });
+
+    const activeMonthIds = async () => {
+        const pspFiles = getFiles('psp');
+        const cebFiles = getFiles('ceb');
+        const warFiles = getFiles('war');
+        const tlFiles = getFiles('tl');
+
+        let psp: LangMonth[] = [], ceb: LangMonth[] = [], war: LangMonth[] = [], tl: LangMonth[] = []
+
+        if (pspFiles) psp = (await extractJsonFilesToArray(pspFiles)) ?? [];
+        if (cebFiles) ceb = (await extractJsonFilesToArray(cebFiles)) ?? [];
+        if (warFiles) war = (await extractJsonFilesToArray(warFiles)) ?? [];
+        if (tlFiles) tl = (await extractJsonFilesToArray(tlFiles)) ?? [];
+
+        const res: string[] = [
+            ...psp.map(m => m.content.period),
+            ...ceb.map(m => m.content.period),
+            ...war.map(m => m.content.period),
+            ...tl.map(m => m.content.period),
+        ]
+
+        return Array.from(new Set(res));
+    }
 
     const templates = ref([
         { code: 's-140', supported: true, name: "S-140 Template" },
@@ -106,11 +130,17 @@ export const useFilesStore = defineStore('files', () => {
     async function loadFiles(): Promise<void> {
         const lang = congStore.congregation.lang;
 
-        if (!lang) return
+        if (!lang) return;
 
-        const jsonfiles = getFiles(lang)
-        langMonths.value = []
+        const jsonfiles = getFiles(lang);
+        langMonths.value = [];
 
+        if (jsonfiles) {
+            await extractJsonFiles(jsonfiles);
+        }
+    }
+
+    async function extractJsonFiles(jsonfiles: Record<string, any>): Promise<void> {
         for (const path in jsonfiles) {
             const filePath: string = path;
             const fileName = filePath.split('/').pop();
@@ -138,6 +168,37 @@ export const useFilesStore = defineStore('files', () => {
                 console.error(`Error processing file ${fileName}: ${error}`);
             }
         }
+    }
+    async function extractJsonFilesToArray(jsonfiles: Record<string, any>): Promise<LangMonth[]> {
+        const result: LangMonth[] = [];
+        for (const path in jsonfiles) {
+            const filePath: string = path;
+            const fileName = filePath.split('/').pop();
+
+            if (fileName === undefined) {
+                console.error(`File name could not be determined from path: ${filePath}`);
+                continue;
+            }
+
+            try {
+                if (typeof jsonfiles[filePath] === 'function') {
+                    const content: Content = await jsonfiles[filePath]() as Content;
+
+                    if (content.default.publish) {
+                        result.push({
+                            name: fileName,
+                            content: content.default
+                        });
+                    }
+
+                } else {
+                    console.error(`No function found for path: ${filePath}`);
+                }
+            } catch (error) {
+                console.error(`Error processing file ${fileName}: ${error}`);
+            }
+        }
+        return result;
     }
 
     async function loadMonthTemplate(monthCode?: string): Promise<void> {
@@ -246,7 +307,8 @@ export const useFilesStore = defineStore('files', () => {
         loadFiles, studentsParts,
         langMonths, loadedMonth,
         loadMonthTemplate,
-        templates, s140PartItems, weekOptions
+        templates, s140PartItems, weekOptions,
+        activeMonthIds
     }
 })
 
