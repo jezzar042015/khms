@@ -2,7 +2,7 @@
     <div :class="gridColumns">
         <div class="s140-grid-titles">
             <span v-show="part?.time" class="s140-runtime">{{ runTime }}</span>
-            <span v-show="part?.time">{{ part?.title }} {{ timeLimit }}</span>
+            <span v-show="part?.time"> {{ displayTitle }} {{ isOverride ? '' : timeLimit }}</span>
         </div>
         <div class="assignee" v-if="hasAux1Class">
             <span class="s140-part-label" v-show="showLabel">{{ part?.label }}:</span>
@@ -30,6 +30,7 @@
     import { useCongregationStore } from '@/stores/congregation';
     import { usePublisherStore } from '@/stores/publisher';
     import { useFilesStore } from '@/stores/files';
+    import { useOverridesStore } from '@/stores/overrides';
     import type { S140PartItem } from '@/types/files';
 
     import AssignmentSelector from '@/components/AssignmentSelector.vue'
@@ -37,8 +38,9 @@
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
     const congStore = useCongregationStore();
-    const pubStore = usePublisherStore()
-    const fileStore = useFilesStore()
+    const pubStore = usePublisherStore();
+    const fileStore = useFilesStore();
+    const overrides = useOverridesStore();
 
     const props = defineProps<{
         part: S140PartItem
@@ -83,6 +85,19 @@
             return null;
         }
     });
+
+    const displayTitle = computed(() => {
+        const override = overrides.read(props.part.id)
+
+        if (override) {
+            return override.title
+        }
+        return props.part.title
+    })
+
+    const isOverride = computed(() => {
+        return overrides.read(props.part.id) !== null
+    })
 
     const displayAux1Assignee = computed(() => {
 

@@ -9,7 +9,7 @@
         <span v-else class="thumbnail-alt">{{ part.alt }}</span>
 
         <span>
-            <div v-show="part.title" :class="part.class">{{ part.title }}</div>
+            <div v-show="part.title" :class="part.class">{{ displayTitle }}</div>
             <div class="generic-label">{{ part.reference }}</div>
             <div class="assignee" @click="showSelector">
                 <div :class="assignClasses">{{ displayAssignee }}</div>
@@ -24,6 +24,7 @@
     import { computed, ref } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
     import { usePublisherStore } from '@/stores/publisher';
+    import { useOverridesStore } from '@/stores/overrides';
     import type { PartItem } from '@/types/files';
 
     import thumbnails from '@/assets/utils/thumbnails';
@@ -43,6 +44,7 @@
 
     const assignmentStore = useAssignmentStore();
     const pubStore = usePublisherStore()
+    const overrides = useOverridesStore()
 
     const isDemo = computed(() => props.part.roles?.includes('demo'))
     const isBibleReading = computed(() => props.part.roles?.includes('br'))
@@ -109,6 +111,15 @@
         if (props.part.class == 'accessory')
             return 'accessory'
         return 'part-item'
+    })
+
+    const displayTitle = computed(() => {
+        const override = overrides.read(props.part.id)
+
+        if (override) {
+            return override.title
+        }
+        return props.part.title
     })
 
     function showSelector(): void {
