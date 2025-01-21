@@ -108,7 +108,8 @@
                         "thumbnail": "",
                         "roles": [
                             "elder"
-                        ]
+                        ],
+                        "writtable": true
                     },
                     {
                         "id": "202504.1.8",

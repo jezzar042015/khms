@@ -20,6 +20,7 @@
   import { useFilesStore } from './stores/files';
   import { useSurveysStore } from './stores/survey';
   import { useRouterStore } from './stores/router';
+  import { useOverridesStore } from './stores/overrides';
 
   import SmallScreen from './components/layouts/SmallScreen.vue';
   import AppWelcome from './components/AppWelcome.vue';
@@ -36,6 +37,7 @@
   const fileStore = useFilesStore()
   const surveyStore = useSurveysStore()
   const router = useRouterStore()
+  const overrides = useOverridesStore()
 
   async function loadLocals() {
     await congStore.loadLocal();
@@ -55,6 +57,7 @@
     router.loadParams()
     await loadLocals()
     router.pruneParams()
+    await overrides.prune();
   })
 
 

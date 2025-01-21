@@ -2,7 +2,14 @@
     <div :class="gridColumns">
         <div class="s140-grid-titles">
             <span v-show="part?.time" class="s140-runtime">{{ runTime }}</span>
-            <span v-show="part?.time">{{ part?.title }} {{ timeLimit }}</span>
+            <span v-show="part?.time">
+                <span v-if="!overriding" @click="startOverride" :class="[{ writtable: part?.writtable }]">
+                    {{ displayTitle }} {{ isOverride ? '' : timeLimit }}
+                </span>
+                <span v-else class="override-title">
+                    <input type="text" v-model="overrideText" @blur="endOverride" ref="editor" placeholder="" />
+                </span>
+            </span>
         </div>
         <div class="assignee" v-if="hasAux1Class">
             <span class="s140-part-label" v-show="showLabel">{{ part?.label }}:</span>
@@ -25,20 +32,23 @@
 </template>
 
 <script setup lang="ts">
-    import { computed, onMounted, ref, watch } from 'vue';
+    import { computed, nextTick, onMounted, ref, watch } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
     import { useCongregationStore } from '@/stores/congregation';
     import { usePublisherStore } from '@/stores/publisher';
     import { useFilesStore } from '@/stores/files';
+    import { useOverridesStore } from '@/stores/overrides';
     import type { S140PartItem } from '@/types/files';
 
     import AssignmentSelector from '@/components/AssignmentSelector.vue'
+    import { onClickOutside } from '@vueuse/core';
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
     const congStore = useCongregationStore();
-    const pubStore = usePublisherStore()
-    const fileStore = useFilesStore()
+    const pubStore = usePublisherStore();
+    const fileStore = useFilesStore();
+    const overrides = useOverridesStore();
 
     const props = defineProps<{
         part: S140PartItem
@@ -83,6 +93,49 @@
             return null;
         }
     });
+
+    const displayTitle = computed(() => {
+        const override = overrides.read(props.part.id)
+
+        if (override) {
+            return override.title
+        }
+        return props.part.title
+    })
+
+    const isOverride = computed(() => {
+        return overrides.read(props.part.id) !== null
+    })
+
+    const overriding = ref(false);
+    const overrideText = ref<string | null>(null)
+    const editor = ref<HTMLInputElement | null>(null)
+
+    onClickOutside(editor, () => endOverride())
+
+    const startOverride = () => {
+        if (!props.part?.writtable) return
+        overriding.value = true
+        nextTick(() => {
+            editor.value?.focus();
+        });
+    }
+
+    const endOverride = () => {
+        overriding.value = false
+
+        if (!overrideText.value || overrideText.value == props.part.title) {
+            overrides.remove(props.part.id)
+            return
+        }
+
+
+
+        overrides.save({
+            id: props.part.id,
+            title: overrideText.value
+        })
+    }
 
     const displayAux1Assignee = computed(() => {
 
@@ -235,6 +288,7 @@
 
     onMounted(() => {
         loadAux1Part()
+        overrideText.value = displayTitle.value
     })
 
     watch(
@@ -244,3 +298,28 @@
     )
 
 </script>
+
+<style scoped>
+    .override-title input
+    {
+        font-weight: 500;
+        color: #555;
+        font-size: 1em;
+        border: none;
+        border-bottom: 1px solid #55555583;
+        width: 100%;
+        outline: none;
+    }
+
+    .writtable
+    {
+        transition: all ease-in-out .1s;
+    }
+
+    .writtable:hover
+    {
+        cursor: pointer;
+        color: #3DA8EA;
+
+    }
+</style>

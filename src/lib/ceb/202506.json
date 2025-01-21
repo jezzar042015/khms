@@ -107,7 +107,8 @@
                         "class": "part-title-living",
                         "roles": [
                             "elder"
-                        ]
+                        ],
+                        "writtable": true
                     },
                     {
                         "id": "202506.1.8",
@@ -523,7 +524,8 @@
                         "class": "part-title-living",
                         "roles": [
                             "elder"
-                        ]
+                        ],
+                        "writtable": true
                     },
                     {
                         "id": "202506.4.8",

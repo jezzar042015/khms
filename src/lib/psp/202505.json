@@ -277,7 +277,8 @@
                         "reference": "bt kap. 26 ¶9-17",
                         "roles": [
                             "cbs"
-                        ]
+                        ],
+                        "writtable": true
                     },
                     {
                         "id": "202505.2.9.r",

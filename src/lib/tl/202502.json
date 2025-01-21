@@ -118,9 +118,9 @@
                         "title": "8. Lokal na Pangangailangan",
                         "class": "part-title-living",
                         "roles": [
-                            "elder",
-                            "ms"
-                        ]
+                            "elder"
+                        ],
+                        "writtable": true
                     },
                     {
                         "id": "202502.1.9",
@@ -398,9 +398,9 @@
                         "title": "8. Lokal na Pangangailangan",
                         "class": "part-title-living",
                         "roles": [
-                            "elder",
-                            "ms"
-                        ]
+                            "elder"
+                        ],
+                        "writtable": true
                     },
                     {
                         "id": "202502.3.9",

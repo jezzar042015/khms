@@ -513,9 +513,9 @@
                         "class": "part-title-living",
                         "thumbnail": "",
                         "roles": [
-                            "elder",
-                            "ms"
-                        ]
+                            "elder"
+                        ],
+                        "writtable": true
                     },
                     {
                         "id": "202503.4.9",
