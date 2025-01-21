@@ -187,6 +187,7 @@ function living(src: WeekItem, week: S140PartItem[]) {
             title: pattern.title ?? pattern.reference ?? '',
             autofills: [...pattern.autofills ?? []],
             roles: [...pattern.roles ?? []],
+            writtable: pattern.writtable ?? false,
         }
 
         if (part.roles?.includes('cbs'))

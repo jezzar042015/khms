@@ -57,8 +57,9 @@ export interface PartItem {
     roles: string[]
     autofills?: string[]
     isVisit?: boolean
-    co?: string 
+    co?: string
     alt?: string
+    writtable?: boolean
 }
 
 export interface S140PartWeeks {
@@ -80,4 +81,5 @@ export interface S140PartItem {
     type?: string
     isVisit?: boolean
     co?: string
+    writtable?: boolean
 }

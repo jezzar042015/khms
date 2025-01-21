@@ -9,7 +9,13 @@
         <span v-else class="thumbnail-alt">{{ part.alt }}</span>
 
         <span>
-            <div v-show="part.title" :class="part.class">{{ displayTitle }}</div>
+            <div @click="startOverride" v-if="showTitle" :class="[part.class, { 'writtable': part.writtable }]">
+                {{ displayTitle }}
+            </div>
+
+            <div v-if="isOverriding" class="editor" ref="editor">
+                <textarea type="text" v-model="overrideText" :class="part.class"></textarea>
+            </div>
             <div class="generic-label">{{ part.reference }}</div>
             <div class="assignee" @click="showSelector">
                 <div :class="assignClasses">{{ displayAssignee }}</div>
@@ -21,10 +27,11 @@
 </template>
 
 <script setup lang="ts">
-    import { computed, ref } from 'vue';
+    import { computed, nextTick, ref, watch } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
     import { usePublisherStore } from '@/stores/publisher';
     import { useOverridesStore } from '@/stores/overrides';
+    import { onClickOutside } from '@vueuse/core';
     import type { PartItem } from '@/types/files';
 
     import thumbnails from '@/assets/utils/thumbnails';
@@ -113,15 +120,6 @@
         return 'part-item'
     })
 
-    const displayTitle = computed(() => {
-        const override = overrides.read(props.part.id)
-
-        if (override) {
-            return override.title
-        }
-        return props.part.title
-    })
-
     function showSelector(): void {
         triggered.value = true
         selector.value = true
@@ -135,6 +133,55 @@
         triggered.value = false
     }
 
+    // title handling
+    const isOverriding = ref(false)
+    const editor = ref<HTMLTextAreaElement | null>(null)
+    const overrideText = ref('')
+
+    onClickOutside(editor, () => endOverride())
+
+    const showTitle = computed(() => {
+        return props.part.title && !isOverriding.value
+    })
+
+    const displayTitle = computed(() => {
+        const override = overrides.read(props.part.id)
+
+        if (override) {
+            return override.title
+        }
+        return props.part.title
+    })
+
+    const startOverride = () => {
+        if (!props.part.writtable) return
+        isOverriding.value = true
+        nextTick(() => {
+            editor.value?.focus();
+        });
+    }
+
+    const endOverride = () => {
+        isOverriding.value = false
+
+        if (!overrideText.value || overrideText.value == props.part.title) {
+            overrides.remove(props.part.id)
+            return
+        }
+
+        overrides.save({
+            id: props.part.id,
+            title: overrideText.value
+        })
+    }
+
+    watch(
+        () => props.part.id,
+        () => {
+            overrideText.value = overrides.read(props.part.id)?.title ?? ''
+        },
+        { immediate: true })
+
 </script>
 
 <style scoped>
@@ -143,5 +190,27 @@
         display: grid;
         grid-template-columns: 2fr 4fr 10fr;
         padding-bottom: 3px;
+    }
+
+    .writtable
+    {
+        transition: all ease-in-out .1s;
+    }
+
+    .writtable:hover
+    {
+        cursor: pointer;
+        color: #3DA8EA;
+
+    }
+
+    .editor textarea
+    {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #55555565;
+        resize: none;
+        width: 100%;
+        font-size: 1em;
     }
 </style>

@@ -266,7 +266,8 @@
                         "class": "part-title-living",
                         "roles": [
                             "elder"
-                        ]
+                        ],
+                        "writtable": true
                     },
                     {
                         "id": "202505.2.9",
