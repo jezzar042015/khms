@@ -539,7 +539,8 @@
                         "roles": [
                             "elder",
                             "ms"
-                        ]
+                        ],
+                        "writtable": true
                     },
                     {
                         "id": "202503.4.9",
