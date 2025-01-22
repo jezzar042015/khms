@@ -3,7 +3,16 @@ import type { Notification } from "@/types/notification"
 const notifications: Notification[] = [
     {
         id: 'a1',
-        date: '2025-01-22T00:00:00-00:00',
+        date: '2025-01-22T00:00:00-00:10',
+        title: "Switching Between Schedule Templates",
+        subheader: 'New Tutorial',
+        isLink: true,
+        link: 'https://jezzar042015.github.io/khms-help/?view=help&item=6',
+        icon: "help"
+    },
+    {
+        id: 'a2',
+        date: '2025-01-22T00:00:00-00:08',
         title: "OCLM - May 2025 (Filipino Sign Language)",
         subheader: 'Schedule is added',
         link: '?month=202505&lang=psp',
@@ -11,8 +20,8 @@ const notifications: Notification[] = [
         icon: "new"
     },
     {
-        id: 'a2',
-        date: '2025-01-22T00:00:00-00:00',
+        id: 'a3',
+        date: '2025-01-22T00:00:00-00:08',
         title: "OCLM - June 2025 (Filipino Sign Language)",
         subheader: 'Schedule is added',
         link: '?month=202506&lang=psp',
