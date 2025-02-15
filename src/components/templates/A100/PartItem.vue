@@ -38,12 +38,12 @@
     import AssignmentSelector from '@/components/AssignmentSelector.vue';
 
 
-    const props = defineProps<{
+    const { part } = defineProps<{
         part: PartItem
     }>()
 
     const partItem = ref<PartItem>(
-        { ...props.part }
+        { ...part }
     )
 
     const selector = ref(false)
@@ -53,14 +53,14 @@
     const pubStore = usePublisherStore()
     const overrides = useOverridesStore()
 
-    const isDemo = computed(() => props.part.roles?.includes('demo'))
-    const isBibleReading = computed(() => props.part.roles?.includes('br'))
-    const isTalk = computed(() => props.part.roles?.includes('talk'))
+    const isDemo = computed(() => part.roles?.includes('demo'))
+    const isBibleReading = computed(() => part.roles?.includes('br'))
+    const isTalk = computed(() => part.roles?.includes('talk'))
 
     const displayAssignee = computed(() => {
-        if (props.part?.isVisit) return props.part.co
+        if (part?.isVisit) return part.co
 
-        const partid: string = props.part?.id ?? ''
+        const partid: string = part?.id ?? ''
         const assigned = assignmentStore.get.find(a => a.pid == partid);
         if (!assigned) return 'Not Assigned!'
 
@@ -93,9 +93,9 @@
     })
 
     const thumbnail = computed<string | null>(() => {
-        if (!props.part.thumbnail) return null
-        const tn = thumbnails[props.part.thumbnail]
-        return (tn) ? tn.thumbnail : props.part.thumbnail
+        if (!part.thumbnail) return null
+        const tn = thumbnails[part.thumbnail]
+        return (tn) ? tn.thumbnail : part.thumbnail
     });
 
     const thumbnailImageClass = computed(() => {
@@ -106,16 +106,16 @@
             'sqr-r': 'image-sqr-right'
         };
 
-        return props.part.thumbnailMode ? modes[props.part.thumbnailMode] || null : null;
+        return part.thumbnailMode ? modes[part.thumbnailMode] || null : null;
     });
 
     const time = computed<string | null>(() => {
-        if (!props.part.time) return null
-        return `${props.part.time}m`
+        if (!part.time) return null
+        return `${part.time}m`
     })
 
     const itemClasses = computed<string>(() => {
-        if (props.part.class == 'accessory')
+        if (part.class == 'accessory')
             return 'accessory'
         return 'part-item'
     })
@@ -141,20 +141,20 @@
     onClickOutside(editor, () => endOverride())
 
     const showTitle = computed(() => {
-        return props.part.title && !isOverriding.value
+        return part.title && !isOverriding.value
     })
 
     const displayTitle = computed(() => {
-        const override = overrides.read(props.part.id)
+        const override = overrides.read(part.id)
 
         if (override) {
             return override.title
         }
-        return props.part.title
+        return part.title
     })
 
     const startOverride = () => {
-        if (!props.part.writtable) return
+        if (!part.writtable) return
         isOverriding.value = true
         nextTick(() => {
             editor.value?.focus();
@@ -164,21 +164,21 @@
     const endOverride = () => {
         isOverriding.value = false
 
-        if (!overrideText.value || overrideText.value == props.part.title) {
-            overrides.remove(props.part.id)
+        if (!overrideText.value || overrideText.value == part.title) {
+            overrides.remove(part.id)
             return
         }
 
         overrides.save({
-            id: props.part.id,
+            id: part.id,
             title: overrideText.value
         })
     }
 
     watch(
-        () => props.part.id,
+        () => part.id,
         () => {
-            overrideText.value = overrides.read(props.part.id)?.title ?? ''
+            overrideText.value = overrides.read(part.id)?.title ?? ''
         },
         { immediate: true })
 

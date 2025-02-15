@@ -33,7 +33,7 @@
     import IconInterpreter from '@/components/icons/IconInterpreter.vue';
     import AssignmentSelector from '@/components/AssignmentSelector.vue';
 
-    const props = defineProps<{
+    const { weekId } = defineProps<{
         weekId: string
     }>()
 
@@ -45,13 +45,13 @@
 
 
     const cameraOp = ref<PartItem>({
-        id: `${props.weekId}.cam`,
+        id: `${weekId}.cam`,
         time: 0,
         roles: ['cam'],
     })
 
     const interpreters = ref<PartItem>({
-        id: `${props.weekId}.intr`,
+        id: `${weekId}.intr`,
         time: 0,
         roles: ['intr'],
         title: 'Reverse Interpreting'

@@ -63,7 +63,7 @@
     const mouseXpos = ref<number>(0)
     const a100Pos = ref<A100Position>('right')
 
-    const props = defineProps<{
+    const { part, triggered } = defineProps<{
         part: S140PartItem | PartItem,
         triggered: boolean,
     }>()
@@ -74,7 +74,7 @@
     const participantAlias = computed<string>(() => {
         if (noAssignables.value) return 'No Assignables';
 
-        const roles = props.part.roles || [];
+        const roles = part.roles || [];
 
         if (roles.includes('demo')) {
             return 'Select Students';
@@ -112,18 +112,18 @@
     })
 
     const isOpenPrayer = computed<boolean>(() => {
-        return props.part.id.endsWith('.op')
+        return part.id.endsWith('.op')
     })
 
     const isClosingPrayer = computed<boolean>(() => {
-        return props.part.id.endsWith('.cp')
+        return part.id.endsWith('.cp')
     })
 
     const titleDisplay = computed<string>(() => {
         if (isOpenPrayer.value) return 'Opening Prayer'
         if (isClosingPrayer.value) return 'Closing Prayer'
 
-        return props.part.title ?? ''
+        return part.title ?? ''
     })
 
     const filteredAssignables = computed<Publisher[]>(() => {
@@ -133,10 +133,10 @@
     })
 
     const assignables = computed<Publisher[]>(() => {
-        if (!props.part.roles) return pubStore.publishers
+        if (!part.roles) return pubStore.publishers
 
         const list = pubStore.publishers.filter(publisher =>
-            publisher.roles.some(role => props.part.roles?.includes(role))
+            publisher.roles.some(role => part.roles?.includes(role))
         )
 
         return list.sort((a, b) => {
@@ -171,11 +171,11 @@
         return result;
     }
 
-    const isDemo = computed(() => props.part.roles?.includes('demo'))
-    const isBibleReading = computed(() => props.part.roles?.includes('br'))
-    const isTalk = computed(() => props.part.roles?.includes('talk'))
-    const arePrayers = computed(() => props.part.roles?.includes('prayers'))
-    const areInterpreters = computed(() => props.part.roles?.includes('intr'))
+    const isDemo = computed(() => part.roles?.includes('demo'))
+    const isBibleReading = computed(() => part.roles?.includes('br'))
+    const isTalk = computed(() => part.roles?.includes('talk'))
+    const arePrayers = computed(() => part.roles?.includes('prayers'))
+    const areInterpreters = computed(() => part.roles?.includes('intr'))
 
     function isSelected(pubId: string | undefined): boolean {
         if (!pubId || !assignment.value) return false
@@ -216,8 +216,8 @@
     }
 
     async function handleAutofills(id: string): Promise<void> {
-        if (props.part.autofills) {
-            for (const af of props.part.autofills) {
+        if (part.autofills) {
+            for (const af of part.autofills) {
                 await assignStore.upsert({
                     pid: af, a: id,
                 })
@@ -228,7 +228,7 @@
     async function handleS140Prayer(id: string, isAdded: boolean): Promise<void> {
 
         if (isOpenPrayer.value || isClosingPrayer.value) {
-            const weekId = getWeekId(props.part.id)
+            const weekId = getWeekId(part.id)
             let a100Prayer = assignStore.get.find(p => p.pid == weekId)
 
             if (!a100Prayer)
@@ -244,7 +244,7 @@
 
     async function handlePrayers(id: string, isAdded: boolean): Promise<void> {
         if (arePrayers.value) {
-            const weekId = getWeekId(props.part.id + '.1')
+            const weekId = getWeekId(part.id + '.1')
             const i = assignment.value.a.indexOf(id)
             const prayer = { pid: '', a: '' }
 
@@ -268,14 +268,14 @@
 
     function prepAssignment(): void {
         if (isDemo.value || areInterpreters.value || isBibleReading.value || isTalk.value || arePrayers.value) {
-            assignment.value = { pid: props.part.id, a: [] }
+            assignment.value = { pid: part.id, a: [] }
         } else {
-            assignment.value = { pid: props.part.id, a: '' }
+            assignment.value = { pid: part.id, a: '' }
         }
     }
 
     function blurredSelector(event: MouseEvent): void {
-        if (props.triggered) {
+        if (triggered) {
             emits("trigger-off");
             mouseYpos.value = event.clientY
             mouseXpos.value = event.clientX
@@ -340,7 +340,7 @@
 
 
     function loadAssigned(): void {
-        const partId: string = props.part?.id ?? '';
+        const partId: string = part?.id ?? '';
         const assigned = assignStore.get.find(a => a.pid == partId);
         if (assigned) {
             // makes sure that missing pubs are removed
@@ -350,7 +350,7 @@
                     if (!pubExist) assigned.a = assigned.a.filter(i => i != id)
                 }
             }
-            assignment.value = { pid: props.part.id, a: assigned.a }
+            assignment.value = { pid: part.id, a: assigned.a }
         }
     }
 

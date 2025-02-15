@@ -9,19 +9,24 @@
 <script setup lang="ts">
     import { computed } from 'vue';
 
-    const props = defineProps({
-        label: String,
-        placeholder: String,
-        modelValue: String,
-        numeric: Boolean
-    });
+    const {
+        label,
+        placeholder,
+        modelValue,
+        numeric = false,
+    } = defineProps<{
+        label: string;
+        placeholder: string;
+        modelValue: string;
+        numeric?: boolean;
+    }>()
 
     const emit = defineEmits(['update:modelValue']);
 
-    const id = computed(() => `${(props.label ?? '').replace(/\s+/g, '-').toLowerCase()}-${Math.random().toString(36).substr(2, 9)}`);
+    const id = computed(() => `${(label ?? '').replace(/\s+/g, '-').toLowerCase()}-${Math.random().toString(36).substr(2, 9)}`);
 
     const numericHandler = computed(() => {
-        return props.numeric ? isNumberKey : () => { };
+        return numeric ? isNumberKey : () => { };
     });
 
     function onInput(event: Event) {

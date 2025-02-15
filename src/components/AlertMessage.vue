@@ -26,6 +26,7 @@
     }
 
     const emits = defineEmits(['confirm'])
+
     const props = withDefaults(
         defineProps<Props>(),
         {
