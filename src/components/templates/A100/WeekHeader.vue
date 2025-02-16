@@ -63,19 +63,19 @@
     const assignStore = useAssignmentStore();
     const pubStore = usePublisherStore()
 
-    const props = defineProps<{
+    const { w } = defineProps<{
         w: WeekItem
     }>()
 
     const prayer = ref<PartItem>({
-        id: props.w.id,
+        id: w.id,
         time: 0,
         roles: ['elder', 'ms', 'prayers'],
         title: 'Opening & Closing Prayers',
     })
 
     const displayAssignee = computed(() => {
-        const partid = props.w.id
+        const partid = w.id
         const assigned = assignStore.get.find(a => a.pid == partid);
         if (!assigned) return 'Not Assigned!'
 
@@ -92,8 +92,8 @@
     })
 
     const midweekDate = computed(() => {
-        if (!props.w.id) return ''
-        return useWeeklyDate(props.w.id, props.w.week)
+        if (!w.id) return ''
+        return useWeeklyDate(w.id, w.week)
     })
 
     const bg = computed<{ background: string } | null>(() => {
@@ -130,7 +130,7 @@
     })
 
     watch(
-        () => props.w,
+        () => w,
         (newVal) => {
             prayer.value.id = newVal.id
         },
@@ -138,7 +138,7 @@
     )
 
     onMounted(() => {
-        prayer.value.id = props.w.id
+        prayer.value.id = w.id
     })
 
 

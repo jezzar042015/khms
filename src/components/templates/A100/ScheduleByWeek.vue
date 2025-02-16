@@ -26,14 +26,14 @@
 
 <script setup lang="ts">
 
+    import type { WeekItem } from '@/types/files';
     import { computed } from 'vue';
     import { useViewStore } from '@/stores/views';
-    import type { WeekItem } from '@/types/files';
     import WeekHeader from './WeekHeader.vue';
     import PartItem from './PartItem.vue'
     import TechAssignments from './TechAssignments.vue'
 
-    const props = defineProps<{
+    const { w, i, weeks } = defineProps<{
         w: WeekItem
         i: number,
         weeks: number,
@@ -42,9 +42,9 @@
     const viewStore = useViewStore()
 
     const isFourthWeek = computed<boolean>(() => {
-        const isLastWeek = props.weeks == props.i + 1;
+        const isLastWeek = weeks == i + 1;
         if (isLastWeek) return false;
-        return (props.i + 1) % 4 == 0;
+        return (i + 1) % 4 == 0;
     })
 
     const pagebreaker = computed<string>(() => {

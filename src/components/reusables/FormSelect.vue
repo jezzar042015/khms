@@ -26,25 +26,32 @@
 
     type ItemType = { [key: string]: any };
 
-    const props = defineProps({
-        modelValue: [String, Number],
-        items: { type: Array as () => ItemType[], default: () => [] },
-        id: { type: String, default: 'id' },
-        display: { type: String, default: 'name' },
-        placeholder: { type: String, default: 'Select' },
-        label: { type: String, default: null },
-    });
+    const {
+        modelValue,
+        items = [],
+        id = 'id',
+        display = 'name',
+        placeholder = 'Select',
+        label = null,
+    } = defineProps<{
+        modelValue?: string | number;
+        items?: ItemType[];
+        id?: string;
+        display?: string;
+        placeholder?: string;
+        label?: string;
+    }>()
 
     const isOpen = ref(false);
 
     const emit = defineEmits(['update:modelValue']);
 
     const selectedItem = computed<ItemType | null>(() =>
-        props.items.find((item) => item && item[props.id] === props.modelValue) || null
+        items.find((item) => item && item[id] === modelValue) || null
     );
 
     const selectedDisplayValue = computed<string>(() =>
-        selectedItem.value ? selectedItem.value[props.display] : ''
+        selectedItem.value ? selectedItem.value[display] : ''
     );
 
     const ddClasses = computed(() => ({
@@ -61,7 +68,7 @@
     }
 
     const selectItem = (item: ItemType) => {
-        emit('update:modelValue', item[props.id]);
+        emit('update:modelValue', item[id]);
         isOpen.value = false;
     };
 </script>

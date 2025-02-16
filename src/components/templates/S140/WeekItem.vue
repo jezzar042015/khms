@@ -36,40 +36,33 @@
 </template>
 
 <script setup lang="ts">
+    import type { S140PartItem, WeekItemFeed } from '@/types/files';
     import { computed, ref } from 'vue';
     import { useFilesStore } from '@/stores/files';
     import { useCongregationStore } from '@/stores/congregation';
     import { useWeeklyDate } from '@/composables/weeklyDate';
-    import type { S140PartItem, WeekItemFeed } from '@/types/files';
+    import { onClickOutside } from '@vueuse/core'
     import PartItem from './PartItem.vue';
     import WeekdaySelector from '@/components/WeekdaySelector.vue';
-    import { onClickOutside } from '@vueuse/core'
 
-    interface S140Week {
+    const { w, i } = defineProps<{
         w: WeekItemFeed
         i: number
-    }
-
-    const props = defineProps<S140Week>()
+    }>()
     const congStore = useCongregationStore()
     const fileStore = useFilesStore()
-
-    const week = computed(() => {
-        if (!props.w) return null
-        return props.w.week
-    })
 
     const hasAuxClass = computed<boolean>(() => {
         return congStore.congregation.classId == 2
     })
 
     const midweekDate = computed(() => {
-        if (!props.w.id) return ''
-        return useWeeklyDate(props.w.id, props.w.week)
+        if (!w.id) return ''
+        return useWeeklyDate(w.id, w.week)
     })
 
     const hasMeetingDemos = computed<boolean>(() => {
-        const weekId = props.w.id
+        const weekId = w.id
         if (!weekId) return false
         const weekParts = fileStore.s140PartItems[weekId]
         if (!weekParts) return false
@@ -88,13 +81,13 @@
     });
 
     const reading = computed(() => {
-        if (!props.w) return null
-        return props.w.bibleReading
+        if (!w) return null
+        return w.bibleReading
     })
 
     const composedParts = computed<S140PartItem[]>(() => {
-        if (!props.w) return []
-        const weekId = props.w.id;
+        if (!w) return []
+        const weekId = w.id;
         return fileStore.s140PartItems[weekId]
     })
 
