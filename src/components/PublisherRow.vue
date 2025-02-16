@@ -25,10 +25,10 @@
 </template>
 
 <script setup lang="ts">
+    import type { Publisher } from '@/types/publisher';
     import { computed, ref } from 'vue';
     import { usePublisherStore } from '@/stores/publisher';
     import { useViewStore } from '@/stores/views';
-    import type { Publisher } from '@/types/publisher';
 
 
     import RoleSelector from '@/components/RoleSelector.vue'
@@ -38,7 +38,7 @@
     const roleSelectorDisplay = ref(false);
 
     const emits = defineEmits(['request-remove'])
-    const props = defineProps<{
+    const { pub } = defineProps<{
         pub: Publisher
     }>()
 
@@ -47,9 +47,9 @@
     const viewStore = useViewStore()
 
     const publisher = ref<Publisher>({
-        id: props.pub.id,
-        name: props.pub.name,
-        roles: props.pub.roles
+        id: pub.id,
+        name: pub.name,
+        roles: pub.roles
     })
 
     const isNewPub = computed<boolean>(() => {

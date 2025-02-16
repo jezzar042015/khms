@@ -9,36 +9,30 @@
 </template>
 
 <script setup lang="ts">
+    import { computed } from 'vue';
 
-    const props = defineProps({
-        modelValue: {
-            type: [String, Boolean],
-            required: true
-        },
-        label: {
-            type: String,
-            default: ""
-        },
-        falseValue: {
-            type: [String, Boolean],
-            default: false
-        },
-        trueValue: {
-            type: [String, Boolean],
-            default: true
-        },
-        id: {
-            type: String,
-            default: () => `switch-${Math.random().toString(36).substr(2, 9)}`
-        }
-    });
+    const {
+        modelValue,
+        label = "",
+        falseValue = false,
+        trueValue = true,
+        switchId,
+    } = defineProps<{
+        modelValue: string | boolean;
+        label?: string;
+        falseValue?: string | boolean;
+        trueValue?: string | boolean;
+        switchId?: string;
+    }>()
 
     const emit = defineEmits(['update:modelValue']);
 
     const toggleSwitch = (event: Event) => {
         const input = event.target as HTMLInputElement
-        emit('update:modelValue', input.checked ? props.trueValue : props.falseValue);
+        emit('update:modelValue', input.checked ? trueValue : falseValue);
     };
+
+    const id = computed(() => switchId || `switch-${Math.random().toString(36).substr(2, 9)}`);
 </script>
 
 <style scoped>

@@ -89,8 +89,8 @@
     import { useWeeklyDate } from '@/composables/weeklyDate';
 
     const $toast = useToast();
-    const props = defineProps<{
-        part: PartItem
+    const { partSource } = defineProps<{
+        partSource: PartItem
     }>()
 
     type Classrooms = 'main' | 'aux1' | 'aux2'
@@ -102,12 +102,12 @@
     const slip = ref<HTMLElement>()
     const shooter = ref(true)
 
-    const isDemo = computed(() => props.part.roles?.includes('demo'))
-    const isBibleReading = computed(() => props.part.roles?.includes('br'))
-    const isTalk = computed(() => props.part.roles?.includes('talk'))
+    const isDemo = computed(() => partSource.roles?.includes('demo'))
+    const isBibleReading = computed(() => partSource.roles?.includes('br'))
+    const isTalk = computed(() => partSource.roles?.includes('talk'))
 
     const studentName = computed(() => {
-        const part = assignStore.get.find(p => p.pid == props.part.id)
+        const part = assignStore.get.find(p => p.pid == partSource.id)
         if (!part) return null
 
         const areStudents = (isDemo.value || isBibleReading.value || isTalk)
@@ -117,7 +117,7 @@
     })
 
     const assistant = computed(() => {
-        const part = assignStore.get.find(p => p.pid == props.part.id)
+        const part = assignStore.get.find(p => p.pid == partSource.id)
         if (!part) return null
 
         const areStudents = (isDemo.value || isBibleReading.value || isTalk)
@@ -127,19 +127,19 @@
     })
 
     const classAssignment = computed<Classrooms>(() => {
-        if (props.part.id.includes('.ax1')) return 'aux1'
+        if (partSource.id.includes('.ax1')) return 'aux1'
         return 'main'
     })
 
     const assignDate = computed(() => {
         const weeks = fileStore.weekOptions
-        const weekId = props.part.id.substring(0, 8);
+        const weekId = partSource.id.substring(0, 8);
         const week = weeks.find(w => w.id == weekId)
         return useWeeklyDate(weekId, week?.name ?? '', true)
     })
 
     const partNum = computed(() => {
-        const title = props.part.title ?? ''
+        const title = partSource.title ?? ''
         const perPos = title.indexOf('.')
         const partNum = title.substring(0, perPos)
         return /^-?\d+(\.\d+)?$/.test(partNum) ? `#${title.substring(0, perPos)}` : title;

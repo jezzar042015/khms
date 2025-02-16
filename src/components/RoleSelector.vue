@@ -20,26 +20,26 @@
 </template>
 
 <script setup lang="ts">
-    import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
-    import { usePublisherStore } from '@/stores/publisher';
     import type { Publisher } from '@/types/publisher';
     import type { PubRole } from '@/types/pubrole';
-    import IconPlus from '@/components/icons/IconPlus.vue'
+    import { computed, onMounted, onUnmounted, ref, watch } from 'vue';
+    import { usePublisherStore } from '@/stores/publisher';
     import { useViewStore } from '@/stores/views';
+    import IconPlus from '@/components/icons/IconPlus.vue'
 
     const pubStore = usePublisherStore()
     const viewStore = useViewStore()
     const emit = defineEmits(['hideMe', 'triggerOff'])
 
-    const props = defineProps<{
+    const { publisher, triggered } = defineProps<{
         publisher: Publisher,
         triggered: boolean
     }>()
 
     const pub = ref<Publisher>({
-        id: props.publisher.id,
-        name: props.publisher.name,
-        roles: props.publisher.roles,
+        id: publisher.id,
+        name: publisher.name,
+        roles: publisher.roles,
     })
 
     const roleSelector = ref<HTMLElement>();
@@ -78,7 +78,7 @@
     }
 
     function handleOutsideSelectorClick(event: Event): void {
-        if (props.triggered) {
+        if (triggered) {
             emit("triggerOff");
             return;
         }
@@ -115,7 +115,7 @@
     });
 
     watch(
-        () => props.publisher,
+        () => publisher,
         async (newPublisher) => {
             pub.value.id = newPublisher.id;
             pub.value.name = newPublisher.name;

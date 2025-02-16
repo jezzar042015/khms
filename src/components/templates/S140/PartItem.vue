@@ -38,10 +38,10 @@
     import { usePublisherStore } from '@/stores/publisher';
     import { useFilesStore } from '@/stores/files';
     import { useOverridesStore } from '@/stores/overrides';
+    import { onClickOutside } from '@vueuse/core';
     import type { S140PartItem } from '@/types/files';
 
     import AssignmentSelector from '@/components/AssignmentSelector.vue'
-    import { onClickOutside } from '@vueuse/core';
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
@@ -50,7 +50,7 @@
     const fileStore = useFilesStore();
     const overrides = useOverridesStore();
 
-    const props = defineProps<{
+    const { part } = defineProps<{
         part: S140PartItem
     }>()
 
@@ -60,16 +60,16 @@
     const selectorAux1 = ref(false);
     const triggeredSelector = ref(false);
 
-    const isDemo = computed(() => props.part.roles?.includes('demo'))
-    const isBibleReading = computed(() => props.part.roles?.includes('br'))
-    const isTalk = computed(() => props.part.roles?.includes('talk'))
+    const isDemo = computed(() => part.roles?.includes('demo'))
+    const isBibleReading = computed(() => part.roles?.includes('br'))
+    const isTalk = computed(() => part.roles?.includes('talk'))
 
     const displayAssignee = computed(() => {
 
-        const isVisit = props.part.roles?.includes('co')
-        if (isVisit) return props.part.co;
+        const isVisit = part.roles?.includes('co')
+        if (isVisit) return part.co;
 
-        const partid: string = props.part?.id ?? ''
+        const partid: string = part?.id ?? ''
         const assigned = assignmentStore.get.find(a => a.pid == partid);
         if (!assigned) return 'Not Assigned!';
 
@@ -95,16 +95,16 @@
     });
 
     const displayTitle = computed(() => {
-        const override = overrides.read(props.part.id)
+        const override = overrides.read(part.id)
 
         if (override) {
             return override.title
         }
-        return props.part.title
+        return part.title
     })
 
     const isOverride = computed(() => {
-        return overrides.read(props.part.id) !== null
+        return overrides.read(part.id) !== null
     })
 
     const overriding = ref(false);
@@ -114,7 +114,7 @@
     onClickOutside(editor, () => endOverride())
 
     const startOverride = () => {
-        if (!props.part?.writtable) return
+        if (!part?.writtable) return
         overriding.value = true
         nextTick(() => {
             editor.value?.focus();
@@ -124,15 +124,15 @@
     const endOverride = () => {
         overriding.value = false
 
-        if (!overrideText.value || overrideText.value == props.part.title) {
-            overrides.remove(props.part.id)
+        if (!overrideText.value || overrideText.value == part.title) {
+            overrides.remove(part.id)
             return
         }
 
 
 
         overrides.save({
-            id: props.part.id,
+            id: part.id,
             title: overrideText.value
         })
     }
@@ -169,7 +169,7 @@
     })
 
     const hasMeetingDemos = computed<boolean>(() => {
-        const weekId = getWeekId(props.part.id)
+        const weekId = getWeekId(part.id)
         if (!weekId) return false
         const weekParts = fileStore.s140PartItems[weekId]
         const demoParts = weekParts.some(p => p.roles?.includes('demo'))
@@ -178,14 +178,14 @@
 
     const isAux1Part = computed<boolean>(() => {
         if (!hasAux1Class.value) return false
-        const isIntro = props.part.id.endsWith('.0')
+        const isIntro = part.id.endsWith('.0')
 
         return isDemo.value || isTalk.value || (isBibleReading.value && hasMeetingDemos.value
             || (isIntro && hasMeetingDemos.value))
     })
 
     const isAssignable = computed<boolean>(() => {
-        return (props.part.roles || []).length > 0
+        return (part.roles || []).length > 0
     })
 
     const assignClasses = computed(() => {
@@ -203,15 +203,15 @@
     })
 
     const timeLimit = computed(() => {
-        if (!props.part?.time) return null
-        if (props.part.showNoTime) return null
-        return `(${props.part.time} min.)`
+        if (!part?.time) return null
+        if (part.showNoTime) return null
+        return `(${part.time} min.)`
     })
 
     const runTime = computed<string | null>(() => {
-        if (typeof props.part.runtime !== 'number') return null
+        if (typeof part.runtime !== 'number') return null
         const startTime = congStore.congregation.midweekTime ?? '06:00'
-        return displayTime(startTime, props.part?.runtime)
+        return displayTime(startTime, part?.runtime)
     })
 
     const gridColumns = computed<string>(() => {
@@ -227,8 +227,8 @@
     });
 
     const showLabel = computed(() => {
-        const hasLabel = Boolean(props.part?.label)
-        const hasVisit = props.part.roles?.includes('co')
+        const hasLabel = Boolean(part?.label)
+        const hasVisit = part.roles?.includes('co')
         return (hasLabel && !hasVisit)
     })
 
@@ -271,11 +271,11 @@
 
     function loadAux1Part(): void {
         if (isAux1Part.value) {
-            const isIntro = props.part.id.endsWith('.0')
+            const isIntro = part.id.endsWith('.0')
             partAux1.value = {
-                id: `${props.part.id}${AUX1CLASSIDSUFFIX}`,
-                title: 'Auxy Class 1 | ' + (isIntro ? 'Counselor' : props.part.title),
-                roles: [...props.part.roles ?? []],
+                id: `${part.id}${AUX1CLASSIDSUFFIX}`,
+                title: 'Auxy Class 1 | ' + (isIntro ? 'Counselor' : part.title),
+                roles: [...part.roles ?? []],
             }
         }
     }
@@ -292,7 +292,7 @@
     })
 
     watch(
-        () => props.part.id,
+        () => part.id,
         () => loadAux1Part(),
         { deep: true }
     )

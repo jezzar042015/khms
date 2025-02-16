@@ -1,15 +1,15 @@
 <template>
     <PopAlert>
         <div class="header">
-            {{ settings.header }}
+            {{ header }}
         </div>
         <div class="msg">
-            {{ settings.msg }}
+            {{ msg }}
         </div>
         <div class="footer">
-            <button class="btn-confirm" @click.stop="confirmed" v-if="settings.confirm">{{ settings.confirmText
+            <button class="btn-confirm" @click.stop="confirmed" v-if="confirm">{{ confirmText
                 }}</button>
-            <button class="btn-cancel" @click.stop="close" v-if="settings.cancel">{{ settings.cancelText }}</button>
+            <button class="btn-cancel" @click.stop="close" v-if="cancel">{{ cancelText }}</button>
         </div>
     </PopAlert>
 </template>
@@ -21,25 +21,40 @@
 
     const viewStore = useViewStore()
 
-    interface Props {
-        settings?: AlertSettings,
-    }
-
     const emits = defineEmits(['confirm'])
-    const props = withDefaults(
-        defineProps<Props>(),
-        {
-            settings: () => ({
-                confirm: true,
-                confirmText: 'OK',
-                header: 'Header',
-                icon: 'none' as AlertIcons,
-                msg: 'Message',
-                cancel: true,
-                cancelText: 'Cancel',
-            })
-        }
-    );
+
+    const {
+        confirm = true,
+        confirmText = 'OK',
+        header = 'Header',
+        icon = 'none' as AlertIcons,
+        msg = 'Message',
+        cancel = true,
+        cancelText = 'Cancel',
+    } = defineProps<{
+        confirm?: boolean;
+        confirmText?: string;
+        header?: string;
+        icon?: AlertIcons;
+        msg?: string;
+        cancel?: boolean;
+        cancelText?: string;
+    }>()
+
+    // const props = withDefaults(
+    //     defineProps<Props>(),
+    //     {
+    //         settings: () => ({
+    //             confirm: true,
+    //             confirmText: 'OK',
+    //             header: 'Header',
+    //             icon: 'none' as AlertIcons,
+    //             msg: 'Message',
+    //             cancel: true,
+    //             cancelText: 'Cancel',
+    //         })
+    //     }
+    // );
 
     function close() {
         viewStore.setPopAlert(false)
