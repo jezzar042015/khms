@@ -17,7 +17,7 @@
     } = defineProps<{
         label: string;
         placeholder: string;
-        modelValue: string;
+        modelValue?: string;
         numeric?: boolean;
     }>()
 

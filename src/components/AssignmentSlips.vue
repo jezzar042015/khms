@@ -5,7 +5,7 @@
                 <article>
                     <div id="grid-slips">
                         <template v-for="part in fileStore.studentsParts" :key="part.id">
-                            <SlipTemplate :part="part" />
+                            <SlipTemplate :part-source="part" />
                         </template>
                     </div>
                 </article>

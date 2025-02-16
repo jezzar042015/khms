@@ -34,7 +34,7 @@
         placeholder = 'Select',
         label = null,
     } = defineProps<{
-        modelValue: string | number;
+        modelValue?: string | number;
         items?: ItemType[];
         id?: string;
         display?: string;

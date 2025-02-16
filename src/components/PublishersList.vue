@@ -27,7 +27,8 @@
             </div>
         </div>
     </div>
-    <AlertMessage :settings="alert" @confirm="removePublisher" />
+    <AlertMessage :confirm="alert.confirm" :confirm-text="alert.confirmText" :header="alert.header" :icon="alert.icon"
+        :msg="alert.msg" :cancel="alert.cancel" :cancel-text="alert.cancelText" @confirm="removePublisher" />
 </template>
 
 <script setup lang="ts">
@@ -38,6 +39,7 @@
     import type { AlertSettings } from '@/types/vforms';
     import PublisherRow from '@/components/PublisherRow.vue'
     import AlertMessage from '@/components/AlertMessage.vue'
+
     const alert = ref<AlertSettings>({})
 
     const viewStore = useViewStore()

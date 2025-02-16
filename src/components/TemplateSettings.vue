@@ -97,7 +97,9 @@
         </div>
 
     </div>
-    <AlertMessage :settings="alerts" @confirm="execConfirm" />
+    <AlertMessage :confirm="alerts.confirm" :confirm-text="alerts.confirmText" :header="alerts.header"
+        :icon="alerts.icon" :msg="alerts.msg" :cancel="alerts.cancel" :cancel-text="alerts.cancelText"
+        @confirm="execConfirm" />
 </template>
 
 <script setup lang="ts">
