@@ -1,8 +1,7 @@
 <template>
-    <div class="select field" @mouseleave="hideOptions">
+    <div class="select field" @mouseleave="hideOptions" @click.stop="toggleOptions">
         <label :for="id">{{ label }}</label>
-        <input :id="id" class="input" type="text" :placeholder="placeholder" readonly @click.stop="toggleOptions"
-            :value="selectedDisplayValue" />
+        <input :id="id" class="input" type="text" :placeholder="placeholder" readonly :value="selectedDisplayValue" />
         <div :class="ddClasses">
             <div class="dd-items" v-for="item in items" :key="item[id]" @click="selectItem(item)">
                 {{ item[display] }}
