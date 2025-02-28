@@ -41,21 +41,6 @@
         cancelText?: string;
     }>()
 
-    // const props = withDefaults(
-    //     defineProps<Props>(),
-    //     {
-    //         settings: () => ({
-    //             confirm: true,
-    //             confirmText: 'OK',
-    //             header: 'Header',
-    //             icon: 'none' as AlertIcons,
-    //             msg: 'Message',
-    //             cancel: true,
-    //             cancelText: 'Cancel',
-    //         })
-    //     }
-    // );
-
     function close() {
         viewStore.setPopAlert(false)
     }

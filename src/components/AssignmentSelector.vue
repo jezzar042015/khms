@@ -36,6 +36,9 @@
 </template>
 
 <script setup lang="ts">
+    /**
+     * @description modal pane component that allows the use to select a publisher(s) to handle parts
+    */
     import { computed, onMounted, onUnmounted, ref } from 'vue';
     import { usePublisherStore } from '@/stores/publisher';
     import { useAssignmentStore } from '@/stores/assignment';
@@ -99,12 +102,20 @@
         }
     });
 
+    /**
+     * @description provides classes that will the basis of the pane position in relation to PartItem
+     * @returns (string) css classes delimited by a comma 
+    */
     const selectorClasses = computed<string>(() => {
         const is140 = congStore.congregation.mwbTemplate == 's-140'
         const a100Class = a100Pos.value === 'left' ? ' ona100-right' : ' ona100-left';
         return 'assign-selector' + (is140 ? ' ons140' : a100Class)
     })
 
+    /**
+     * @description provides classes that will the basis of the pane's arrow position in relation to PartItem
+     * @returns (string) css classes delimited by a comma 
+    */
     const arrowClasses = computed<string>(() => {
         const is140 = congStore.congregation.mwbTemplate == 's-140'
         const a100Class = a100Pos.value === 'left' ? ' arrow-left' : ' arrow-right';
@@ -126,12 +137,10 @@
         return part.title ?? ''
     })
 
-    const filteredAssignables = computed<Publisher[]>(() => {
-        if (!filter.value) return assignables.value
-        const f = filter.value.toLowerCase()
-        return assignables.value.filter(pub => pub.name.toLowerCase().includes(f))
-    })
-
+    /**
+     * @description array of assignable publishers filtered by the part's required roles
+     * @returns (Publisher[])
+    */
     const assignables = computed<Publisher[]>(() => {
         if (!part.roles) return pubStore.publishers
 
@@ -146,14 +155,30 @@
         });
     })
 
+    /**
+     * @description the final array of assignable publishers after user filter is applied
+     * @returns (Publisher[])
+    */
+    const filteredAssignables = computed<Publisher[]>(() => {
+        if (!filter.value) return assignables.value
+        const f = filter.value.toLowerCase()
+        return assignables.value.filter(pub => pub.name.toLowerCase().includes(f))
+    })
+
     const noAssignables = computed<boolean>(() => {
         return assignables.value.length === 0
     })
 
     const longList = computed<boolean>(() => {
-        return assignables.value.length > 8
+        const minimumLongList = 8
+        return assignables.value.length > minimumLongList
     })
 
+    /**
+     * @description provides a label if the assigned student is the main Student or an Assistant
+     *  if the position of the student id 
+     * @returns (string)
+    */
     const studentOrAssistant = (pubId: string | undefined): string | null => {
         if (!Array.isArray(assignment.value.a) || arePrayers.value || areInterpreters.value) {
             return null;
