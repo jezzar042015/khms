@@ -278,24 +278,15 @@ export const useFilesStore = defineStore('files', () => {
         if (detail.sjj) targetWeek.songs[2] = detail.sjj
     }
 
-    watch(
-        () => currentPeriod.value,
-        (n) => {
-            if (n) loadMonthTemplate(n)
-        }
-    )
-
-    watch(
-        () => congStore.congregation.lang,
-        async (n, o) => {
-            if (n && o != '') {
+    watch(() => [currentPeriod.value, congStore.congregation.lang],
+        async ([period, lang]) => {
+            
+            if (period && lang) {
                 await loadFiles()
                 const period = periodIsInMonths.value ? currentPeriod.value : undefined
                 await loadMonthTemplate(period)
             }
-        },
-        { immediate: false }
-    )
+        })
 
     watch(
         () => congStore.congregation.mwbTemplate,
