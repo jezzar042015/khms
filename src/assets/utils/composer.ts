@@ -1,10 +1,11 @@
 import translations from "./translations";
 import { useFilesStore } from "@/stores/files";
 import { useCongregationStore } from "@/stores/congregation";
-import type { S140PartItem, S140PartWeeks, WeekItem } from "@/types/files";
+import type { PartItem, S140PartItem, S140PartWeeks, WeekItem } from "@/types/files";
 
 let runtime = 0;
 let lang: string = ''
+let cbsPart: PartItem | null
 
 export async function s140Builder(): Promise<S140PartWeeks> {
     const weeks: S140PartWeeks = {}
@@ -190,8 +191,10 @@ function living(src: WeekItem, week: S140PartItem[]) {
             writtable: pattern.writtable ?? false,
         }
 
-        if (part.roles?.includes('cbs'))
+        if (part.roles?.includes('cbs')) {
             part.label = translations.mwbs140[lang].conductor
+            cbsPart = { ...pattern } as PartItem
+        }
 
         if (part.id.includes('.r'))
             part.label = pattern.alt?.replace(':', '')
@@ -204,8 +207,17 @@ function living(src: WeekItem, week: S140PartItem[]) {
 
         part.runtime = runtime
         runtime = (part.time ?? 0) + runtime
-
         week.push(part)
+    }
+
+    if (cbsPart?.isVisit) {
+        const tempCoTalk = { ...week[week.length - 2] }
+        const tempConclusion = { ...week[week.length - 1] }
+
+        tempConclusion.runtime = tempCoTalk?.runtime ?? 0
+        tempCoTalk.runtime = tempConclusion.runtime + (tempConclusion?.time ?? 0)
+        week[week.length - 2] = tempConclusion
+        week[week.length - 1] = tempCoTalk
     }
 }
 
