@@ -13,7 +13,7 @@
                 </template>
             </div>
             <div>
-                <template v-for="part in w.parts.living" :key="part.id">
+                <template v-for="part in livingParts" :key="part.id">
                     <PartItem :part="part" />
                 </template>
                 <template v-if="viewStore.cams">
@@ -26,8 +26,8 @@
 
 <script setup lang="ts">
 
-    import type { WeekItem } from '@/types/files';
-    import { computed } from 'vue';
+    import type { PartItem as PartItemType, WeekItem } from '@/types/files';
+    import { computed} from 'vue';
     import { useViewStore } from '@/stores/views';
     import WeekHeader from './WeekHeader.vue';
     import PartItem from './PartItem.vue'
@@ -38,6 +38,18 @@
         i: number,
         weeks: number,
     }>()
+
+    const livingParts = computed<PartItemType[]>(() => {
+        const parts = [...w.parts.living] 
+        const isVisitWeek = w.parts.living[w.parts.living.length - 2].isVisit
+        
+        if (isVisitWeek) {
+            parts[parts.length - 1] =  {...w.parts.living[w.parts.living.length - 2]}
+            parts[parts.length - 2] ={...w.parts.living[w.parts.living.length - 1]}
+        }
+        
+        return parts
+    })
 
     const viewStore = useViewStore()
 
