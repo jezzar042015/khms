@@ -22,7 +22,7 @@
             </div>
             <div class="list-wrapper">
                 <div class="list">
-                    <div :class="['item', { active: isSelected(a.id) }]" v-for="a in filteredAssignables" :key="a.id"
+                    <div :class="['item', { active: isAssigned(a.id) }]" v-for="a in filteredAssignables" :key="a.id"
                         @click.stop="setAssignment(a.id ?? '')">
                         {{ a.name }}
                         <span class="demo-desc">
@@ -36,9 +36,11 @@
 </template>
 
 <script setup lang="ts">
+
     /**
-     * @description modal pane component that allows the use to select a publisher(s) to handle parts
+     * @description modal pane component that allows the user to select publisher(s) to handle parts
     */
+
     import { computed, onMounted, onUnmounted, ref } from 'vue';
     import { usePublisherStore } from '@/stores/publisher';
     import { useAssignmentStore } from '@/stores/assignment';
@@ -202,7 +204,12 @@
     const arePrayers = computed(() => part.roles?.includes('prayers'))
     const areInterpreters = computed(() => part.roles?.includes('intr'))
 
-    function isSelected(pubId: string | undefined): boolean {
+    /**
+     * @description determines if a publisher's name is already assigned 
+     * to the part. 
+     * @returns (boolean)
+    */
+    function isAssigned(pubId: string | undefined): boolean {
         if (!pubId || !assignment.value) return false
         if (typeof assignment.value.a === 'string') {
             return pubId === assignment.value.a
@@ -211,6 +218,11 @@
         }
     }
 
+    /**
+     * @description handles assigning or removing the assignment to or from a publisher
+     * @param id (string)
+     * @returns (void) 
+     * */
     async function setAssignment(id: string): Promise<void> {
 
         let added: boolean = true;
@@ -240,6 +252,7 @@
         }
     }
 
+
     async function handleAutofills(id: string): Promise<void> {
         if (part.autofills) {
             for (const af of part.autofills) {
@@ -250,6 +263,9 @@
         }
     }
 
+    /**
+     * Handling prayer assignment on S-140 template
+    */
     async function handleS140Prayer(id: string, isAdded: boolean): Promise<void> {
 
         if (isOpenPrayer.value || isClosingPrayer.value) {
@@ -267,6 +283,9 @@
         }
     }
 
+    /**
+     * Handling prayer assignment on a customed template
+    */
     async function handlePrayers(id: string, isAdded: boolean): Promise<void> {
         if (arePrayers.value) {
             const weekId = getWeekId(part.id + '.1')
