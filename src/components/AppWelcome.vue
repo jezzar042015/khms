@@ -33,6 +33,11 @@
 </template>
 
 <script setup lang="ts">
+   
+   /**
+     * @description Component to let the user enter the congregation details 
+    */
+
     import { computed } from 'vue'
     import { useCongregationStore } from '@/stores/congregation';
     import { useViewStore } from '@/stores/views';
@@ -42,6 +47,12 @@
     const congStore = useCongregationStore()
     const viewStore = useViewStore()
 
+    /**
+     * @description the user can't proceed
+     * if the congregation's class and language are not provided
+     * 
+     * @returns (boolean)  
+    */
     const hasRequired = computed(() => {
         const hasClass = congStore.congregation.classId
         const hasLang = congStore.congregation.lang

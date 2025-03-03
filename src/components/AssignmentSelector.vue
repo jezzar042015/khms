@@ -22,7 +22,7 @@
             </div>
             <div class="list-wrapper">
                 <div class="list">
-                    <div :class="['item', { active: isSelected(a.id) }]" v-for="a in filteredAssignables" :key="a.id"
+                    <div :class="['item', { active: isAssigned(a.id) }]" v-for="a in filteredAssignables" :key="a.id"
                         @click.stop="setAssignment(a.id ?? '')">
                         {{ a.name }}
                         <span class="demo-desc">
@@ -36,6 +36,11 @@
 </template>
 
 <script setup lang="ts">
+
+    /**
+     * @description modal pane component that allows the user to select publisher(s) to handle parts
+    */
+
     import { computed, onMounted, onUnmounted, ref } from 'vue';
     import { usePublisherStore } from '@/stores/publisher';
     import { useAssignmentStore } from '@/stores/assignment';
@@ -99,12 +104,20 @@
         }
     });
 
+    /**
+     * @description provides classes that will the basis of the pane position in relation to PartItem
+     * @returns (string) css classes delimited by a comma 
+    */
     const selectorClasses = computed<string>(() => {
         const is140 = congStore.congregation.mwbTemplate == 's-140'
         const a100Class = a100Pos.value === 'left' ? ' ona100-right' : ' ona100-left';
         return 'assign-selector' + (is140 ? ' ons140' : a100Class)
     })
 
+    /**
+     * @description provides classes that will the basis of the pane's arrow position in relation to PartItem
+     * @returns (string) css classes delimited by a comma 
+    */
     const arrowClasses = computed<string>(() => {
         const is140 = congStore.congregation.mwbTemplate == 's-140'
         const a100Class = a100Pos.value === 'left' ? ' arrow-left' : ' arrow-right';
@@ -126,12 +139,10 @@
         return part.title ?? ''
     })
 
-    const filteredAssignables = computed<Publisher[]>(() => {
-        if (!filter.value) return assignables.value
-        const f = filter.value.toLowerCase()
-        return assignables.value.filter(pub => pub.name.toLowerCase().includes(f))
-    })
-
+    /**
+     * @description array of assignable publishers filtered by the part's required roles
+     * @returns (Publisher[])
+    */
     const assignables = computed<Publisher[]>(() => {
         if (!part.roles) return pubStore.publishers
 
@@ -146,14 +157,30 @@
         });
     })
 
+    /**
+     * @description the final array of assignable publishers after user filter is applied
+     * @returns (Publisher[])
+    */
+    const filteredAssignables = computed<Publisher[]>(() => {
+        if (!filter.value) return assignables.value
+        const f = filter.value.toLowerCase()
+        return assignables.value.filter(pub => pub.name.toLowerCase().includes(f))
+    })
+
     const noAssignables = computed<boolean>(() => {
         return assignables.value.length === 0
     })
 
     const longList = computed<boolean>(() => {
-        return assignables.value.length > 8
+        const minimumLongList = 8
+        return assignables.value.length > minimumLongList
     })
 
+    /**
+     * @description provides a label if the assigned student is the main Student or an Assistant
+     *  if the position of the student id 
+     * @returns (string)
+    */
     const studentOrAssistant = (pubId: string | undefined): string | null => {
         if (!Array.isArray(assignment.value.a) || arePrayers.value || areInterpreters.value) {
             return null;
@@ -177,7 +204,12 @@
     const arePrayers = computed(() => part.roles?.includes('prayers'))
     const areInterpreters = computed(() => part.roles?.includes('intr'))
 
-    function isSelected(pubId: string | undefined): boolean {
+    /**
+     * @description determines if a publisher's name is already assigned 
+     * to the part. 
+     * @returns (boolean)
+    */
+    function isAssigned(pubId: string | undefined): boolean {
         if (!pubId || !assignment.value) return false
         if (typeof assignment.value.a === 'string') {
             return pubId === assignment.value.a
@@ -186,6 +218,11 @@
         }
     }
 
+    /**
+     * @description handles assigning or removing the assignment to or from a publisher
+     * @param id (string)
+     * @returns (void) 
+     * */
     async function setAssignment(id: string): Promise<void> {
 
         let added: boolean = true;
@@ -215,6 +252,7 @@
         }
     }
 
+
     async function handleAutofills(id: string): Promise<void> {
         if (part.autofills) {
             for (const af of part.autofills) {
@@ -225,6 +263,9 @@
         }
     }
 
+    /**
+     * Handling prayer assignment on S-140 template
+    */
     async function handleS140Prayer(id: string, isAdded: boolean): Promise<void> {
 
         if (isOpenPrayer.value || isClosingPrayer.value) {
@@ -242,6 +283,9 @@
         }
     }
 
+    /**
+     * Handling prayer assignment on a customed template
+    */
     async function handlePrayers(id: string, isAdded: boolean): Promise<void> {
         if (arePrayers.value) {
             const weekId = getWeekId(part.id + '.1')
