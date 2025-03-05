@@ -40,6 +40,20 @@ const translations: Translations = {
             conductor: 'Conductor'
 
         },
+        en: {
+            title: 'Midweek Meeting Schedule',
+            song: 'Song',
+            gems: 'TREASURES FROM GOD’S WORD',
+            ministry: 'APPLY YOURSELF TO THE FIELD MINISTRY',
+            living: 'LIVING AS CHRISTIANS',
+            prayer: 'Prayer',
+            demo: 'Student/Assistant',
+            student: 'Student',
+            chairman: 'Chairman',
+            coCounselor: 'Auxiliary Class Counselor',
+            conductor: 'Conductor'
+
+        },
         ceb: {
             title: 'Eskedyul sa Midweek nga Tigom',
             song: 'Awit',

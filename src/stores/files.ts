@@ -13,6 +13,7 @@ const jsonFilesCeb = import.meta.glob('@/lib/ceb/*.json');
 const jsonFilesPsp = import.meta.glob('@/lib/psp/*.json');
 const jsonFilesWar = import.meta.glob('@/lib/war/*.json');
 const jsonFilesTl = import.meta.glob('@/lib/tl/*.json');
+const jsonFilesEn = import.meta.glob('@/lib/en/*.json');
 
 export const useFilesStore = defineStore('files', () => {
 
@@ -40,19 +41,22 @@ export const useFilesStore = defineStore('files', () => {
         const cebFiles = getFiles('ceb');
         const warFiles = getFiles('war');
         const tlFiles = getFiles('tl');
+        const enFiles = getFiles('en');
 
-        let psp: LangMonth[] = [], ceb: LangMonth[] = [], war: LangMonth[] = [], tl: LangMonth[] = []
+        let psp: LangMonth[] = [], ceb: LangMonth[] = [], war: LangMonth[] = [], tl: LangMonth[] = [], en: LangMonth[] = []
 
         if (pspFiles) psp = (await extractJsonFilesToArray(pspFiles)) ?? [];
         if (cebFiles) ceb = (await extractJsonFilesToArray(cebFiles)) ?? [];
         if (warFiles) war = (await extractJsonFilesToArray(warFiles)) ?? [];
         if (tlFiles) tl = (await extractJsonFilesToArray(tlFiles)) ?? [];
+        if (enFiles) en = (await extractJsonFilesToArray(enFiles)) ?? [];
 
         const res: string[] = [
             ...psp.map(m => m.content.period),
             ...ceb.map(m => m.content.period),
             ...war.map(m => m.content.period),
             ...tl.map(m => m.content.period),
+            ...en.map(m => m.content.period),
         ]
 
         return Array.from(new Set(res));
@@ -280,7 +284,7 @@ export const useFilesStore = defineStore('files', () => {
 
     watch(() => [currentPeriod.value, congStore.congregation.lang],
         async ([period, lang]) => {
-            
+
             if (period && lang) {
                 await loadFiles()
                 const period = periodIsInMonths.value ? currentPeriod.value : undefined
@@ -312,5 +316,7 @@ function getFiles(lang: string) {
         return jsonFilesWar;
     } else if (lang === 'tl') {
         return jsonFilesTl;
+    } else if (lang === 'en') {
+        return jsonFilesEn;
     }
 }
