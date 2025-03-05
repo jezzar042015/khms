@@ -2,7 +2,7 @@
   "period": "202506",
   "display": "June 2025",
   "title": "Our Christian Life and Ministry Meeting Schedule",
-  "theme": "",
+  "theme": "#4C6C51",
   "publish": true,
   "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025166/univ/art/202025166_univ_sqs_lg.jpg",
   "firstMonday": "2025-06-02",
@@ -105,7 +105,7 @@
             "time": 15,
             "title": "7. Local Needs",
             "class": "part-title-living",
-            "thumbnail": {},
+            "thumbnail": "",
             "thumbnailMode": "",
             "roles": [
               "elder",
@@ -241,7 +241,7 @@
             "time": 15,
             "title": "7. Cultivate Habits That Promote Good Communication",
             "class": "part-title-living",
-            "thumbnail": {},
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025166/univ/art/202025166_univ_cnt_3_lg.jpg",
             "thumbnailMode": "",
             "roles": [
               "elder",
@@ -388,7 +388,7 @@
             "time": 15,
             "title": "8. Helping Loved Ones Draw Close to Jehovah “Without a Word”",
             "class": "part-title-living",
-            "thumbnail": {},
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025167/univ/art/202025167_univ_cnt_2_lg.jpg",
             "thumbnailMode": "",
             "roles": [
               "elder",
@@ -524,7 +524,7 @@
             "time": 15,
             "title": "7. Local Needs",
             "class": "part-title-living",
-            "thumbnail": {},
+            "thumbnail": "",
             "thumbnailMode": "",
             "roles": [
               "elder",
@@ -660,7 +660,7 @@
             "time": 5,
             "title": "7. Encourage Others to Try Our Bible Course",
             "class": "part-title-living",
-            "thumbnail": {},
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025169/univ/art/202025169_univ_cnt_2_lg.jpg",
             "thumbnailMode": "",
             "roles": [
               "elder",
@@ -672,7 +672,7 @@
             "time": 10,
             "title": "8. Organizational Accomplishments for June",
             "class": "part-title-living",
-            "thumbnail": {},
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep23/univ/art/com-rep23_univ_wss_06_lg.jpg",
             "thumbnailMode": "",
             "roles": [
               "elder",

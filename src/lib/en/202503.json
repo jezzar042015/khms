@@ -1,26 +1,26 @@
 {
-  "period": "202505",
-  "display": "May 2025",
+  "period": "202503",
+  "display": "March 2025",
   "title": "Our Christian Life and Ministry Meeting Schedule",
-  "theme": "#4C6C51",
+  "theme": "#933a07",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025166/univ/art/202025166_univ_sqs_lg.jpg",
-  "firstMonday": "2025-05-05",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025082/univ/art/202025082_univ_sqs_lg.jpg",
+  "firstMonday": "2025-03-03",
   "weeks": [
     {
       "order": 1,
-      "id": "202505.1",
-      "week": "MAY 5-11",
-      "bibleReading": "PROVERBS 12",
+      "id": "202503.1",
+      "week": "MARCH 3-9",
+      "bibleReading": "PROVERBS 3",
       "songs": [
-        "101",
-        "21",
+        "8",
+        "124",
         "57"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202505.1.0",
+            "id": "202503.1.0",
             "time": 1,
             "reference": "Opening Comments",
             "roles": [
@@ -28,14 +28,14 @@
               "ms"
             ],
             "autofills": [
-              "202505.1.10"
+              "202503.1.9"
             ]
           },
           {
-            "id": "202505.1.1",
+            "id": "202503.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025161/univ/art/202025161_univ_sqs_lg.jpg",
-            "title": "1. Hard Work Is Rewarding",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025081/univ/art/202025081_univ_sqs_lg.jpg",
+            "title": "1. Demonstrate Trust in Jehovah",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -43,7 +43,7 @@
             ]
           },
           {
-            "id": "202505.1.2",
+            "id": "202503.1.2",
             "time": 10,
             "reference": "",
             "title": "2. Spiritual Gems",
@@ -54,9 +54,9 @@
             ]
           },
           {
-            "id": "202505.1.3",
+            "id": "202503.1.3",
             "time": 4,
-            "reference": "Pr 12:1-20 (th study 5)",
+            "reference": "Pr 3:1-18 (th study 12)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -66,57 +66,46 @@
         ],
         "ministry": [
           {
-            "id": "202505.1.4",
-            "time": 2,
+            "id": "202503.1.4",
+            "time": 3,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 1 point 4",
+            "reference": "lmd lesson 1 point 5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.1.5",
-            "time": 3,
+            "id": "202503.1.5",
+            "time": 4,
             "title": "5. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 5 point 4",
+            "reference": "lmd lesson 3 point 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.1.6",
-            "time": 3,
-            "title": "6. Following Up",
+            "id": "202503.1.6",
+            "time": 5,
+            "title": "6. Talk",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 9 point 3",
-            "thumbnail": "lmd",
+            "reference": "th study 20",
+            "thumbnail": "th",
             "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202505.1.7",
-            "time": 3,
-            "title": "7. Explaining Your Beliefs",
-            "class": "part-title-ministry",
-            "reference": "lmd lesson 4 point 3",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
+              "talk"
             ]
           }
         ],
         "living": [
           {
-            "id": "202505.1.8",
+            "id": "202503.1.7",
             "time": 15,
-            "title": "8. Facing Economic Uncertainty With Jehovah’s Help",
+            "title": "7. Demonstrate Trust in Jehovah’s Organization",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025161/univ/art/202025161_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025081/univ/art/202025081_univ_cnt_2_lg.jpg",
             "thumbnailMode": "",
             "roles": [
               "elder",
@@ -124,18 +113,18 @@
             ]
           },
           {
-            "id": "202505.1.9",
+            "id": "202503.1.8",
             "time": 30,
-            "title": "9. Congregation Bible Study",
+            "title": "8. Congregation Bible Study",
             "class": "part-title-living",
             "thumbnail": "bt",
-            "reference": "bt chap. 26 ¶1-8, boxes on pp. 204, 208",
+            "reference": "bt chap. 23 ¶9-15, boxes on pp. 184, 186",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202505.1.9.r",
+            "id": "202503.1.8.r",
             "class": "accessory",
             "alt": "Reader:",
             "roles": [
@@ -143,7 +132,7 @@
             ]
           },
           {
-            "id": "202505.1.10",
+            "id": "202503.1.9",
             "time": 3,
             "reference": "Concluding Comments",
             "roles": [
@@ -156,18 +145,18 @@
     },
     {
       "order": 2,
-      "id": "202505.2",
-      "week": "MAY 12-18",
-      "bibleReading": "PROVERBS 13",
+      "id": "202503.2",
+      "week": "MARCH 10-16",
+      "bibleReading": "PROVERBS 4",
       "songs": [
-        "34",
-        "77",
-        "43"
+        "36",
+        "16",
+        "76"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202505.2.0",
+            "id": "202503.2.0",
             "time": 1,
             "reference": "Opening Comments",
             "roles": [
@@ -175,14 +164,14 @@
               "ms"
             ],
             "autofills": [
-              "202505.2.10"
+              "202503.2.10"
             ]
           },
           {
-            "id": "202505.2.1",
+            "id": "202503.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025162/univ/art/202025162_univ_sqs_lg.jpg",
-            "title": "1. Do Not Be Fooled by “the Lamp of the Wicked”",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025082/univ/art/202025082_univ_sqs_lg.jpg",
+            "title": "1. “Safeguard Your Heart”",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -190,7 +179,7 @@
             ]
           },
           {
-            "id": "202505.2.2",
+            "id": "202503.2.2",
             "time": 10,
             "reference": "",
             "title": "2. Spiritual Gems",
@@ -201,9 +190,9 @@
             ]
           },
           {
-            "id": "202505.2.3",
+            "id": "202503.2.3",
             "time": 4,
-            "reference": "Pr 13:1-17 (th study 10)",
+            "reference": "Pr 4:1-18 (th study 12)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -213,18 +202,18 @@
         ],
         "ministry": [
           {
-            "id": "202505.2.4",
+            "id": "202503.2.4",
             "time": 3,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 2 point 5",
+            "reference": "lmd lesson 1 point 5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.2.5",
+            "id": "202503.2.5",
             "time": 4,
             "title": "5. Starting a Conversation",
             "class": "part-title-ministry",
@@ -235,24 +224,24 @@
             ]
           },
           {
-            "id": "202505.2.6",
+            "id": "202503.2.6",
             "time": 5,
-            "title": "6. Talk",
+            "title": "6. Explaining Your Beliefs",
             "class": "part-title-ministry",
-            "reference": "th study 16",
-            "thumbnail": "th",
+            "reference": "lmd lesson 3 point 4",
+            "thumbnail": "lmd",
             "roles": [
-              "talk"
+              "demo"
             ]
           }
         ],
         "living": [
           {
-            "id": "202505.2.7",
-            "time": 8,
-            "title": "7. “The Light of the Righteous Shines Brightly”",
+            "id": "202503.2.7",
+            "time": 10,
+            "title": "7. Organizational Accomplishments for March",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025162/univ/art/202025162_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep23/univ/art/com-rep23_univ_wss_04_lg.jpg",
             "thumbnailMode": "",
             "roles": [
               "elder",
@@ -260,9 +249,9 @@
             ]
           },
           {
-            "id": "202505.2.8",
-            "time": 7,
-            "title": "8. Local Needs",
+            "id": "202503.2.8",
+            "time": 5,
+            "title": "8. Memorial Campaign to Begin Saturday, March 15",
             "class": "part-title-living",
             "thumbnail": "",
             "thumbnailMode": "",
@@ -272,18 +261,18 @@
             ]
           },
           {
-            "id": "202505.2.9",
+            "id": "202503.2.9",
             "time": 30,
             "title": "9. Congregation Bible Study",
             "class": "part-title-living",
             "thumbnail": "bt",
-            "reference": "bt chap. 26 ¶9-17",
+            "reference": "bt chap. 23 ¶16-19, box on p. 188",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202505.2.9.r",
+            "id": "202503.2.9.r",
             "class": "accessory",
             "alt": "Reader:",
             "roles": [
@@ -291,7 +280,7 @@
             ]
           },
           {
-            "id": "202505.2.10",
+            "id": "202503.2.10",
             "time": 3,
             "reference": "Concluding Comments",
             "roles": [
@@ -304,18 +293,18 @@
     },
     {
       "order": 3,
-      "id": "202505.3",
-      "week": "MAY 19-25",
-      "bibleReading": "PROVERBS 14",
+      "id": "202503.3",
+      "week": "MARCH 17-23",
+      "bibleReading": "PROVERBS 5",
       "songs": [
-        "89",
-        "126",
-        "116"
+        "122",
+        "121",
+        "3"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202505.3.0",
+            "id": "202503.3.0",
             "time": 1,
             "reference": "Opening Comments",
             "roles": [
@@ -323,14 +312,14 @@
               "ms"
             ],
             "autofills": [
-              "202505.3.9"
+              "202503.3.9"
             ]
           },
           {
-            "id": "202505.3.1",
+            "id": "202503.3.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025163/univ/art/202025163_univ_sqs_lg.jpg",
-            "title": "1. Ponder Each Step When a Disaster Strikes",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025083/univ/art/202025083_univ_sqs_lg.jpg",
+            "title": "1. Stay Far Away From Sexual Immorality",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -338,7 +327,7 @@
             ]
           },
           {
-            "id": "202505.3.2",
+            "id": "202503.3.2",
             "time": 10,
             "reference": "",
             "title": "2. Spiritual Gems",
@@ -349,9 +338,9 @@
             ]
           },
           {
-            "id": "202505.3.3",
+            "id": "202503.3.3",
             "time": 4,
-            "reference": "Pr 14:1-21 (th study 11)",
+            "reference": "Pr 5:1-23 (th study 5)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -361,34 +350,34 @@
         ],
         "ministry": [
           {
-            "id": "202505.3.4",
+            "id": "202503.3.4",
             "time": 3,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 3 point 3",
+            "reference": "lmd lesson 6 point 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.3.5",
+            "id": "202503.3.5",
             "time": 4,
             "title": "5. Following Up",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 9 point 4",
+            "reference": "lmd lesson 9 point 5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.3.6",
+            "id": "202503.3.6",
             "time": 5,
             "title": "6. Making Disciples",
             "class": "part-title-ministry",
-            "reference": "th study 19",
-            "thumbnail": "th",
+            "reference": "lmd lesson 11 point 4",
+            "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
@@ -396,11 +385,11 @@
         ],
         "living": [
           {
-            "id": "202505.3.7",
+            "id": "202503.3.7",
             "time": 15,
-            "title": "7. Remain Prepared for a Disaster",
+            "title": "7. Take Precautions to Remain Chaste When Dating",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025163/univ/art/202025163_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025083/univ/art/202025083_univ_cnt_2_lg.jpg",
             "thumbnailMode": "",
             "roles": [
               "elder",
@@ -408,18 +397,18 @@
             ]
           },
           {
-            "id": "202505.3.8",
+            "id": "202503.3.8",
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
             "thumbnail": "bt",
-            "reference": "bt chap. 26 ¶18-22, box on p. 209",
+            "reference": "bt chap. 24 ¶1-6",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202505.3.8.r",
+            "id": "202503.3.8.r",
             "class": "accessory",
             "alt": "Reader:",
             "roles": [
@@ -427,7 +416,7 @@
             ]
           },
           {
-            "id": "202505.3.9",
+            "id": "202503.3.9",
             "time": 3,
             "reference": "Concluding Comments",
             "roles": [
@@ -440,18 +429,18 @@
     },
     {
       "order": 4,
-      "id": "202505.4",
-      "week": "MAY 26–JUNE 1",
-      "bibleReading": "PROVERBS 15",
+      "id": "202503.4",
+      "week": "MARCH 24-30",
+      "bibleReading": "PROVERBS 6",
       "songs": [
-        "102",
-        "155",
-        "100"
+        "11",
+        "2",
+        "126"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202505.4.0",
+            "id": "202503.4.0",
             "time": 1,
             "reference": "Opening Comments",
             "roles": [
@@ -459,14 +448,14 @@
               "ms"
             ],
             "autofills": [
-              "202505.4.9"
+              "202503.4.10"
             ]
           },
           {
-            "id": "202505.4.1",
+            "id": "202503.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025164/univ/art/202025164_univ_sqs_lg.jpg",
-            "title": "1. Help Others to Have a Cheerful Heart",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025084/univ/art/202025084_univ_sqs_lg.jpg",
+            "title": "1. What Can We Learn From the Ant?",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -474,7 +463,7 @@
             ]
           },
           {
-            "id": "202505.4.2",
+            "id": "202503.4.2",
             "time": 10,
             "reference": "",
             "title": "2. Spiritual Gems",
@@ -485,9 +474,9 @@
             ]
           },
           {
-            "id": "202505.4.3",
+            "id": "202503.4.3",
             "time": 4,
-            "reference": "Pr 15:1-21 (th study 2)",
+            "reference": "Pr 6:1-26 (th study 10)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -497,34 +486,34 @@
         ],
         "ministry": [
           {
-            "id": "202505.4.4",
-            "time": 3,
+            "id": "202503.4.4",
+            "time": 4,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 1 point 5",
+            "reference": "lmd lesson 4 point 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.4.5",
+            "id": "202503.4.5",
             "time": 4,
             "title": "5. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 2 point 4",
+            "reference": "lmd lesson 3 point 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.4.6",
-            "time": 5,
-            "title": "6. Making Disciples",
+            "id": "202503.4.6",
+            "time": 4,
+            "title": "6. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "th study 4",
-            "thumbnail": "th",
+            "reference": "lmd lesson 5 point 3",
+            "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
@@ -532,9 +521,9 @@
         ],
         "living": [
           {
-            "id": "202505.4.7",
-            "time": 15,
-            "title": "7. We Can Have a Cheerful Heart Despite Our Trials",
+            "id": "202503.4.7",
+            "time": 5,
+            "title": "7. Creation Proves That Jehovah Wants Us to Rejoice​—Fascinating Animals",
             "class": "part-title-living",
             "thumbnail": "",
             "thumbnailMode": "",
@@ -544,18 +533,30 @@
             ]
           },
           {
-            "id": "202505.4.8",
+            "id": "202503.4.8",
+            "time": 10,
+            "title": "8. Local Needs",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "thumbnailMode": "",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202503.4.9",
             "time": 30,
-            "title": "8. Congregation Bible Study",
+            "title": "9. Congregation Bible Study",
             "class": "part-title-living",
             "thumbnail": "bt",
-            "reference": "bt chap. 27 ¶1-9",
+            "reference": "bt chap. 24 ¶7-12, box on p. 193",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202505.4.8.r",
+            "id": "202503.4.9.r",
             "class": "accessory",
             "alt": "Reader:",
             "roles": [
@@ -563,7 +564,143 @@
             ]
           },
           {
-            "id": "202505.4.9",
+            "id": "202503.4.10",
+            "time": 3,
+            "reference": "Concluding Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "id": "202503.5",
+      "week": "MARCH 31–APRIL 6",
+      "bibleReading": "PROVERBS 7",
+      "songs": [
+        "34",
+        "13",
+        "70"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202503.5.0",
+            "time": 1,
+            "reference": "Opening Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202503.5.9"
+            ]
+          },
+          {
+            "id": "202503.5.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025085/univ/art/202025085_univ_sqs_lg.jpg",
+            "title": "1. Avoid Tempting Situations",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202503.5.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Spiritual Gems",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202503.5.3",
+            "time": 4,
+            "reference": "Pr 7:6-20 (th study 2)",
+            "title": "3. Bible Reading",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202503.5.4",
+            "time": 4,
+            "title": "4. Following Up",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 9 point 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202503.5.5",
+            "time": 4,
+            "title": "5. Following Up",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 9 point 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202503.5.6",
+            "time": 4,
+            "title": "6. Following Up",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 9 point 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202503.5.7",
+            "time": 15,
+            "title": "7. Another Convenient Time (Lu 4:6)",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwb/202010/univ/art/jwb_univ_202010_wss_16_lg.jpg",
+            "thumbnailMode": "",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202503.5.8",
+            "time": 30,
+            "title": "8. Congregation Bible Study",
+            "class": "part-title-living",
+            "thumbnail": "bt",
+            "reference": "bt chap. 24 ¶13-21",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202503.5.8.r",
+            "class": "accessory",
+            "alt": "Reader:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202503.5.9",
             "time": 3,
             "reference": "Concluding Comments",
             "roles": [
