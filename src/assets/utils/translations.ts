@@ -66,6 +66,45 @@ const translations: Translations = {
             chairman: 'Tsirman',
             coCounselor: 'Magtatambag sa Ikaduhang Lawak',
             conductor: 'Tigdumala'
+        },
+        hil: {
+            title: 'Iskedyul sa Midweek nga Miting',
+            song: 'Ambahanon',
+            gems: 'MGA BAHANDI SA PULONG SANG DIOS',
+            ministry: 'MANGIN EPEKTIBO SA MINISTERYO',
+            living: 'PAGKABUHI BILANG CRISTIANO',
+            prayer: 'Pangamuyo',
+            demo: 'Estudyante/Assistant',
+            student: 'Estudyante',
+            chairman: 'Tsirman',
+            coCounselor: 'Manuglaygay sa Auxiliary Classroom',
+            conductor: 'Konduktor'
+        },
+        pag: {
+            title: 'Eskedyul na Aral ed Midweek',
+            song: 'Kansion',
+            gems: 'KAYAMANAN ED SALITA NA DIOS',
+            ministry: 'MAGMALIW YA EPEKTIBO ED MINISTERYO',
+            living: 'BILAY NA KRISTIANO',
+            prayer: 'Pikakasi',
+            demo: 'Estudyante/Assistant',
+            student: 'Estudyante',
+            chairman: 'Chairman',
+            coCounselor: 'Auxiliary Classroom Counselor',
+            conductor: 'Mangikondukta'
+        },
+        ilo: {
+            title: 'Gimong iti Tengnga ti Lawas',
+            song: 'Kanta',
+            gems: 'GAMENG MANIPUD ITI SAO TI DIOS',
+            ministry: 'AGBALIN A MAS EPEKTIBO ITI MINISTERIO',
+            living: 'PANAGBIAG KAS KRISTIANO',
+            prayer: 'Kararag',
+            demo: 'Estudiante/Katulongan',
+            student: 'Estudiante',
+            chairman: 'Estudiante',
+            coCounselor: 'Mamalbalakad iti Kanayonan a Klase',
+            conductor: 'Conductor'
         }
     }
 }

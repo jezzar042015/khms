@@ -46,7 +46,10 @@ const months: Record<number, Record<string, string>> = {
         'en': 'January',
         'ceb': 'Enero',
         'war': 'Enero',
-        'tl': 'Enero',
+        'tl': 'Enero', 
+        'hil': 'Enero',
+        'pag': 'Enero',
+        'ilo': 'Enero',
     },
     1: {
         'psp': 'February',
@@ -54,6 +57,9 @@ const months: Record<number, Record<string, string>> = {
         'ceb': 'Pebrero',
         'war': 'Pebrero',
         'tl': 'Pebrero',
+        hil: 'Pebrero',
+        pag: 'Pebrero',
+        ilo: 'Pebrero',
     },
     2: {
         'psp': 'March',
@@ -61,6 +67,9 @@ const months: Record<number, Record<string, string>> = {
         'ceb': 'Marso',
         'war': 'Marso',
         'tl': 'Marso',
+        hil: 'Marso',
+        pag: 'Marso',
+        ilo: 'Marso',
     },
     3: {
         'psp': 'April',
@@ -68,6 +77,9 @@ const months: Record<number, Record<string, string>> = {
         'ceb': 'Abril',
         'war': 'Abril',
         'tl': 'Abril',
+        hil: 'Abril',
+        pag: 'Abril',
+        ilo: 'Abril',
     },
     4: {
         'psp': 'May',
@@ -75,6 +87,9 @@ const months: Record<number, Record<string, string>> = {
         'ceb': 'Mayo',
         'war': 'Mayo',
         'tl': 'Mayo',
+        hil: 'Mayo',
+        pag: 'Mayo',
+        ilo: 'Mayo',
     },
     5: {
         'psp': 'June',
@@ -82,6 +97,9 @@ const months: Record<number, Record<string, string>> = {
         'ceb': 'Hunyo',
         'war': 'Hunyo',
         'tl': 'Hunyo',
+        hil: 'Hunyo',
+        pag: 'Hunyo',
+        ilo: 'Hunio',
     },
     6: {
         'psp': 'July',
@@ -89,6 +107,9 @@ const months: Record<number, Record<string, string>> = {
         'ceb': 'Hulyo',
         'war': 'Hulyo',
         'tl': 'Hulyo',
+        hil: 'Hulyo',
+        pag: 'Hulyo',
+        ilo: 'Hulio',
     },
     7: {
         'psp': 'August',
@@ -96,6 +117,9 @@ const months: Record<number, Record<string, string>> = {
         'ceb': 'Agosto',
         'war': 'Agosto',
         'tl': 'Agosto',
+        hil: 'Agosto',
+        pag: 'Agosto',
+        ilo: 'Agosto',
     },
     8: {
         'psp': 'September',
@@ -103,6 +127,9 @@ const months: Record<number, Record<string, string>> = {
         'ceb': 'Septiyembre',
         'war': 'Septyembre',
         'tl': 'Setyembre',
+        hil: 'Septiembre',
+        pag: 'Setyembre',
+        ilo: 'Septiembre',
     },
     9: {
         'psp': 'October',
@@ -110,6 +137,9 @@ const months: Record<number, Record<string, string>> = {
         'ceb': 'Oktubre',
         'war': 'Oktubre',
         'tl': 'Oktubre',
+        hil: 'Oktubre',
+        pag: 'Oktubre',
+        ilo: 'Oktubre',
     },
     10: {
         'psp': 'November',
@@ -117,6 +147,9 @@ const months: Record<number, Record<string, string>> = {
         'ceb': 'Nobyembre',
         'war': 'Nobyembre',
         'tl': 'Nobyembre',
+        hil: 'Nobiembre',
+        pag: 'Nobyembre',
+        ilo: 'Nobiembre',
     },
     11: {
         'psp': 'December',
@@ -124,5 +157,8 @@ const months: Record<number, Record<string, string>> = {
         'ceb': 'Disyembre',
         'war': 'Disyembre',
         'tl': 'Disyembre',
+        hil: 'Disiembre',
+        pag: 'Disyembre',
+        ilo: 'Disiembre',
     },
 }
