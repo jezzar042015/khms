@@ -14,6 +14,10 @@ const jsonFilesPsp = import.meta.glob('@/lib/psp/*.json');
 const jsonFilesWar = import.meta.glob('@/lib/war/*.json');
 const jsonFilesTl = import.meta.glob('@/lib/tl/*.json');
 const jsonFilesEn = import.meta.glob('@/lib/en/*.json');
+const jsonFilesHil = import.meta.glob('@/lib/hil/*.json');
+const jsonFilesIlo = import.meta.glob('@/lib/ilo/*.json');
+const jsonFilesPag = import.meta.glob('@/lib/pag/*.json');
+
 
 export const useFilesStore = defineStore('files', () => {
 
@@ -42,14 +46,27 @@ export const useFilesStore = defineStore('files', () => {
         const warFiles = getFiles('war');
         const tlFiles = getFiles('tl');
         const enFiles = getFiles('en');
+        const iloFiles = getFiles('ilo');
+        const hilFiles = getFiles('hil');
+        const pagFiles = getFiles('pag');
 
-        let psp: LangMonth[] = [], ceb: LangMonth[] = [], war: LangMonth[] = [], tl: LangMonth[] = [], en: LangMonth[] = []
+        let psp: LangMonth[] = [], 
+        ceb: LangMonth[] = [], 
+        war: LangMonth[] = [], 
+        tl: LangMonth[] = [], 
+        en: LangMonth[] = [],
+        hil: LangMonth[] = [],
+        ilo: LangMonth[] = [],
+        pag: LangMonth[] = []
 
         if (pspFiles) psp = (await extractJsonFilesToArray(pspFiles)) ?? [];
         if (cebFiles) ceb = (await extractJsonFilesToArray(cebFiles)) ?? [];
         if (warFiles) war = (await extractJsonFilesToArray(warFiles)) ?? [];
         if (tlFiles) tl = (await extractJsonFilesToArray(tlFiles)) ?? [];
         if (enFiles) en = (await extractJsonFilesToArray(enFiles)) ?? [];
+        if (iloFiles) ilo = (await extractJsonFilesToArray(iloFiles)) ?? [];
+        if (hilFiles) hil = (await extractJsonFilesToArray(hilFiles)) ?? [];
+        if (pagFiles) pag = (await extractJsonFilesToArray(pagFiles)) ?? [];
 
         const res: string[] = [
             ...psp.map(m => m.content.period),
@@ -57,6 +74,9 @@ export const useFilesStore = defineStore('files', () => {
             ...war.map(m => m.content.period),
             ...tl.map(m => m.content.period),
             ...en.map(m => m.content.period),
+            ...hil.map(m => m.content.period),
+            ...ilo.map(m => m.content.period),
+            ...pag.map(m => m.content.period),
         ]
 
         return Array.from(new Set(res));
@@ -318,5 +338,11 @@ function getFiles(lang: string) {
         return jsonFilesTl;
     } else if (lang === 'en') {
         return jsonFilesEn;
+    } else if (lang === 'ilo') {
+        return jsonFilesIlo;
+    } else if (lang === 'pag') {
+        return jsonFilesPag;
+    } else if (lang === 'hil') {
+        return jsonFilesHil;
     }
 }

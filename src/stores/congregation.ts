@@ -16,11 +16,14 @@ export const useCongregationStore = defineStore('congregation', () => {
     })
 
     const languages = ref<Language[]>([
-        { code: 'en', support: true, lang: 'English' },
         { code: 'ceb', support: true, lang: 'Cebuano' },
+        { code: 'en', support: true, lang: 'English' },
         { code: 'psp', support: true, lang: 'Filipino Sign Language' },
-        { code: 'war', support: true, lang: 'Waray-waray' },
+        { code: 'hil', support: true, lang: 'Hiligaynon' },
+        { code: 'ilo', support: true, lang: 'Iloko' },
+        { code: 'pag', support: true, lang: 'Pangasinan' },
         { code: 'tl', support: true, lang: 'Tagalog' },
+        { code: 'war', support: true, lang: 'Waray-waray' },
     ]);
 
     const ministryClasses = ref<MWBClass[]>([
