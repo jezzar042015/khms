@@ -1,0 +1,578 @@
+{
+  "period": "202507",
+  "display": "Hulyo 2025",
+  "title": "Eskedyul sa Cristianong Pagkabuhi kag Pagministeryo nga Miting",
+  "theme": "#75322C",
+  "publish": true,
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025245/univ/art/202025245_univ_sqs_lg.jpg",
+  "firstMonday": "2025-07-07",
+  "weeks": [
+    {
+      "order": 1,
+      "id": "202507.1",
+      "week": "HULYO 7-13",
+      "bibleReading": "HULUBATON 21",
+      "songs": [
+        "98",
+        "132",
+        "72"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202507.1.0",
+            "time": 1,
+            "reference": "Nagabukas nga Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202507.1.9"
+            ]
+          },
+          {
+            "id": "202507.1.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025241/univ/art/202025241_univ_sqs_lg.jpg",
+            "title": "1. Mga Prinsipio nga Makabulig Para Mangin Malipayon ang Pag-asawahay",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.1.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.1.3",
+            "time": 4,
+            "reference": "Hul 21:​1-18 (th tulun-an 5)",
+            "title": "3. Pagbasa sa Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202507.1.4",
+            "time": 3,
+            "title": "4. Pagsugod sa Pag-istoryahanay",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 3 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202507.1.5",
+            "time": 4,
+            "title": "5. Pagbalik sa mga Interesado",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 7 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202507.1.6",
+            "time": 5,
+            "title": "6. Pagpaathag sang Imo Pagpati",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 4 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202507.1.7",
+            "time": 15,
+            "title": "7. Ipakita ang Respeto sa Inyo Pag-asawahay",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025241/univ/art/202025241_univ_cnt_2_lg.jpg",
+            "thumbnailMode": "sqr-c",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.1.8",
+            "time": 30,
+            "title": "8. Pagtinuon sang Kongregasyon sa Biblia",
+            "class": "part-title-living",
+            "thumbnail": "bt",
+            "reference": "bt kap. 28 ¶16-22",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202507.1.8.r",
+            "class": "accessory",
+            "alt": "Tagabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202507.1.9",
+            "time": 3,
+            "reference": "Nagatakop nga Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "id": "202507.2",
+      "week": "HULYO 14-20",
+      "bibleReading": "HULUBATON 22",
+      "songs": [
+        "79",
+        "134",
+        "6"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202507.2.0",
+            "time": 1,
+            "reference": "Nagabukas nga Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202507.2.9"
+            ]
+          },
+          {
+            "id": "202507.2.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025242/univ/art/202025242_univ_sqs_lg.jpg",
+            "title": "1. Mga Prinsipio nga Makabulig sa Pagpadaku sa Kabataan",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.2.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.2.3",
+            "time": 4,
+            "reference": "Hul 22:​1-19 (th tulun-an 10)",
+            "title": "3. Pagbasa sa Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202507.2.4",
+            "time": 3,
+            "title": "4. Pagsugod sa Pag-istoryahanay",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 5 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202507.2.5",
+            "time": 4,
+            "title": "5. Pagsugod sa Pag-istoryahanay",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 1 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202507.2.6",
+            "time": 5,
+            "title": "6. Pamulongpulong",
+            "class": "part-title-ministry",
+            "reference": "th tulun-an 20",
+            "thumbnail": "th",
+            "roles": [
+              "talk"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202507.2.7",
+            "time": 15,
+            "title": "7. Mangin Mapinasensiahon Pero Magbutang sang Limitasyon",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025242/univ/art/202025242_univ_cnt_2_lg.jpg",
+            "thumbnailMode": "sqr-r",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.2.8",
+            "time": 30,
+            "title": "8. Pagtinuon sang Kongregasyon sa Biblia",
+            "class": "part-title-living",
+            "thumbnail": "lfb",
+            "reference": "lfb “Sulat Halin sa Nagadumala nga Hubon,” introduksion sa seksion 1, kag leksion 1",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202507.2.8.r",
+            "class": "accessory",
+            "alt": "Tagabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202507.2.9",
+            "time": 3,
+            "reference": "Nagatakop nga Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "id": "202507.3",
+      "week": "HULYO 21-27",
+      "bibleReading": "HULUBATON 23",
+      "songs": [
+        "97",
+        "35",
+        "40"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202507.3.0",
+            "time": 1,
+            "reference": "Nagabukas nga Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202507.3.10"
+            ]
+          },
+          {
+            "id": "202507.3.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025243/univ/art/202025243_univ_sqs_lg.jpg",
+            "title": "1. Mga Prinsipio nga Makabulig Parte sa Pag-inom sang Alkohol",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.3.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.3.3",
+            "time": 4,
+            "reference": "Hul 23:​1-24 (th tulun-an 5)",
+            "title": "3. Pagbasa sa Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202507.3.4",
+            "time": 2,
+            "title": "4. Pagsugod sa Pag-istoryahanay",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 3 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202507.3.5",
+            "time": 5,
+            "title": "5. Pagbalik sa mga Interesado",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 9 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202507.3.6",
+            "time": 5,
+            "title": "6. Pagtudlo Agod Mangin Disipulo",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 12 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202507.3.7",
+            "time": 8,
+            "title": "7. Maserbe Bala Ako sang Ilimnon Ukon Indi?",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025243/univ/art/202025243_univ_cnt_2_lg.jpg",
+            "thumbnailMode": "sqr-r",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.3.8",
+            "time": 7,
+            "title": "8. Lokal nga mga Kinahanglanon",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "thumbnailMode": "",
+            "roles": [
+              "elder"
+            ],
+            "writtable": true
+          },
+          {
+            "id": "202507.3.9",
+            "time": 30,
+            "title": "9. Pagtinuon sang Kongregasyon sa Biblia",
+            "class": "part-title-living",
+            "thumbnail": "lfb",
+            "reference": "lfb leksion 2, introduksion sa seksion 2, kag leksion 3",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202507.3.9.r",
+            "class": "accessory",
+            "alt": "Tagabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202507.3.10",
+            "time": 3,
+            "reference": "Nagatakop nga Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "id": "202507.4",
+      "week": "HULYO 28–AGOSTO 3",
+      "bibleReading": "HULUBATON 24",
+      "songs": [
+        "38",
+        "99",
+        "112"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202507.4.0",
+            "time": 1,
+            "reference": "Nagabukas nga Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202507.4.10"
+            ]
+          },
+          {
+            "id": "202507.4.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025244/univ/art/202025244_univ_sqs_lg.jpg",
+            "title": "1. Pabakura ang Imo Kaugalingon sa Pag-atubang sa mga Kabudlayan",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.4.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.4.3",
+            "time": 4,
+            "reference": "Hul 24:​1-20 (th tulun-an 11)",
+            "title": "3. Pagbasa sa Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202507.4.4",
+            "time": 2,
+            "title": "4. Pagsugod sa Pag-istoryahanay",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 2 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202507.4.5",
+            "time": 3,
+            "title": "5. Pagsugod sa Pag-istoryahanay",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 3 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202507.4.6",
+            "time": 3,
+            "title": "6. Pagsugod sa Pag-istoryahanay",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 4 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202507.4.7",
+            "time": 3,
+            "title": "7. Pamulongpulong",
+            "class": "part-title-ministry",
+            "reference": "th tulun-an 6",
+            "thumbnail": "th",
+            "roles": [
+              "talk"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202507.4.8",
+            "time": 15,
+            "title": "8. Buligi ang Isa kag Isa Kon May Kabudlayan",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025244/univ/art/202025244_univ_cnt_2_lg.jpg",
+            "thumbnailMode": "",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202507.4.9",
+            "time": 30,
+            "title": "9. Pagtinuon sang Kongregasyon sa Biblia",
+            "class": "part-title-living",
+            "thumbnail": "lfb",
+            "reference": "lfb leksion 4-5",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202507.4.9.r",
+            "class": "accessory",
+            "alt": "Tagabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202507.4.10",
+            "time": 3,
+            "reference": "Nagatakop nga Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
