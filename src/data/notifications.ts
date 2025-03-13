@@ -2,6 +2,78 @@ import type { Notification } from "@/types/notification"
 
 const notifications: Notification[] = [
     {
+        id: 'd3',
+        date: '2025-03-14T00:00:00-00:08',
+        title: "OCLM - Hulyo 2025 (Cebuano)",
+        subheader: 'Schedule is added',
+        link: '?month=202507&lang=ceb',
+        isLink: true,
+        icon: "new"
+    },
+    {
+        id: 'd4',
+        date: '2025-03-14T00:00:00-00:08',
+        title: "OCLM - Agosto 2025 (Cebuano)",
+        subheader: 'Schedule is added',
+        link: '?month=202508&lang=ceb',
+        isLink: true,
+        icon: "new"
+    },
+    {
+        id: 'd5',
+        date: '2025-03-14T00:00:00-00:08',
+        title: "OCLM - Hulyo 2025 (Tagalog)",
+        subheader: 'Schedule is added',
+        link: '?month=202507&lang=tl',
+        isLink: true,
+        icon: "new"
+    },
+    {
+        id: 'd6',
+        date: '2025-03-14T00:00:00-00:08',
+        title: "OCLM - Agosto 2025 (Tagalog)",
+        subheader: 'Schedule is added',
+        link: '?month=202508&lang=tl',
+        isLink: true,
+        icon: "new"
+    },
+    {
+        id: 'd7',
+        date: '2025-03-14T00:00:00-00:08',
+        title: "OCLM - Hulyo 2025 (Hiligaynon)",
+        subheader: 'Schedule is added',
+        link: '?month=202507&lang=hil',
+        isLink: true,
+        icon: "new"
+    },
+    {
+        id: 'd8',
+        date: '2025-03-14T00:00:00-00:08',
+        title: "OCLM - Agosto 2025 (Hiligaynon)",
+        subheader: 'Schedule is added',
+        link: '?month=202508&lang=hil',
+        isLink: true,
+        icon: "new"
+    },
+    {
+        id: 'd9',
+        date: '2025-03-14T00:00:00-00:08',
+        title: "OCLM - Hulyo 2025 (Pangasinan)",
+        subheader: 'Schedule is added',
+        link: '?month=202507&lang=pag',
+        isLink: true,
+        icon: "new"
+    },
+    {
+        id: 'd10',
+        date: '2025-03-14T00:00:00-00:08',
+        title: "OCLM - Agosto 2025 (Pangasinan)",
+        subheader: 'Schedule is added',
+        link: '?month=202508&lang=pag',
+        isLink: true,
+        icon: "new"
+    },
+    {
         id: 'd1',
         date: '2025-03-13T00:00:00-00:08',
         title: "OCLM - July 2025 (English)",
