@@ -110,7 +110,8 @@
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "writtable": true
           },
           {
             "id": "202506.1.8",
@@ -529,7 +530,8 @@
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "writtable": true
           },
           {
             "id": "202506.4.8",

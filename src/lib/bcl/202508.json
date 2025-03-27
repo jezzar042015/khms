@@ -1,41 +1,39 @@
 {
-  "period": "202505",
-  "display": "May 2025",
-  "title": "Our Christian Life and Ministry Meeting Schedule",
-  "theme": "#4C6C51",
+  "period": "202508",
+  "display": "undefined 2025",
+  "theme": "#75322C",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025166/univ/art/202025166_univ_sqs_lg.jpg",
-  "firstMonday": "2025-05-05",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025245/univ/art/202025245_univ_sqs_lg.jpg",
+  "firstMonday": "2025-08-04",
   "weeks": [
     {
       "order": 1,
-      "id": "202505.1",
-      "week": "MAY 5-11",
-      "bibleReading": "PROVERBS 12",
+      "id": "202508.1",
+      "week": "AGOSTO 4-10",
+      "bibleReading": "TALINHAGA 25",
       "songs": [
-        "101",
-        "21",
-        "57"
+        "154",
+        "123",
+        "150"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202505.1.0",
+            "id": "202508.1.0",
             "time": 1,
-            "reference": "Opening Comments",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202505.1.10"
+              "202508.1.9"
             ]
           },
           {
-            "id": "202505.1.1",
+            "id": "202508.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025161/univ/art/202025161_univ_sqs_lg.jpg",
-            "title": "1. Hard Work Is Rewarding",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025245/univ/art/202025245_univ_sqs_lg.jpg",
+            "title": "1. Madunong na mga Prinsipyo na Makakatabang Kun Manungod sa Satong Pagtaram",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -43,10 +41,10 @@
             ]
           },
           {
-            "id": "202505.1.2",
+            "id": "202508.1.2",
             "time": 10,
             "reference": "",
-            "title": "2. Spiritual Gems",
+            "title": "2. Espirituwal na Kayamanan",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -54,10 +52,10 @@
             ]
           },
           {
-            "id": "202505.1.3",
+            "id": "202508.1.3",
             "time": 4,
-            "reference": "Pr 12:1-20 (th study 5)",
-            "title": "3. Bible Reading",
+            "reference": "Tal 25:​1-17 (th leksiyon 10)",
+            "title": "3. Pagbasa sa Bibliya",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -66,86 +64,73 @@
         ],
         "ministry": [
           {
-            "id": "202505.1.4",
-            "time": 2,
-            "title": "4. Starting a Conversation",
+            "id": "202508.1.4",
+            "time": 3,
+            "title": "4. Pagpuon nin Pakikipag-ulay",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 1 point 4",
+            "reference": "lmd leksiyon 3 punto 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.1.5",
-            "time": 3,
-            "title": "5. Starting a Conversation",
+            "id": "202508.1.5",
+            "time": 4,
+            "title": "5. Pagdalaw Liwat",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 5 point 4",
+            "reference": "lmd leksiyon 8 punto 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.1.6",
-            "time": 3,
-            "title": "6. Following Up",
+            "id": "202508.1.6",
+            "time": 5,
+            "title": "6. Pahayag",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 9 point 3",
-            "thumbnail": "lmd",
+            "reference": "th leksiyon 13",
+            "thumbnail": "th",
             "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202505.1.7",
-            "time": 3,
-            "title": "7. Explaining Your Beliefs",
-            "class": "part-title-ministry",
-            "reference": "lmd lesson 4 point 3",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
+              "talk"
             ]
           }
         ],
         "living": [
           {
-            "id": "202505.1.8",
+            "id": "202508.1.7",
             "time": 15,
-            "title": "8. Facing Economic Uncertainty With Jehovah’s Help",
+            "title": "7. Lokal na mga Pangangaipo",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025161/univ/art/202025161_univ_cnt_2_lg.jpg",
+            "thumbnail": "",
             "thumbnailMode": "",
             "roles": [
-              "elder",
-              "ms"
-            ]
+              "elder"
+            ],
+            "writtable": true
           },
           {
-            "id": "202505.1.9",
+            "id": "202508.1.8",
             "time": 30,
-            "title": "9. Congregation Bible Study",
+            "title": "8. Pag-adal sa Bibliya kan Kongregasyon",
             "class": "part-title-living",
-            "thumbnail": "bt",
-            "reference": "bt chap. 26 ¶1-8, boxes on pp. 204, 208",
+            "thumbnail": "lfb",
+            "reference": "lfb leksiyon 6, intro sa seksiyon 3, asin leksiyon 7",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202505.1.9.r",
+            "id": "202508.1.8.r",
             "class": "accessory",
-            "alt": "Reader:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202505.1.10",
+            "id": "202508.1.9",
             "time": 3,
-            "reference": "Concluding Comments",
             "roles": [
               "elder",
               "ms"
@@ -156,33 +141,32 @@
     },
     {
       "order": 2,
-      "id": "202505.2",
-      "week": "MAY 12-18",
-      "bibleReading": "PROVERBS 13",
+      "id": "202508.2",
+      "week": "AGOSTO 11-17",
+      "bibleReading": "TALINHAGA 26",
       "songs": [
-        "34",
-        "77",
-        "43"
+        "88",
+        "94",
+        "89"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202505.2.0",
+            "id": "202508.2.0",
             "time": 1,
-            "reference": "Opening Comments",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202505.2.10"
+              "202508.2.9"
             ]
           },
           {
-            "id": "202505.2.1",
+            "id": "202508.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025162/univ/art/202025162_univ_sqs_lg.jpg",
-            "title": "1. Do Not Be Fooled by “the Lamp of the Wicked”",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025246/univ/art/202025246_univ_sqs_lg.jpg",
+            "title": "1. Rumayo Kamo sa “Sarong Mangmang”",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -190,10 +174,10 @@
             ]
           },
           {
-            "id": "202505.2.2",
+            "id": "202508.2.2",
             "time": 10,
             "reference": "",
-            "title": "2. Spiritual Gems",
+            "title": "2. Espirituwal na Kayamanan",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -201,10 +185,10 @@
             ]
           },
           {
-            "id": "202505.2.3",
+            "id": "202508.2.3",
             "time": 4,
-            "reference": "Pr 13:1-17 (th study 10)",
-            "title": "3. Bible Reading",
+            "reference": "Tal 26:​1-20 (th leksiyon 5)",
+            "title": "3. Pagbasa sa Bibliya",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -213,46 +197,46 @@
         ],
         "ministry": [
           {
-            "id": "202505.2.4",
+            "id": "202508.2.4",
             "time": 3,
-            "title": "4. Starting a Conversation",
+            "title": "4. Pagpuon nin Pakikipag-ulay",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 2 point 5",
+            "reference": "lmd leksiyon 1 punto 5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.2.5",
+            "id": "202508.2.5",
             "time": 4,
-            "title": "5. Starting a Conversation",
+            "title": "5. Pagdalaw Liwat",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 2 point 3",
+            "reference": "lmd leksiyon 7 punto 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.2.6",
+            "id": "202508.2.6",
             "time": 5,
-            "title": "6. Talk",
+            "title": "6. Paggibo nin mga Disipulo",
             "class": "part-title-ministry",
-            "reference": "th study 16",
-            "thumbnail": "th",
+            "reference": "lmd leksiyon 11 punto 5",
+            "thumbnail": "lmd",
             "roles": [
-              "talk"
+              "demo"
             ]
           }
         ],
         "living": [
           {
-            "id": "202505.2.7",
-            "time": 8,
-            "title": "7. “The Light of the Righteous Shines Brightly”",
+            "id": "202508.2.7",
+            "time": 15,
+            "title": "7. Magin ‘Madunong Para sa Kaligtasan’ Paagi sa Personal na Pag-adal",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025162/univ/art/202025162_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025246/univ/art/202025246_univ_cnt_2_lg.jpg",
             "thumbnailMode": "",
             "roles": [
               "elder",
@@ -260,40 +244,26 @@
             ]
           },
           {
-            "id": "202505.2.8",
-            "time": 7,
-            "title": "8. Local Needs",
-            "class": "part-title-living",
-            "thumbnail": "",
-            "thumbnailMode": "",
-            "roles": [
-              "elder"
-            ],
-            "writtable": true
-          },
-          {
-            "id": "202505.2.9",
+            "id": "202508.2.8",
             "time": 30,
-            "title": "9. Congregation Bible Study",
+            "title": "8. Pag-adal sa Bibliya kan Kongregasyon",
             "class": "part-title-living",
-            "thumbnail": "bt",
-            "reference": "bt chap. 26 ¶9-17",
+            "thumbnail": "lfb",
+            "reference": "lfb leksiyon 8-9",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202505.2.9.r",
+            "id": "202508.2.8.r",
             "class": "accessory",
-            "alt": "Reader:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202505.2.10",
+            "id": "202508.2.9",
             "time": 3,
-            "reference": "Concluding Comments",
             "roles": [
               "elder",
               "ms"
@@ -304,33 +274,32 @@
     },
     {
       "order": 3,
-      "id": "202505.3",
-      "week": "MAY 19-25",
-      "bibleReading": "PROVERBS 14",
+      "id": "202508.3",
+      "week": "AGOSTO 18-24",
+      "bibleReading": "TALINHAGA 27",
       "songs": [
-        "89",
-        "126",
-        "116"
+        "102",
+        "109",
+        "118"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202505.3.0",
+            "id": "202508.3.0",
             "time": 1,
-            "reference": "Opening Comments",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202505.3.9"
+              "202508.3.9"
             ]
           },
           {
-            "id": "202505.3.1",
+            "id": "202508.3.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025163/univ/art/202025163_univ_sqs_lg.jpg",
-            "title": "1. Ponder Each Step When a Disaster Strikes",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025247/univ/art/202025247_univ_sqs_lg.jpg",
+            "title": "1. An Pakinabang sa Pagkaigwa nin Tunay na mga Amigo",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -338,10 +307,10 @@
             ]
           },
           {
-            "id": "202505.3.2",
+            "id": "202508.3.2",
             "time": 10,
             "reference": "",
-            "title": "2. Spiritual Gems",
+            "title": "2. Espirituwal na Kayamanan",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -349,10 +318,10 @@
             ]
           },
           {
-            "id": "202505.3.3",
+            "id": "202508.3.3",
             "time": 4,
-            "reference": "Pr 14:1-21 (th study 11)",
-            "title": "3. Bible Reading",
+            "reference": "Tal 27:​1-17 (th leksiyon 5)",
+            "title": "3. Pagbasa sa Bibliya",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -361,75 +330,73 @@
         ],
         "ministry": [
           {
-            "id": "202505.3.4",
+            "id": "202508.3.4",
             "time": 3,
-            "title": "4. Starting a Conversation",
+            "title": "4. Pagpuon nin Pakikipag-ulay",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 3 point 3",
+            "reference": "lmd leksiyon 6 punto 5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.3.5",
+            "id": "202508.3.5",
             "time": 4,
-            "title": "5. Following Up",
+            "title": "5. Pagdalaw Liwat",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 9 point 4",
+            "reference": "lmd leksiyon 8 punto 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.3.6",
+            "id": "202508.3.6",
             "time": 5,
-            "title": "6. Making Disciples",
+            "title": "6. Pahayag",
             "class": "part-title-ministry",
-            "reference": "th study 19",
+            "reference": "th leksiyon 14",
             "thumbnail": "th",
             "roles": [
-              "demo"
+              "talk"
             ]
           }
         ],
         "living": [
           {
-            "id": "202505.3.7",
+            "id": "202508.3.7",
             "time": 15,
-            "title": "7. Remain Prepared for a Disaster",
+            "title": "7. “Sarong Tugang na Namumundag sa mga Panahon nin Kasakitan”",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025163/univ/art/202025163_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025247/univ/art/202025247_univ_cnt_2_lg.jpg",
+            "thumbnailMode": "sqr-c",
             "roles": [
               "elder",
               "ms"
             ]
           },
           {
-            "id": "202505.3.8",
+            "id": "202508.3.8",
             "time": 30,
-            "title": "8. Congregation Bible Study",
+            "title": "8. Pag-adal sa Bibliya kan Kongregasyon",
             "class": "part-title-living",
-            "thumbnail": "bt",
-            "reference": "bt chap. 26 ¶18-22, box on p. 209",
+            "thumbnail": "lfb",
+            "reference": "lfb leksiyon 10-11",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202505.3.8.r",
+            "id": "202508.3.8.r",
             "class": "accessory",
-            "alt": "Reader:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202505.3.9",
+            "id": "202508.3.9",
             "time": 3,
-            "reference": "Concluding Comments",
             "roles": [
               "elder",
               "ms"
@@ -440,33 +407,32 @@
     },
     {
       "order": 4,
-      "id": "202505.4",
-      "week": "MAY 26–JUNE 1",
-      "bibleReading": "PROVERBS 15",
+      "id": "202508.4",
+      "week": "AGOSTO 25-31",
+      "bibleReading": "TALINHAGA 28",
       "songs": [
-        "102",
-        "155",
-        "100"
+        "150",
+        "112",
+        "113"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202505.4.0",
+            "id": "202508.4.0",
             "time": 1,
-            "reference": "Opening Comments",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202505.4.9"
+              "202508.4.11"
             ]
           },
           {
-            "id": "202505.4.1",
+            "id": "202508.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025164/univ/art/202025164_univ_sqs_lg.jpg",
-            "title": "1. Help Others to Have a Cheerful Heart",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025248/univ/art/202025248_univ_sqs_lg.jpg",
+            "title": "1. Kun Ano an Pagkakaiba kan Maraot na Tawo Asin Matanos na Tawo",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -474,10 +440,10 @@
             ]
           },
           {
-            "id": "202505.4.2",
+            "id": "202508.4.2",
             "time": 10,
             "reference": "",
-            "title": "2. Spiritual Gems",
+            "title": "2. Espirituwal na Kayamanan",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -485,10 +451,10 @@
             ]
           },
           {
-            "id": "202505.4.3",
+            "id": "202508.4.3",
             "time": 4,
-            "reference": "Pr 15:1-21 (th study 2)",
-            "title": "3. Bible Reading",
+            "reference": "Tal 28:​1-17 (th leksiyon 10)",
+            "title": "3. Pagbasa sa Bibliya",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -497,34 +463,45 @@
         ],
         "ministry": [
           {
-            "id": "202505.4.4",
+            "id": "202508.4.4",
             "time": 3,
-            "title": "4. Starting a Conversation",
+            "title": "4. Pagpuon nin Pakikipag-ulay",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 1 point 5",
+            "reference": "lmd leksiyon 5 punto 5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.4.5",
-            "time": 4,
-            "title": "5. Starting a Conversation",
+            "id": "202508.4.5",
+            "time": 3,
+            "title": "5. Pagpuon nin Pakikipag-ulay",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 2 point 4",
+            "reference": "lmd leksiyon 5 punto 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202505.4.6",
-            "time": 5,
-            "title": "6. Making Disciples",
+            "id": "202508.4.6",
+            "time": 2,
+            "title": "6. Pagpuon nin Pakikipag-ulay",
             "class": "part-title-ministry",
-            "reference": "th study 4",
-            "thumbnail": "th",
+            "reference": "lmd leksiyon 1 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202508.4.7",
+            "time": 3,
+            "title": "7. Pagpuon nin Pakikipag-ulay",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 2 punto 4",
+            "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
@@ -532,11 +509,23 @@
         ],
         "living": [
           {
-            "id": "202505.4.7",
-            "time": 15,
-            "title": "7. We Can Have a Cheerful Heart Despite Our Trials",
+            "id": "202508.4.8",
+            "time": 6,
+            "title": "8. Ikinakaungis Mo Daw an Kadahasan?",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025248/univ/art/202025248_univ_cnt_2_lg.jpg",
+            "thumbnailMode": "sqr-c",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202508.4.9",
+            "time": 9,
+            "title": "9. Espesyal na Kampanya sa Setyembre",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/1014367/univ/art/1014367_univ_lsr_lg.jpg",
             "thumbnailMode": "",
             "roles": [
               "elder",
@@ -544,28 +533,26 @@
             ]
           },
           {
-            "id": "202505.4.8",
+            "id": "202508.4.10",
             "time": 30,
-            "title": "8. Congregation Bible Study",
+            "title": "10. Pag-adal sa Bibliya kan Kongregasyon",
             "class": "part-title-living",
-            "thumbnail": "bt",
-            "reference": "bt chap. 27 ¶1-9",
+            "thumbnail": "lfb",
+            "reference": "lfb leksiyon 12-13",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202505.4.8.r",
+            "id": "202508.4.10.r",
             "class": "accessory",
-            "alt": "Reader:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202505.4.9",
+            "id": "202508.4.11",
             "time": 3,
-            "reference": "Concluding Comments",
             "roles": [
               "elder",
               "ms"

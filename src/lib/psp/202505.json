@@ -258,7 +258,8 @@
                         "class": "part-title-living",
                         "roles": [
                             "elder"
-                        ]
+                        ],
+                        "writtable": true
                     },
                     {
                         "id": "202505.2.9",
@@ -269,8 +270,7 @@
                         "reference": "bt 4, Box 3",
                         "roles": [
                             "cbs"
-                        ],
-                        "writtable": true
+                        ]
                     },
                     {
                         "id": "202505.2.10",
