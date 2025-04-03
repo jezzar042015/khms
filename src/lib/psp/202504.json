@@ -233,6 +233,7 @@
                         "title": "7. Do Privileges Make You Privileged?",
                         "class": "part-title-living",
                         "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwb/202006/univ/art/jwb_univ_202006_wss_10_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder"
                         ]
@@ -369,7 +370,8 @@
                         "time": 8,
                         "title": "8. 2025 Update on the Local Design/​Construction Program",
                         "class": "part-title-living",
-                        "thumbnail": "",
+                        "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/wdcu/univ/art/wdcu_univ_lss_07_lg.jpg",
+                        "thumbnailMode": "sqr-c",
                         "roles": [
                             "elder",
                             "ms"
