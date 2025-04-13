@@ -1,5 +1,18 @@
 const translations: Translations = {
     mwbs140: {
+        bcl: {
+            title: 'Midweek na Pagtiripon',
+            song: 'Kanta',
+            gems: 'KAYAMANAN NA YAON SA TATARAMON NIN DIYOS',
+            ministry: 'MAGIN ANDAM SA MINISTERYO',
+            living: 'PAMUMUHAY BILANG KRISTIYANO',
+            prayer: 'Pamibi',
+            demo: 'Estudyante/Assistant',
+            student: 'Estudyante',
+            chairman: 'Tsirman',
+            coCounselor: 'Parakonseho sa Second Hall',
+            conductor: 'Makondukta'
+        },
         war: {
             title: 'Midweek nga Katirok',
             song: 'Karantahon',

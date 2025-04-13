@@ -9,6 +9,7 @@ import { s140Builder } from "@/assets/utils/composer";
 import type { Content, LangMonth, PartItem, S140PartWeeks } from "@/types/files";
 import type { VisitDetail } from "@/types/visit";
 
+const jsonFilesBCL = import.meta.glob('@/lib/bcl/*.json');
 const jsonFilesCeb = import.meta.glob('@/lib/ceb/*.json');
 const jsonFilesPsp = import.meta.glob('@/lib/psp/*.json');
 const jsonFilesWar = import.meta.glob('@/lib/war/*.json');
@@ -50,14 +51,14 @@ export const useFilesStore = defineStore('files', () => {
         const hilFiles = getFiles('hil');
         const pagFiles = getFiles('pag');
 
-        let psp: LangMonth[] = [], 
-        ceb: LangMonth[] = [], 
-        war: LangMonth[] = [], 
-        tl: LangMonth[] = [], 
-        en: LangMonth[] = [],
-        hil: LangMonth[] = [],
-        ilo: LangMonth[] = [],
-        pag: LangMonth[] = []
+        let psp: LangMonth[] = [],
+            ceb: LangMonth[] = [],
+            war: LangMonth[] = [],
+            tl: LangMonth[] = [],
+            en: LangMonth[] = [],
+            hil: LangMonth[] = [],
+            ilo: LangMonth[] = [],
+            pag: LangMonth[] = []
 
         if (pspFiles) psp = (await extractJsonFilesToArray(pspFiles)) ?? [];
         if (cebFiles) ceb = (await extractJsonFilesToArray(cebFiles)) ?? [];
@@ -328,7 +329,9 @@ export const useFilesStore = defineStore('files', () => {
 })
 
 function getFiles(lang: string) {
-    if (lang === 'ceb') {
+    if (lang === 'bcl') {
+        return jsonFilesBCL;
+    } else if (lang === 'ceb') {
         return jsonFilesCeb;
     } else if (lang === 'psp') {
         return jsonFilesPsp;
