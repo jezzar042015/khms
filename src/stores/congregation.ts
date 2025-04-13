@@ -16,6 +16,7 @@ export const useCongregationStore = defineStore('congregation', () => {
     })
 
     const languages = ref<Language[]>([
+        { code: 'bcl', support: true, lang: 'Bicol' },
         { code: 'ceb', support: true, lang: 'Cebuano' },
         { code: 'en', support: true, lang: 'English' },
         { code: 'psp', support: true, lang: 'Filipino Sign Language' },
