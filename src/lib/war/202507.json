@@ -3,7 +3,7 @@
   "display": "Hulyo 2025",
   "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
   "theme": "#75322C",
-  "publish": false,
+  "publish": true,
   "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025245/univ/art/202025245_univ_sqs_lg.jpg",
   "firstMonday": "2025-07-07",
   "weeks": [
@@ -35,7 +35,7 @@
             "id": "202507.1.1",
             "time": 10,
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025241/univ/art/202025241_univ_sqs_lg.jpg",
-            "title": "1. Maalamong mga Prinsipyo Para sa Malipayong Kaminyoon",
+            "title": "1. Maaramon nga mga Prinsipyo Para ha Malipayon nga Pag-asawa",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -45,7 +45,7 @@
           {
             "id": "202507.1.2",
             "time": 10,
-            "reference": "",
+            "reference": "Pr 21:31",
             "title": "2. Espirituwal nga mga Hiyas",
             "class": "part-title-gems",
             "roles": [
@@ -103,7 +103,7 @@
           {
             "id": "202507.1.7",
             "time": 15,
-            "title": "7. Magpakitag Pagtahod sa Inyong Kaminyoon",
+            "title": "7. Ipakita an Respeto ha Iyo Pag-asawa",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025241/univ/art/202025241_univ_cnt_2_lg.jpg",
             "thumbnailMode": "sqr-c",
@@ -171,7 +171,7 @@
             "id": "202507.2.1",
             "time": 10,
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025242/univ/art/202025242_univ_sqs_lg.jpg",
-            "title": "1. Maalamong mga Prinsipyo Para sa Pagpadakog mga Anak",
+            "title": "1. Maaramon nga mga Prinsipyo ha Pagpadaku hin mga Anak",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -239,7 +239,7 @@
           {
             "id": "202507.2.7",
             "time": 15,
-            "title": "7. Mahimong Mapailobon, Pero Dili Konsentidor",
+            "title": "7. Magin Pasensyoso, Pero Diri Konsintidor",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025242/univ/art/202025242_univ_cnt_2_lg.jpg",
             "thumbnailMode": "sqr-r",
@@ -307,7 +307,7 @@
             "id": "202507.3.1",
             "time": 10,
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025243/univ/art/202025243_univ_sqs_lg.jpg",
-            "title": "1. Maalamong mga Prinsipyo Bahin sa Alkoholikong Ilimnon",
+            "title": "1. Maaramon nga mga Prinsipyo ha Pag-inom hin Makahurubog nga Irimnon",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -375,7 +375,7 @@
           {
             "id": "202507.3.7",
             "time": 8,
-            "title": "7. Angay ba Kong Mag-serve ug Alkoholikong Ilimnon o Dili?",
+            "title": "7. Angay ba Ako Magserbi hin Makahurubog nga Irimnon o Diri?",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025243/univ/art/202025243_univ_cnt_2_lg.jpg",
             "thumbnailMode": "sqr-r",
@@ -402,7 +402,7 @@
             "title": "9. Pag-aram ha Biblia han Kongregasyon",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksyon 2, intro sa seksiyon 2, ug leksyon 3",
+            "reference": "lfb leksyon 2, intro ha seksiyon 2, ngan leksyon 3",
             "roles": [
               "cbs"
             ]
@@ -455,7 +455,7 @@
             "id": "202507.4.1",
             "time": 10,
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025244/univ/art/202025244_univ_sqs_lg.jpg",
-            "title": "1. Palig-ona ang Imong Kaugalingon Aron Madaog Nimo ang mga Kalisdanan",
+            "title": "1. Parig-ona an Imo Kalugaringon Para ha Panahon han Kakurian",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -534,7 +534,7 @@
           {
             "id": "202507.4.8",
             "time": 15,
-            "title": "8. Tabangi ang Usag usa Panahon sa mga Kalisdanan",
+            "title": "8. Magbinuligay ha Panahon han Kakurian",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025244/univ/art/202025244_univ_cnt_2_lg.jpg",
             "thumbnailMode": "",
