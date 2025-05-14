@@ -663,12 +663,12 @@ section
 
 .s140-grid-col2
 {
-  grid-template-columns: 1fr 150px;
+  grid-template-columns: 1fr 230px;
 }
 
 .s140-grid-col3
 {
-  grid-template-columns: 1fr 150px 150px;
+  grid-template-columns: 1fr 200px 200px;
 
 }
 
@@ -830,12 +830,12 @@ section
 
   .s140-grid-col2
   {
-    grid-template-columns: 1fr 120px;
+    grid-template-columns: 1fr 230px;
   }
 
   .s140-grid-col3
   {
-    grid-template-columns: 1fr 120px 120px;
+    grid-template-columns: 1fr 200px 200px;
 
   }
 

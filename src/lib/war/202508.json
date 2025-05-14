@@ -3,7 +3,7 @@
   "display": "Agosto 2025",
   "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
   "theme": "#75322C",
-  "publish": false,
+  "publish": true,
   "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025245/univ/art/202025245_univ_sqs_lg.jpg",
   "firstMonday": "2025-08-04",
   "weeks": [
@@ -35,7 +35,7 @@
             "id": "202508.1.1",
             "time": 10,
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025245/univ/art/202025245_univ_sqs_lg.jpg",
-            "title": "1. Maalamong mga Prinsipyo Para sa Atong Sinultihan",
+            "title": "1. Maaramon nga mga Prinsipyo Para ha Aton Panyakan",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -118,7 +118,7 @@
             "title": "8. Pag-aram ha Biblia han Kongregasyon",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksyon 6, intro sa seksiyon 3, ug leksyon 7",
+            "reference": "lfb leksyon 6, intro ha seksiyon 3, ngan leksyon 7",
             "roles": [
               "cbs"
             ]
@@ -171,7 +171,7 @@
             "id": "202508.2.1",
             "time": 10,
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025246/univ/art/202025246_univ_sqs_lg.jpg",
-            "title": "1. Likayi ang “Buangbuang”",
+            "title": "1. Pahirayo ha “Lurong nga Tawo”",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -239,7 +239,7 @@
           {
             "id": "202508.2.7",
             "time": 15,
-            "title": "7. Mahimong “Maalamon Para sa Kaluwasan” Pinaagi sa Personal nga Pagtuon",
+            "title": "7. Magin “Maaramon Para ha Katalwasan” Pinaagi ha Personal nga Pag-aram",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025246/univ/art/202025246_univ_cnt_2_lg.jpg",
             "thumbnailMode": "",
@@ -307,7 +307,7 @@
             "id": "202508.3.1",
             "time": 10,
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025247/univ/art/202025247_univ_sqs_lg.jpg",
-            "title": "1. Mga Kaayohan kon naa Tay Tinuod nga mga Higala",
+            "title": "1. Kon Paonan-o Kita Nagpapahimulos ha Pagkaada Tinuod nga Kasangkayan",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -375,7 +375,7 @@
           {
             "id": "202508.3.7",
             "time": 15,
-            "title": "7. “Igsoon nga Masaligan Panahon sa Kalisdanan”",
+            "title": "7. “Usa nga Bugto nga Natawo Para ha mga Panahon han Kasakitan”",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025247/univ/art/202025247_univ_cnt_2_lg.jpg",
             "thumbnailMode": "sqr-c",
@@ -443,7 +443,7 @@
             "id": "202508.4.1",
             "time": 10,
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025248/univ/art/202025248_univ_sqs_lg.jpg",
-            "title": "1. Ang Kalainan sa Tawong Daotan ug sa Tawong Matarong",
+            "title": "1. Mga Kaibahan han Maraot nga Tawo Ngan han Matadong nga Tawo",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -522,7 +522,7 @@
           {
             "id": "202508.4.8",
             "time": 6,
-            "title": "8. Gidumtan ba Nimo ang Kapintasan?",
+            "title": "8. Nangangalas Ka ba ha Kamadarahog?",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025248/univ/art/202025248_univ_cnt_2_lg.jpg",
             "thumbnailMode": "sqr-c",
@@ -534,7 +534,7 @@
           {
             "id": "202508.4.9",
             "time": 9,
-            "title": "9. Espesyal nga Kampanya sa Septyembre",
+            "title": "9. Espesyal nga Kampanya ha Septyembre",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/1014367/univ/art/1014367_univ_lsr_lg.jpg",
             "thumbnailMode": "",
