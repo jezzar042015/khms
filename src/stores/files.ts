@@ -42,42 +42,46 @@ export const useFilesStore = defineStore('files', () => {
     });
 
     const activeMonthIds = async () => {
-        const pspFiles = getFiles('psp');
+        const bclFiles = getFiles('bcl');
         const cebFiles = getFiles('ceb');
-        const warFiles = getFiles('war');
-        const tlFiles = getFiles('tl');
         const enFiles = getFiles('en');
-        const iloFiles = getFiles('ilo');
         const hilFiles = getFiles('hil');
+        const iloFiles = getFiles('ilo');
         const pagFiles = getFiles('pag');
+        const pspFiles = getFiles('psp');
+        const tlFiles = getFiles('tl');
+        const warFiles = getFiles('war');
 
-        let psp: LangMonth[] = [],
+        let bcl: LangMonth[] = [],
             ceb: LangMonth[] = [],
-            war: LangMonth[] = [],
-            tl: LangMonth[] = [],
             en: LangMonth[] = [],
             hil: LangMonth[] = [],
             ilo: LangMonth[] = [],
-            pag: LangMonth[] = []
+            pag: LangMonth[] = [],
+            tl: LangMonth[] = [],
+            war: LangMonth[] = [],
+            psp: LangMonth[] = []
 
-        if (pspFiles) psp = (await extractJsonFilesToArray(pspFiles)) ?? [];
+        if (bclFiles) bcl = (await extractJsonFilesToArray(bclFiles)) ?? [];
         if (cebFiles) ceb = (await extractJsonFilesToArray(cebFiles)) ?? [];
-        if (warFiles) war = (await extractJsonFilesToArray(warFiles)) ?? [];
-        if (tlFiles) tl = (await extractJsonFilesToArray(tlFiles)) ?? [];
         if (enFiles) en = (await extractJsonFilesToArray(enFiles)) ?? [];
-        if (iloFiles) ilo = (await extractJsonFilesToArray(iloFiles)) ?? [];
         if (hilFiles) hil = (await extractJsonFilesToArray(hilFiles)) ?? [];
+        if (iloFiles) ilo = (await extractJsonFilesToArray(iloFiles)) ?? [];
         if (pagFiles) pag = (await extractJsonFilesToArray(pagFiles)) ?? [];
+        if (pspFiles) psp = (await extractJsonFilesToArray(pspFiles)) ?? [];
+        if (tlFiles) tl = (await extractJsonFilesToArray(tlFiles)) ?? [];
+        if (warFiles) war = (await extractJsonFilesToArray(warFiles)) ?? [];
 
         const res: string[] = [
-            ...psp.map(m => m.content.period),
+            ...bcl.map(m => m.content.period),
             ...ceb.map(m => m.content.period),
-            ...war.map(m => m.content.period),
-            ...tl.map(m => m.content.period),
             ...en.map(m => m.content.period),
             ...hil.map(m => m.content.period),
             ...ilo.map(m => m.content.period),
             ...pag.map(m => m.content.period),
+            ...psp.map(m => m.content.period),
+            ...tl.map(m => m.content.period),
+            ...war.map(m => m.content.period),
         ]
 
         return Array.from(new Set(res));
@@ -90,6 +94,9 @@ export const useFilesStore = defineStore('files', () => {
 
     const s140PartItems = ref<S140PartWeeks>({})
 
+    /**
+     * checks if the current period is available in the next selected language's array of months
+     * */
     const periodIsInMonths = computed<boolean>(() => {
         const exist = langMonths.value.find(m => m.content.period == currentPeriod.value)
         return Boolean(exist)

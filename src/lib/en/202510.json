@@ -1,40 +1,41 @@
 {
-  "period": "202507",
-  "display": "Hulyo 2025",
-  "title": "Iskedyul kan Midweek na Pagtiripon",
-  "theme": "#75322C",
+  "period": "202510",
+  "display": "October 2025",
+  "title": "Our Christian Life and Ministry Meeting Schedule",
+  "theme": "#6185BD",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025245/univ/art/202025245_univ_sqs_lg.jpg",
-  "firstMonday": "2025-07-07",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
+  "firstMonday": "2025-10-06",
   "weeks": [
     {
       "order": 1,
-      "id": "202507.1",
-      "week": "HULYO 7-13",
-      "bibleReading": "TALINHAGA 21",
+      "id": "202510.1",
+      "week": "OCTOBER 6-12",
+      "bibleReading": "ECCLESIASTES 5-6",
       "songs": [
-        "98",
-        "132",
-        "72"
+        "42",
+        "160",
+        "34"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202507.1.0",
+            "id": "202510.1.0",
             "time": 1,
+            "reference": "Opening Comments",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202507.1.9"
+              "202510.1.10"
             ]
           },
           {
-            "id": "202507.1.1",
+            "id": "202510.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025241/univ/art/202025241_univ_sqs_lg.jpg",
-            "title": "1. Madunong na mga Prinsipyo na Makakatabang Para sa Maugmang Pag-inaguman",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
+            "title": "1. How We Show Reverence for Our Great God",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -42,10 +43,10 @@
             ]
           },
           {
-            "id": "202507.1.2",
+            "id": "202510.1.2",
             "time": 10,
             "reference": "",
-            "title": "2. Espirituwal na Kayamanan",
+            "title": "2. Spiritual Gems",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -53,10 +54,10 @@
             ]
           },
           {
-            "id": "202507.1.3",
+            "id": "202510.1.3",
             "time": 4,
-            "reference": "Tal 21:​1-18 (th leksiyon 5)",
-            "title": "3. Pagbasa sa Bibliya",
+            "reference": "Ec 5:1-17 (th study 12)",
+            "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -65,33 +66,44 @@
         ],
         "ministry": [
           {
-            "id": "202507.1.4",
+            "id": "202510.1.4",
+            "time": 1,
+            "title": "4. Starting a Conversation",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 4 point 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202510.1.5",
+            "time": 2,
+            "title": "5. Starting a Conversation",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 1 point 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202510.1.6",
             "time": 3,
-            "title": "4. Pagpuon nin Pakikipag-ulay",
+            "title": "6. Following Up",
             "class": "part-title-ministry",
-            "reference": "lmd leksiyon 3 punto 3",
+            "reference": "lmd lesson 7 point 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202507.1.5",
-            "time": 4,
-            "title": "5. Pagdalaw Liwat",
-            "class": "part-title-ministry",
-            "reference": "lmd leksiyon 7 punto 3",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202507.1.6",
+            "id": "202510.1.7",
             "time": 5,
-            "title": "6. Pagpaliwanag kan Saimong Paniniwala",
+            "title": "7. Making Disciples",
             "class": "part-title-ministry",
-            "reference": "lmd leksiyon 4 punto 3",
+            "reference": "lmd lesson 11 point 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -100,38 +112,40 @@
         ],
         "living": [
           {
-            "id": "202507.1.7",
+            "id": "202510.1.8",
             "time": 15,
-            "title": "7. Magpahiling nin Respeto sa Saimong Agom",
+            "title": "8. Are You Using “Truths We Love to Teach”?",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025241/univ/art/202025241_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-c",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_cnt_3_lg.jpg",
+            "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
               "ms"
             ]
           },
           {
-            "id": "202507.1.8",
+            "id": "202510.1.9",
             "time": 30,
-            "title": "8. Pag-adal sa Bibliya kan Kongregasyon",
+            "title": "9. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "bt",
-            "reference": "bt kap. 28 ¶16-22",
+            "thumbnail": "lfb",
+            "reference": "lfb lessons 24-25",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202507.1.8.r",
+            "id": "202510.1.9.r",
             "class": "accessory",
+            "alt": "Reader:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202507.1.9",
+            "id": "202510.1.10",
             "time": 3,
+            "reference": "Concluding Comments",
             "roles": [
               "elder",
               "ms"
@@ -142,32 +156,33 @@
     },
     {
       "order": 2,
-      "id": "202507.2",
-      "week": "HULYO 14-20",
-      "bibleReading": "TALINHAGA 22",
+      "id": "202510.2",
+      "week": "OCTOBER 13-19",
+      "bibleReading": "ECCLESIASTES 7-8",
       "songs": [
-        "79",
-        "134",
-        "6"
+        "39",
+        "151",
+        "124"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202507.2.0",
+            "id": "202510.2.0",
             "time": 1,
+            "reference": "Opening Comments",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202507.2.9"
+              "202510.2.10"
             ]
           },
           {
-            "id": "202507.2.1",
+            "id": "202510.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025242/univ/art/202025242_univ_sqs_lg.jpg",
-            "title": "1. Madunong na mga Prinsipyo na Makakatabang sa Pagpadakula nin mga Aki",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_sqs_lg.jpg",
+            "title": "1. “Go to the House of Mourning”",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -175,10 +190,10 @@
             ]
           },
           {
-            "id": "202507.2.2",
+            "id": "202510.2.2",
             "time": 10,
             "reference": "",
-            "title": "2. Espirituwal na Kayamanan",
+            "title": "2. Spiritual Gems",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -186,10 +201,10 @@
             ]
           },
           {
-            "id": "202507.2.3",
+            "id": "202510.2.3",
             "time": 4,
-            "reference": "Tal 22:​1-19 (th leksiyon 10)",
-            "title": "3. Pagbasa sa Bibliya",
+            "reference": "Ec 8:1-13 (th study 10)",
+            "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -198,46 +213,57 @@
         ],
         "ministry": [
           {
-            "id": "202507.2.4",
-            "time": 3,
-            "title": "4. Pagpuon nin Pakikipag-ulay",
+            "id": "202510.2.4",
+            "time": 2,
+            "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd leksiyon 5 punto 4",
+            "reference": "lmd lesson 2 point 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202507.2.5",
-            "time": 4,
-            "title": "5. Pagpuon nin Pakikipag-ulay",
+            "id": "202510.2.5",
+            "time": 2,
+            "title": "5. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd leksiyon 1 punto 4",
+            "reference": "lmd lesson 2 point 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202507.2.6",
+            "id": "202510.2.6",
+            "time": 2,
+            "title": "6. Following Up",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 9 point 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202510.2.7",
             "time": 5,
-            "title": "6. Pahayag",
+            "title": "7. Explaining Your Beliefs",
             "class": "part-title-ministry",
-            "reference": "th leksiyon 20",
+            "reference": "th study 17",
             "thumbnail": "th",
             "roles": [
-              "talk"
+              "demo"
             ]
           }
         ],
         "living": [
           {
-            "id": "202507.2.7",
+            "id": "202510.2.8",
             "time": 15,
-            "title": "7. Magin Mapasensiya, Pero Bakong Kunsintidor",
+            "title": "8. Build Strong Faith in the Resurrection",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025242/univ/art/202025242_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_cnt_2_lg.jpg",
             "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
@@ -245,26 +271,28 @@
             ]
           },
           {
-            "id": "202507.2.8",
+            "id": "202510.2.9",
             "time": 30,
-            "title": "8. Pag-adal sa Bibliya kan Kongregasyon",
+            "title": "9. Congregation Bible Study",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb “Surat Hali sa Namamahalang Grupo,” intro sa seksiyon 1, asin leksiyon 1",
+            "reference": "lfb lessons 26-27",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202507.2.8.r",
+            "id": "202510.2.9.r",
             "class": "accessory",
+            "alt": "Reader:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202507.2.9",
+            "id": "202510.2.10",
             "time": 3,
+            "reference": "Concluding Comments",
             "roles": [
               "elder",
               "ms"
@@ -275,32 +303,33 @@
     },
     {
       "order": 3,
-      "id": "202507.3",
-      "week": "HULYO 21-27",
-      "bibleReading": "TALINHAGA 23",
+      "id": "202510.3",
+      "week": "OCTOBER 20-26",
+      "bibleReading": "ECCLESIASTES 9-10",
       "songs": [
-        "97",
-        "35",
-        "40"
+        "30",
+        "47",
+        "28"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202507.3.0",
+            "id": "202510.3.0",
             "time": 1,
+            "reference": "Opening Comments",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202507.3.10"
+              "202510.3.9"
             ]
           },
           {
-            "id": "202507.3.1",
+            "id": "202510.3.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025243/univ/art/202025243_univ_sqs_lg.jpg",
-            "title": "1. Madunong na mga Prinsipyo na Makakatabang Kun Manungod sa Pag-inom nin Arak",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025328/univ/art/202025328_univ_sqs_lg.jpg",
+            "title": "1. Keep a Proper View of Your Trials",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -308,10 +337,10 @@
             ]
           },
           {
-            "id": "202507.3.2",
+            "id": "202510.3.2",
             "time": 10,
             "reference": "",
-            "title": "2. Espirituwal na Kayamanan",
+            "title": "2. Spiritual Gems",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -319,10 +348,10 @@
             ]
           },
           {
-            "id": "202507.3.3",
+            "id": "202510.3.3",
             "time": 4,
-            "reference": "Tal 23:​1-24 (th leksiyon 5)",
-            "title": "3. Pagbasa sa Bibliya",
+            "reference": "Ec 10:1-20 (th study 11)",
+            "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -331,33 +360,33 @@
         ],
         "ministry": [
           {
-            "id": "202507.3.4",
-            "time": 2,
-            "title": "4. Pagpuon nin Pakikipag-ulay",
+            "id": "202510.3.4",
+            "time": 3,
+            "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd leksiyon 3 punto 5",
+            "reference": "lmd lesson 3 point 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202507.3.5",
-            "time": 5,
-            "title": "5. Pagdalaw Liwat",
+            "id": "202510.3.5",
+            "time": 4,
+            "title": "5. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd leksiyon 9 punto 5",
+            "reference": "lmd lesson 4 point 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202507.3.6",
+            "id": "202510.3.6",
             "time": 5,
-            "title": "6. Paggibo nin mga Disipulo",
+            "title": "6. Making Disciples",
             "class": "part-title-ministry",
-            "reference": "lmd leksiyon 12 punto 4",
+            "reference": "lmd lesson 12 point 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -366,11 +395,11 @@
         ],
         "living": [
           {
-            "id": "202507.3.7",
-            "time": 8,
-            "title": "7. Dapat Daw Akong Magserbi nin Arak o Dai?",
+            "id": "202510.3.7",
+            "time": 15,
+            "title": "7. Finding Stability in the Face of Tragedy",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025243/univ/art/202025243_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025328/univ/art/202025328_univ_cnt_2_lg.jpg",
             "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
@@ -378,38 +407,28 @@
             ]
           },
           {
-            "id": "202507.3.8",
-            "time": 7,
-            "title": "8. Lokal na mga Pangangaipo",
-            "class": "part-title-living",
-            "thumbnail": "",
-            "thumbnailMode": "",
-            "roles": [
-              "elder"
-            ],
-            "writtable": true
-          },
-          {
-            "id": "202507.3.9",
+            "id": "202510.3.8",
             "time": 30,
-            "title": "9. Pag-adal sa Bibliya kan Kongregasyon",
+            "title": "8. Congregation Bible Study",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksiyon 2, intro sa seksiyon 2, asin leksiyon 3",
+            "reference": "lfb lesson 28, intro to section 6, and lesson 29",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202507.3.9.r",
+            "id": "202510.3.8.r",
             "class": "accessory",
+            "alt": "Reader:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202507.3.10",
+            "id": "202510.3.9",
             "time": 3,
+            "reference": "Concluding Comments",
             "roles": [
               "elder",
               "ms"
@@ -420,32 +439,33 @@
     },
     {
       "order": 4,
-      "id": "202507.4",
-      "week": "HULYO 28–AGOSTO 3",
-      "bibleReading": "TALINHAGA 24",
+      "id": "202510.4",
+      "week": "OCTOBER 27–NOVEMBER 2",
+      "bibleReading": "ECCLESIASTES 11-12",
       "songs": [
-        "38",
-        "99",
-        "112"
+        "155",
+        "111",
+        "8"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202507.4.0",
+            "id": "202510.4.0",
             "time": 1,
+            "reference": "Opening Comments",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202507.4.10"
+              "202510.4.9"
             ]
           },
           {
-            "id": "202507.4.1",
+            "id": "202510.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025244/univ/art/202025244_univ_sqs_lg.jpg",
-            "title": "1. Pakusugon an Saimong Sadiri Para Maatubang an mga Kasakitan",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025329/univ/art/202025329_univ_sqs_lg.jpg",
+            "title": "1. Enjoy a Happy, Healthy Life",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -453,10 +473,10 @@
             ]
           },
           {
-            "id": "202507.4.2",
+            "id": "202510.4.2",
             "time": 10,
             "reference": "",
-            "title": "2. Espirituwal na Kayamanan",
+            "title": "2. Spiritual Gems",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -464,10 +484,10 @@
             ]
           },
           {
-            "id": "202507.4.3",
+            "id": "202510.4.3",
             "time": 4,
-            "reference": "Tal 24:​1-20 (th leksiyon 11)",
-            "title": "3. Pagbasa sa Bibliya",
+            "reference": "Ec 12:1-14 (th study 12)",
+            "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -476,44 +496,33 @@
         ],
         "ministry": [
           {
-            "id": "202507.4.4",
-            "time": 2,
-            "title": "4. Pagpuon nin Pakikipag-ulay",
+            "id": "202510.4.4",
+            "time": 3,
+            "title": "4. Following Up",
             "class": "part-title-ministry",
-            "reference": "lmd leksiyon 2 punto 4",
+            "reference": "lmd lesson 8 point 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202507.4.5",
-            "time": 3,
-            "title": "5. Pagpuon nin Pakikipag-ulay",
+            "id": "202510.4.5",
+            "time": 4,
+            "title": "5. Following Up",
             "class": "part-title-ministry",
-            "reference": "lmd leksiyon 3 punto 4",
+            "reference": "lmd lesson 9 point 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202507.4.6",
-            "time": 3,
-            "title": "6. Pagpuon nin Pakikipag-ulay",
+            "id": "202510.4.6",
+            "time": 5,
+            "title": "6. Talk",
             "class": "part-title-ministry",
-            "reference": "lmd leksiyon 4 punto 3",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202507.4.7",
-            "time": 3,
-            "title": "7. Pahayag",
-            "class": "part-title-ministry",
-            "reference": "th leksiyon 6",
+            "reference": "th study 20",
             "thumbnail": "th",
             "roles": [
               "talk"
@@ -522,38 +531,40 @@
         ],
         "living": [
           {
-            "id": "202507.4.8",
+            "id": "202510.4.7",
             "time": 15,
-            "title": "8. Tabangan an Lambang Saro sa Panahon nin Kasakitan",
+            "title": "7. Local Needs",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025244/univ/art/202025244_univ_cnt_2_lg.jpg",
+            "thumbnail": "",
             "thumbnailMode": "",
             "roles": [
-              "elder",
-              "ms"
-            ]
+              "elder"
+            ],
+            "writtable": true
           },
           {
-            "id": "202507.4.9",
+            "id": "202510.4.8",
             "time": 30,
-            "title": "9. Pag-adal sa Bibliya kan Kongregasyon",
+            "title": "8. Congregation Bible Study",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksiyon 4-5",
+            "reference": "lfb lessons 30-31",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202507.4.9.r",
+            "id": "202510.4.8.r",
             "class": "accessory",
+            "alt": "Reader:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202507.4.10",
+            "id": "202510.4.9",
             "time": 3,
+            "reference": "Concluding Comments",
             "roles": [
               "elder",
               "ms"

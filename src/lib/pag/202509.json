@@ -1,0 +1,726 @@
+{
+  "period": "202509",
+  "display": "Setyembre 2025",
+  "title": "Eskedyul na Aral ed Midweek",
+  "theme": "#6185BD",
+  "publish": true,
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
+  "firstMonday": "2025-09-01",
+  "weeks": [
+    {
+      "order": 1,
+      "id": "202509.1",
+      "week": "SETYEMBRE 1-7",
+      "bibleReading": "PROVERBIO 29",
+      "songs": [
+        "28",
+        "159",
+        "31"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202509.1.0",
+            "time": 1,
+            "reference": "Introduksion",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202509.1.9"
+            ]
+          },
+          {
+            "id": "202509.1.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025321/univ/art/202025321_univ_sqs_lg.jpg",
+            "title": "1. Ipulisay Iray Kustombre ya Agmakapaliket ed si Jehova",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.1.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Saray Espiritual a Kayamanan",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.1.3",
+            "time": 4,
+            "reference": "Pro 29:​1-18 (th leksion 5)",
+            "title": "3. Panagbasa na Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202509.1.4",
+            "time": 3,
+            "title": "4. Pangigapo na Tongtongan",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 2 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202509.1.5",
+            "time": 4,
+            "title": "5. Pangigapo na Tongtongan",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 3 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202509.1.6",
+            "time": 5,
+            "title": "6. Pangigapo na Tongtongan",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 3 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202509.1.7",
+            "time": 15,
+            "title": "7. Lokal Iran Pankaukolan",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "thumbnailMode": "",
+            "roles": [
+              "elder"
+            ],
+            "writtable": true
+          },
+          {
+            "id": "202509.1.8",
+            "time": 30,
+            "title": "8. Panag-aral na Kongregasyon ed Biblia",
+            "class": "part-title-living",
+            "thumbnail": "lfb",
+            "reference": "lfb introduksion ed seksion 4 tan leksion 14-15",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202509.1.8.r",
+            "class": "accessory",
+            "alt": "Managbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202509.1.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "id": "202509.2",
+      "week": "SETYEMBRE 8-14",
+      "bibleReading": "PROVERBIO 30",
+      "songs": [
+        "136",
+        "80",
+        "128"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202509.2.0",
+            "time": 1,
+            "reference": "Introduksion",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202509.2.10"
+            ]
+          },
+          {
+            "id": "202509.2.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025322/univ/art/202025322_univ_sqs_lg.jpg",
+            "title": "1. “Agmo Ak Komon Aabuloyan a Manirap Odino Onyaman”",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.2.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Saray Espiritual a Kayamanan",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.2.3",
+            "time": 4,
+            "reference": "Pro 30:​1-14 (th leksion 2)",
+            "title": "3. Panagbasa na Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202509.2.4",
+            "time": 4,
+            "title": "4. Pangigapo na Tongtongan",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 1 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202509.2.5",
+            "time": 4,
+            "title": "5. Panagpawil",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 9 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202509.2.6",
+            "time": 4,
+            "title": "6. Ipaliwawa Iray Papanisiaan Mo",
+            "class": "part-title-ministry",
+            "reference": "th leksion 7",
+            "thumbnail": "th",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202509.2.7",
+            "time": 5,
+            "title": "7. Agpapanisiaan so Aliwan Tuan Kareenan!—Chibisa Selemani",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwbcov22/univ/art/jwbcov22_univ_wss_08_lg.jpg",
+            "thumbnailMode": "sqr-c",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.2.8",
+            "time": 10,
+            "title": "8. Saray Agawaan na Organisasyon Parad Setyembre",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "thumbnailMode": "sqr-c",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.2.9",
+            "time": 30,
+            "title": "9. Panag-aral na Kongregasyon ed Biblia",
+            "class": "part-title-living",
+            "thumbnail": "lfb",
+            "reference": "lfb leksion 16-17",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202509.2.9.r",
+            "class": "accessory",
+            "alt": "Managbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202509.2.10",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "id": "202509.3",
+      "week": "SETYEMBRE 15-21",
+      "bibleReading": "PROVERBIO 31",
+      "songs": [
+        "135",
+        "121",
+        "2"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202509.3.0",
+            "time": 1,
+            "reference": "Introduksion",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202509.3.10"
+            ]
+          },
+          {
+            "id": "202509.3.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025323/univ/art/202025323_univ_sqs_lg.jpg",
+            "title": "1. Saray Naaralan ed Maaron Bilin na Sakey ya Ina",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.3.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Saray Espiritual a Kayamanan",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.3.3",
+            "time": 4,
+            "reference": "Pro 31:​10-31 (th leksion 10)",
+            "title": "3. Panagbasa na Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202509.3.4",
+            "time": 3,
+            "title": "4. Pangigapo na Tongtongan",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 5 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202509.3.5",
+            "time": 4,
+            "title": "5. Pangigapo na Tongtongan",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 1 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202509.3.6",
+            "time": 5,
+            "title": "6. Panagpawil",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 7 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202509.3.7",
+            "time": 8,
+            "title": "7. Tulongan Iray Ananak Yo Pian Dugay Pangusar Da ed Saray Gadyet",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025323/univ/art/202025323_univ_cnt_2_lg.jpg",
+            "thumbnailMode": "sqr-c",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.3.8",
+            "time": 7,
+            "title": "8. Lokal Iran Pankaukolan",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "thumbnailMode": "",
+            "roles": [
+              "elder"
+            ],
+            "writtable": true
+          },
+          {
+            "id": "202509.3.9",
+            "time": 30,
+            "title": "9. Panag-aral na Kongregasyon ed Biblia",
+            "class": "part-title-living",
+            "thumbnail": "lfb",
+            "reference": "lfb leksion 18-19",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202509.3.9.r",
+            "class": "accessory",
+            "alt": "Managbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202509.3.10",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "id": "202509.4",
+      "week": "SETYEMBRE 22-28",
+      "bibleReading": "ECLESIASTES 1-2",
+      "songs": [
+        "103",
+        "84",
+        "148"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202509.4.0",
+            "time": 1,
+            "reference": "Introduksion",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202509.4.10"
+            ]
+          },
+          {
+            "id": "202509.4.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025324/univ/art/202025324_univ_sqs_lg.jpg",
+            "title": "1. Ituloy Yon Ipasal Iray Onsublay ya Henerasyon",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.4.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Saray Espiritual a Kayamanan",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.4.3",
+            "time": 4,
+            "reference": "Ec 1:​1-18 (th leksion 11)",
+            "title": "3. Panagbasa na Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202509.4.4",
+            "time": 2,
+            "title": "4. Pangigapo na Tongtongan",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 3 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202509.4.5",
+            "time": 2,
+            "title": "5. Pangigapo na Tongtongan",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 2 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202509.4.6",
+            "time": 2,
+            "title": "6. Panagpawil",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 9 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202509.4.7",
+            "time": 5,
+            "title": "7. Panaggaway Disipulo",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 10 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202509.4.8",
+            "time": 15,
+            "title": "8. Say Taloran Importantin Naaralan Nipaakar ed Panangipasal",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025324/univ/art/202025324_univ_cnt_2_lg.jpg",
+            "thumbnailMode": "sqr-r",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.4.9",
+            "time": 30,
+            "title": "9. Panag-aral na Kongregasyon ed Biblia",
+            "class": "part-title-living",
+            "thumbnail": "lfb",
+            "reference": "lfb leksion 20-21",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202509.4.9.r",
+            "class": "accessory",
+            "alt": "Managbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202509.4.10",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "id": "202509.5",
+      "week": "SETYEMBRE 29–OKTUBRE 5",
+      "bibleReading": "ECLESIASTES 3-4",
+      "songs": [
+        "93",
+        "131",
+        "51"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202509.5.0",
+            "time": 1,
+            "reference": "Introduksion",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202509.5.9"
+            ]
+          },
+          {
+            "id": "202509.5.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025325/univ/art/202025325_univ_sqs_lg.jpg",
+            "title": "1. Pabiskeg Yoy Relasyon Yon Sanasawa tan Say Relasyon Yod si Jehova",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.5.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Saray Espiritual a Kayamanan",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.5.3",
+            "time": 4,
+            "reference": "Ec 4:​1-16 (th leksion 2)",
+            "title": "3. Panagbasa na Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202509.5.4",
+            "time": 3,
+            "title": "4. Pangigapo na Tongtongan",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 2 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202509.5.5",
+            "time": 4,
+            "title": "5. Panagpawil",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 9 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202509.5.6",
+            "time": 5,
+            "title": "6. Paliwawa",
+            "class": "part-title-ministry",
+            "reference": "th leksion 19",
+            "thumbnail": "th",
+            "roles": [
+              "talk"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202509.5.7",
+            "time": 15,
+            "title": "7. No Wala ray Problema Yon Sanasawa, Agyo Ibabaliwalay Jehova",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025325/univ/art/202025325_univ_cnt_2_lg.jpg",
+            "thumbnailMode": "sqr-c",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202509.5.8",
+            "time": 30,
+            "title": "8. Panag-aral na Kongregasyon ed Biblia",
+            "class": "part-title-living",
+            "thumbnail": "lfb",
+            "reference": "lfb leksion 22, introduksion ed seksion 5, tan leksion 23",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202509.5.8.r",
+            "class": "accessory",
+            "alt": "Managbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202509.5.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
