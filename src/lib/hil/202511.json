@@ -1,41 +1,41 @@
 {
-  "period": "202510",
-  "display": "Oktubre 2025",
-  "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
-  "theme": "#6185BD",
+  "period": "202511",
+  "display": "Nobiembre 2025",
+  "title": "Eskedyul sa Cristianong Pagkabuhi kag Pagministeryo nga Miting",
+  "theme": "#7c6453",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
-  "firstMonday": "2025-10-06",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_sqs_lg.jpg",
+  "firstMonday": "2025-11-03",
   "weeks": [
     {
       "order": 1,
-      "id": "202510.1",
-      "week": "OKTUBRE 6-12",
-      "bibleReading": "ECLESIASTES 5-6",
+      "id": "202511.1",
+      "week": "NOBIEMBRE 3-9",
+      "bibleReading": "AMBAHANON NI SOLOMON 1-2",
       "songs": [
-        "42",
-        "160",
-        "34"
+        "132",
+        "46",
+        "137"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202510.1.0",
+            "id": "202511.1.0",
             "time": 1,
-            "reference": "Introduksyon",
+            "reference": "Nagabukas nga Komento",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202510.1.10"
+              "202511.1.9"
             ]
           },
           {
-            "id": "202510.1.1",
+            "id": "202511.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
-            "title": "1. Kon Paonan-o Ipapakita an Daku nga Respeto ha Aton Harangdon nga Dios",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_sqs_lg.jpg",
+            "title": "1. Isa ka Istorya sang Matuod nga Gugma",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -43,7 +43,7 @@
             ]
           },
           {
-            "id": "202510.1.2",
+            "id": "202511.1.2",
             "time": 10,
             "reference": "",
             "title": "2. Espirituwal nga mga Hiyas",
@@ -54,10 +54,10 @@
             ]
           },
           {
-            "id": "202510.1.3",
+            "id": "202511.1.3",
             "time": 4,
-            "reference": "Ec 5:​1-17 (th aradman 12)",
-            "title": "3. Pagbasa ha Biblia",
+            "reference": "Amb 2:1-17 (th tulun-an 12)",
+            "title": "3. Pagbasa sa Biblia",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -66,45 +66,34 @@
         ],
         "ministry": [
           {
-            "id": "202510.1.4",
-            "time": 1,
-            "title": "4. Pagtikang ha Pakiistorya",
-            "class": "part-title-ministry",
-            "reference": "lmd leksyon 4 punto 5",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202510.1.5",
-            "time": 2,
-            "title": "5. Pagtikang ha Pakiistorya",
-            "class": "part-title-ministry",
-            "reference": "lmd leksyon 1 punto 3",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202510.1.6",
+            "id": "202511.1.4",
             "time": 3,
-            "title": "6. Pakiistorya Utro",
+            "title": "4. Pagsugod sa Pag-istoryahanay",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 7 punto 3",
+            "reference": "lmd leksion 1 punto 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.1.7",
-            "time": 5,
-            "title": "7. Panhimo hin Disipulo",
+            "id": "202511.1.5",
+            "time": 4,
+            "title": "5. Pagbalik sa mga Interesado",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 11 punto 3",
+            "reference": "lmd leksion 9 punto 3",
             "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202511.1.6",
+            "time": 5,
+            "title": "6. Pagtudlo Agod Mangin Disipulo",
+            "class": "part-title-ministry",
+            "reference": "th tulun-an 8",
+            "thumbnail": "th",
             "roles": [
               "demo"
             ]
@@ -112,40 +101,40 @@
         ],
         "living": [
           {
-            "id": "202510.1.8",
+            "id": "202511.1.7",
             "time": 15,
-            "title": "8. Ginagamit Mo ba an “Mga Kamatuoran nga Karuyag Gud Naton Itutdo”?",
+            "title": "7. “Ang Tawo nga Maalwan Pakamaayuhon”",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_cnt_3_lg.jpg",
-            "thumbnailMode": "sqr-r",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_cnt_2_lg.jpg",
+            "thumbnailMode": "sqr-c",
             "roles": [
               "elder",
               "ms"
             ]
           },
           {
-            "id": "202510.1.9",
+            "id": "202511.1.8",
             "time": 30,
-            "title": "9. Pag-aram ha Biblia han Kongregasyon",
+            "title": "8. Pagtinuon sang Kongregasyon sa Biblia",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksyon 24-25",
+            "reference": "lfb leksion 32-33",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202510.1.9.r",
+            "id": "202511.1.8.r",
             "class": "accessory",
-            "alt": "Magbabasa:",
+            "alt": "Tagabasa:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202510.1.10",
+            "id": "202511.1.9",
             "time": 3,
-            "reference": "Konklusyon",
+            "reference": "Nagatakop nga Komento",
             "roles": [
               "elder",
               "ms"
@@ -156,33 +145,33 @@
     },
     {
       "order": 2,
-      "id": "202510.2",
-      "week": "OKTUBRE 13-19",
-      "bibleReading": "ECLESIASTES 7-8",
+      "id": "202511.2",
+      "week": "NOBIEMBRE 10-16",
+      "bibleReading": "AMBAHANON NI SOLOMON 3-5",
       "songs": [
-        "39",
-        "151",
-        "124"
+        "31",
+        "36",
+        "44"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202510.2.0",
+            "id": "202511.2.0",
             "time": 1,
-            "reference": "Introduksyon",
+            "reference": "Nagabukas nga Komento",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202510.2.10"
+              "202511.2.10"
             ]
           },
           {
-            "id": "202510.2.1",
+            "id": "202511.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_sqs_lg.jpg",
-            "title": "1. ‘Pakadto ha Balay nga May Pagtaguminatay’",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_sqs_lg.jpg",
+            "title": "1. Importante ang Matahom nga mga Kinaiya",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -190,7 +179,7 @@
             ]
           },
           {
-            "id": "202510.2.2",
+            "id": "202511.2.2",
             "time": 10,
             "reference": "",
             "title": "2. Espirituwal nga mga Hiyas",
@@ -201,10 +190,10 @@
             ]
           },
           {
-            "id": "202510.2.3",
+            "id": "202511.2.3",
             "time": 4,
-            "reference": "Ec 8:​1-13 (th aradman 10)",
-            "title": "3. Pagbasa ha Biblia",
+            "reference": "Amb 4:1-16 (th tulun-an 2)",
+            "title": "3. Pagbasa sa Biblia",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -213,86 +202,87 @@
         ],
         "ministry": [
           {
-            "id": "202510.2.4",
-            "time": 2,
-            "title": "4. Pagtikang ha Pakiistorya",
+            "id": "202511.2.4",
+            "time": 3,
+            "title": "4. Pagsugod sa Pag-istoryahanay",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 2 punto 4",
+            "reference": "lmd leksion 6 punto 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.2.5",
-            "time": 2,
-            "title": "5. Pagtikang ha Pakiistorya",
+            "id": "202511.2.5",
+            "time": 4,
+            "title": "5. Pagsugod sa Pag-istoryahanay",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 2 punto 3",
+            "reference": "lmd leksion 4 punto 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.2.6",
-            "time": 2,
-            "title": "6. Pakiistorya Utro",
-            "class": "part-title-ministry",
-            "reference": "lmd leksyon 9 punto 4",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202510.2.7",
+            "id": "202511.2.6",
             "time": 5,
-            "title": "7. Pagsaysay han Imo mga Gintotoohan",
+            "title": "6. Pamulongpulong",
             "class": "part-title-ministry",
-            "reference": "th aradman 17",
+            "reference": "th tulun-an 1",
             "thumbnail": "th",
             "roles": [
-              "demo"
+              "talk"
             ]
           }
         ],
         "living": [
           {
-            "id": "202510.2.8",
-            "time": 15,
-            "title": "8. Magkaada Marig-on nga Pagtoo ha Pagkabanhaw",
+            "id": "202511.2.7",
+            "time": 8,
+            "title": "7. Magpangasawa Ukon Magpamana sa Sumulunod Lamang sang Ginuo (Ge 28:2)",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-r",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwbmw/201501/univ/art/jwbmw_univ_201501_wss_05_lg.jpg",
+            "thumbnailMode": "sqr-c",
             "roles": [
               "elder",
               "ms"
             ]
           },
           {
-            "id": "202510.2.9",
+            "id": "202511.2.8",
+            "time": 7,
+            "title": "8. Mangin Maayo Ka Bala nga Bana Ukon Asawa?",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_cnt_2_lg.jpg",
+            "thumbnailMode": "sqr-c",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202511.2.9",
             "time": 30,
-            "title": "9. Pag-aram ha Biblia han Kongregasyon",
+            "title": "9. Pagtinuon sang Kongregasyon sa Biblia",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksyon 26-27",
+            "reference": "lfb leksion 34-35",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202510.2.9.r",
+            "id": "202511.2.9.r",
             "class": "accessory",
-            "alt": "Magbabasa:",
+            "alt": "Tagabasa:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202510.2.10",
+            "id": "202511.2.10",
             "time": 3,
-            "reference": "Konklusyon",
+            "reference": "Nagatakop nga Komento",
             "roles": [
               "elder",
               "ms"
@@ -303,33 +293,33 @@
     },
     {
       "order": 3,
-      "id": "202510.3",
-      "week": "OKTUBRE 20-26",
-      "bibleReading": "ECLESIASTES 9-10",
+      "id": "202511.3",
+      "week": "NOBIEMBRE 17-23",
+      "bibleReading": "AMBAHANON NI SOLOMON 6-8",
       "songs": [
-        "30",
-        "47",
-        "28"
+        "34",
+        "121",
+        "51"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202510.3.0",
+            "id": "202511.3.0",
             "time": 1,
-            "reference": "Introduksyon",
+            "reference": "Nagabukas nga Komento",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202510.3.9"
+              "202511.3.10"
             ]
           },
           {
-            "id": "202510.3.1",
+            "id": "202511.3.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025328/univ/art/202025328_univ_sqs_lg.jpg",
-            "title": "1. Magkaada Tama nga Panhunahuna ha Imo mga Problema",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025403/univ/art/202025403_univ_sqs_lg.jpg",
+            "title": "1. Mangin Pader, Indi Ganhaan",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -337,7 +327,7 @@
             ]
           },
           {
-            "id": "202510.3.2",
+            "id": "202511.3.2",
             "time": 10,
             "reference": "",
             "title": "2. Espirituwal nga mga Hiyas",
@@ -348,10 +338,10 @@
             ]
           },
           {
-            "id": "202510.3.3",
+            "id": "202511.3.3",
             "time": 4,
-            "reference": "Ec 10:​1-20 (th aradman 11)",
-            "title": "3. Pagbasa ha Biblia",
+            "reference": "Amb 4:1-13 (th tulun-an 12)",
+            "title": "3. Pagbasa sa Biblia",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -360,34 +350,45 @@
         ],
         "ministry": [
           {
-            "id": "202510.3.4",
-            "time": 3,
-            "title": "4. Pagtikang ha Pakiistorya",
+            "id": "202511.3.4",
+            "time": 2,
+            "title": "4. Pagsugod sa Pag-istoryahanay",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 3 punto 4",
+            "reference": "lmd leksion 4 punto 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.3.5",
-            "time": 4,
-            "title": "5. Pagtikang ha Pakiistorya",
+            "id": "202511.3.5",
+            "time": 2,
+            "title": "5. Pagsugod sa Pag-istoryahanay",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 4 punto 4",
+            "reference": "lmd leksion 1 punto 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.3.6",
+            "id": "202511.3.6",
+            "time": 2,
+            "title": "6. Pagsugod sa Pag-istoryahanay",
+            "class": "part-title-ministry",
+            "reference": "lmd leksion 2 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202511.3.7",
             "time": 5,
-            "title": "6. Panhimo hin Disipulo",
+            "title": "7. Pagpaathag sang Imo Pagpati",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 12 punto 3",
-            "thumbnail": "lmd",
+            "reference": "th tulun-an 7",
+            "thumbnail": "th",
             "roles": [
               "demo"
             ]
@@ -395,11 +396,11 @@
         ],
         "living": [
           {
-            "id": "202510.3.7",
+            "id": "202511.3.8",
             "time": 15,
-            "title": "7. Bubuligan Ka ni Jehova ha Panahon han Trahedya",
+            "title": "8. Palagyo Kamo sa Seksuwal nga Imoralidad",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025328/univ/art/202025328_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025403/univ/art/202025403_univ_cnt_2_lg.jpg",
             "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
@@ -407,28 +408,28 @@
             ]
           },
           {
-            "id": "202510.3.8",
+            "id": "202511.3.9",
             "time": 30,
-            "title": "8. Pag-aram ha Biblia han Kongregasyon",
+            "title": "9. Pagtinuon sang Kongregasyon sa Biblia",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksyon 28, introduksyon ha seksyon 6, ngan leksyon 29",
+            "reference": "lfb leksion 36-37",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202510.3.8.r",
+            "id": "202511.3.9.r",
             "class": "accessory",
-            "alt": "Magbabasa:",
+            "alt": "Tagabasa:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202510.3.9",
+            "id": "202511.3.10",
             "time": 3,
-            "reference": "Konklusyon",
+            "reference": "Nagatakop nga Komento",
             "roles": [
               "elder",
               "ms"
@@ -439,33 +440,33 @@
     },
     {
       "order": 4,
-      "id": "202510.4",
-      "week": "OKTUBRE 27–NOBYEMBRE 2",
-      "bibleReading": "ECLESIASTES 11-12",
+      "id": "202511.4",
+      "week": "NOBIEMBRE 24-30",
+      "bibleReading": "ISAIAS 1-2",
       "songs": [
-        "155",
-        "111",
-        "8"
+        "44",
+        "38",
+        "89"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202510.4.0",
+            "id": "202511.4.0",
             "time": 1,
-            "reference": "Introduksyon",
+            "reference": "Nagabukas nga Komento",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202510.4.9"
+              "202511.4.9"
             ]
           },
           {
-            "id": "202510.4.1",
+            "id": "202511.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025329/univ/art/202025329_univ_sqs_lg.jpg",
-            "title": "1. Magkaada Malipayon Ngan Mahimsog nga Kinabuhi",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025404/univ/art/202025404_univ_sqs_lg.jpg",
+            "title": "1. May Paglaum Para sa mga Tawo nga “Madamo sing Kasaypanan”",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -473,7 +474,7 @@
             ]
           },
           {
-            "id": "202510.4.2",
+            "id": "202511.4.2",
             "time": 10,
             "reference": "",
             "title": "2. Espirituwal nga mga Hiyas",
@@ -484,10 +485,10 @@
             ]
           },
           {
-            "id": "202510.4.3",
+            "id": "202511.4.3",
             "time": 4,
-            "reference": "Ec 12:​1-14 (th aradman 12)",
-            "title": "3. Pagbasa ha Biblia",
+            "reference": "Isa 2:1-11 (th tulun-an 11)",
+            "title": "3. Pagbasa sa Biblia",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -496,33 +497,33 @@
         ],
         "ministry": [
           {
-            "id": "202510.4.4",
+            "id": "202511.4.4",
             "time": 3,
-            "title": "4. Pakiistorya Utro",
+            "title": "4. Pagsugod sa Pag-istoryahanay",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 8 punto 3",
+            "reference": "lmd leksion 3 punto 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.4.5",
+            "id": "202511.4.5",
             "time": 4,
-            "title": "5. Pakiistorya Utro",
+            "title": "5. Pagbalik sa mga Interesado",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 9 punto 3",
+            "reference": "lmd leksion 7 punto 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.4.6",
+            "id": "202511.4.6",
             "time": 5,
-            "title": "6. Pahayag",
+            "title": "6. Pamulongpulong",
             "class": "part-title-ministry",
-            "reference": "th aradman 20",
+            "reference": "th tulun-an 20",
             "thumbnail": "th",
             "roles": [
               "talk"
@@ -531,40 +532,40 @@
         ],
         "living": [
           {
-            "id": "202510.4.7",
+            "id": "202511.4.7",
             "time": 15,
-            "title": "7. Lokal nga mga Panginahanglan",
+            "title": "7. Mangin Abyan ni Jehova—Si Jehova Nagapatawad",
             "class": "part-title-living",
-            "thumbnail": "",
-            "thumbnailMode": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/501600114/univ/art/501600114_univ_lsr_lg.jpg",
+            "thumbnailMode": "sqr-c",
             "roles": [
-              "elder"
-            ],
-            "writtable": true
+              "elder",
+              "ms"
+            ]
           },
           {
-            "id": "202510.4.8",
+            "id": "202511.4.8",
             "time": 30,
-            "title": "8. Pag-aram ha Biblia han Kongregasyon",
+            "title": "8. Pagtinuon sang Kongregasyon sa Biblia",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksyon 30-31",
+            "reference": "lfb leksion 38, introduksion sa seksion 7, kag leksion 39",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202510.4.8.r",
+            "id": "202511.4.8.r",
             "class": "accessory",
-            "alt": "Magbabasa:",
+            "alt": "Tagabasa:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202510.4.9",
+            "id": "202511.4.9",
             "time": 3,
-            "reference": "Konklusyon",
+            "reference": "Nagatakop nga Komento",
             "roles": [
               "elder",
               "ms"
