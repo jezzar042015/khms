@@ -3,7 +3,7 @@
   "display": "September 2025",
   "title": "Our Christian Life and Ministry Meeting Schedule",
   "theme": "#6185BD",
-  "publish": false,
+  "publish": true,
   "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
   "firstMonday": "2025-09-01",
   "weeks": [
@@ -56,7 +56,7 @@
           {
             "id": "202509.1.3",
             "time": 4,
-            "reference": "Pr 29:1-18 (th study 5)",
+            "reference": "Pr 29:1-13 (th 5)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -117,8 +117,8 @@
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt Section 3; 9:1-7, Box 2",
             "roles": [
               "cbs"
             ]
@@ -184,7 +184,7 @@
           {
             "id": "202509.2.3",
             "time": 4,
-            "reference": "Pr 30:1-14 (th study 2)",
+            "reference": "Pr 30:1-10 (th 2)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -245,7 +245,7 @@
             "time": 10,
             "title": "8. Organizational Accomplishments for September",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep23/univ/art/com-rep23_univ_wss_03_lg.jpg",
             "thumbnailMode": "sqr-c",
             "roles": [
               "elder",
@@ -257,8 +257,8 @@
             "time": 30,
             "title": "9. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 9:8-16",
             "roles": [
               "cbs"
             ]
@@ -324,7 +324,7 @@
           {
             "id": "202509.3.3",
             "time": 4,
-            "reference": "Pr 31:10-31 (th study 10)",
+            "reference": "Pr 31:10-24 (th 10)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -397,8 +397,8 @@
             "time": 30,
             "title": "9. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 9:17-24, Box 1",
             "roles": [
               "cbs"
             ]
@@ -464,7 +464,7 @@
           {
             "id": "202509.4.3",
             "time": 4,
-            "reference": "Ec 1:1-18 (th study 11)",
+            "reference": "Ec 1:1-15 (th 11)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -536,8 +536,8 @@
             "time": 30,
             "title": "9. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 10:1-4, Box",
             "roles": [
               "cbs"
             ]
@@ -557,7 +557,7 @@
     {
       "order": 5,
       "id": "202509.5",
-      "week": "SEPTEMBER 29–OCTOBER 5",
+      "week": "SEP 29–OCT 5",
       "bibleReading": "ECCLESIASTES 3-4",
       "songs": [
         "93",
@@ -603,7 +603,7 @@
           {
             "id": "202509.5.3",
             "time": 4,
-            "reference": "Ec 4:1-16 (th study 2)",
+            "reference": "Ec 4:1-12 (th 2)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -664,8 +664,8 @@
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 10:5-12",
             "roles": [
               "cbs"
             ]

@@ -253,7 +253,7 @@
             "time": 10,
             "title": "8. Mga Nagawa ng Organisasyon Para sa Setyembre",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep23/univ/art/com-rep23_univ_wss_03_lg.jpg",
             "thumbnailMode": "sqr-c",
             "roles": [
               "elder",
@@ -589,7 +589,7 @@
     {
       "order": 5,
       "id": "202509.5",
-      "week": "SETYEMBRE 29–OKTUBRE 5",
+      "week": "SET 29–OKT 5",
       "bibleReading": "ECLESIASTES 3-4",
       "songs": [
         "93",
