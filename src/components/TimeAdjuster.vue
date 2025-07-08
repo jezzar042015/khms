@@ -11,7 +11,12 @@
         </div>
         <div class="input">
             <label for="">Minutes</label>
-            <input type="number" :min="1" :max="60" v-model="time">
+            <div class="col-2">
+                <input type="number" :min="1" :max="60" v-model="time">
+                <button v-if="part.time != activeTime" class="btn" @click="restore">Restore to {{ part.time
+                    }}min</button>
+            </div>
+
         </div>
         <div>
 
@@ -24,8 +29,9 @@
     import { onClickOutside } from '@vueuse/core'
     import type { PartItem } from '@/types/files';
 
-    const { part } = defineProps<{
+    const { part, activeTime } = defineProps<{
         part: PartItem
+        activeTime: number
     }>()
 
     const emits = defineEmits(['close'])
@@ -37,8 +43,12 @@
         emits('close', time.value)
     }
 
+    const restore = () => {
+        emits('close', part.time)
+    }
+
     onMounted(() => {
-        time.value = part.time
+        time.value = activeTime
     })
 </script>
 
@@ -93,13 +103,31 @@
 
     .input input
     {
-        width: 60%;
+        width: 50%;
         border: none;
         border-bottom: 1px solid gray;
         padding: 10px;
-        border-radius: 2px;
         outline: none;
         font-size: x-large;
 
+    }
+
+    .col-2
+    {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .btn
+    {
+        padding: 6px 20px;
+        border: 1px #3DA8EA solid;
+        background: #ffffff;
+        color: #3DA8EA;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: .70em;
+        width: 50%;
     }
 </style>

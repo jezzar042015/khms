@@ -2,10 +2,11 @@
     <div :class="{ 'pt-wrapper': part.class !== 'accessory' }">
         <div :class="itemClasses">
             <span class="relative">
-                <span :class="{ 'timer': isLiving }" @click="timerAdjuster = !timerAdjuster">
+                <span :class="{ 'timer': isLiving && part.title }" @click="timerAdjuster = !timerAdjuster">
                     {{ time }}
                 </span>
-                <TimeAdjuster :part="part" v-if="isLiving && timerAdjuster" @close="updatePartTime" />
+                <TimeAdjuster :active-time="partItem.time" :part="part" v-if="isLiving && timerAdjuster && part.title"
+                    @close="updatePartTime" />
             </span>
             <span v-if="part.thumbnail">
                 <div class="part-thumbnail">
