@@ -1,57 +1,86 @@
 <template>
-    <div :class="itemClasses">
-        <span>{{ time }}</span>
-        <span v-if="part.thumbnail">
-            <div class="part-thumbnail">
-                <img :src="thumbnail ?? ''" alt="" :class="thumbnailImageClass">
-            </div>
-        </span>
-        <span v-else class="thumbnail-alt">{{ part.alt }}</span>
+    <div :class="{ 'pt-wrapper': part.class !== 'accessory' }">
+        <div :class="itemClasses">
+            <span class="relative">
+                <span :class="{ 'timer': isLiving }" @click="timerAdjuster = !timerAdjuster">
+                    {{ time }}
+                </span>
+                <TimeAdjuster :part="part" v-if="isLiving && timerAdjuster" @close="updatePartTime" />
+            </span>
+            <span v-if="part.thumbnail">
+                <div class="part-thumbnail">
+                    <img :src="thumbnail ?? ''" alt="" :class="thumbnailImageClass">
+                </div>
+            </span>
+            <span v-else class="thumbnail-alt">{{ part.alt }}</span>
 
-        <span>
-            <div @click="startOverride" v-if="showTitle" :class="[part.class, { 'writtable': part.writtable }]">
-                {{ displayTitle }}
-            </div>
+            <span>
+                <div @click="startOverride" v-if="showTitle" :class="[part.class, { 'writtable': part.writtable }]">
+                    {{ displayTitle }}
+                </div>
 
-            <div v-if="isOverriding" class="editor" ref="editor">
-                <textarea type="text" v-model="overrideText" :class="part.class"></textarea>
-            </div>
-            <div class="generic-label">{{ part.reference }}</div>
-            <div class="assignee" @click="showSelector">
-                <div :class="assignClasses">{{ displayAssignee }}</div>
-                <AssignmentSelector v-if="selector" :part="partItem" :triggered="triggered" @hide="hideSelector"
-                    @trigger-off="triggerOff" />
-            </div>
-        </span>
+                <div v-if="isOverriding" class="editor" ref="editor">
+                    <textarea type="text" v-model="overrideText" :class="part.class"></textarea>
+                </div>
+                <div class="generic-label">{{ part.reference }}</div>
+                <div class="assignee" @click="showSelector">
+                    <div :class="assignClasses">{{ displayAssignee }}</div>
+                    <AssignmentSelector v-if="selector" :part="partItem" :triggered="triggered" @hide="hideSelector"
+                        @trigger-off="triggerOff" />
+                </div>
+            </span>
+        </div>
+
     </div>
 </template>
 
 <script setup lang="ts">
     import { computed, nextTick, ref, watch } from 'vue';
-    import { useAssignmentStore } from '@/stores/assignment';
-    import { usePublisherStore } from '@/stores/publisher';
-    import { useOverridesStore } from '@/stores/overrides';
     import { onClickOutside } from '@vueuse/core';
+    import { useAssignmentStore } from '@/stores/assignment';
+    import { useOverridesStore } from '@/stores/overrides';
+    import { usePublisherStore } from '@/stores/publisher';
+    import { useTimeOverrides } from '@/stores/timeOverrides';
     import type { PartItem } from '@/types/files';
 
     import thumbnails from '@/assets/utils/thumbnails';
     import AssignmentSelector from '@/components/AssignmentSelector.vue';
+    import TimeAdjuster from '@/components/TimeAdjuster.vue';
 
-
-    const { part } = defineProps<{
+    const { part, isLiving = false } = defineProps<{
         part: PartItem
+        isLiving?: boolean
     }>()
 
     const partItem = ref<PartItem>(
         { ...part }
     )
 
+    const timerAdjuster = ref(false)
     const selector = ref(false)
     const triggered = ref(false)
+
+    const updatePartTime = (time: number) => {
+        if (time !== partItem.value.time) {
+            partItem.value.time = time
+            timeOverrides.save({
+                id: part.id,
+                time: time
+            })
+        }
+
+        if (time === part.time) {
+            const storedOverride = timeOverrides.read(part.id)?.time ?? 0
+            if (storedOverride > 0) timeOverrides.remove(part.id)
+        }
+
+        timerAdjuster.value = false
+    }
 
     const assignmentStore = useAssignmentStore();
     const pubStore = usePublisherStore()
     const overrides = useOverridesStore()
+    const timeOverrides = useTimeOverrides()
 
     const isDemo = computed(() => part.roles?.includes('demo'))
     const isBibleReading = computed(() => part.roles?.includes('br'))
@@ -110,8 +139,8 @@
     });
 
     const time = computed<string | null>(() => {
-        if (!part.time) return null
-        return `${part.time}m`
+        if (!partItem.value.time) return null
+        return `${partItem.value.time}m`
     })
 
     const itemClasses = computed<string>(() => {
@@ -179,6 +208,11 @@
         () => part.id,
         () => {
             overrideText.value = overrides.read(part.id)?.title ?? ''
+            const time = timeOverrides.read(part.id)?.time ?? ''
+
+            if (time) {
+                partItem.value.time = time
+            }
         },
         { immediate: true })
 
@@ -212,5 +246,23 @@
         resize: none;
         width: 100%;
         font-size: 1em;
+    }
+
+    .timer
+    {
+        padding-right: 6px;
+        padding-bottom: 6px;
+        cursor: pointer;
+        transition: all;
+    }
+
+    .timer:hover
+    {
+        color: skyblue;
+    }
+
+    .pt-wrapper
+    {
+        position: relative;
     }
 </style>
