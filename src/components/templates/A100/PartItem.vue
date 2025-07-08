@@ -5,7 +5,7 @@
                 <span :class="{ 'timer': isLiving && part.title }" @click="timerAdjuster = !timerAdjuster">
                     {{ time }}
                 </span>
-                <TimeAdjuster :active-time="partItem.time" :part="part" v-if="isLiving && timerAdjuster && part.title"
+                <TimeAdjuster :part-item="partItem" :part="part" v-if="isLiving && timerAdjuster && part.title"
                     @close="updatePartTime" />
             </span>
             <span v-if="part.thumbnail">
@@ -62,6 +62,11 @@
     const triggered = ref(false)
 
     const updatePartTime = (time: number) => {
+
+        timerAdjuster.value = false
+
+        if (Number(time) == 0) return
+
         if (time !== partItem.value.time) {
             partItem.value.time = time
             timeOverrides.save({
@@ -74,8 +79,6 @@
             const storedOverride = timeOverrides.read(part.id)?.time ?? 0
             if (storedOverride > 0) timeOverrides.remove(part.id)
         }
-
-        timerAdjuster.value = false
     }
 
     const assignmentStore = useAssignmentStore();
@@ -194,7 +197,10 @@
     const endOverride = () => {
         isOverriding.value = false
 
+        partItem.value.title = overrideText.value
+
         if (!overrideText.value || overrideText.value == part.title) {
+            partItem.value.title = part.title
             overrides.remove(part.id)
             return
         }
@@ -211,9 +217,8 @@
             overrideText.value = overrides.read(part.id)?.title ?? ''
             const time = timeOverrides.read(part.id)?.time ?? ''
 
-            if (time) {
-                partItem.value.time = time
-            }
+            if (time) partItem.value.time = time
+            if (overrideText.value) partItem.value.title = overrideText.value
         },
         { immediate: true })
 

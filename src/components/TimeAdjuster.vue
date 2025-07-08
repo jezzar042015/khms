@@ -6,15 +6,15 @@
         <div class="bar"></div>
         <div>
             <p class="tc-title">
-                {{ part.title }}
+                {{ partItem.title }}
             </p>
         </div>
         <div class="input">
             <label for="">Minutes</label>
             <div class="col-2">
                 <input type="number" :min="1" :max="60" v-model="time">
-                <button v-if="part.time != activeTime" class="btn" @click="restore">Restore to {{ part.time
-                    }}min</button>
+                <button v-if="part.time != partItem.time" class="btn" @click="restore">Restore to {{ part.time
+                }}min</button>
             </div>
 
         </div>
@@ -29,9 +29,9 @@
     import { onClickOutside } from '@vueuse/core'
     import type { PartItem } from '@/types/files';
 
-    const { part, activeTime } = defineProps<{
+    const { part, partItem } = defineProps<{
         part: PartItem
-        activeTime: number
+        partItem: PartItem
     }>()
 
     const emits = defineEmits(['close'])
@@ -48,7 +48,7 @@
     }
 
     onMounted(() => {
-        time.value = activeTime
+        time.value = partItem.time
     })
 </script>
 
