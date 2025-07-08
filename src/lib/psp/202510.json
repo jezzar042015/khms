@@ -3,7 +3,7 @@
   "display": "October 2025",
   "title": "Our Christian Life and Ministry Meeting Schedule",
   "theme": "#6185BD",
-  "publish": false,
+  "publish": true,
   "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
   "firstMonday": "2025-10-06",
   "weeks": [
@@ -56,7 +56,7 @@
           {
             "id": "202510.1.3",
             "time": 4,
-            "reference": "Ec 5:1-17 (th study 12)",
+            "reference": "Ec 5:1-10 (th 12)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -128,8 +128,8 @@
             "time": 30,
             "title": "9. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 10:13-21",
             "roles": [
               "cbs"
             ]
@@ -195,7 +195,7 @@
           {
             "id": "202510.2.3",
             "time": 4,
-            "reference": "Ec 8:1-13 (th study 10)",
+            "reference": " Ec 8:1-13 (th 10)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -267,8 +267,8 @@
             "time": 30,
             "title": "9. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt Section 4; 11:1-4, Box 1, Box 2",
             "roles": [
               "cbs"
             ]
@@ -334,7 +334,7 @@
           {
             "id": "202510.3.3",
             "time": 4,
-            "reference": "Ec 10:1-20 (th study 11)",
+            "reference": "Ec 10:1-15 (th 11)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -395,8 +395,8 @@
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 11:5-10, Box 3",
             "roles": [
               "cbs"
             ]
@@ -416,7 +416,7 @@
     {
       "order": 4,
       "id": "202510.4",
-      "week": "OCTOBER 27–NOVEMBER 2",
+      "week": "OCT 27–NOV 2",
       "bibleReading": "ECCLESIASTES 11-12",
       "songs": [
         "155",
@@ -462,7 +462,7 @@
           {
             "id": "202510.4.3",
             "time": 4,
-            "reference": "Ec 12:1-14 (th study 12)",
+            "reference": "Ec 12:1-8 (th 12)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -523,8 +523,8 @@
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 11:11-19",
             "roles": [
               "cbs"
             ]
