@@ -1,4 +1,4 @@
-import type { TimeOverride } from "@/types/time-override";
+import type { TimeOverride } from "@/types/override-time";
 import { useStorage } from "@vueuse/core";
 import { defineStore } from "pinia";
 

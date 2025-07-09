@@ -1,10 +1,11 @@
 import { computed, ref, watch, watchEffect } from "vue";
 import { defineStore } from "pinia";
 import { cloneDeep } from 'lodash';
-import { useCongregationStore } from "./congregation";
-import { useVisitStore } from "./visits";
-import { useEventStore } from "./events";
 import { useAssignmentStore } from "./assignment";
+import { useCongregationStore } from "./congregation";
+import { useEventStore } from "./events";
+import { usePartsOverride } from "./overrides-part";
+import { useVisitStore } from "./visits";
 import { s140Builder } from "@/assets/utils/composer";
 import type { Content, LangMonth, PartItem, S140PartWeeks } from "@/types/files";
 import type { VisitDetail } from "@/types/visit";
@@ -24,6 +25,7 @@ export const useFilesStore = defineStore('files', () => {
 
     const congStore = useCongregationStore()
     const assignStore = useAssignmentStore()
+    const partOverride = usePartsOverride()
     const langMonths = ref<LangMonth[]>([])
     const currentPeriod = ref('')
 
@@ -201,6 +203,7 @@ export const useFilesStore = defineStore('files', () => {
             }
         }
     }
+
     async function extractJsonFilesToArray(jsonfiles: Record<string, any>): Promise<LangMonth[]> {
         const result: LangMonth[] = [];
         for (const path in jsonfiles) {
@@ -248,11 +251,28 @@ export const useFilesStore = defineStore('files', () => {
             loadedMonth.value = cloned
         }
 
+        await handlePartOverrides()
+
         await loadMonthVisit()
         await loadMonthEvent()
         await composeS140()
         await assignStore.loadMonthAssignments()
 
+    }
+
+    const handlePartOverrides = async () => {
+        if (!loadedMonth.value) return
+
+        const partsOverrideOnCurrentPeriod = partOverride.stored.filter(p => p.id.startsWith(`${currentPeriod.value}.`))
+
+        if (partsOverrideOnCurrentPeriod.length == 0) return
+        for (const part of partsOverrideOnCurrentPeriod) {
+            const weekNum = Number(part.id.split('.')[1])
+            const beforeToId = part.id.replace('.nsrt', '')
+            const refIdPosition = loadedMonth.value.content.weeks[weekNum - 1].parts.living.findIndex(p => p.id === beforeToId)
+            if (refIdPosition == -1 || refIdPosition == undefined) return
+            loadedMonth.value?.content.weeks[weekNum - 1].parts.living.splice(refIdPosition + 1, 0, part)
+        }
     }
 
     async function composeS140(): Promise<void> {
@@ -310,6 +330,30 @@ export const useFilesStore = defineStore('files', () => {
         if (detail.sjj) targetWeek.songs[2] = detail.sjj
     }
 
+    async function insertLivingItem(id: string): Promise<void> {
+        if (!loadedMonth.value) return
+        const newPart: PartItem = {
+            title: 'Local Needs',
+            id: `${id}.nsrt`,
+            class: "part-title-living",
+            roles: ['elder'],
+            time: 3,
+        }
+
+        const weekNum = Number(id.split('.')[1])
+        const refIdPosition = loadedMonth.value.content.weeks[weekNum - 1].parts.living.findIndex(p => p.id === id)
+        if (refIdPosition == -1 || refIdPosition == undefined) return
+        loadedMonth.value?.content.weeks[weekNum - 1].parts.living.splice(refIdPosition + 1, 0, newPart)
+        partOverride.save(newPart)
+    }
+
+    async function removeLivingItem(id: string): Promise<void> {
+        if (!loadedMonth.value) return
+        const weekNum = Number(id.split('.')[1])
+        loadedMonth.value.content.weeks[weekNum - 1].parts.living = loadedMonth.value.content.weeks[weekNum - 1].parts.living.filter(i => i.id !== id)
+        partOverride.remove(id)
+    }
+
     watch(() => [currentPeriod.value, congStore.congregation.lang],
         async ([period, lang]) => {
 
@@ -331,7 +375,9 @@ export const useFilesStore = defineStore('files', () => {
         langMonths, loadedMonth,
         loadMonthTemplate,
         templates, s140PartItems, weekOptions,
-        activeMonthIds
+        activeMonthIds,
+        insertLivingItem,
+        removeLivingItem
     }
 })
 
