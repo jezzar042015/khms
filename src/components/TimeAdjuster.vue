@@ -13,10 +13,10 @@
             <label for="">{{ time }} minute{{ time == 1 ? '' : 's' }}</label>
             <div class="col-2">
                 <input type="range" :min="1" :max="60" v-model="time">
-                <button v-if="part.time != partItem.time" class="btn" @click="restore">Restore to {{ part.time
-                    }}min</button>
+                <button v-if="part.time != partItem.time" class="btn" @click="restore">
+                    Restore to {{ part.time }}min
+                </button>
             </div>
-
         </div>
         <div>
 
@@ -62,8 +62,8 @@
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         position: absolute;
         z-index: 10;
-        min-width: 300px;
-        right: 50px;
+        min-width: 280px;
+        left: 25px;
         top: -40px;
         font-size: large;
     }

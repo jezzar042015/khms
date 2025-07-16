@@ -1,12 +1,11 @@
 <template>
-    <div :class="[{ 'pt-wrapper': part.class !== 'accessory' }]">
+    <div :class="[{ 'pt-wrapper': part.class !== 'accessory' }, { 'inserter': true }]">
         <div :class="itemClasses">
             <span class="relative">
-                <span :class="{ 'timer': isLiving && part.title }" @click="timerAdjuster = !timerAdjuster">
+                <span :class="{ 'timer': isTimerAdjustable }" @click="timerAdjuster = !timerAdjuster">
                     {{ time }}
                 </span>
-                <TimeAdjuster :part-item="partItem" :part="part" v-if="isLiving && timerAdjuster && part.title"
-                    @close="updatePartTime" />
+                <TimeAdjuster :part-item="partItem" :part="part" v-if="showTimeAdjuster" @close="updatePartTime" />
             </span>
             <span v-if="part.thumbnail">
                 <div class="part-thumbnail">
@@ -58,6 +57,7 @@
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
     import IconPlus from '@/components/icons/IconPlus.vue';
     import IconMinus from '@/components/icons/IconMinus.vue';
+    import { useCongregationStore } from '@/stores/congregation';
 
     const { part, isLiving = false, hasInsert = false } = defineProps<{
         part: PartItem
@@ -99,6 +99,7 @@
     const pubStore = usePublisherStore()
     const overrides = useOverridesStore()
     const timeOverrides = useTimeOverrides()
+    const congStore = useCongregationStore()
 
     const isDemo = computed(() => part.roles?.includes('demo'))
     const isBibleReading = computed(() => part.roles?.includes('br'))
@@ -167,8 +168,28 @@
         return 'part-item'
     })
 
-    const showInserterBtn = computed(() => isLiving && partItem.value.title && !hasInsert)
+    // can only add part item inside living parts
+    const showInserterBtn = computed(() => {
+        const isFslCBS = partItem.value.roles.includes('cbs') && congStore.congregation.lang == 'psp'
+        const isNonFslCBS = partItem.value.roles.includes('cbs') && congStore.congregation.lang !== 'psp'
+        const isCbsReader = partItem.value.roles.includes('rdr')
+        const hasTitle = Boolean(partItem.value.title)
+
+        if (!isLiving || hasInsert) return false
+        if (isFslCBS || isCbsReader) return true
+        return isLiving && !isNonFslCBS && hasTitle
+
+    })
     const showRemoverBtn = computed(() => isLiving && partItem.value.id.endsWith('.nsrt') && hasInsert)
+
+    const showTimeAdjuster = computed(() => isTimerAdjustable.value && timerAdjuster.value && part.title)
+
+    const isTimerAdjustable = computed(() => {
+        const isTreauresPart = part.id.endsWith('.1')
+        const isGemsPart = part.id.endsWith('.2')
+        const isTitledLiving = isLiving && part.title
+        return isTreauresPart || isGemsPart || isTitledLiving
+    })
 
     function showSelector(): void {
         triggered.value = true
@@ -292,7 +313,8 @@
         color: skyblue;
     }
 
-    .pt-wrapper
+    .pt-wrapper,
+    .inserter
     {
         position: relative;
     }
@@ -349,7 +371,7 @@
         transform: scale(1);
     }
 
-    .pt-wrapper:hover .remover-btn
+    .inserter:hover .remover-btn
     {
         opacity: 1;
         transform: scale(1);
