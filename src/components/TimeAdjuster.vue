@@ -10,11 +10,11 @@
             </p>
         </div>
         <div class="input">
-            <label for="">Minutes</label>
+            <label for="">{{ time }} minute{{ time == 1 ? '' : 's' }}</label>
             <div class="col-2">
-                <input type="number" :min="1" :max="60" v-model="time">
+                <input type="range" :min="1" :max="60" v-model="time">
                 <button v-if="part.time != partItem.time" class="btn" @click="restore">Restore to {{ part.time
-                }}min</button>
+                    }}min</button>
             </div>
 
         </div>
@@ -98,23 +98,14 @@
 
     .input label
     {
-        font-size: small;
-    }
-
-    .input input
-    {
-        width: 50%;
-        border: none;
-        border-bottom: 1px solid gray;
-        padding: 10px;
-        outline: none;
-        font-size: x-large;
-
+        font-size: larger;
+        color: black;
+        font-weight: 600;
     }
 
     .col-2
     {
-        display: flex;
+        display: block;
         justify-content: space-between;
         gap: 10px;
     }
@@ -128,6 +119,119 @@
         border-radius: 4px;
         cursor: pointer;
         font-size: .70em;
-        width: 50%;
+        width: 100%;
     }
+
+
+    /* Styling the range input */
+    input[type="range"]
+    {
+        -webkit-appearance: none;
+        /* Remove default WebKit styling */
+        appearance: none;
+        width: 100%;
+        /* Full width */
+        height: 5px;
+        /* Track height */
+        background: #e0e0e0;
+        /* Track background */
+        border-radius: 5px;
+        /* Rounded track */
+        outline: none;
+        /* Remove focus outline */
+        transition: background 0.3s ease;
+        /* Smooth background transition */
+        margin: 20px 0;
+        cursor: pointer;
+    }
+
+    /* Track styling for WebKit browsers (Chrome, Safari) */
+    input[type="range"]::-webkit-slider-runnable-track
+    {
+        height: 8px;
+        background: #e0e0e0;
+        border-radius: 5px;
+    }
+
+    /* Thumb styling for WebKit browsers */
+    input[type="range"]::-webkit-slider-thumb
+    {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        /* Thumb size */
+        height: 20px;
+        background: #3DA8EA;
+        /* Thumb color */
+        border-radius: 50%;
+        /* Circular thumb */
+        cursor: pointer;
+        margin-top: -5px;
+        /* Align thumb with track */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        /* Thumb shadow */
+    }
+
+    /* Track styling for Firefox */
+    input[type="range"]::-moz-range-track
+    {
+        height: 10px;
+        background: #e0e0e0;
+        border-radius: 5px;
+    }
+
+    /* Thumb styling for Firefox */
+    input[type="range"]::-moz-range-thumb
+    {
+        width: 20px;
+        height: 20px;
+        background: #3DA8EA;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        /* Remove default border */
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Track styling for Microsoft Edge */
+    input[type="range"]::-ms-track
+    {
+        height: 10px;
+        background: #e0e0e0;
+        border-radius: 5px;
+        color: transparent;
+        /* Hide default tick marks */
+    }
+
+    /* Thumb styling for Microsoft Edge */
+    input[type="range"]::-ms-thumb
+    {
+        width: 20px;
+        height: 20px;
+        background: #3DA8EA;
+        border-radius: 50%;
+        cursor: pointer;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Styling on hover or focus */
+    input[type="range"]:hover::-webkit-slider-thumb,
+    input[type="range"]:focus::-webkit-slider-thumb
+    {
+        background: #1f9ce9;
+        /* Darker thumb color on hover/focus */
+    }
+
+    input[type="range"]:hover::-moz-range-thumb,
+    input[type="range"]:focus::-moz-range-thumb
+    {
+        background: #1f9ce9;
+    }
+
+    input[type="range"]:hover::-ms-thumb,
+    input[type="range"]:focus::-ms-thumb
+    {
+        background: #1f9ce9;
+    }
+
 </style>
