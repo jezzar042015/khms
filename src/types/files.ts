@@ -82,4 +82,5 @@ export interface S140PartItem {
     isVisit?: boolean
     co?: string
     writtable?: boolean
+    timeAdjustable?: boolean
 }

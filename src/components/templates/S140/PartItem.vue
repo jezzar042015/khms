@@ -1,7 +1,10 @@
 <template>
     <div :class="gridColumns">
         <div class="s140-grid-titles">
-            <span v-show="part?.time" class="s140-runtime">{{ runTime }}</span>
+            <span v-show="part?.time" @click="showTimeAdjuster"
+                :class="['s140-runtime', { 'time-adjustable': part.timeAdjustable }]">
+                {{ runTime }}
+            </span>
             <span v-show="part?.time">
                 <span v-if="!overriding" @click="startOverride" :class="[{ writtable: part?.writtable }]">
                     {{ displayTitle }} {{ isOverride ? '' : timeLimit }}
@@ -28,20 +31,23 @@
             <AssignmentSelector v-if="selector" :part="part" :triggered="triggeredSelector" @hide="hideSelector"
                 @trigger-off="triggerOff" />
         </div>
+        <TimeAdjuster style="margin-left: 50px;" v-if="timeAdjuster" :part="part" :part-item="part" @close="updatePartTime" />
     </div>
 </template>
 
 <script setup lang="ts">
     import { computed, nextTick, onMounted, ref, watch } from 'vue';
+    import { onClickOutside } from '@vueuse/core';
     import { useAssignmentStore } from '@/stores/assignment';
     import { useCongregationStore } from '@/stores/congregation';
-    import { usePublisherStore } from '@/stores/publisher';
     import { useFilesStore } from '@/stores/files';
     import { useOverridesStore } from '@/stores/overrides';
-    import { onClickOutside } from '@vueuse/core';
+    import { usePublisherStore } from '@/stores/publisher';
+    import { useTimeOverrides } from '@/stores/overrides-time';
     import type { S140PartItem } from '@/types/files';
 
     import AssignmentSelector from '@/components/AssignmentSelector.vue'
+    import TimeAdjuster from '@/components/TimeAdjuster.vue';
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
@@ -49,10 +55,35 @@
     const pubStore = usePublisherStore();
     const fileStore = useFilesStore();
     const overrides = useOverridesStore();
+    const timeOverrides = useTimeOverrides()
 
     const { part } = defineProps<{
         part: S140PartItem
     }>()
+
+    const timeAdjuster = ref(false)
+    const showTimeAdjuster = () => {
+        if (part.timeAdjustable) {
+            timeAdjuster.value = true
+        }
+    }
+
+    const updatePartTime = (time: number) => {
+        timeAdjuster.value = false
+        if (Number(time) == 0) return
+
+        if (time !== part.time) {
+            timeOverrides.save({
+                id: part.id,
+                time: time
+            })
+        }
+
+        if (time === part.time) {
+            const storedOverride = timeOverrides.read(part.id)?.time ?? 0
+            if (storedOverride > 0) timeOverrides.remove(part.id)
+        }
+    }
 
     const partAux1 = ref<S140PartItem | undefined>()
 
@@ -321,5 +352,10 @@
         cursor: pointer;
         color: #3DA8EA;
 
+    }
+
+    .time-adjustable
+    {
+        cursor: pointer;
     }
 </style>

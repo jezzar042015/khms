@@ -47,6 +47,7 @@
     import { computed, nextTick, ref, watch } from 'vue';
     import { onClickOutside } from '@vueuse/core';
     import { useAssignmentStore } from '@/stores/assignment';
+    import { useCongregationStore } from '@/stores/congregation';
     import { useOverridesStore } from '@/stores/overrides';
     import { usePublisherStore } from '@/stores/publisher';
     import { useTimeOverrides } from '@/stores/overrides-time';
@@ -57,7 +58,6 @@
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
     import IconPlus from '@/components/icons/IconPlus.vue';
     import IconMinus from '@/components/icons/IconMinus.vue';
-    import { useCongregationStore } from '@/stores/congregation';
 
     const { part, isLiving = false, hasInsert = false } = defineProps<{
         part: PartItem

@@ -27,11 +27,11 @@
 <script setup lang="ts">
     import { onMounted, ref, useTemplateRef } from 'vue'
     import { onClickOutside } from '@vueuse/core'
-    import type { PartItem } from '@/types/files';
+    import type { PartItem, S140PartItem } from '@/types/files';
 
     const { part, partItem } = defineProps<{
-        part: PartItem
-        partItem: PartItem
+        part: PartItem | S140PartItem
+        partItem: PartItem | S140PartItem
     }>()
 
     const emits = defineEmits(['close'])
@@ -48,7 +48,7 @@
     }
 
     onMounted(() => {
-        time.value = partItem.time
+        time.value = partItem.time ?? 0
     })
 </script>
 
