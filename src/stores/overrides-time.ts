@@ -26,6 +26,7 @@ export const useTimeOverrides = defineStore('time-overrides', () => {
         }
     }
     return {
+        stored,
         read, save, remove
     }
 })

@@ -705,6 +705,7 @@ section
 {
   font-size: 1.0em;
   padding: 3px 8px 5px;
+  position: relative;
 }
 
 .s140-week-title

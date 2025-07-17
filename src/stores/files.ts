@@ -9,6 +9,7 @@ import { useVisitStore } from "./visits";
 import { s140Builder } from "@/assets/utils/composer";
 import type { Content, LangMonth, PartItem, S140PartWeeks } from "@/types/files";
 import type { VisitDetail } from "@/types/visit";
+import { useTimeOverrides } from "./overrides-time";
 
 const jsonFilesBCL = import.meta.glob('@/lib/bcl/*.json');
 const jsonFilesCeb = import.meta.glob('@/lib/ceb/*.json');
@@ -26,6 +27,7 @@ export const useFilesStore = defineStore('files', () => {
     const congStore = useCongregationStore()
     const assignStore = useAssignmentStore()
     const partOverride = usePartsOverride()
+    const timeOverride = useTimeOverrides()
     const langMonths = ref<LangMonth[]>([])
     const currentPeriod = ref('')
 
@@ -367,6 +369,12 @@ export const useFilesStore = defineStore('files', () => {
     watch(
         () => congStore.congregation.mwbTemplate,
         async () => await composeS140()
+    )
+
+    watch(
+        () => timeOverride.stored,
+        async () => await composeS140(),
+        { deep: true }
     )
 
     return {

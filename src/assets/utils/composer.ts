@@ -1,6 +1,7 @@
 import translations from "./translations";
 import { useFilesStore } from "@/stores/files";
 import { useCongregationStore } from "@/stores/congregation";
+import { useTimeOverrides } from "@/stores/overrides-time";
 import type { PartItem, S140PartItem, S140PartWeeks, WeekItem } from "@/types/files";
 
 let runtime = 0;
@@ -138,6 +139,10 @@ function gems(src: WeekItem, week: S140PartItem[]) {
                 part.label = translations.mwbs140[lang].student
             }
 
+            if (part.id.endsWith('.1') || part.id.endsWith('.2')) {
+                part.timeAdjustable = true
+            }
+
             part.runtime = runtime
             runtime = (part.time ?? 1) + runtime + 1
 
@@ -181,7 +186,7 @@ function living(src: WeekItem, week: S140PartItem[]) {
     for (const pattern of parts) {
         const part: S140PartItem = {
             id: pattern.id,
-            time: pattern.time,
+            time: getTime(pattern),
             runtime: runtime,
             thumbnail: pattern.thumbnail,
             reference: pattern.reference,
@@ -189,6 +194,7 @@ function living(src: WeekItem, week: S140PartItem[]) {
             autofills: [...pattern.autofills ?? []],
             roles: [...pattern.roles ?? []],
             writtable: pattern.writtable ?? false,
+            timeAdjustable: true
         }
 
         if (part.roles?.includes('cbs')) {
@@ -206,7 +212,7 @@ function living(src: WeekItem, week: S140PartItem[]) {
         }
 
         part.runtime = runtime
-        runtime = (part.time ?? 0) + runtime
+        runtime = (part.time ?? 0) + runtime + 0
         week.push(part)
     }
 
@@ -221,3 +227,8 @@ function living(src: WeekItem, week: S140PartItem[]) {
     }
 }
 
+function getTime(part: PartItem) {
+    const override = useTimeOverrides()
+    const overridePart = override.read(part.id)
+    return overridePart ? Number(overridePart.time) : part.time
+}
