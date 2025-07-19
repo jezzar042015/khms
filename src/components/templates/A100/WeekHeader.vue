@@ -11,7 +11,7 @@
         </div>
         <div class="week-sched">
             <span class="icon">
-                <IconBible />
+                <IconBible style="height: 30px; width: 30px;" />
             </span>
             <span>
                 {{ w.bibleReading }}
