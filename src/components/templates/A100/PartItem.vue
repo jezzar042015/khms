@@ -327,7 +327,7 @@
         height: 5px;
         bottom: -2px;
         width: 100%;
-        z-index: 20;
+        z-index: 1;
     }
 
     .insert-btn,
