@@ -4,7 +4,7 @@
   "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
   "theme": "#7c6453",
   "publish": true,
-  "thumbnail": "",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025400/ASL/wpub/202025400_ASL_cvr_xs.jpg",
   "firstMonday": "2025-11-03",
   "language": "war",
   "weeks": [
@@ -35,7 +35,7 @@
           {
             "id": "202511.1.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_sqs_xs.jpg",
             "title": "1. Usa nga Istorya han Tinuod nga Gugma",
             "class": "part-title-gems",
             "roles": [
@@ -111,7 +111,7 @@
               "elder",
               "ms"
             ],
-            "thumbnailMode": ""
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202511.1.8",
@@ -171,7 +171,7 @@
           {
             "id": "202511.2.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_sqs_xs.jpg",
             "title": "1. An Pagkaimportante han Tinuod nga Kahusay",
             "class": "part-title-gems",
             "roles": [
@@ -247,7 +247,7 @@
               "elder",
               "ms"
             ],
-            "thumbnailMode": ""
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202511.2.8",
@@ -259,7 +259,7 @@
               "elder",
               "ms"
             ],
-            "thumbnailMode": ""
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202511.2.9",
@@ -319,7 +319,7 @@
           {
             "id": "202511.3.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025403/univ/art/202025403_univ_sqs_xs.jpg",
             "title": "1. Magin Pader, Diri Purtahan",
             "class": "part-title-gems",
             "roles": [
@@ -406,7 +406,7 @@
               "elder",
               "ms"
             ],
-            "thumbnailMode": ""
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202511.3.9",
@@ -466,7 +466,7 @@
           {
             "id": "202511.4.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025404/univ/art/202025404_univ_sqs_xs.jpg",
             "title": "1. Paglaom Para ha mga “Nabubug-atan han Kasaypanan”",
             "class": "part-title-gems",
             "roles": [
@@ -542,7 +542,7 @@
               "elder",
               "ms"
             ],
-            "thumbnailMode": ""
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202511.4.8",

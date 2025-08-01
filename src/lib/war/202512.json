@@ -4,7 +4,7 @@
   "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
   "theme": "#7c6453",
   "publish": true,
-  "thumbnail": "",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025400/ASL/wpub/202025400_ASL_cvr_xs.jpg",
   "firstMonday": "2025-12-01",
   "language": "war",
   "weeks": [
@@ -35,7 +35,7 @@
           {
             "id": "202512.1.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025405/univ/art/202025405_univ_sqs_xs.jpg",
             "title": "1. May Katungod hi Jehova nga Maglaom hin Labaw Pa",
             "class": "part-title-gems",
             "roles": [
@@ -170,7 +170,7 @@
           {
             "id": "202512.2.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_sqs_xs.jpg",
             "title": "1. “Aadi Ako! Sugoa Ako!”",
             "class": "part-title-gems",
             "roles": [
@@ -246,7 +246,7 @@
               "elder",
               "ms"
             ],
-            "thumbnailMode": ""
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.2.8",
@@ -306,7 +306,7 @@
           {
             "id": "202512.3.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025407/univ/art/202025407_univ_sqs_xs.jpg",
             "title": "1. Igintagna nga “Duro nga Kalamrag”",
             "class": "part-title-gems",
             "roles": [
@@ -382,7 +382,7 @@
               "elder",
               "ms"
             ],
-            "thumbnailMode": ""
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.3.8",
@@ -394,7 +394,7 @@
               "elder",
               "ms"
             ],
-            "thumbnailMode": ""
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.3.9",
@@ -454,7 +454,7 @@
           {
             "id": "202512.4.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025408/univ/art/202025408_univ_sqs_xs.jpg",
             "title": "1. Ano an Ginsisiring han Biblia Parte ha Tiarabot nga Mesias?",
             "class": "part-title-gems",
             "roles": [
@@ -530,7 +530,7 @@
               "elder",
               "ms"
             ],
-            "thumbnailMode": ""
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.4.8",
@@ -590,7 +590,7 @@
           {
             "id": "202512.5.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025409/univ/art/202025409_univ_sqs_xs.jpg",
             "title": "1. An mga Kaaway han Katawohan han Dios Diri Makakalikay han Sirot",
             "class": "part-title-gems",
             "roles": [
