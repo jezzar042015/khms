@@ -2,9 +2,9 @@
   "period": "202512",
   "display": "December 2025",
   "title": "Our Christian Life and Ministry Meeting Schedule",
-  "theme": "#7c6453",
+  "theme": "#5d3e2c",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025400/ASL/wpub/202025400_ASL_cvr_xs.jpg",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025400/ASL/wpub/202025400_ASL_cvr_lg.jpg",
   "firstMonday": "2025-12-01",
   "language": "psp",
   "weeks": [
@@ -35,7 +35,7 @@
           {
             "id": "202512.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025405/univ/art/202025405_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025405/univ/art/202025405_univ_sqs_lg.jpg",
             "title": "1. Jehovah Had a Right to Expect More",
             "class": "part-title-gems",
             "roles": [
@@ -162,7 +162,7 @@
           {
             "id": "202512.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_sqs_lg.jpg",
             "title": "1. “Here I Am! Send Me!”",
             "class": "part-title-gems",
             "roles": [
@@ -233,7 +233,7 @@
             "time": 15,
             "title": "7. House-to-House Preaching​—Our Trademark",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_cnt_3_xs.jpg",
+            "thumbnail": "",
             "roles": [
               "elder",
               "ms"
@@ -290,7 +290,7 @@
           {
             "id": "202512.3.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025407/univ/art/202025407_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025407/univ/art/202025407_univ_sqs_lg.jpg",
             "title": "1. “A Great Light” Prophesied",
             "class": "part-title-gems",
             "roles": [
@@ -361,7 +361,7 @@
             "time": 5,
             "title": "7. The Light Is Becoming Brighter",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025407/univ/art/202025407_univ_cnt_2_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025407/univ/art/202025407_univ_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -430,7 +430,7 @@
           {
             "id": "202512.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025408/univ/art/202025408_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025408/univ/art/202025408_univ_sqs_lg.jpg",
             "title": "1. What Would the Messiah Be Like?",
             "class": "part-title-gems",
             "roles": [
@@ -501,7 +501,7 @@
             "time": 15,
             "title": "7. Do You “Judge With Righteous Judgment”?",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025408/univ/art/202025408_univ_cnt_2_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025408/univ/art/202025408_univ_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -558,7 +558,7 @@
           {
             "id": "202512.5.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025409/univ/art/202025409_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025409/univ/art/202025409_univ_sqs_lg.jpg",
             "title": "1. Enemies of God’s People Do Not Escape Punishment",
             "class": "part-title-gems",
             "roles": [

@@ -2,9 +2,9 @@
   "period": "202511",
   "display": "November 2025",
   "title": "Our Christian Life and Ministry Meeting Schedule",
-  "theme": "#7c6453",
+  "theme": "#5d3e2c",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025400/ASL/wpub/202025400_ASL_cvr_xs.jpg",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025400/ASL/wpub/202025400_ASL_cvr_lg.jpg",
   "firstMonday": "2025-11-03",
   "language": "psp",
   "weeks": [
@@ -35,7 +35,7 @@
           {
             "id": "202511.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_sqs_lg.jpg",
             "title": "1. A Story of Unfailing Love",
             "class": "part-title-gems",
             "roles": [
@@ -106,12 +106,12 @@
             "time": 15,
             "title": "7. “The Generous Person Will Be Blessed”",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_cnt_2_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_cnt_4_lg.jpg",
             "roles": [
               "elder",
               "ms"
             ],
-            "thumbnailMode": "sqr-c"
+            "thumbnailMode": ""
           },
           {
             "id": "202511.1.8",
@@ -163,7 +163,7 @@
           {
             "id": "202511.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_sqs_lg.jpg",
             "title": "1. The Importance of Inner Beauty",
             "class": "part-title-gems",
             "roles": [
@@ -234,7 +234,7 @@
             "time": 8,
             "title": "7. Marry Only in the Lord (Ge 28:2)",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_cnt_3_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_cnt_3_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -246,7 +246,7 @@
             "time": 7,
             "title": "8. Would You Make a Good Marriage Mate?",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_cnt_4_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_cnt_4_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -303,7 +303,7 @@
           {
             "id": "202511.3.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025403/univ/art/202025403_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025403/univ/art/202025403_univ_sqs_lg.jpg",
             "title": "1. Be a Wall, Not a Door",
             "class": "part-title-gems",
             "roles": [
@@ -385,7 +385,7 @@
             "time": 15,
             "title": "8. Flee From Sexual Immorality",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025403/univ/art/202025403_univ_cnt_3_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -442,7 +442,7 @@
           {
             "id": "202511.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025404/univ/art/202025404_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025404/univ/art/202025404_univ_sqs_lg.jpg",
             "title": "1. Hope for Those “Weighed Down With Error”",
             "class": "part-title-gems",
             "roles": [
