@@ -2,10 +2,11 @@
   "period": "202511",
   "display": "November 2025",
   "title": "Our Christian Life and Ministry Meeting Schedule",
-  "theme": "",
-  "publish": false,
-  "thumbnail": "",
+  "theme": "#7c6453",
+  "publish": true,
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025400/ASL/wpub/202025400_ASL_cvr_xs.jpg",
   "firstMonday": "2025-11-03",
+  "language": "psp",
   "weeks": [
     {
       "order": 1,
@@ -34,7 +35,7 @@
           {
             "id": "202511.1.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_sqs_xs.jpg",
             "title": "1. A Story of Unfailing Love",
             "class": "part-title-gems",
             "roles": [
@@ -56,7 +57,7 @@
           {
             "id": "202511.1.3",
             "time": 4,
-            "reference": "Ca 2:1-17 (th study 12)",
+            "reference": "Ca 2:1-15 (th 12)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -105,20 +106,20 @@
             "time": 15,
             "title": "7. “The Generous Person Will Be Blessed”",
             "class": "part-title-living",
-            "thumbnail": "",
-            "thumbnailMode": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_cnt_2_xs.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202511.1.8",
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 12:1-6, Box 1",
             "roles": [
               "cbs"
             ]
@@ -162,7 +163,7 @@
           {
             "id": "202511.2.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_sqs_xs.jpg",
             "title": "1. The Importance of Inner Beauty",
             "class": "part-title-gems",
             "roles": [
@@ -184,7 +185,7 @@
           {
             "id": "202511.2.3",
             "time": 4,
-            "reference": "Ca 4:1-16 (th study 2)",
+            "reference": "Ca 4:1-11 (th 2)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -233,32 +234,32 @@
             "time": 8,
             "title": "7. Marry Only in the Lord (Ge 28:2)",
             "class": "part-title-living",
-            "thumbnail": "",
-            "thumbnailMode": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_cnt_3_xs.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202511.2.8",
             "time": 7,
             "title": "8. Would You Make a Good Marriage Mate?",
             "class": "part-title-living",
-            "thumbnail": "",
-            "thumbnailMode": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_cnt_4_xs.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202511.2.9",
             "time": 30,
             "title": "9. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 12:7-13, Box 2",
             "roles": [
               "cbs"
             ]
@@ -302,7 +303,7 @@
           {
             "id": "202511.3.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025403/univ/art/202025403_univ_sqs_xs.jpg",
             "title": "1. Be a Wall, Not a Door",
             "class": "part-title-gems",
             "roles": [
@@ -324,7 +325,7 @@
           {
             "id": "202511.3.3",
             "time": 4,
-            "reference": "Ca 7:1-13 (th study 12)",
+            "reference": "Ca 7:1-13 (th 12)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -385,19 +386,19 @@
             "title": "8. Flee From Sexual Immorality",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202511.3.9",
             "time": 30,
             "title": "9. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 12:14-20",
             "roles": [
               "cbs"
             ]
@@ -441,7 +442,7 @@
           {
             "id": "202511.4.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025404/univ/art/202025404_univ_sqs_xs.jpg",
             "title": "1. Hope for Those “Weighed Down With Error”",
             "class": "part-title-gems",
             "roles": [
@@ -463,7 +464,7 @@
           {
             "id": "202511.4.3",
             "time": 4,
-            "reference": "Isa 2:1-11 (th study 11)",
+            "reference": "Isa 2:1-11 (th 11)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -513,19 +514,19 @@
             "title": "7. Become Jehovah’s Friend​—Jehovah Forgives",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202511.4.8",
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt Section 5; 13:1-7, Box 1",
             "roles": [
               "cbs"
             ]
