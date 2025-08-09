@@ -2,10 +2,11 @@
   "period": "202512",
   "display": "December 2025",
   "title": "Our Christian Life and Ministry Meeting Schedule",
-  "theme": "",
-  "publish": false,
-  "thumbnail": "",
+  "theme": "#7c6453",
+  "publish": true,
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025400/ASL/wpub/202025400_ASL_cvr_xs.jpg",
   "firstMonday": "2025-12-01",
+  "language": "psp",
   "weeks": [
     {
       "order": 1,
@@ -34,7 +35,7 @@
           {
             "id": "202512.1.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025405/univ/art/202025405_univ_sqs_xs.jpg",
             "title": "1. Jehovah Had a Right to Expect More",
             "class": "part-title-gems",
             "roles": [
@@ -56,7 +57,7 @@
           {
             "id": "202512.1.3",
             "time": 4,
-            "reference": "Isa 5:1-12 (th study 5)",
+            "reference": "Isa 5:1-10 (th 5)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -106,7 +107,6 @@
             "title": "7. Local Needs",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder"
             ],
@@ -117,8 +117,8 @@
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 13:8-16, Box 2",
             "roles": [
               "cbs"
             ]
@@ -162,7 +162,7 @@
           {
             "id": "202512.2.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_sqs_xs.jpg",
             "title": "1. “Here I Am! Send Me!”",
             "class": "part-title-gems",
             "roles": [
@@ -184,7 +184,7 @@
           {
             "id": "202512.2.3",
             "time": 4,
-            "reference": "Isa 8:1-13 (th study 5)",
+            "reference": "Isa 8:1-13 (th 5)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -233,20 +233,20 @@
             "time": 15,
             "title": "7. House-to-House Preaching​—Our Trademark",
             "class": "part-title-living",
-            "thumbnail": "",
-            "thumbnailMode": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_cnt_3_xs.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.2.8",
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 13:17-24",
             "roles": [
               "cbs"
             ]
@@ -290,7 +290,7 @@
           {
             "id": "202512.3.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025407/univ/art/202025407_univ_sqs_xs.jpg",
             "title": "1. “A Great Light” Prophesied",
             "class": "part-title-gems",
             "roles": [
@@ -312,7 +312,7 @@
           {
             "id": "202512.3.3",
             "time": 4,
-            "reference": "Isa 10:1-14 (th study 11)",
+            "reference": "Isa 10:1-13 (th 11)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -361,12 +361,12 @@
             "time": 5,
             "title": "7. The Light Is Becoming Brighter",
             "class": "part-title-living",
-            "thumbnail": "",
-            "thumbnailMode": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025407/univ/art/202025407_univ_cnt_2_xs.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.3.8",
@@ -374,19 +374,19 @@
             "title": "8. Organizational Accomplishments for December",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.3.9",
             "time": 30,
             "title": "9. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 14:1-6, Box 2",
             "roles": [
               "cbs"
             ]
@@ -430,7 +430,7 @@
           {
             "id": "202512.4.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025408/univ/art/202025408_univ_sqs_xs.jpg",
             "title": "1. What Would the Messiah Be Like?",
             "class": "part-title-gems",
             "roles": [
@@ -452,7 +452,7 @@
           {
             "id": "202512.4.3",
             "time": 4,
-            "reference": "Isa 11:1-12 (th study 11)",
+            "reference": "Isa 11:1-10 (th 11)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -501,20 +501,20 @@
             "time": 15,
             "title": "7. Do You “Judge With Righteous Judgment”?",
             "class": "part-title-living",
-            "thumbnail": "",
-            "thumbnailMode": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025408/univ/art/202025408_univ_cnt_2_xs.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.4.8",
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 14:7-10, Box 1",
             "roles": [
               "cbs"
             ]
@@ -534,7 +534,7 @@
     {
       "order": 5,
       "id": "202512.5",
-      "week": "DEC 29 – JAN 4",
+      "week": "DECEMBER 29, 2025–JANUARY 4, 2026",
       "bibleReading": "ISAIAH 14-16",
       "songs": [
         "63",
@@ -558,7 +558,7 @@
           {
             "id": "202512.5.1",
             "time": 10,
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025409/univ/art/202025409_univ_sqs_xs.jpg",
             "title": "1. Enemies of God’s People Do Not Escape Punishment",
             "class": "part-title-gems",
             "roles": [
@@ -580,7 +580,7 @@
           {
             "id": "202512.5.3",
             "time": 4,
-            "reference": "Isa 16:1-14 (th study 10)",
+            "reference": "Isa 16:1-9 (th 10)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -630,7 +630,6 @@
             "title": "7. Local Needs",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder"
             ],
@@ -641,8 +640,8 @@
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "",
-            "reference": "",
+            "thumbnail": "bt",
+            "reference": "bt 14:11-20",
             "roles": [
               "cbs"
             ]
