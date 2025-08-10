@@ -2,10 +2,11 @@
   "period": "202510",
   "display": "Oktubre 2025",
   "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
-  "theme": "#6185BD",
+  "theme": "#1a356c",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202509/univ/art/mwb_univ_202509_lg.jpg",
   "firstMonday": "2025-10-06",
+  "language": "war",
   "weeks": [
     {
       "order": 1,
@@ -117,11 +118,11 @@
             "title": "8. Ginagamit Mo ba an “Mga Kamatuoran nga Karuyag Gud Naton Itutdo”?",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_cnt_3_lg.jpg",
-            "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202510.1.9",
@@ -264,11 +265,11 @@
             "title": "8. Magkaada Marig-on nga Pagtoo ha Pagkabanhaw",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202510.2.9",
@@ -400,11 +401,11 @@
             "title": "7. Bubuligan Ka ni Jehova ha Panahon han Trahedya",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025328/univ/art/202025328_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-r"
           },
           {
             "id": "202510.3.8",
@@ -440,7 +441,7 @@
     {
       "order": 4,
       "id": "202510.4",
-      "week": "OKT 27–NOB 2",
+      "week": "OKTUBRE 27–NOBYEMBRE 2",
       "bibleReading": "ECLESIASTES 11-12",
       "songs": [
         "155",
@@ -536,7 +537,6 @@
             "title": "7. Lokal nga mga Panginahanglan",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder"
             ],

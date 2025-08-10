@@ -2,9 +2,9 @@
   "period": "202510",
   "display": "October 2025",
   "title": "Our Christian Life and Ministry Meeting Schedule",
-  "theme": "",
+  "theme": "#1a356c",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025320/ASL/wpub/202025320_ASL_cvr_xs.jpg",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202509/univ/art/mwb_univ_202509_lg.jpg",
   "firstMonday": "2025-10-06",
   "language": "psp",
   "weeks": [
@@ -35,7 +35,7 @@
           {
             "id": "202510.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
             "title": "1. How We Show Reverence for Our Great God",
             "class": "part-title-gems",
             "roles": [
@@ -117,7 +117,7 @@
             "time": 15,
             "title": "8. Are You Using “Truths We Love to Teach”?",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_cnt_3_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_cnt_3_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -174,7 +174,7 @@
           {
             "id": "202510.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_sqs_lg.jpg",
             "title": "1. “Go to the House of Mourning”",
             "class": "part-title-gems",
             "roles": [
@@ -256,7 +256,7 @@
             "time": 15,
             "title": "8. Build Strong Faith in the Resurrection",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_cnt_2_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -319,8 +319,7 @@
             "roles": [
               "elder",
               "ms"
-            ],
-            "thumbnailMode": ""
+            ]
           },
           {
             "id": "202510.3.2",
@@ -385,12 +384,12 @@
             "time": 15,
             "title": "7. Finding Stability in the Face of Tragedy",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025328/univ/art/202025328_univ_cnt_2_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025328/univ/art/202025328_univ_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
             ],
-            "thumbnailMode": "sqr-c"
+            "thumbnailMode": "sqr-r"
           },
           {
             "id": "202510.3.8",
@@ -442,14 +441,13 @@
           {
             "id": "202510.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025329/univ/art/202025329_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025329/univ/art/202025329_univ_sqs_lg.jpg",
             "title": "1. Enjoy a Happy, Healthy Life",
             "class": "part-title-gems",
             "roles": [
               "elder",
               "ms"
-            ],
-            "thumbnailMode": ""
+            ]
           },
           {
             "id": "202510.4.2",

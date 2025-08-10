@@ -2,10 +2,11 @@
   "period": "202510",
   "display": "October 2025",
   "title": "Our Christian Life and Ministry Meeting Schedule",
-  "theme": "#6185BD",
+  "theme": "#1a356c",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202509/univ/art/mwb_univ_202509_lg.jpg",
   "firstMonday": "2025-10-06",
+  "language": "en",
   "weeks": [
     {
       "order": 1,
@@ -117,11 +118,11 @@
             "title": "8. Are You Using “Truths We Love to Teach”?",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_cnt_3_lg.jpg",
-            "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202510.1.9",
@@ -264,11 +265,11 @@
             "title": "8. Build Strong Faith in the Resurrection",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202510.2.9",
@@ -400,11 +401,11 @@
             "title": "7. Finding Stability in the Face of Tragedy",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025328/univ/art/202025328_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-r"
           },
           {
             "id": "202510.3.8",
@@ -440,7 +441,7 @@
     {
       "order": 4,
       "id": "202510.4",
-      "week": "OCT 27–NOV 2",
+      "week": "OCTOBER 27–NOVEMBER 2",
       "bibleReading": "ECCLESIASTES 11-12",
       "songs": [
         "155",
@@ -536,7 +537,6 @@
             "title": "7. Local Needs",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder"
             ],
