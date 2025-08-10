@@ -2,10 +2,11 @@
   "period": "202509",
   "display": "September 2025",
   "title": "Our Christian Life and Ministry Meeting Schedule",
-  "theme": "#6185BD",
+  "theme": "",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025320/ASL/wpub/202025320_ASL_cvr_xs.jpg",
   "firstMonday": "2025-09-01",
+  "language": "psp",
   "weeks": [
     {
       "order": 1,
@@ -34,7 +35,7 @@
           {
             "id": "202509.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025321/univ/art/202025321_univ_sqs_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025321/univ/art/202025321_univ_sqs_xs.jpg",
             "title": "1. Reject Unscriptural Beliefs and Customs",
             "class": "part-title-gems",
             "roles": [
@@ -106,7 +107,6 @@
             "title": "7. Local Needs",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder"
             ],
@@ -168,7 +168,8 @@
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": ""
           },
           {
             "id": "202509.2.2",
@@ -233,24 +234,24 @@
             "time": 5,
             "title": "7. Do Not Be Misled by Imitation Peace!​—Chibisa Selemani",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwbcov22/univ/art/jwbcov22_univ_wss_08_lg.jpg",
-            "thumbnailMode": "sqr-c",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025322/univ/art/202025322_univ_cnt_1_xs.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202509.2.8",
             "time": 10,
             "title": "8. Organizational Accomplishments for September",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep23/univ/art/com-rep23_univ_wss_03_lg.jpg",
-            "thumbnailMode": "sqr-c",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025322/univ/art/202025322_univ_cnt_1_xs.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": ""
           },
           {
             "id": "202509.2.9",
@@ -302,7 +303,7 @@
           {
             "id": "202509.3.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025323/univ/art/202025323_univ_sqs_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025323/univ/art/202025323_univ_sqs_xs.jpg",
             "title": "1. Lessons From a Mother’s Loving Instructions",
             "class": "part-title-gems",
             "roles": [
@@ -373,12 +374,12 @@
             "time": 8,
             "title": "7. Help Your Children to Use Electronic Devices Wisely",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025323/univ/art/202025323_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-c",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025323/univ/art/202025323_univ_cnt_2_xs.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": ""
           },
           {
             "id": "202509.3.8",
@@ -386,7 +387,6 @@
             "title": "8. Local Needs",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder"
             ],
@@ -442,7 +442,7 @@
           {
             "id": "202509.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025324/univ/art/202025324_univ_sqs_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025324/sign/art/202025324_sign_cnt_1_xs.jpg",
             "title": "1. Continue to Train the Next Generation",
             "class": "part-title-gems",
             "roles": [
@@ -524,12 +524,12 @@
             "time": 15,
             "title": "8. Three Important Lessons About Training",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025324/univ/art/202025324_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-r",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025324/sign/art/202025324_sign_cnt_2_xs.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "w-50"
           },
           {
             "id": "202509.4.9",
@@ -557,7 +557,7 @@
     {
       "order": 5,
       "id": "202509.5",
-      "week": "SEP 29–OCT 5",
+      "week": "SEPTEMBER 29–OCTOBER 5",
       "bibleReading": "ECCLESIASTES 3-4",
       "songs": [
         "93",
@@ -587,7 +587,8 @@
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": ""
           },
           {
             "id": "202509.5.2",
@@ -652,12 +653,12 @@
             "time": 15,
             "title": "7. When Marital Problems Arise, Keep Jehovah in the Picture",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025325/univ/art/202025325_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-c",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025325/univ/art/202025325_univ_cnt_2_xs.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202509.5.8",

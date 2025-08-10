@@ -2,10 +2,11 @@
   "period": "202512",
   "display": "Disyembre 2025",
   "title": "Eskedyul sa Ating Buhay at Ministeryong Kristianong Pulong",
-  "theme": "#7c6453",
+  "theme": "#6c4733",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_sqs_lg.jpg",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025400/ASL/wpub/202025400_ASL_cvr_xs.jpg",
   "firstMonday": "2025-12-01",
+  "language": "tl",
   "weeks": [
     {
       "order": 1,
@@ -34,13 +35,14 @@
           {
             "id": "202512.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025405/univ/art/202025405_univ_sqs_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025405/univ/art/202025405_univ_sqs_xs.jpg",
             "title": "1. May Karapatan si Jehova na Umasang Susunod Tayo sa Kaniya",
             "class": "part-title-gems",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": ""
           },
           {
             "id": "202512.1.2",
@@ -106,7 +108,6 @@
             "title": "7. Lokal na Pangangailangan",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder"
             ],
@@ -170,13 +171,14 @@
           {
             "id": "202512.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_sqs_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_cnt_2_lg.jpg",
             "title": "1. “Narito Ako! Isugo Mo Ako!”",
             "class": "part-title-gems",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.2.2",
@@ -242,11 +244,11 @@
             "title": "7. Kilalá Tayo sa Pagbabahay-bahay",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_cnt_3_lg.jpg",
-            "thumbnailMode": "w-50",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "w-50"
           },
           {
             "id": "202512.2.8",
@@ -306,13 +308,14 @@
           {
             "id": "202512.3.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025407/univ/art/202025407_univ_sqs_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025407/univ/art/202025407_univ_sqs_xs.jpg",
             "title": "1. Inihula ang Isang “Matinding Liwanag”",
             "class": "part-title-gems",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": ""
           },
           {
             "id": "202512.3.2",
@@ -378,23 +381,23 @@
             "title": "7. Mas Tumitindi Pa ang Liwanag",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025407/univ/art/202025407_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.3.8",
             "time": 10,
             "title": "8. Mga Nagawa ng Organisasyon Para sa Disyembre",
             "class": "part-title-living",
-            "thumbnail": "",
-            "thumbnailMode": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep23/univ/art/com-rep23_univ_wss_01_lg.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "w-50"
           },
           {
             "id": "202512.3.9",
@@ -454,7 +457,7 @@
           {
             "id": "202512.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025408/univ/art/202025408_univ_sqs_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025408/univ/art/202025408_univ_sqs_xs.jpg",
             "title": "1. Sino ang Magiging Mesiyas?",
             "class": "part-title-gems",
             "roles": [
@@ -526,11 +529,11 @@
             "title": "7. Humahatol Ka Ba “sa Matuwid na Paraan”?",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025408/univ/art/202025408_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-r",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.4.8",
@@ -566,7 +569,7 @@
     {
       "order": 5,
       "id": "202512.5",
-      "week": "DIS 29 – ENERO 4",
+      "week": "DISYEMBRE 29, 2025–ENERO 4, 2026",
       "bibleReading": "ISAIAS 14-16",
       "songs": [
         "63",
@@ -590,7 +593,7 @@
           {
             "id": "202512.5.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025409/univ/art/202025409_univ_sqs_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025409/univ/art/202025409_univ_sqs_xs.jpg",
             "title": "1. Siguradong Mapaparusahan ang mga Kaaway ng Bayan ng Diyos",
             "class": "part-title-gems",
             "roles": [
@@ -662,7 +665,6 @@
             "title": "7. Lokal na Pangangailangan",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder"
             ],

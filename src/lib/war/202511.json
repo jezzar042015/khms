@@ -2,7 +2,7 @@
   "period": "202511",
   "display": "Nobyembre 2025",
   "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
-  "theme": "#7c6453",
+  "theme": "#5d3e2c",
   "publish": true,
   "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025400/ASL/wpub/202025400_ASL_cvr_xs.jpg",
   "firstMonday": "2025-11-03",
@@ -35,13 +35,14 @@
           {
             "id": "202511.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_cnt_3_lg.jpg",
             "title": "1. Usa nga Istorya han Tinuod nga Gugma",
             "class": "part-title-gems",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "w-50"
           },
           {
             "id": "202511.1.2",
@@ -106,7 +107,7 @@
             "time": 15,
             "title": "7. “An Mahinatagon nga Tawo Bibendisyonan”",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025401/univ/art/202025401_univ_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -242,7 +243,7 @@
             "time": 8,
             "title": "7. Pag-asawa ha Sumurunod La han Ginoo (Ge 28:2)",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_cnt_3_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -254,7 +255,7 @@
             "time": 7,
             "title": "8. Magigin Maopay Ka ba nga Asawa?",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025402/univ/art/202025402_univ_cnt_3_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -401,7 +402,7 @@
             "time": 15,
             "title": "8. Palagiw Tikang ha Seksuwal nga Imoralidad",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025403/univ/art/202025403_univ_cnt_3_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -466,13 +467,14 @@
           {
             "id": "202511.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025404/univ/art/202025404_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025404/univ/art/202025404_univ_sqs_lg.jpg",
             "title": "1. Paglaom Para ha mga “Nabubug-atan han Kasaypanan”",
             "class": "part-title-gems",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": ""
           },
           {
             "id": "202511.4.2",
