@@ -2,7 +2,7 @@
   "period": "202512",
   "display": "Disyembre 2025",
   "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
-  "theme": "#7c6453",
+  "theme": "#6c4733",
   "publish": true,
   "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025400/ASL/wpub/202025400_ASL_cvr_xs.jpg",
   "firstMonday": "2025-12-01",
@@ -41,7 +41,8 @@
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": ""
           },
           {
             "id": "202512.1.2",
@@ -170,13 +171,14 @@
           {
             "id": "202512.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_sqs_xs.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_cnt_2_lg.jpg",
             "title": "1. “Aadi Ako! Sugoa Ako!”",
             "class": "part-title-gems",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202512.2.2",
@@ -241,12 +243,12 @@
             "time": 15,
             "title": "7. Pagsangyaw ha Balay-Balay—An Aton Pangirilal-an",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025406/univ/art/202025406_univ_cnt_3_lg.jpg",
             "roles": [
               "elder",
               "ms"
             ],
-            "thumbnailMode": "sqr-c"
+            "thumbnailMode": "w-50"
           },
           {
             "id": "202512.2.8",
@@ -312,7 +314,8 @@
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": ""
           },
           {
             "id": "202512.3.2",
@@ -377,7 +380,7 @@
             "time": 5,
             "title": "7. An Kalamrag Mas Nagtitikalamrag",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025407/univ/art/202025407_univ_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -389,12 +392,12 @@
             "time": 10,
             "title": "8. Mga Nahimo han Organisasyon Para ha Disyembre",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep23/univ/art/com-rep23_univ_wss_01_lg.jpg",
             "roles": [
               "elder",
               "ms"
             ],
-            "thumbnailMode": "sqr-c"
+            "thumbnailMode": "w-50"
           },
           {
             "id": "202512.3.9",
@@ -525,7 +528,7 @@
             "time": 15,
             "title": "7. ‘Naghuhukom Ka ba ha Matadong nga Paagi’?",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025408/univ/art/202025408_univ_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
