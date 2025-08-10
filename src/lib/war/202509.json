@@ -2,10 +2,11 @@
   "period": "202509",
   "display": "Septyembre 2025",
   "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
-  "theme": "#6185BD",
+  "theme": "#20366e",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202509/univ/art/mwb_univ_202509_lg.jpg",
   "firstMonday": "2025-09-01",
+  "language": "war",
   "weeks": [
     {
       "order": 1,
@@ -106,7 +107,6 @@
             "title": "7. Lokal nga mga Panginahanglan",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder"
             ],
@@ -242,11 +242,11 @@
             "title": "7. Ayaw Palimbong ha Diri Tinuod nga Kamurayawan!—Chibisa Selemani",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/jwbcov22/univ/art/jwbcov22_univ_wss_08_lg.jpg",
-            "thumbnailMode": "sqr-c",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202509.2.8",
@@ -254,11 +254,11 @@
             "title": "8. Mga Nahimo han Organisasyon Para ha Septyembre",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/com-rep23/univ/art/com-rep23_univ_wss_03_lg.jpg",
-            "thumbnailMode": "sqr-c",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202509.2.9",
@@ -390,11 +390,11 @@
             "title": "7. Buligi an Imo mga Anak nga Magin Maaramon ha Paggamit hin Gadyet",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025323/univ/art/202025323_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-c",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-c"
           },
           {
             "id": "202509.3.8",
@@ -402,7 +402,6 @@
             "title": "8. Lokal nga mga Panginahanglan",
             "class": "part-title-living",
             "thumbnail": "",
-            "thumbnailMode": "",
             "roles": [
               "elder"
             ],
@@ -466,7 +465,7 @@
           {
             "id": "202509.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025324/univ/art/202025324_univ_sqs_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025324/sign/art/202025324_sign_sqs_lg.jpg",
             "title": "1. Padayon nga I-train an Sunod nga Henerasyon",
             "class": "part-title-gems",
             "roles": [
@@ -548,12 +547,12 @@
             "time": 15,
             "title": "8. Tulo nga Importante nga Leksyon Parte ha Pag-train",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025324/univ/art/202025324_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-r",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025324/sign/art/202025324_sign_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "sqr-r"
           },
           {
             "id": "202509.4.9",
@@ -589,7 +588,7 @@
     {
       "order": 5,
       "id": "202509.5",
-      "week": "SEP 29–OKT 5",
+      "week": "SEPTYEMBRE 29–OKTUBRE 5",
       "bibleReading": "ECLESIASTES 3-4",
       "songs": [
         "93",
@@ -685,11 +684,11 @@
             "title": "7. Kon Magkaada Problema ha Pag-asawa, Sarig ha Giya ni Jehova",
             "class": "part-title-living",
             "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025325/univ/art/202025325_univ_cnt_2_lg.jpg",
-            "thumbnailMode": "sqr-c",
             "roles": [
               "elder",
               "ms"
-            ]
+            ],
+            "thumbnailMode": "w-50"
           },
           {
             "id": "202509.5.8",
