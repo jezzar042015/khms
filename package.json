@@ -12,11 +12,7 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/",
-    "translate-ceb-tl": "node auto-translator/ceb-tl.js",
-    "translate-ceb-war": "node auto-translator/ceb-war.js",
-    "translate-ceb-psp": "node auto-translator/ceb-psp.js",
-    "translate-ceb-all": "node auto-translator/ceb-all.js"
+    "format": "prettier --write src/"
   },
   "dependencies": {
     "@testing-library/vue": "^8.1.0",

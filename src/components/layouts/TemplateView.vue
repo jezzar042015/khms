@@ -37,11 +37,11 @@
                     <IconHelp class="icon-base" />
                 </div>
 
-                <div class="no-print relative">
+                <!-- <div class="no-print relative">
                     <IconBell class="icon-bell" @click="displayAlerts" />
                     <AlertBadge />
                     <NotificationPane />
-                </div>
+                </div> -->
 
                 <div class="cong-form no-print">
 
@@ -64,16 +64,15 @@
     import { useViewStore } from '@/stores/views';
     import { ref } from 'vue';
     import IconPrinter from '../icons/IconPrinter.vue';
-    import IconBell from '../icons/IconBell.vue';
     import TemplateSettings from '../TemplateSettings.vue';
     import IconHelp from '../icons/IconHelp.vue';
-    import AlertBadge from '../reusables/AlertBadge.vue';
-    import NotificationPane from '../NotificationPane.vue';
-    import { useNotificationsStore } from '@/stores/notifications';
+    // import AlertBadge from '../reusables/AlertBadge.vue';
+    // import NotificationPane from '../NotificationPane.vue';
+    // import { useNotificationsStore } from '@/stores/notifications';
 
+    // const notiStore = useNotificationsStore()
     const fileStore = useFilesStore();
     const viewStore = useViewStore();
-    const notiStore = useNotificationsStore()
     const congSettingsDisplay = ref(false)
 
     function showCongSettings(): void {
@@ -104,9 +103,6 @@
         window.location.href = 'https://jezzar042015.github.io/khms-help/'
     }
 
-    function displayAlerts() {
-        notiStore.displayPane = !notiStore.displayPane
-    }
 </script>
 
 
