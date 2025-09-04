@@ -1,11 +1,17 @@
 import { useAssignmentStore } from "@/stores/assignment";
 import { useCongregationStore } from "@/stores/congregation";
 import { useEventStore } from "@/stores/events";
+import { useOverridesStore } from "@/stores/overrides";
+import { usePartsOverride } from "@/stores/overrides-part";
+import { useTimeOverrides } from "@/stores/overrides-time";
 import { usePublisherStore } from "@/stores/publisher";
 import { useViewStore } from "@/stores/views";
 import { useVisitStore } from "@/stores/visits";
 import type { Congregation } from "@/types/congregation";
 import type { EventsDetails } from "@/types/event";
+import type { PartItem } from "@/types/files";
+import type { TimeOverride } from "@/types/override-time";
+import type { Override } from "@/types/overrides";
 import type { Publisher } from "@/types/publisher";
 import type { VisitsDetails } from "@/types/visit";
 
@@ -35,12 +41,12 @@ export async function Restore(event: Event) {
     if (input.files && input.files.length > 0) {
         const file = input.files[0];
         const reader = new FileReader();
-        reader.onload = function (e) {
+        reader.onload = async function (e) {
             try {
                 if (e.target && typeof e.target.result === 'string') {
                     const backupText = e.target.result;
                     const json = JSON.parse(backupText);
-                    restoreToLocals(json);
+                    await restoreToLocals(json);
                 } else {
                     console.error('Error: FileReader result is not a string.');
                 }
@@ -58,6 +64,9 @@ async function compose(): Promise<Store> {
     const visitStore = useVisitStore()
     const assignStore = useAssignmentStore()
     const pubStore = usePublisherStore()
+    const overrides = useOverridesStore()
+    const overrideParts = usePartsOverride()
+    const overrideTimes = useTimeOverrides()
 
     return {
         cong: congStore.congregation,
@@ -67,6 +76,9 @@ async function compose(): Promise<Store> {
         visits: visitStore.months,
         visitDetails: visitStore.details,
         eventDetails: eventStore.details,
+        overrides: overrides.stored,
+        overrideParts: overrideParts.stored,
+        overrideTimes: overrideTimes.stored,
     }
 }
 
@@ -76,6 +88,9 @@ async function restoreToLocals(json: Store) {
     const visitStore = useVisitStore()
     const assignStore = useAssignmentStore()
     const pubStore = usePublisherStore()
+    const overrides = useOverridesStore()
+    const overrideParts = usePartsOverride()
+    const overrideTimes = useTimeOverrides()
 
     congStore.congregation = json.cong
     eventStore.months = json.events
@@ -84,7 +99,9 @@ async function restoreToLocals(json: Store) {
     visitStore.details = json.visitDetails
     pubStore.pubs = json.pubs
     assignStore.restore(json.assignments)
-
+    overrides.stored = json.overrides
+    overrideParts.stored = json.overrideParts
+    overrideTimes.stored = json.overrideTimes
 }
 
 function downloadAsText(json: object) {
@@ -119,4 +136,7 @@ interface Store {
     visits: string[]
     visitDetails: VisitsDetails
     eventDetails: EventsDetails
+    overrides: Override[]
+    overrideParts: PartItem[]
+    overrideTimes: TimeOverride[]
 }

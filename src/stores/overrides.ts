@@ -41,6 +41,7 @@ export const useOverridesStore = defineStore('overrides', () => {
     }
 
     return {
+        stored,
         read, save, remove, prune
     }
 })
