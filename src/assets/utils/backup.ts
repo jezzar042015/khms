@@ -22,6 +22,9 @@ export async function HARD_STORAGE_RESET() {
     const assignStore = useAssignmentStore()
     const pubStore = usePublisherStore()
     const viewStore = useViewStore()
+    const overrides = useOverridesStore()
+    const overrideParts = usePartsOverride()
+    const overrideTimes = useTimeOverrides()
 
     congStore.reset();
     pubStore.reset();
@@ -29,6 +32,9 @@ export async function HARD_STORAGE_RESET() {
     visitStore.reset();
     assignStore.resetAll();
     viewStore.setView("welcome");
+    overrides.stored = []
+    overrideParts.stored = []
+    overrideTimes.stored = []
 }
 
 export async function BackUp() {
