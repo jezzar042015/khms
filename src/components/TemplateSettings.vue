@@ -91,7 +91,7 @@
                 <a href="https://m.me/312885485248553" target="_blank">
                     <lord-icon src="https://cdn.lordicon.com/ayhtotha.json" trigger="hover" colors="primary:#ffffff">
                     </lord-icon>
-                    Chat Developer
+                    Chat for Support
                 </a>
             </div>
         </div>
