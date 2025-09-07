@@ -13,7 +13,7 @@
             </div>
             <div class="actions">
                 <div id="printer">
-                    <button @click="print">
+                    <button @click="confirmPrinting">
                         <span class="icon">
                             <IconPrinter />
                         </span>
@@ -49,6 +49,7 @@
                 </div>
             </div>
         </div>
+        <AlertMessage :cancel="alert.cancel" :msg="alert.msg" :header="alert.header" @confirm="print" />
     </div>
     <slot></slot>
 </template>
@@ -57,13 +58,16 @@
     import { useFilesStore } from '@/stores/files';
     import { useViewStore } from '@/stores/views';
     import { ref } from 'vue';
+    import type { AlertSettings } from '@/types/vforms';
     import IconPrinter from '../icons/IconPrinter.vue';
     import TemplateSettings from '../TemplateSettings.vue';
     import IconHelp from '../icons/IconHelp.vue';
+    import AlertMessage from '../AlertMessage.vue';
 
     const fileStore = useFilesStore();
     const viewStore = useViewStore();
-    const congSettingsDisplay = ref(false)
+    const congSettingsDisplay = ref(false);
+    const alert = ref<AlertSettings>({});
 
     function showCongSettings(): void {
         congSettingsDisplay.value = true
@@ -73,8 +77,18 @@
         congSettingsDisplay.value = false
     }
 
-    function print(): void {
+    async function print(): Promise<void> {
+        await viewStore.setPopAlert(false)
         window.print();
+    }
+
+    function confirmPrinting(): void {
+        alert.value.cancel = false
+        alert.value.msg = `To remove the "Headers and footers", uncheck the "Headers and footers" checkbox on the printing Settings.`
+        alert.value.confirm = true
+        alert.value.confirmText = "OK"
+        alert.value.header = "Printing Tip"
+        viewStore.setPopAlert(true)
     }
 
     function toStudents(): void {
