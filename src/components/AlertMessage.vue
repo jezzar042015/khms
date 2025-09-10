@@ -8,7 +8,7 @@
         </div>
         <div class="footer">
             <button class="btn-confirm" @click.stop="confirmed" v-if="confirm">{{ confirmText
-            }}</button>
+                }}</button>
             <button class="btn-cancel" @click.stop="close" v-if="cancel">{{ cancelText }}</button>
         </div>
     </PopAlert>
@@ -21,7 +21,7 @@
 
     const viewStore = useViewStore()
 
-    const emits = defineEmits(['confirm'])
+    const emits = defineEmits(['confirm', 'cancel'])
 
     const {
         confirm = true,
@@ -42,12 +42,13 @@
     }>()
 
     function close() {
+        emits('cancel')
         viewStore.setPopAlert(false)
     }
 
     function confirmed() {
         emits('confirm')
-        close()
+        viewStore.setPopAlert(false)
     }
 </script>
 
