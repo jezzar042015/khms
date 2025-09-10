@@ -49,7 +49,8 @@
                 </div>
             </div>
         </div>
-        <AlertMessage :cancel="alert.cancel" :msg="alert.msg" :header="alert.header" @confirm="print" />
+        <AlertMessage :cancel="alert.cancel" :cancel-text="alert.cancelText" :msg="alert.msg" :header="alert.header"
+            @confirm="print" @cancel="viewPrintingTutorial" />
     </div>
     <slot></slot>
 </template>
@@ -83,11 +84,12 @@
     }
 
     function confirmPrinting(): void {
-        alert.value.cancel = false
         alert.value.msg = `To remove the "Headers and footers", uncheck the "Headers and footers" checkbox on the printing Settings.`
         alert.value.confirm = true
         alert.value.confirmText = "OK"
         alert.value.header = "Printing Tip"
+        alert.value.cancel = true
+        alert.value.cancelText = "See Tutorial"
         viewStore.setPopAlert(true)
     }
 
@@ -105,6 +107,10 @@
 
     function toHelp(): void {
         window.location.href = 'https://jezzar042015.github.io/khms-help/'
+    }
+
+    function viewPrintingTutorial(): void {
+        window.open('https://jezzar042015.github.io/khms-help/?view=help&item=7', '_blank')
     }
 
 </script>
