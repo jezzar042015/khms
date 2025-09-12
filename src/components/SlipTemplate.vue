@@ -81,12 +81,12 @@
     import { usePublisherStore } from '@/stores/publisher';
     import { useFilesStore } from '@/stores/files';
     import { useToast } from 'vue-toast-notification';
+    import { useWeeklyDate } from '@/composables/weeklyDate';
     import type { PartItem } from '@/types/files';
     import domtoimage from 'dom-to-image';
     import IconCheck from './icons/IconCheck.vue';
     import IconCamera from './icons/IconCamera.vue';
     import IconDownload from './icons/IconDownload.vue';
-    import { useWeeklyDate } from '@/composables/weeklyDate';
 
     const $toast = useToast();
     const { partSource } = defineProps<{
@@ -199,6 +199,7 @@
             shooter.value = true
             $toast.info('Assignment slip was successfully downloaded!', { position: 'top', duration: 5000 })
         } catch (error) {
+            console.error('Failed to download assignment slip:', error);
             $toast.warning('Assignment slip was not downloaded!', { position: 'top', duration: 5000 })
             shooter.value = true
         }

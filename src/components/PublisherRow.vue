@@ -25,36 +25,34 @@
 </template>
 
 <script setup lang="ts">
-    import type { Publisher } from '@/types/publisher';
     import { computed, ref } from 'vue';
     import { usePublisherStore } from '@/stores/publisher';
     import { useViewStore } from '@/stores/views';
+    import type { Publisher } from '@/types/publisher';
 
-
-    import RoleSelector from '@/components/RoleSelector.vue'
-    import IconPlus from '@/components/icons/IconPlus.vue'
     import IconMinus from '@/components/icons/IconMinus.vue'
+    import IconPlus from '@/components/icons/IconPlus.vue'
+    import RoleSelector from '@/components/RoleSelector.vue'
 
     const roleSelectorDisplay = ref(false);
 
-    const emits = defineEmits(['request-remove'])
     const { pub } = defineProps<{
         pub: Publisher
-    }>()
+    }>();
+
+    const emits = defineEmits(['request-remove']);
 
     const hasTriggeredSelector = ref(false);
-    const pubStore = usePublisherStore()
-    const viewStore = useViewStore()
+    const pubStore = usePublisherStore();
+    const viewStore = useViewStore();
 
     const publisher = ref<Publisher>({
         id: pub.id,
         name: pub.name,
         roles: pub.roles
-    })
+    });
 
-    const isNewPub = computed<boolean>(() => {
-        return (typeof publisher.value.id === 'undefined')
-    })
+    const isNewPub = computed<boolean>(() => typeof publisher.value.id === 'undefined');
 
     const rolesDisplay = computed<{ code: string, display: string }[]>(() => {
         const pubRoles = publisher.value.roles

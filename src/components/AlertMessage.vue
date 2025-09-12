@@ -7,9 +7,12 @@
             {{ msg }}
         </div>
         <div class="footer">
-            <button class="btn-confirm" @click.stop="confirmed" v-if="confirm">{{ confirmText
-                }}</button>
-            <button class="btn-cancel" @click.stop="close" v-if="cancel">{{ cancelText }}</button>
+            <button class="btn-confirm" @click.stop="confirmed" v-if="confirm">
+                {{ confirmText }}
+            </button>
+            <button class="btn-cancel" @click.stop="close" v-if="cancel">
+                {{ cancelText }}
+            </button>
         </div>
     </PopAlert>
 </template>
