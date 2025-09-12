@@ -42,14 +42,14 @@
     */
 
     import { computed, onMounted, onUnmounted, ref } from 'vue';
-    import { usePublisherStore } from '@/stores/publisher';
     import { useAssignmentStore } from '@/stores/assignment';
-    import { useViewStore } from '@/stores/views';
     import { useCongregationStore } from '@/stores/congregation';
+    import { usePublisherStore } from '@/stores/publisher';
+    import { useToast } from 'vue-toast-notification';
+    import { useViewStore } from '@/stores/views';
     import type { S140PartItem, PartItem } from '@/types/files';
     import type { Publisher } from '@/types/publisher';
     import type { MWBAssignment } from '@/types/mwb';
-    import { useToast } from 'vue-toast-notification';
 
     type A100Position = 'right' | 'left'
     const emits = defineEmits(['hide', 'trigger-off'])

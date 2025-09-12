@@ -33,10 +33,10 @@
 </template>
 
 <script setup lang="ts">
-   
-   /**
-     * @description Component to let the user enter the congregation details 
-    */
+
+    /**
+      * @description Component to let the user enter the congregation details 
+     */
 
     import { computed } from 'vue'
     import { useCongregationStore } from '@/stores/congregation';
@@ -58,9 +58,7 @@
         const hasLang = congStore.congregation.lang
 
         return hasClass && hasLang
-    })
-
-
+    });
 </script>
 
 <style scoped>
