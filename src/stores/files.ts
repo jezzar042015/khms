@@ -340,6 +340,7 @@ export const useFilesStore = defineStore('files', () => {
             class: "part-title-living",
             roles: ['elder'],
             time: 3,
+            writtable: true,
         }
 
         const weekNum = Number(id.split('.')[1])
