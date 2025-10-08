@@ -126,35 +126,25 @@
         return pub?.name
     })
 
-    const classAssignment = computed<Classrooms>(() => {
-        if (partSource.id.includes('.ax1')) return 'aux1'
-        return 'main'
-    })
-
-    const assignDate = computed(() => {
+    const assignDate = computed<string>(() => {
         const weeks = fileStore.weekOptions
         const weekId = partSource.id.substring(0, 8);
         const week = weeks.find(w => w.id == weekId)
         return useWeeklyDate(weekId, week?.name ?? '', true)
     })
 
-    const partNum = computed(() => {
+    const partNum = computed<string>(() => {
         const title = partSource.title ?? ''
         const perPos = title.indexOf('.')
         const partNum = title.substring(0, perPos)
         return /^-?\d+(\.\d+)?$/.test(partNum) ? `#${title.substring(0, perPos)}` : title;
-    })
-    const boxMain = computed(() => {
-        return ['checkbox', { 'checked': classAssignment.value == 'main' }]
-    })
+    });
 
-    const boxAux1 = computed(() => {
-        return ['checkbox', { 'checked': classAssignment.value == 'aux1' }]
-    })
+    const classCode = computed<Classrooms>(() => partSource.id.includes('.ax1') ? 'aux1' : 'main');
 
-    const boxAux2 = computed(() => {
-        return ['checkbox', { 'checked': classAssignment.value == 'aux2' }]
-    })
+    const boxMain = computed(() => ['checkbox', { 'checked': classCode.value == 'main' }])
+    const boxAux1 = computed(() => ['checkbox', { 'checked': classCode.value == 'aux1' }])
+    const boxAux2 = computed(() => ['checkbox', { 'checked': classCode.value == 'aux2' }])
 
     async function capture() {
 

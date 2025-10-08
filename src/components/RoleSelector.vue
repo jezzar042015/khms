@@ -67,9 +67,7 @@
         return filtered
     })
 
-    const noAssignableRoles = computed<boolean>(() => {
-        return availableRoles.value.length === 0
-    })
+    const noAssignableRoles = computed<boolean>(() => availableRoles.value.length === 0)
 
     async function addRole(role: string): Promise<void> {
         if (pub.value.roles.includes(role)) return
