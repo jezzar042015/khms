@@ -141,6 +141,7 @@
 
     /**
      * @description array of assignable publishers filtered by the part's required roles
+     * @description the return is an array sorted by names
      * @returns (Publisher[])
     */
     const assignables = computed<Publisher[]>(() => {
