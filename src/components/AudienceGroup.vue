@@ -1,15 +1,25 @@
 <template>
     <div v-if="isAuxiChairman" class="auxy-audience">
-        <span v-if="hasAssignedAudience">{{ assignedAudience }}</span>
-        <span v-else class="blurred">Assign Audience</span>
+        <span @click="onSelection = true" v-if="hasAssignedAudience">{{ assignedAudience }}</span>
+        <span @click="onSelection = true" v-else class="blurred">Assign Audience</span>
+        <div class="selections" v-if="onSelection" ref="target">
+            <div class="option">Group 1</div>
+            <div class="option">Group 2</div>
+            <div class="option">Group 3</div>
+            <div class="option">Group 4</div>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
     import { useAssignmentStore } from '@/stores/assignment';
-    import { computed } from 'vue';
+    import { onClickOutside } from '@vueuse/core';
+    import { computed, ref } from 'vue';
 
     const assignments = useAssignmentStore();
+    const onSelection = ref(false)
+    const target = ref<HTMLElement | null>(null)
+    onClickOutside(target, () => onSelection.value = false)
 
     const { isAuxiChairman, partId } = defineProps<{
         isAuxiChairman: boolean
@@ -35,11 +45,26 @@
         margin-top: -4px;
         padding-left: 20px;
         cursor: pointer;
+        position: relative;
     }
 
     .blurred
     {
         color: gray;
         opacity: .5;
+    }
+
+    .selections
+    {
+        position: absolute;
+        left: 12px;
+        padding: 2px;
+        background: white;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+
+    .option
+    {
+        padding: 2px 8px;
     }
 </style>
