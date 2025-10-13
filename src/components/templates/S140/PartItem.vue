@@ -19,10 +19,7 @@
             <div :class="assignAux1Classes" v-if="isAux1Part" @click="showAux1Selector">
                 {{ displayAux1Assignee }}
             </div>
-            <div v-if="isAuxiChairman" class="auxy-audience">
-                <span>Assign Audience</span>
-            </div>
-
+            <AudienceGroup :is-auxi-chairman="isAuxiChairman" :part-id="part.id" />
             <AssignmentSelector v-if="selectorAux1 && partAux1" :part="partAux1" :triggered="triggeredSelector"
                 @hide="hideSelector" @trigger-off="triggerOff" />
         </div>
@@ -54,6 +51,7 @@
 
     import AssignmentSelector from '@/components/AssignmentSelector.vue'
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
+    import AudienceGroup from '@/components/AudienceGroup.vue'
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
@@ -369,13 +367,4 @@
         cursor: pointer;
     }
 
-    .auxy-audience
-    {
-        display: block;
-        font-weight: 500;
-        font-size: 12px;
-        margin-top: -4px;
-        padding-left: 20px;
-        cursor: pointer;
-    }
 </style>
