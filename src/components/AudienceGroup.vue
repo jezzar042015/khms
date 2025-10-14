@@ -3,20 +3,21 @@
         <span @click="onSelection = true" v-if="hasAssignedAudience">{{ assignedAudience }}</span>
         <span @click="onSelection = true" v-else class="blurred">Assign Audience</span>
         <div class="selections" v-if="onSelection" ref="target">
-            <div class="option">Group 1</div>
-            <div class="option">Group 2</div>
-            <div class="option">Group 3</div>
-            <div class="option">Group 4</div>
+            <div v-for="item in audiences.stored" :key="item">
+                <div class="option">{{ item }}</div>
+            </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
     import { useAssignmentStore } from '@/stores/assignment';
+    import { useAudienceStore } from '@/stores/audience';
     import { onClickOutside } from '@vueuse/core';
     import { computed, ref } from 'vue';
 
     const assignments = useAssignmentStore();
+    const audiences = useAudienceStore()
     const onSelection = ref(false)
     const target = ref<HTMLElement | null>(null)
     onClickOutside(target, () => onSelection.value = false)
