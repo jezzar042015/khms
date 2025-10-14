@@ -2,35 +2,19 @@
     <div :class="selectorClasses" ref="assignSelector" @click.stop>
         <div class="wrapper">
             <span :class="arrowClasses" ref="arrow"></span>
-            <div>
-                <div class="desc">{{ titleDisplay }}</div>
-                <div class="alias" v-if="!noAssignables">{{ participantAlias }}</div>
-                <div class="noalias" v-else>
-                    <p>No students or participants have been added yet who can be assigned to this part. Please check
-                        the publishers list:</p>
-                    <ul>
-                        <li>Has the publisher been added?</li>
-                        <li>If they have been added, do they have the correct roles assigned?</li>
-                    </ul>
 
-                    <button @click="viewStore.setView('pubs')">Check Publishers</button>
+            <assignment-selector-header :part :is-closing-prayer="isClosingPrayer" :is-open-prayer="isOpenPrayer"
+                :no-assignables="noAssignables" />
 
-                </div>
-            </div>
             <div v-if="longList">
                 <input type="text" class="filter" placeholder="Filter" v-model="filter">
             </div>
             <div class="list-options-wrapper">
                 <div class="list">
-
-                    <div :class="['item', { active: isAssigned(a.id) }]" v-for="a in filteredAssignables" :key="a.id"
-                        @click.stop="setAssignment(a.id ?? '')">
-                        <p>{{ a.name }}</p>
-                        <span class="demo-desc">
-                            {{ studentOrAssistant(a.id) }}
-                        </span>
-                    </div>
-
+                    <template v-for="a in filteredAssignables" :key="a.id">
+                        <assignment-selector-item :person="a" :assignment="assignment" :are-prayers="arePrayers"
+                            :are-interpreters="areInterpreters" @set-assignment="setAssignment" />
+                    </template>
                 </div>
             </div>
         </div>
@@ -48,16 +32,16 @@
     import { useCongregationStore } from '@/stores/congregation';
     import { usePublisherStore } from '@/stores/publisher';
     import { useToast } from 'vue-toast-notification';
-    import { useViewStore } from '@/stores/views';
     import type { S140PartItem, PartItem } from '@/types/files';
     import type { Publisher } from '@/types/publisher';
     import type { MWBAssignment } from '@/types/mwb';
+    import AssignmentSelectorItem from './AssignmentSelectorItem.vue'
+    import AssignmentSelectorHeader from './AssignmentSelectorHeader.vue'
 
     type A100Position = 'right' | 'left'
     const emits = defineEmits(['hide', 'trigger-off'])
     const pubStore = usePublisherStore()
     const assignStore = useAssignmentStore()
-    const viewStore = useViewStore()
     const congStore = useCongregationStore()
 
     const $toast = useToast();
@@ -77,34 +61,6 @@
 
     const assignSelector = ref<HTMLElement | null>(null)
     const arrow = ref<HTMLElement | null>(null)
-
-    const participantAlias = computed<string>(() => {
-        if (noAssignables.value) return 'No Assignables';
-
-        const roles = part.roles || [];
-
-        if (roles.includes('demo')) {
-            return 'Select Students';
-        } else if (roles.includes('prayers')) {
-            return 'Select brothers to pray'
-        } else if (roles.includes('talk')) {
-            return 'Select Talk Student';
-        } else if (roles.includes('cbs')) {
-            return 'Select Conductor';
-        } else if (roles.includes('br')) {
-            return 'Select Student Reader';
-        } else if (roles.includes('rdr')) {
-            return 'Select Reader';
-        } else if (roles.includes('cam')) {
-            return 'Select Camera Operator';
-        } else if (roles.includes('intr')) {
-            return 'Select Interpreters';
-        } else if (roles.includes('elder') || roles.includes('ms')) {
-            return 'Select brother to handle';
-        } else {
-            return 'Select ...';
-        }
-    });
 
     /**
      * @description provides classes that will the basis of the pane position in relation to PartItem
@@ -132,13 +88,6 @@
 
     const isClosingPrayer = computed<boolean>(() => {
         return part.id.endsWith('.cp')
-    })
-
-    const titleDisplay = computed<string>(() => {
-        if (isOpenPrayer.value) return 'Opening Prayer'
-        if (isClosingPrayer.value) return 'Closing Prayer'
-
-        return part.title ?? ''
     })
 
     /**
@@ -179,47 +128,11 @@
         return assignables.value.length > minimumLongList
     })
 
-    /**
-     * @description provides a label if the assigned student is the main Student or an Assistant
-     *  if the position of the student id 
-     * @returns (string)
-    */
-    const studentOrAssistant = (pubId: string | undefined): string | null => {
-        if (!Array.isArray(assignment.value.a) || arePrayers.value || areInterpreters.value) {
-            return null;
-        }
-
-        const index = assignment.value.a.indexOf(pubId ?? '');
-        let result: string | null = null;
-
-        if (index === 0) {
-            result = 'Student';
-        } else if (index > 0) {
-            result = 'Assistant';
-        }
-
-        return result;
-    }
-
     const isDemo = computed(() => part.roles?.includes('demo'))
     const isBibleReading = computed(() => part.roles?.includes('br'))
     const isTalk = computed(() => part.roles?.includes('talk'))
-    const arePrayers = computed(() => part.roles?.includes('prayers'))
-    const areInterpreters = computed(() => part.roles?.includes('intr'))
-
-    /**
-     * @description determines if a publisher's name is already assigned 
-     * to the part. 
-     * @returns (boolean)
-    */
-    function isAssigned(pubId: string | undefined): boolean {
-        if (!pubId || !assignment.value) return false
-        if (typeof assignment.value.a === 'string') {
-            return pubId === assignment.value.a
-        } else {
-            return assignment.value.a.includes(pubId)
-        }
-    }
+    const arePrayers = computed(() => part.roles?.includes('prayers') ?? false)
+    const areInterpreters = computed(() => part.roles?.includes('intr') ?? false)
 
     /**
      * @description handles assigning or removing the assignment to or from a publisher
@@ -313,6 +226,9 @@
         return match ? match[1] : null;
     }
 
+    /**
+     * Prepares whether the assignment.a is string or string[]
+    */
     function prepAssignment(): void {
         if (isDemo.value || areInterpreters.value || isBibleReading.value || isTalk.value || arePrayers.value) {
             assignment.value = { pid: part.id, a: [] }
@@ -479,40 +395,6 @@
         left: -20.5px;
     }
 
-    .alias
-    {
-        padding: 4px 0;
-        font-size: .95em;
-    }
-
-    .noalias
-    {
-        padding: 10px;
-    }
-
-    .noalias ul
-    {
-        padding: 10px 10px 10px 20px;
-    }
-
-    .desc
-    {
-        font-size: .8em;
-        padding-bottom: 10px;
-        position: relative;
-    }
-
-    .desc::before
-    {
-        content: "";
-        position: absolute;
-        width: 100px;
-        height: 4px;
-        background: #3da8ea7a;
-        z-index: -1;
-        bottom: 2px;
-    }
-
     .filter
     {
         width: 100%;
@@ -538,58 +420,6 @@
         overflow: auto;
         gap: 4px;
         padding-top: 5px;
-    }
-
-    .item
-    {
-        font-size: .95em;
-        padding: 5px 8px;
-        border-left: 5px solid rgba(197, 197, 197, 0.247);
-        color: rgb(77, 77, 77);
-        position: relative;
-        cursor: pointer;
-    }
-
-
-    .item:hover,
-    .active
-    {
-        color: black;
-        font-weight: 600;
-    }
-
-    .item:not(.active):hover
-    {
-        border-left: 5px solid #3da8ea27;
-    }
-
-    .active
-    {
-        border-left: 5px solid #3da8ea7a;
-    }
-
-    .demo-desc
-    {
-        font-size: .84em;
-        position: absolute;
-        right: 10px;
-        top: 5px;
-        min-width: 100px;
-        font-weight: 400;
-        color: gray;
-        padding-left: 15px;
-    }
-
-    .demo-desc:not(:empty)::before
-    {
-        content: "";
-        position: absolute;
-        height: 6px;
-        width: 6px;
-        background: #3da8ea7a;
-        border-radius: 100%;
-        left: 0;
-        top: 40%;
     }
 
     button
