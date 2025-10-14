@@ -61,7 +61,7 @@
     router.pruneParams()
     await overrides.prune();
     assignmentHistory.read()
-    console.log(JSON.parse(JSON.stringify(assignmentHistory.ayfmStudents)));
+    // console.log(JSON.parse(JSON.stringify(assignmentHistory.ayfmStudents)));
 
   })
 

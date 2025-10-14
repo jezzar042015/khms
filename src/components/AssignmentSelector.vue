@@ -30,6 +30,7 @@
     import { computed, onMounted, onUnmounted, ref } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
     import { useCongregationStore } from '@/stores/congregation';
+    import { useFilesStore } from '@/stores/files';
     import { usePublisherStore } from '@/stores/publisher';
     import { useToast } from 'vue-toast-notification';
     import type { S140PartItem, PartItem } from '@/types/files';
@@ -43,6 +44,7 @@
     const pubStore = usePublisherStore()
     const assignStore = useAssignmentStore()
     const congStore = useCongregationStore()
+    const fileStore = useFilesStore()
 
     const $toast = useToast();
     const filter = ref('')
@@ -102,12 +104,44 @@
             publisher.roles.some(role => part.roles?.includes(role))
         )
 
-        return list.sort((a, b) => {
-            const pa = +(assignment.value.a?.includes(a.id || '') || false);
-            const pb = +(assignment.value.a?.includes(b.id || '') || false);
-            return pb - pa;
-        });
+        const studentparts: string[] = ["demo", "br", "talk"]
+        const isStudentPart = part.roles.some(r => studentparts.includes(r))
+
+        // Exclude publishers who already have assignments this week for student parts
+        const filteredList = isStudentPart
+            ? list.filter(p => !hasAssignments.value.includes(p.id ?? ''))
+            : list
+
+        return filteredList.sort((a, b) => {
+            const pa = +(assignment.value.a?.includes(a.id || '') || false)
+            const pb = +(assignment.value.a?.includes(b.id || '') || false)
+            return pb - pa
+        })
     })
+
+    /**
+     * @description array of publishers already has assigned part this week
+     * @returns (string[])
+    */
+    const hasAssignments = computed(() => {
+        const weekId = part.id.substring(0, 8) ?? ''
+        const studentPartIds = fileStore.studentsParts
+            .filter(s => s.id.startsWith(weekId))
+            .map(m => m.id)
+
+        const currentAssigned = Array.isArray(assignment.value.a)
+            ? assignment.value.a.filter(Boolean)
+            : (assignment.value.a ? [assignment.value.a] : [])
+
+        return Array.from(new Set(
+            assignStore.get
+                .filter(s => studentPartIds.includes(s.pid))
+                .flatMap(s => Array.isArray(s.a) ? s.a : [s.a])
+                .filter(Boolean)
+                .filter(id => !currentAssigned.includes(id as string))
+        ))
+    })
+
 
     /**
      * @description the final array of assignable publishers after user filter is applied
