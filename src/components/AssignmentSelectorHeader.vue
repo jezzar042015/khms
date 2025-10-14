@@ -100,4 +100,22 @@
     {
         padding: 10px 10px 10px 20px;
     }
+
+    button
+    {
+        background: #3DA8EA;
+        border: none;
+        color: white;
+        font-size: 12px;
+        padding: 10px 25px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: ease-in-out .5s;
+        margin-top: 10px;
+    }
+
+    button:hover
+    {
+        background: #2878aa;
+    }
 </style>
