@@ -60,7 +60,7 @@
     await loadLocals()
     router.pruneParams()
     await overrides.prune();
-    await assignmentHistory.read()
+    assignmentHistory.read()
   })
 
 
