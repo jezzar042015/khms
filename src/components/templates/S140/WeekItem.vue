@@ -25,7 +25,7 @@
                 </div>
             </template>
             <template v-else>
-                <PartItem :part="part" />
+                <PartItem :part="part" :key="part.id" />
             </template>
         </template>
 

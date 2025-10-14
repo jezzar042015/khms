@@ -60,7 +60,9 @@
     await loadLocals()
     router.pruneParams()
     await overrides.prune();
-    await assignmentHistory.read()
+    assignmentHistory.read()
+    // console.log(JSON.parse(JSON.stringify(assignmentHistory.ayfmStudents)));
+
   })
 
 
