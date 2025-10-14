@@ -1,6 +1,6 @@
 import type { MWBAssignment } from "@/types/mwb";
 import { defineStore } from "pinia";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 export const useAssignmentHistoryStore = defineStore('assign-history', () => {
 
@@ -33,8 +33,44 @@ export const useAssignmentHistoryStore = defineStore('assign-history', () => {
         stored.value = assignments;
     }
 
+    const bibleReaders = computed(() => {
+        const readers = stored.value.reduce<Record<string, string[]>>((acc, p) => {
+            if (!p.pid.endsWith('.3')) return acc
+            const name = p.a?.[0] ?? ''
+            const date = p.pid.slice(0, 8)
+                ; (acc[name] ??= []).push(date)
+            return acc
+        }, {})
+
+        // Sort each array descending (most recent first)
+        for (const dates of Object.values(readers)) {
+            dates.sort((a, b) => b.localeCompare(a))
+        }
+
+        return readers
+    })
+
+    const ayfmStudents = computed(() => {
+        const students = stored.value.reduce<Record<string, string[]>>((acc, p) => {
+            if (p.pid.endsWith('.3')) return acc
+            const name = p.a?.[0] ?? ''
+            const date = p.pid.slice(0, 8)
+                ; (acc[name] ??= []).push(date)
+            return acc
+        }, {})
+
+        // Sort each array descending (most recent first)
+        for (const dates of Object.values(students)) {
+            dates.sort((a, b) => b.localeCompare(a))
+        }
+
+        return students
+    })
+
     return {
         stored,
+        bibleReaders,
+        ayfmStudents,
         read
     }
 })
