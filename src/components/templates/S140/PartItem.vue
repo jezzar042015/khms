@@ -19,19 +19,22 @@
             <div :class="assignAux1Classes" v-if="isAux1Part" @click="showAux1Selector">
                 {{ displayAux1Assignee }}
             </div>
+            <AudienceGroup :is-auxi-chairman="isAuxiChairman" :part-id="part.id" />
             <AssignmentSelector v-if="selectorAux1 && partAux1" :part="partAux1" :triggered="triggeredSelector"
                 @hide="hideSelector" @trigger-off="triggerOff" />
         </div>
         <div class="assignee" v-show="isAssignable" @click="showSelector">
-            <span class="s140-part-label" v-show="showLabel" v-if="!hasAux1Class"> {{
-                part?.label }}: </span>
+            <span class="s140-part-label" v-show="showLabel" v-if="!hasAux1Class">
+                {{ part?.label }}:
+            </span>
             <div :class="assignClasses">
                 {{ displayAssignee }}
             </div>
             <AssignmentSelector v-if="selector" :part="part" :triggered="triggeredSelector" @hide="hideSelector"
                 @trigger-off="triggerOff" />
         </div>
-        <TimeAdjuster style="margin-left: 50px;" v-if="timeAdjuster" :part="part" :part-item="part" @close="updatePartTime" />
+        <TimeAdjuster style="margin-left: 50px;" v-if="timeAdjuster" :part="part" :part-item="part"
+            @close="updatePartTime" />
     </div>
 </template>
 
@@ -48,6 +51,7 @@
 
     import AssignmentSelector from '@/components/AssignmentSelector.vue'
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
+    import AudienceGroup from '@/components/AudienceGroup.vue'
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
@@ -197,6 +201,10 @@
 
     const hasAux1Class = computed<boolean>(() => {
         return congStore.congregation.classId == 2
+    })
+
+    const isAuxiChairman = computed<boolean>(() => {
+        return part.id.endsWith('.0');
     })
 
     const hasMeetingDemos = computed<boolean>(() => {
@@ -358,4 +366,5 @@
     {
         cursor: pointer;
     }
+
 </style>

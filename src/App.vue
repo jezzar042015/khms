@@ -12,6 +12,7 @@
 <script setup lang="ts">
   import { onMounted } from 'vue';
 
+  import { useAssignmentHistoryStore } from './stores/assignment-history';
   import { useCongregationStore } from './stores/congregation';
   import { usePublisherStore } from './stores/publisher';
   import { useVisitStore } from './stores/visits';
@@ -38,6 +39,7 @@
   const surveyStore = useSurveysStore()
   const router = useRouterStore()
   const overrides = useOverridesStore()
+  const assignmentHistory = useAssignmentHistoryStore()
 
   async function loadLocals() {
     await congStore.loadLocal();
@@ -58,6 +60,7 @@
     await loadLocals()
     router.pruneParams()
     await overrides.prune();
+    await assignmentHistory.read()
   })
 
 
