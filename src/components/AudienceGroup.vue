@@ -1,24 +1,24 @@
 <template>
     <div v-if="isAuxiChairman" class="auxy-audience">
         <!-- Show assigned audience or "Assign Audience" -->
-        <span v-if="!isEditing" @click="startEditing" :class="{ blurred: !hasAssignedAudience }">
+        <span v-if="!isEditing" @click.self="startEditing" :class="{ blurred: !hasAssignedAudience }">
             {{ hasAssignedAudience ? assignedAudience : 'Assign Audience' }}
         </span>
 
         <!-- Input appears when editing -->
         <input v-else ref="inputEl" v-model="inputValue" type="text" class="audience-input"
-            @keydown.enter.prevent="saveInput" @blur="saveInput" />
+            @keydown.enter.prevent="saveInput" @blur="saveInput" title="Press Enter to Save" />
 
         <!-- Show selections only while input is focused -->
         <div v-if="showSelections" class="selections" ref="target">
             <div v-for="item in audiences.stored" :key="item" class="option">
-                <!-- Click item to assign -->
-                <span @click.stop="assignAudience(item)">
+                <!-- Click item to assign (use pointerdown so it fires before input blur) -->
+                <span @pointerdown.prevent="assignAudience(item)">
                     {{ item }}
                 </span>
 
-                <!-- Click × to delete -->
-                <span class="remove" @click.stop="removeAudience(item)" title="Remove option">
+                <!-- Click × to delete (use pointerdown and stop propagation) -->
+                <span class="remove" @pointerdown.stop.prevent="removeAudience(item)" title="Remove option">
                     &times;
                 </span>
             </div>
@@ -80,10 +80,13 @@
     };
 
     // Assign audience
-    const assignAudience = (item: string) => {
-        const existing = assignments.get.find(a => a.pid === partid.value);
-        if (existing) existing.a = item;
-        else assignments.get.push({ pid: partid.value, a: item });
+    const assignAudience = async (item: string) => {
+        inputValue.value = item
+        await assignments.upsert({
+            pid: partid.value,
+            a: item
+        })
+
         isEditing.value = false;
         showSelections.value = false;
     };
@@ -130,10 +133,9 @@
     .audience-input
     {
         font-size: 12px;
-        padding: 2px 4px;
+        padding: 0px 4px;
         width: 120px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+        border: none;
         outline: none;
     }
 
@@ -171,6 +173,7 @@
         margin-left: 6px;
         cursor: pointer;
         font-weight: bold;
+        padding: 0px 8px;
     }
 
     .remove:hover
