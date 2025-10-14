@@ -20,15 +20,17 @@
             <div v-if="longList">
                 <input type="text" class="filter" placeholder="Filter" v-model="filter">
             </div>
-            <div class="list-wrapper">
+            <div class="list-options-wrapper">
                 <div class="list">
+
                     <div :class="['item', { active: isAssigned(a.id) }]" v-for="a in filteredAssignables" :key="a.id"
                         @click.stop="setAssignment(a.id ?? '')">
-                        {{ a.name }}
+                        <p>{{ a.name }}</p>
                         <span class="demo-desc">
                             {{ studentOrAssistant(a.id) }}
                         </span>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -523,7 +525,7 @@
         outline: none;
     }
 
-    .list-wrapper
+    .list-options-wrapper
     {
         overflow-y: auto;
         flex: 1;
