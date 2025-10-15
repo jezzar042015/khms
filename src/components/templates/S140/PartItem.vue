@@ -1,5 +1,10 @@
 <template>
-    <div :class="gridColumns">
+    <div :class="['inserter-wrapper', gridColumns]">
+        <div v-if="true" class="item-inserter">
+            <div class="insert-btn">
+                <IconPlus style="height: 20px; width: 20px; stroke: white;" />
+            </div>
+        </div>
         <div class="s140-grid-titles">
             <span v-show="part?.time" @click="showTimeAdjuster"
                 :class="['s140-runtime', { 'time-adjustable': part.timeAdjustable }]">
@@ -52,6 +57,7 @@
     import AssignmentSelector from '@/components/AssignmentSelector.vue'
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
     import AudienceGroup from '@/components/AudienceGroup.vue'
+    import IconPlus from '@/components/icons/IconPlus.vue';
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
@@ -253,6 +259,9 @@
         return displayTime(startTime, part?.runtime)
     })
 
+    /**
+     * @description Handles the classes assignment to manage columns display based on the number of classes
+     * */
     const gridColumns = computed<string>(() => {
         const minClasses = congStore.congregation.classId;
 
@@ -367,4 +376,78 @@
         cursor: pointer;
     }
 
+    .inserter-wrapper
+    {
+        position: relative;
+    }
+
+    .item-inserter
+    {
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        height: 5px;
+        bottom: -2px;
+        left: -20px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .item-inserter:hover
+    {
+        border-bottom: 1px dotted rgb(189, 189, 189);
+        border-bottom-left-radius: 50%;
+    }
+
+    .insert-btn,
+    .remover-btn
+    {
+        display: flex;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s, transform 0.3s;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .insert-btn
+    {
+        background-color: #3DA8EA;
+        margin-top: -12px;
+        margin-right: -12px;
+        transform: scale(0.8);
+        height: 30px;
+        width: 30px;
+    }
+
+    .remover-btn
+    {
+        background-color: rgba(219, 2, 2, 0.322);
+        position: absolute;
+        transform: scale(0.5);
+        right: -10px;
+        top: 10px;
+        height: 25px;
+        width: 25px;
+        transition: ease-in-out .3s
+    }
+
+    .item-inserter:hover .insert-btn
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .inserter:hover .remover-btn
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .remover-btn:hover
+    {
+        background-color: rgb(219, 2, 2);
+    }
 </style>
