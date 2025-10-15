@@ -83,4 +83,5 @@ export interface S140PartItem {
     co?: string
     writtable?: boolean
     timeAdjustable?: boolean
+    isInsertable?: boolean
 }

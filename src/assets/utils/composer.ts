@@ -65,6 +65,7 @@ function midsong(src: WeekItem, week: S140PartItem[]) {
         roles: [],
         showNoTime: true,
         runtime: runtime,
+        isInsertable: true,
     }
 
     runtime = part.time + runtime
@@ -183,7 +184,10 @@ function ministry(src: WeekItem, week: S140PartItem[]) {
 function living(src: WeekItem, week: S140PartItem[]) {
     const parts = src.parts.living;
 
-    for (const pattern of parts) {
+    for (let i = 0; i < parts.length; i++) {
+        const pattern = parts[i];
+        const isLast = i === parts.length - 1;
+
         const part: S140PartItem = {
             id: pattern.id,
             time: getTime(pattern),
@@ -194,7 +198,8 @@ function living(src: WeekItem, week: S140PartItem[]) {
             autofills: [...pattern.autofills ?? []],
             roles: [...pattern.roles ?? []],
             writtable: pattern.writtable ?? false,
-            timeAdjustable: true
+            timeAdjustable: true,
+            isInsertable: !isLast
         }
 
         if (part.roles?.includes('cbs')) {

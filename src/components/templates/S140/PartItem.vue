@@ -1,6 +1,6 @@
 <template>
     <div :class="['inserter-wrapper', gridColumns]">
-        <div v-if="true" class="item-inserter">
+        <div v-if="part.isInsertable" class="item-inserter">
             <div class="insert-btn">
                 <IconPlus style="height: 20px; width: 20px; stroke: white;" />
             </div>
