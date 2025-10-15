@@ -65,7 +65,6 @@ function midsong(src: WeekItem, week: S140PartItem[]) {
         roles: [],
         showNoTime: true,
         runtime: runtime,
-        isInsertable: true,
     }
 
     runtime = part.time + runtime

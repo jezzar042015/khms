@@ -25,7 +25,7 @@
                 </div>
             </template>
             <template v-else>
-                <PartItem :part="part" :key="part.id" />
+                <PartItem :part="part" :key="part.id" :has-inserted="true" @insert-item="insertLivingPartItem" />
             </template>
         </template>
 
@@ -100,6 +100,11 @@
     }
     const hideDaySelector = () => {
         onDaySelection.value = false
+    }
+
+    const insertLivingPartItem = async (id: string) => {
+        await fileStore.insertLivingItem(id)
+        await fileStore.composeS140()
     }
 
     onClickOutside(daySelector, event => hideDaySelector())

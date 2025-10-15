@@ -1,7 +1,7 @@
 <template>
     <div :class="['inserter-wrapper', gridColumns]">
-        <div v-if="part.isInsertable" class="item-inserter">
-            <div class="insert-btn">
+        <div v-if="part.isInsertable && !hasInserted" class="item-inserter">
+            <div class="insert-btn" @click="insertPartItem">
                 <IconPlus style="height: 20px; width: 20px; stroke: white;" />
             </div>
         </div>
@@ -67,9 +67,12 @@
     const overrides = useOverridesStore();
     const timeOverrides = useTimeOverrides()
 
-    const { part } = defineProps<{
+    const { part, hasInserted } = defineProps<{
         part: S140PartItem
+        hasInserted?: boolean
     }>()
+
+    const emits = defineEmits(['insert-item'])
 
     const timeAdjuster = ref(false)
     const showTimeAdjuster = () => {
@@ -315,6 +318,10 @@
         const formattedMinutes = newMinutes.toString().padStart(2, '0');
 
         return `${formattedHours}:${formattedMinutes}`;
+    }
+
+    const insertPartItem = () => {
+        emits('insert-item', part.id)
     }
 
     function loadAux1Part(): void {
