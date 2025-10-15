@@ -86,7 +86,9 @@
     }
 
     const updatePartTime = (time: number) => {
+
         timeAdjuster.value = false
+
         if (Number(time) == 0) return
 
         if (time !== part.time) {
@@ -94,11 +96,6 @@
                 id: part.id,
                 time: time
             })
-        }
-
-        if (time === part.time) {
-            const storedOverride = timeOverrides.read(part.id)?.time ?? 0
-            if (storedOverride > 0) timeOverrides.remove(part.id)
         }
     }
 
