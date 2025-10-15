@@ -5,6 +5,9 @@
                 <IconPlus style="height: 20px; width: 20px; stroke: white;" />
             </div>
         </div>
+        <div v-if="isRemovableInsert" class="remover-btn" @click="removePartItem">
+            <IconMinus style="height: 15px; width: 15px; stroke: white;" />
+        </div>
         <div class="s140-grid-titles">
             <span v-show="part?.time" @click="showTimeAdjuster"
                 :class="['s140-runtime', { 'time-adjustable': part.timeAdjustable }]">
@@ -58,6 +61,7 @@
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
     import AudienceGroup from '@/components/AudienceGroup.vue'
     import IconPlus from '@/components/icons/IconPlus.vue';
+    import IconMinus from '@/components/icons/IconMinus.vue';
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
@@ -72,7 +76,7 @@
         hasInserted?: boolean
     }>()
 
-    const emits = defineEmits(['insert-item'])
+    const emits = defineEmits(['insert-item', 'remove-item'])
 
     const timeAdjuster = ref(false)
     const showTimeAdjuster = () => {
@@ -320,8 +324,14 @@
         return `${formattedHours}:${formattedMinutes}`;
     }
 
+    const isRemovableInsert = computed(() => part.id.endsWith('.nsrt'))
+
     const insertPartItem = () => {
         emits('insert-item', part.id)
+    }
+
+    const removePartItem = () => {
+        emits('remove-item', part.id)
     }
 
     function loadAux1Part(): void {
@@ -434,8 +444,8 @@
         background-color: rgba(219, 2, 2, 0.322);
         position: absolute;
         transform: scale(0.5);
-        right: -10px;
-        top: 10px;
+        left: -25px;
+        top: 3px;
         height: 25px;
         width: 25px;
         transition: ease-in-out .3s
@@ -447,7 +457,7 @@
         transform: scale(1);
     }
 
-    .inserter:hover .remover-btn
+    .inserter-wrapper:hover .remover-btn
     {
         opacity: 1;
         transform: scale(1);
