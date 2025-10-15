@@ -25,7 +25,8 @@
                 </div>
             </template>
             <template v-else>
-                <PartItem :part="part" :key="part.id" />
+                <PartItem :part="part" :key="part.id" :has-inserted="hasInserted" @insert-item="insertLivingPartItem"
+                    @remove-item="removeLivingPartItem" />
             </template>
         </template>
 
@@ -91,6 +92,8 @@
         return fileStore.s140PartItems[weekId]
     })
 
+    const hasInserted = computed(() => composedParts.value.some(s => s.id.endsWith('.nsrt')))
+
     // midweek day selector
 
     const onDaySelection = ref(false)
@@ -100,6 +103,16 @@
     }
     const hideDaySelector = () => {
         onDaySelection.value = false
+    }
+
+    const insertLivingPartItem = async (id: string) => {
+        await fileStore.insertLivingItem(id)
+        await fileStore.composeS140()
+    }
+
+    const removeLivingPartItem = async (id: string) => {
+        await fileStore.removeLivingItem(id)
+        await fileStore.composeS140()
     }
 
     onClickOutside(daySelector, event => hideDaySelector())
