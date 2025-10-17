@@ -1,6 +1,6 @@
 <template>
     <div :class="['item', { active: isAssigned(person.id) }]" @click.stop="setAssignment(person.id ?? '')">
-        <p>{{ person.name }}</p>
+        <p>{{ person.name }} <span v-show="showAgo" class="ago">{{ lastDate }}w</span></p>
         <span class="demo-desc">
             {{ studentOrAssistant(person.id) }}
         </span>
@@ -8,8 +8,10 @@
 </template>
 
 <script setup lang="ts">
+    import { useAssignmentHistoryStore } from '@/stores/assignment-history';
     import type { MWBAssignment } from '@/types/mwb'
     import type { Publisher } from '@/types/publisher';
+    import { computed } from 'vue';
 
     const { person, arePrayers, areInterpreters, assignment } = defineProps<{
         person: Publisher
@@ -19,8 +21,53 @@
     }>()
 
     const emits = defineEmits(['set-assignment'])
-
+    const history = useAssignmentHistoryStore()
     const setAssignment = (id: string) => emits('set-assignment', id)
+
+    const lastDate = computed(() => {
+        if (!person.id) return 0
+        const isBibleReading = assignment.pid.endsWith('.3') || assignment.pid.endsWith('.3.ax1')
+        const prevParts = isBibleReading ? history.bibleReaders[person.id] : history.ayfmStudents[person.id]
+        return prevParts ? weeksFromCurrent(prevParts[0]) : 0
+    })
+
+    const showAgo = computed(() => {
+        return Array.isArray(assignment.a) && !arePrayers && !areInterpreters && lastDate.value > 0
+    })
+
+    function weeksFromCurrent(code: string, today: Date = new Date()): number {
+        // Parse input like "202510.1"
+        const [ym, wStr] = code.split(".");
+        const year = Number.parseInt(ym.slice(0, 4), 10);
+        const month = Number.parseInt(ym.slice(4, 6), 10) - 1; // JS months are 0-indexed
+        const week = Number.parseInt(wStr, 10);
+
+        // Get first Monday of the target month
+        const firstDay = new Date(year, month, 1);
+        const dayOfWeek = firstDay.getDay(); // 0=Sun, 1=Mon, ...
+        const firstMonday =
+            dayOfWeek === 1
+                ? new Date(year, month, 1)
+                : new Date(year, month, 1 + ((8 - dayOfWeek) % 7));
+
+        // Calculate start date of the given week (Monday)
+        const weekStart = new Date(firstMonday);
+        weekStart.setDate(firstMonday.getDate() + (week - 1) * 7);
+
+        // Find Monday of current week
+        const current = new Date(today);
+        const currentDayOfWeek = current.getDay();
+        const currentMonday = new Date(current);
+        currentMonday.setDate(current.getDate() - ((currentDayOfWeek + 6) % 7));
+
+        // Difference in full weeks
+        const diffDays = Math.floor(
+            (currentMonday.getTime() - weekStart.getTime()) / (1000 * 60 * 60 * 24)
+        );
+        const diffWeeks = Math.floor(diffDays / 7) + 1; // +1 so current week = 1
+
+        return diffWeeks;
+    }
 
     /**
     * @description determines if a publisher's name is already assigned 
@@ -111,5 +158,15 @@
         border-radius: 100%;
         left: 0;
         top: 40%;
+    }
+
+    .ago
+    {
+        background: rgb(236, 130, 130);
+        color: #fff;
+        padding: 1px 5px;
+        font-size: 10px;
+        border-radius: 10px;
+        margin-left: 10px;
     }
 </style>
