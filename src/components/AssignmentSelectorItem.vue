@@ -24,7 +24,11 @@
 
 
     const showAgo = computed(() => {
-        return Array.isArray(assignment.a) && !arePrayers && !areInterpreters && (person.weeksSinceLastAssignment ?? 0) !== 0
+        return Array.isArray(assignment.a) &&
+            !arePrayers &&
+            !areInterpreters &&
+            (person.weeksSinceLastAssignment ?? 0) !== 0 &&
+            !assignment.a.includes(person.id ?? '')
     })
 
 
@@ -105,7 +109,7 @@
         position: absolute;
         right: 10px;
         top: 5px;
-        min-width: 100px;
+        min-width: 70px;
         font-weight: 400;
         color: gray;
         padding-left: 15px;

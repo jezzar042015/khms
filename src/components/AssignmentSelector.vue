@@ -126,10 +126,19 @@
         }
 
         return filteredList.sort((a, b) => {
+            const assignedIds = assignment.value.a || []
+
             // Step 1: prioritize those currently assigned
-            const pa = +(assignment.value.a?.includes(a.id || '') || false)
-            const pb = +(assignment.value.a?.includes(b.id || '') || false)
-            if (pb !== pa) return pb - pa
+            const aIndex = assignedIds.indexOf(a.id || '')
+            const bIndex = assignedIds.indexOf(b.id || '')
+            const aAssigned = aIndex !== -1
+            const bAssigned = bIndex !== -1
+
+            if (aAssigned && !bAssigned) return -1
+            if (!aAssigned && bAssigned) return 1
+
+            // ✅ If both are assigned, follow the order in assignedIds array
+            if (aAssigned && bAssigned) return aIndex - bIndex
 
             // Step 2: bring those with weeksSinceLastAssignment == -1 to the top
             const aSpecial = a.weeksSinceLastAssignment === -1 ? 1 : 0
@@ -148,11 +157,11 @@
         const targetMonday = getMonday(targetCode);
         const baseMonday = getMonday(baseCode);
 
-        // Calculate week difference
+        // Difference in full weeks (no +1)
         const diffDays = Math.floor(
             (baseMonday.getTime() - targetMonday.getTime()) / (1000 * 60 * 60 * 24)
         );
-        const diffWeeks = Math.floor(diffDays / 7) + 1; // +1 so same week = 1
+        const diffWeeks = Math.floor(diffDays / 7);
 
         return diffWeeks;
     }
@@ -166,7 +175,6 @@
         const month = Number.parseInt(ym.slice(4, 6), 10) - 1;
         const week = Number.parseInt(wStr, 10);
 
-        // Get first Monday of the target month
         const firstDay = new Date(year, month, 1);
         const dayOfWeek = firstDay.getDay();
         const firstMonday =
@@ -174,7 +182,6 @@
                 ? new Date(year, month, 1)
                 : new Date(year, month, 1 + ((8 - dayOfWeek) % 7));
 
-        // Compute Monday of the given week
         const monday = new Date(firstMonday);
         monday.setDate(firstMonday.getDate() + (week - 1) * 7);
 
@@ -268,6 +275,8 @@
             await handleAutofills(id);
             await handleS140Prayer(id, added);
         }
+
+        historyStore.read()
     }
 
 
