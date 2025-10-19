@@ -120,7 +120,7 @@
             for (const item of filteredList) {
                 if (item.id) {
                     const prevParts = isBibleReading.value ? historyStore.bibleReaders[item.id] : historyStore.ayfmStudents[item.id]
-                    item.weeksSinceLastAssignment = prevParts ? weeksBetween(prevParts[0], weekId) : -1
+                    item.weeksSinceLastAssignment = prevParts ? weeksBetween(prevParts[0], weekId) : undefined
                 }
             }
         }
@@ -140,9 +140,9 @@
             // ✅ If both are assigned, follow the order in assignedIds array
             if (aAssigned && bAssigned) return aIndex - bIndex
 
-            // Step 2: bring those with weeksSinceLastAssignment == -1 to the top
-            const aSpecial = a.weeksSinceLastAssignment === -1 ? 1 : 0
-            const bSpecial = b.weeksSinceLastAssignment === -1 ? 1 : 0
+            // Step 2: bring those with weeksSinceLastAssignment == undefined to the top
+            const aSpecial = a.weeksSinceLastAssignment === undefined ? 1 : 0
+            const bSpecial = b.weeksSinceLastAssignment === undefined ? 1 : 0
             if (bSpecial !== aSpecial) return bSpecial - aSpecial
 
             // Step 3: sort remaining by weeksSinceLastAssignment descending

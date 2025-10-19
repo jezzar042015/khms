@@ -1,6 +1,12 @@
 <template>
     <div :class="['item', { active: isAssigned(person.id) }]" @click.stop="setAssignment(person.id ?? '')">
-        <p>{{ person.name }} <span v-show="showAgo" class="ago">{{ ago }}</span></p>
+        <p>
+            {{ person.name }}
+            <span v-show="showAgo" class="ago">
+                {{ ago }}</span>
+        </p>
+
+        <!-- Labels what assignment on array parts -->
         <span class="demo-desc">
             {{ studentOrAssistant(person.id) }}
         </span>
@@ -27,13 +33,16 @@
         return Array.isArray(assignment.a) &&
             !arePrayers &&
             !areInterpreters &&
-            (person.weeksSinceLastAssignment ?? 0) !== 0 &&
+            // (person.weeksSinceLastAssignment ?? 0) !== 0 &&
             !assignment.a.includes(person.id ?? '')
     })
 
 
     const ago = computed(() => {
-        return person.weeksSinceLastAssignment === -1 ? 'No previous' : `${person.weeksSinceLastAssignment}w ago`
+        const w = person.weeksSinceLastAssignment
+        if (w === undefined) return 'No previous'
+        if (w < 0) return `Next ${Math.abs(w)}w`
+        return `${w}w ago`
     })
 
     /**
@@ -85,6 +94,14 @@
         cursor: pointer;
     }
 
+    .item p
+    {
+        display: flex;
+        align-items: center;
+        gap: 0px 10px;
+        flex-wrap: wrap;
+    }
+
 
     .item:hover,
     .active
@@ -108,7 +125,7 @@
         font-size: .84em;
         position: absolute;
         right: 10px;
-        top: 5px;
+        top: 6px;
         min-width: 70px;
         font-weight: 400;
         color: gray;
@@ -129,12 +146,12 @@
 
     .ago
     {
+        display: inline-block;
         background: white;
         border: 1px solid rgb(245, 197, 197);
         color: rgb(250, 92, 92) !important;
         padding: 1px 5px;
         font-size: 10px !important;
         border-radius: 10px;
-        margin-left: 10px;
     }
 </style>
