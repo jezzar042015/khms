@@ -9,9 +9,12 @@ export const useAssignmentHistoryStore = defineStore('assign-history', () => {
     const read = async () => {
         const assignments: MWBAssignment[] = [];
 
-        // Regex for allowed keys and pid pattern
+        // Regex for target local storage keys
         const keyPattern = /^khmsts-parts-\d{6}$/;
-        const pidPattern = /^\d{6}\.\d\.\d$/; // YYYYMM.d.d
+
+        // Regex for target items' pid 
+        // Example valid: "202510.1.3" or "202510.1.3.ax1"
+        const pidPattern = /^\d{6}\.\d\.\d(\.ax1)?$/;
 
         for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
@@ -35,7 +38,7 @@ export const useAssignmentHistoryStore = defineStore('assign-history', () => {
 
     const bibleReaders = computed(() => {
         const readers = stored.value.reduce<Record<string, string[]>>((acc, p) => {
-            if (!p.pid.endsWith('.3')) return acc
+            if (!p.pid.endsWith('.3') && !p.pid.endsWith('.3.ax1')) return acc
             const name = p.a?.[0] ?? ''
             const date = p.pid.slice(0, 8)
                 ; (acc[name] ??= []).push(date)
@@ -52,7 +55,7 @@ export const useAssignmentHistoryStore = defineStore('assign-history', () => {
 
     const ayfmStudents = computed(() => {
         const students = stored.value.reduce<Record<string, string[]>>((acc, p) => {
-            if (p.pid.endsWith('.3')) return acc
+            if (p.pid.endsWith('.3') || p.pid.endsWith('.3.ax1')) return acc
             const name = p.a?.[0] ?? ''
             const date = p.pid.slice(0, 8)
                 ; (acc[name] ??= []).push(date)
