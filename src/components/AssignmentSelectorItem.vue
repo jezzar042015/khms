@@ -1,12 +1,6 @@
 <template>
     <div :class="['item', { active: isAssigned(person.id) }]" @click.stop="setAssignment(person.id ?? '')">
-        <p>
-            {{ person.name }}
-            <span v-show="showAgo" class="ago">
-                {{ ago }}</span>
-        </p>
-
-        <!-- This labels what assignment on array parts -->
+        <p>{{ person.name }}</p>
         <span class="demo-desc">
             {{ studentOrAssistant(person.id) }}
         </span>
@@ -16,7 +10,6 @@
 <script setup lang="ts">
     import type { MWBAssignment } from '@/types/mwb'
     import type { Publisher } from '@/types/publisher';
-    import { computed } from 'vue';
 
     const { person, arePrayers, areInterpreters, assignment } = defineProps<{
         person: Publisher
@@ -26,24 +19,8 @@
     }>()
 
     const emits = defineEmits(['set-assignment'])
+
     const setAssignment = (id: string) => emits('set-assignment', id)
-
-
-    const showAgo = computed(() => {
-        return Array.isArray(assignment.a) &&
-            !arePrayers &&
-            !areInterpreters &&
-            // (person.weeksSinceLastAssignment ?? 0) !== 0 &&
-            !assignment.a.includes(person.id ?? '')
-    })
-
-
-    const ago = computed(() => {
-        const w = person.weeksSinceLastAssignment
-        if (w === undefined) return 'No previous'
-        if (w < 0) return `Next ${Math.abs(w)}w`
-        return `${w}w ago`
-    })
 
     /**
     * @description determines if a publisher's name is already assigned 
@@ -94,14 +71,6 @@
         cursor: pointer;
     }
 
-    .item p
-    {
-        display: flex;
-        align-items: center;
-        gap: 0px 10px;
-        flex-wrap: wrap;
-    }
-
 
     .item:hover,
     .active
@@ -125,8 +94,8 @@
         font-size: .84em;
         position: absolute;
         right: 10px;
-        top: 6px;
-        min-width: 70px;
+        top: 5px;
+        min-width: 100px;
         font-weight: 400;
         color: gray;
         padding-left: 15px;
@@ -142,16 +111,5 @@
         border-radius: 100%;
         left: 0;
         top: 40%;
-    }
-
-    .ago
-    {
-        display: inline-block;
-        background: white;
-        border: 1px solid rgb(245, 197, 197);
-        color: rgb(250, 92, 92) !important;
-        padding: 1px 5px;
-        font-size: 10px !important;
-        border-radius: 10px;
     }
 </style>
