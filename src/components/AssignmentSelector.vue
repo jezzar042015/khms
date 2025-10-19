@@ -29,6 +29,7 @@
 
     import { computed, onMounted, onUnmounted, ref } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
+    import { useAssignmentHistoryStore } from '@/stores/assignment-history';
     import { useCongregationStore } from '@/stores/congregation';
     import { useFilesStore } from '@/stores/files';
     import { usePublisherStore } from '@/stores/publisher';
@@ -43,6 +44,7 @@
     const emits = defineEmits(['hide', 'trigger-off'])
     const pubStore = usePublisherStore()
     const assignStore = useAssignmentStore()
+    const historyStore = useAssignmentHistoryStore()
     const congStore = useCongregationStore()
     const fileStore = useFilesStore()
 
@@ -104,20 +106,80 @@
             publisher.roles.some(role => part.roles?.includes(role))
         )
 
-        const studentparts: string[] = ["demo", "br", "talk"]
-        const isStudentPart = part.roles.some(r => studentparts.includes(r))
+        const studentparts = new Set(["demo", "br", "talk"])
+        const isStudentPart = part.roles.some(r => studentparts.has(r))
 
         // Exclude publishers who already have assignments this week for student parts
         const filteredList = isStudentPart
             ? list.filter(p => !hasAssignments.value.includes(p.id ?? ''))
             : list
 
+        // Here assign the number of weeks from previous assignment
+        const weekId = assignment.value.pid.substring(0, 8)
+        if (isStudentPart) {
+            for (const item of filteredList) {
+                if (item.id) {
+                    const prevParts = isBibleReading.value ? historyStore.bibleReaders[item.id] : historyStore.ayfmStudents[item.id]
+                    item.weeksSinceLastAssignment = prevParts ? weeksBetween(prevParts[0], weekId) : -1
+                }
+            }
+        }
+
         return filteredList.sort((a, b) => {
+            // Step 1: prioritize those currently assigned
             const pa = +(assignment.value.a?.includes(a.id || '') || false)
             const pb = +(assignment.value.a?.includes(b.id || '') || false)
-            return pb - pa
+            if (pb !== pa) return pb - pa
+
+            // Step 2: bring those with weeksSinceLastAssignment == -1 to the top
+            const aSpecial = a.weeksSinceLastAssignment === -1 ? 1 : 0
+            const bSpecial = b.weeksSinceLastAssignment === -1 ? 1 : 0
+            if (bSpecial !== aSpecial) return bSpecial - aSpecial
+
+            // Step 3: sort remaining by weeksSinceLastAssignment descending
+            const wa = a.weeksSinceLastAssignment ?? -Infinity
+            const wb = b.weeksSinceLastAssignment ?? -Infinity
+            return wb - wa
         })
     })
+
+    function weeksBetween(targetCode: string, baseCode: string): number {
+
+        const targetMonday = getMonday(targetCode);
+        const baseMonday = getMonday(baseCode);
+
+        // Calculate week difference
+        const diffDays = Math.floor(
+            (baseMonday.getTime() - targetMonday.getTime()) / (1000 * 60 * 60 * 24)
+        );
+        const diffWeeks = Math.floor(diffDays / 7) + 1; // +1 so same week = 1
+
+        return diffWeeks;
+    }
+
+    /**
+     * Get's the first monday of the given week id code
+     * */
+    const getMonday = (code: string): Date => {
+        const [ym, wStr] = code.split(".");
+        const year = Number.parseInt(ym.slice(0, 4), 10);
+        const month = Number.parseInt(ym.slice(4, 6), 10) - 1;
+        const week = Number.parseInt(wStr, 10);
+
+        // Get first Monday of the target month
+        const firstDay = new Date(year, month, 1);
+        const dayOfWeek = firstDay.getDay();
+        const firstMonday =
+            dayOfWeek === 1
+                ? new Date(year, month, 1)
+                : new Date(year, month, 1 + ((8 - dayOfWeek) % 7));
+
+        // Compute Monday of the given week
+        const monday = new Date(firstMonday);
+        monday.setDate(firstMonday.getDate() + (week - 1) * 7);
+
+        return monday;
+    }
 
     /**
      * @description array of publishers already has assigned part this week
@@ -125,21 +187,27 @@
     */
     const hasAssignments = computed(() => {
         const weekId = part.id.substring(0, 8) ?? ''
-        const studentPartIds = fileStore.studentsParts
-            .filter(s => s.id.startsWith(weekId))
-            .map(m => m.id)
 
-        const currentAssigned = Array.isArray(assignment.value.a)
-            ? assignment.value.a.filter(Boolean)
-            : (assignment.value.a ? [assignment.value.a] : [])
+        const studentPartIds = new Set(
+            fileStore.studentsParts
+                .filter(s => s.id.startsWith(weekId))
+                .map(m => m.id)
+        );
+
+        let currentAssigned: string[] = [];
+        if (Array.isArray(assignment.value.a)) {
+            currentAssigned = assignment.value.a.filter(Boolean);
+        } else if (assignment.value.a) {
+            currentAssigned = [assignment.value.a];
+        }
 
         return Array.from(new Set(
             assignStore.get
-                .filter(s => studentPartIds.includes(s.pid))
+                .filter(s => studentPartIds.has(s.pid))
                 .flatMap(s => Array.isArray(s.a) ? s.a : [s.a])
                 .filter(Boolean)
                 .filter(id => !currentAssigned.includes(id as string))
-        ))
+        ));
     })
 
 
@@ -375,7 +443,7 @@
         background: #ffff;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         padding: 15px 15px;
-        z-index: 1;
+        z-index: 10;
         transform: translateY(-50%);
         overflow: visible;
         font-size: 16px;
