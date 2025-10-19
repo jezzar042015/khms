@@ -6,7 +6,7 @@
                 {{ ago }}</span>
         </p>
 
-        <!-- Labels what assignment on array parts -->
+        <!-- This labels what assignment on array parts -->
         <span class="demo-desc">
             {{ studentOrAssistant(person.id) }}
         </span>
