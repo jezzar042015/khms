@@ -1,10 +1,15 @@
 <template>
     <div :class="gridColumns">
+
         <div class="s140-grid-titles">
+
+            <!-- Part Runtime Display -->
             <span v-show="part?.time" @click="showTimeAdjuster"
                 :class="['s140-runtime', { 'time-adjustable': part.timeAdjustable }]">
                 {{ runTime }}
             </span>
+
+            <!-- Part Title -->
             <span v-show="part?.time">
                 <span v-if="!overriding" @click="startOverride" :class="[{ writtable: part?.writtable }]">
                     {{ displayTitle }} {{ isOverride ? '' : timeLimit }}
@@ -14,15 +19,17 @@
                 </span>
             </span>
         </div>
+
+        <!-- Handling Auxiliary Class Parts -->
         <div class="assignee" v-if="hasAux1Class">
             <span class="s140-part-label" v-show="showLabel">{{ part?.label }}:</span>
-            <div :class="assignAux1Classes" v-if="isAux1Part" @click="showAux1Selector">
+            <div :class="assignAux1Classes" v-if="isAux1Part" @click="showSelector">
                 {{ displayAux1Assignee }}
             </div>
             <AudienceGroup :is-auxi-chairman="isAuxiChairman" :part-id="part.id" />
-            <AssignmentSelector v-if="selectorAux1 && partAux1" :part="partAux1" :triggered="triggeredSelector"
-                @hide="hideSelector" @trigger-off="triggerOff" />
         </div>
+
+        <!-- Handling Normal Parts -->
         <div class="assignee" v-show="isAssignable" @click="showSelector">
             <span class="s140-part-label" v-show="showLabel" v-if="!hasAux1Class">
                 {{ part?.label }}:
@@ -30,9 +37,9 @@
             <div :class="assignClasses">
                 {{ displayAssignee }}
             </div>
-            <AssignmentSelector v-if="selector" :part="part" :triggered="triggeredSelector" @hide="hideSelector"
-                @trigger-off="triggerOff" />
         </div>
+
+        <!-- Handling Time Adjustments -->
         <TimeAdjuster style="margin-left: 50px;" v-if="timeAdjuster" :part="part" :part-item="part"
             @close="updatePartTime" />
     </div>
@@ -49,7 +56,6 @@
     import { useTimeOverrides } from '@/stores/overrides-time';
     import type { S140PartItem } from '@/types/files';
 
-    import AssignmentSelector from '@/components/AssignmentSelector.vue'
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
     import AudienceGroup from '@/components/AudienceGroup.vue'
 
@@ -271,9 +277,21 @@
         return (hasLabel && !hasVisit)
     })
 
-    function showSelector(): void {
-        triggeredSelector.value = true
-        selector.value = true
+    function showSelector(e: MouseEvent): void {
+        const target = e.currentTarget as HTMLElement | null
+        if (!target) return
+
+        const rect = target.getBoundingClientRect()
+
+        console.log({
+            top: rect.top,
+            left: rect.left,
+            bottom: rect.bottom,
+            right: rect.right,
+            width: rect.width,
+            height: rect.height,
+        })
+
     }
 
     function showAux1Selector(): void {
