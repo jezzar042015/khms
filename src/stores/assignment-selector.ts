@@ -3,19 +3,22 @@ import { defineStore } from "pinia";
 import { ref } from "vue";
 
 export const useAssignmentSelector = defineStore('assignment-selectr', () => {
-    const targetRect = ref<DOMRect>()
+    const rect = ref<DOMRect>()
     const part = ref<S140PartItem | PartItem>()
     const show = ref(false)
 
-    const setTargetRect = (rect: DOMRect, targetPart: S140PartItem | PartItem) => {
-        targetRect.value = rect;
+    const setTargetRect = (targetRect: DOMRect, targetPart: S140PartItem | PartItem) => {
+        rect.value = targetRect;
         part.value = targetPart;
         show.value = true
+        console.log(rect.value.bottom);
+
     }
 
     return {
         part,
         show,
+        rect,
         setTargetRect,
     }
 })
