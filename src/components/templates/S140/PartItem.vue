@@ -23,7 +23,7 @@
         <!-- Handling Auxiliary Class Parts -->
         <div class="assignee" v-if="hasAux1Class">
             <span class="s140-part-label" v-show="showLabel">{{ part?.label }}:</span>
-            <div :class="assignAux1Classes" v-if="isAux1Part" @click="showSelector">
+            <div :class="assignAux1Classes" v-if="isAux1Part" @click="showSelector($event, 'aux')">
                 {{ displayAux1Assignee }}
             </div>
             <AudienceGroup :is-auxi-chairman="isAuxiChairman" :part-id="part.id" />
@@ -96,10 +96,6 @@
     }
 
     const partAux1 = ref<S140PartItem | undefined>()
-
-    const selector = ref(false);
-    const selectorAux1 = ref(false);
-    const triggeredSelector = ref(false);
 
     const isDemo = computed(() => part.roles?.includes('demo'))
     const isBibleReading = computed(() => part.roles?.includes('br'))
@@ -277,11 +273,13 @@
         return (hasLabel && !hasVisit)
     })
 
-    function showSelector(e: MouseEvent): void {
+    function showSelector(e: MouseEvent, targetPart = 'def'): void {
         const target = e.currentTarget as HTMLElement | null
         if (!target) return
 
         const rect = target.getBoundingClientRect()
+
+        console.log(targetPart);
 
         console.log({
             top: rect.top,
@@ -292,20 +290,6 @@
             height: rect.height,
         })
 
-    }
-
-    function showAux1Selector(): void {
-        triggeredSelector.value = true
-        selectorAux1.value = true
-    }
-
-    function triggerOff(): void {
-        triggeredSelector.value = false
-    }
-
-    function hideSelector(): void {
-        selector.value = false
-        selectorAux1.value = false
     }
 
     function displayTime(startingTime: string, minutesToAdd: number) {
