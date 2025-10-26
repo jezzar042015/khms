@@ -54,6 +54,7 @@
     import { useOverridesStore } from '@/stores/overrides';
     import { usePublisherStore } from '@/stores/publisher';
     import { useTimeOverrides } from '@/stores/overrides-time';
+    import { useAssignmentSelector } from '@/stores/assignment-selector';
     import type { S140PartItem } from '@/types/files';
 
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
@@ -66,6 +67,7 @@
     const fileStore = useFilesStore();
     const overrides = useOverridesStore();
     const timeOverrides = useTimeOverrides()
+    const selector = useAssignmentSelector()
 
     const { part } = defineProps<{
         part: S140PartItem
@@ -279,19 +281,9 @@
 
         const p: S140PartItem | undefined = targetPart === 'def' ? part : partAux1.value
 
-        if (p) {
-            console.log(p);
-        }
+        if (!p) return
 
-        console.log({
-            top: rect.top,
-            left: rect.left,
-            bottom: rect.bottom,
-            right: rect.right,
-            width: rect.width,
-            height: rect.height,
-        })
-
+        selector.setTargetRect(rect, p)
     }
 
     function displayTime(startingTime: string, minutesToAdd: number) {
