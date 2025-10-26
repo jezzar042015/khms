@@ -1,10 +1,10 @@
 <template>
-    <div :class="selectorClasses" ref="assignSelector" @click.stop>
+    <div v-if="selector.show" :class="selectorClasses" ref="assignSelector" @click.stop>
         <div class="wrapper">
             <span :class="arrowClasses" ref="arrow"></span>
 
-            <assignment-selector-header :part :is-closing-prayer="isClosingPrayer" :is-open-prayer="isOpenPrayer"
-                :no-assignables="noAssignables" />
+            <assignment-selector-header v-if="selector.part" :part="selector.part" :is-closing-prayer="isClosingPrayer"
+                :is-open-prayer="isOpenPrayer" :no-assignables="noAssignables" />
 
             <div v-if="longList">
                 <input type="text" class="filter" placeholder="Filter" v-model="filter">
@@ -30,23 +30,24 @@
     import { computed, onMounted, onUnmounted, ref } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
     import { useAssignmentHistoryStore } from '@/stores/assignment-history';
+    import { useAssignmentSelector } from '@/stores/assignment-selector';
     import { useCongregationStore } from '@/stores/congregation';
     import { useFilesStore } from '@/stores/files';
     import { usePublisherStore } from '@/stores/publisher';
     import { useToast } from 'vue-toast-notification';
-    import type { S140PartItem, PartItem } from '@/types/files';
+    import { onClickOutside } from '@vueuse/core';
     import type { Publisher } from '@/types/publisher';
     import type { MWBAssignment } from '@/types/mwb';
     import AssignmentSelectorItem from './AssignmentSelectorItem.vue'
     import AssignmentSelectorHeader from './AssignmentSelectorHeader.vue'
 
     type A100Position = 'right' | 'left'
-    const emits = defineEmits(['hide', 'trigger-off'])
     const pubStore = usePublisherStore()
     const assignStore = useAssignmentStore()
     const historyStore = useAssignmentHistoryStore()
     const congStore = useCongregationStore()
     const fileStore = useFilesStore()
+    const selector = useAssignmentSelector()
 
     const $toast = useToast();
     const filter = ref('')
@@ -58,13 +59,11 @@
     const mouseXpos = ref<number>(0)
     const a100Pos = ref<A100Position>('right')
 
-    const { part, triggered } = defineProps<{
-        part: S140PartItem | PartItem,
-        triggered: boolean,
-    }>()
 
     const assignSelector = ref<HTMLElement | null>(null)
     const arrow = ref<HTMLElement | null>(null)
+
+    onClickOutside(assignSelector, () => (selector.show = false));
 
     /**
      * @description provides classes that will the basis of the pane position in relation to PartItem
@@ -87,11 +86,11 @@
     })
 
     const isOpenPrayer = computed<boolean>(() => {
-        return part.id.endsWith('.op')
+        return selector.part ? selector.part.id.endsWith('.op') : false
     })
 
     const isClosingPrayer = computed<boolean>(() => {
-        return part.id.endsWith('.cp')
+        return selector.part ? selector.part.id.endsWith('.cp') : false
     })
 
     /**
@@ -100,14 +99,15 @@
      * @returns (Publisher[])
     */
     const assignables = computed<Publisher[]>(() => {
-        if (!part.roles) return pubStore.publishers
+        if (!selector.part) return []
+        if (!selector.part.roles) return pubStore.publishers
 
         const list = pubStore.publishers.filter(publisher =>
-            publisher.roles.some(role => part.roles?.includes(role))
+            publisher.roles.some(role => selector.part ? selector.part.roles?.includes(role) : [])
         )
 
         const studentparts = new Set(["demo", "br", "talk"])
-        const isStudentPart = part.roles.some(r => studentparts.has(r))
+        const isStudentPart = selector.part.roles.some(r => studentparts.has(r))
 
         // Exclude publishers who already have assignments this week for student parts
         const filteredList = isStudentPart
@@ -193,7 +193,8 @@
      * @returns (string[])
     */
     const hasAssignments = computed(() => {
-        const weekId = part.id.substring(0, 8) ?? ''
+        if (!selector.part) return []
+        const weekId = selector.part.id.substring(0, 8) ?? ''
 
         const studentPartIds = new Set(
             fileStore.studentsParts
@@ -237,11 +238,11 @@
         return assignables.value.length > minimumLongList
     })
 
-    const isDemo = computed(() => part.roles?.includes('demo'))
-    const isBibleReading = computed(() => part.roles?.includes('br'))
-    const isTalk = computed(() => part.roles?.includes('talk'))
-    const arePrayers = computed(() => part.roles?.includes('prayers') ?? false)
-    const areInterpreters = computed(() => part.roles?.includes('intr') ?? false)
+    const isDemo = computed(() => selector.part?.roles?.includes('demo'))
+    const isBibleReading = computed(() => selector.part?.roles?.includes('br'))
+    const isTalk = computed(() => selector.part?.roles?.includes('talk'))
+    const arePrayers = computed(() => selector.part?.roles?.includes('prayers') ?? false)
+    const areInterpreters = computed(() => selector.part?.roles?.includes('intr') ?? false)
 
     /**
      * @description handles assigning or removing the assignment to or from a publisher
@@ -281,8 +282,8 @@
 
 
     async function handleAutofills(id: string): Promise<void> {
-        if (part.autofills) {
-            for (const af of part.autofills) {
+        if (selector.part?.autofills) {
+            for (const af of selector.part.autofills) {
                 await assignStore.upsert({
                     pid: af, a: id,
                 })
@@ -296,7 +297,7 @@
     async function handleS140Prayer(id: string, isAdded: boolean): Promise<void> {
 
         if (isOpenPrayer.value || isClosingPrayer.value) {
-            const weekId = getWeekId(part.id)
+            const weekId = getWeekId(selector.part?.id || '')
             let a100Prayer = assignStore.get.find(p => p.pid == weekId)
 
             if (!a100Prayer)
@@ -315,7 +316,7 @@
     */
     async function handlePrayers(id: string, isAdded: boolean): Promise<void> {
         if (arePrayers.value) {
-            const weekId = getWeekId(part.id + '.1')
+            const weekId = getWeekId(selector.part?.id + '.1')
             const i = assignment.value.a.indexOf(id)
             const prayer = { pid: '', a: '' }
 
@@ -342,25 +343,25 @@
     */
     function prepAssignment(): void {
         if (isDemo.value || areInterpreters.value || isBibleReading.value || isTalk.value || arePrayers.value) {
-            assignment.value = { pid: part.id, a: [] }
+            assignment.value = { pid: selector.part?.id ?? '', a: [] }
         } else {
-            assignment.value = { pid: part.id, a: '' }
+            assignment.value = { pid: selector.part?.id ?? '', a: '' }
         }
     }
 
     function blurredSelector(event: MouseEvent): void {
-        if (triggered) {
-            emits("trigger-off");
-            mouseYpos.value = event.clientY
-            mouseXpos.value = event.clientX
-            setOnA100Position()
-            setMyTransform()
-            return;
-        }
+        //     if (triggered) {
+        //         emits("trigger-off");
+        //         mouseYpos.value = event.clientY
+        //         mouseXpos.value = event.clientX
+        //         setOnA100Position()
+        //         setMyTransform()
+        //         return;
+        //     }
 
-        if (assignSelector.value && !assignSelector.value.contains(event.target as HTMLElement)) {
-            emits('hide')
-        }
+        //     if (assignSelector.value && !assignSelector.value.contains(event.target as HTMLElement)) {
+        //         emits('hide')
+        //     }
     };
 
     function setOnA100Position(): void {
@@ -414,7 +415,7 @@
 
 
     function loadAssigned(): void {
-        const partId: string = part?.id ?? '';
+        const partId: string = selector.part?.id ?? '';
         const assigned = assignStore.get.find(a => a.pid == partId);
         if (assigned) {
             // makes sure that missing pubs are removed
@@ -424,7 +425,7 @@
                     if (!pubExist) assigned.a = assigned.a.filter(i => i != id)
                 }
             }
-            assignment.value = { pid: part.id, a: assigned.a }
+            assignment.value = { pid: selector.part?.id ?? '', a: assigned.a }
         }
     }
 

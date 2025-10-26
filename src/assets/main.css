@@ -616,6 +616,7 @@ section
 {
   font-size: 18px;
   height: fit-content;
+  position: relative;
 }
 
 .s140-header
