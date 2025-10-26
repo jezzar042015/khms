@@ -27,7 +27,7 @@
      * @description modal pane component that allows the user to select publisher(s) to handle parts
     */
 
-    import { computed, onMounted, onUnmounted, ref } from 'vue';
+    import { computed, ref, watch } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
     import { useAssignmentHistoryStore } from '@/stores/assignment-history';
     import { useAssignmentSelector } from '@/stores/assignment-selector';
@@ -429,15 +429,18 @@
         }
     }
 
-    onMounted(() => {
-        prepAssignment()
-        loadAssigned()
-        document.addEventListener('click', blurredSelector);
-    })
+    watch(
+        () => selector.part,
+        () => {
+            prepAssignment()
+            loadAssigned()
+        },
+        {
+            immediate: true,
+            deep: true
+        }
+    )
 
-    onUnmounted(() => {
-        document.removeEventListener('click', blurredSelector);
-    })
 </script>
 
 <style scoped>
