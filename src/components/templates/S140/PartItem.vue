@@ -166,8 +166,6 @@
             return
         }
 
-
-
         overrides.save({
             id: part.id,
             title: overrideText.value
@@ -273,13 +271,17 @@
         return (hasLabel && !hasVisit)
     })
 
-    function showSelector(e: MouseEvent, targetPart = 'def'): void {
+    function showSelector(e: MouseEvent, targetPart: 'aux' | 'def' = 'def'): void {
         const target = e.currentTarget as HTMLElement | null
         if (!target) return
 
         const rect = target.getBoundingClientRect()
 
-        console.log(targetPart);
+        const p: S140PartItem | undefined = targetPart === 'def' ? part : partAux1.value
+
+        if (p) {
+            console.log(p);
+        }
 
         console.log({
             top: rect.top,
