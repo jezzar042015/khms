@@ -373,10 +373,35 @@
     function setMyTransform(): void {
         if (!assignSelector.value || !selector.rect) return
 
+        // Account for scrolling
         const scrollTop = window.scrollY || document.documentElement.scrollTop
         const actualTop = selector.rect.top + scrollTop
 
-        assignSelector.value.style.top = `${actualTop}px`
+        // Get rect dimensions
+        const rectRight = selector.rect.right
+        const rectTop = selector.rect.top
+        const rectWidth = selector.rect.width
+
+
+
+        // Get selector dimensions
+        const selectorRect = assignSelector.value.getBoundingClientRect()
+        const selectorWidth = selectorRect.width
+        const selectorHeight = selectorRect.height
+
+        // Optional spacing (e.g. 8px gap above)
+        const gap = 8
+
+        // Center horizontally & place ABOVE rect
+        const right = rectRight - rectWidth - (selectorWidth * 2) + 50
+        const top = actualTop + rectTop // - gap
+
+        // Apply styles
+        assignSelector.value.style.position = 'absolute'
+        assignSelector.value.style.left = `${right}px`
+        assignSelector.value.style.top = `${top}px`
+
+
 
         // const viewportHeight = window.innerHeight;
         // const bottomOverflowLimit = 30
