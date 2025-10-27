@@ -374,10 +374,11 @@
      * AssignmentSelector positioning is relative to #s140 
      * */
     function setMyTransform(): void {
-        console.log(selector.rect);
         if (!assignSelector.value || !selector.rect) return
 
-
+        // Account for scrolling
+        const scrollTop = window.scrollY || document.documentElement.scrollTop
+        const actualTop = selector.rect.top + scrollTop
 
         // Horizontal Positioning 
         const isAuxilliary = selector.part?.id.endsWith('.ax1')
@@ -385,12 +386,19 @@
             selector.rect.width * 2 :
             selector.rect.width;
 
-        console.log(selector.rect.width);
+        // Get selector dimensions
+        const selectorRect = assignSelector.value.getBoundingClientRect()
+        const selectorHeight = selectorRect.height
 
         const gapX = 10;
 
+        const top = Math.max(0, actualTop - selectorHeight)
+
         assignSelector.value.style.right = `${rightOffset + gapX}px`
-        assignSelector.value.style.top = `${selector.rect.y}px`
+        assignSelector.value.style.top = `${top}px`
+
+        console.log(assignSelector.value.style.top, selector.rect.top, scrollTop);
+
     }
 
     function moveWrapperArrow(parentY: number) {
