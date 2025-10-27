@@ -1,5 +1,5 @@
 <template>
-    <div v-if="selector.show" :class="selectorClasses" ref="assignSelector" @click.stop>
+    <div v-show="selector.show" :class="selectorClasses" ref="assignSelector" @click.stop>
         <div class="wrapper">
             <span :class="arrowClasses" ref="arrow"></span>
 
@@ -370,62 +370,27 @@
         a100Pos.value = per > 60 ? 'right' : 'left'
     }
 
+    /**
+     * AssignmentSelector positioning is relative to #s140 
+     * */
     function setMyTransform(): void {
+        console.log(selector.rect);
         if (!assignSelector.value || !selector.rect) return
 
-        // Account for scrolling
-        const scrollTop = window.scrollY || document.documentElement.scrollTop
-        const actualTop = selector.rect.top + scrollTop
-
-        // Get rect dimensions
-        const rectRight = selector.rect.right
-        const rectTop = selector.rect.top
-        const rectWidth = selector.rect.width
 
 
+        // Horizontal Positioning 
+        const isAuxilliary = selector.part?.id.endsWith('.ax1')
+        const rightOffset = isAuxilliary ?
+            selector.rect.width * 2 :
+            selector.rect.width;
 
-        // Get selector dimensions
-        const selectorRect = assignSelector.value.getBoundingClientRect()
-        const selectorWidth = selectorRect.width
-        const selectorHeight = selectorRect.height
+        console.log(selector.rect.width);
 
-        // Optional spacing (e.g. 8px gap above)
-        const gap = 8
+        const gapX = 10;
 
-        // Center horizontally & place ABOVE rect
-        const right = rectRight - rectWidth - (selectorWidth * 2) + 50
-        const top = actualTop + rectTop // - gap
-
-        // Apply styles
-        assignSelector.value.style.position = 'absolute'
-        assignSelector.value.style.left = `${right}px`
-        assignSelector.value.style.top = `${top}px`
-
-
-
-        // const viewportHeight = window.innerHeight;
-        // const bottomOverflowLimit = 30
-        // const topOverflowLimit = 65
-        // const hasBottomOverflow = (viewportHeight - selector.rect.bottom) < bottomOverflowLimit
-
-        // if (hasBottomOverflow) {
-        //     const diff = viewportHeight - selector.rect.bottom;
-        //     console.log(diff);
-
-        //     assignSelector.value.style.transform = `translateY(50%)`
-        //     assignSelector.value.style.bottom = `${-diff + bottomOverflowLimit}px`;
-        //     const rectAfter = assignSelector.value.getBoundingClientRect() as DOMRect;
-        //     moveWrapperArrow(rectAfter.y + rectAfter.height)
-        //     return
-        // }
-
-        // const isBelowTopLimit = (selector.rect.y < topOverflowLimit)
-        // if (isBelowTopLimit) {
-        //     const diff = selector.rect.y - topOverflowLimit
-        //     assignSelector.value.style.transform = `translateY(-50%) translateY(${-diff}px)`;
-        //     const rectAfter = assignSelector.value.getBoundingClientRect() as DOMRect;
-        //     moveWrapperArrow(rectAfter.y + rectAfter.height)
-        // }
+        assignSelector.value.style.right = `${rightOffset + gapX}px`
+        assignSelector.value.style.top = `${selector.rect.y}px`
     }
 
     function moveWrapperArrow(parentY: number) {
@@ -460,8 +425,9 @@
     }
 
     watch(
-        () => selector.part,
+        () => selector.part?.id,
         async () => {
+
             prepAssignment()
             loadAssigned()
             // wait for DOM to update so the template ref is populated
@@ -490,7 +456,6 @@
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         padding: 15px 15px;
         z-index: 10;
-        transform: translateY(-50%);
         overflow: visible;
         font-size: 16px;
         border-radius: 3px;
@@ -499,7 +464,7 @@
 
     .ons140
     {
-        right: calc(100%);
+        /* right: 0; */
     }
 
     .ona100-left

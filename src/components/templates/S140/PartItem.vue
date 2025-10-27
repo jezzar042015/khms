@@ -23,14 +23,14 @@
         <!-- Handling Auxiliary Class Parts -->
         <div class="assignee" v-if="hasAux1Class">
             <span class="s140-part-label" v-show="showLabel">{{ part?.label }}:</span>
-            <div :class="assignAux1Classes" v-if="isAux1Part" @click="showSelector($event, 'aux')">
+            <div :class="assignAux1Classes" v-if="isAux1Part" @click.stop="showSelector($event, 'aux')">
                 {{ displayAux1Assignee }}
             </div>
             <AudienceGroup :is-auxi-chairman="isAuxiChairman" :part-id="part.id" />
         </div>
 
         <!-- Handling Normal Parts -->
-        <div class="assignee" v-show="isAssignable" @click="showSelector">
+        <div class="assignee" v-show="isAssignable" @click.stop="showSelector">
             <span class="s140-part-label" v-show="showLabel" v-if="!hasAux1Class">
                 {{ part?.label }}:
             </span>
@@ -279,6 +279,7 @@
 
         const rect = target.getBoundingClientRect()
 
+        // selects part to assign to selector by default or auxillary
         const p: S140PartItem | undefined = targetPart === 'def' ? part : partAux1.value
 
         if (!p) return
