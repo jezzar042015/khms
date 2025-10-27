@@ -11,8 +11,6 @@ export const useAssignmentSelector = defineStore('assignment-selectr', () => {
         rect.value = targetRect;
         part.value = targetPart;
         show.value = true
-        console.log(rect.value.bottom);
-
     }
 
     return {

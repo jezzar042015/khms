@@ -27,7 +27,7 @@
      * @description modal pane component that allows the user to select publisher(s) to handle parts
     */
 
-    import { computed, ref, watch } from 'vue';
+    import { computed, nextTick, ref, useTemplateRef, watch } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
     import { useAssignmentHistoryStore } from '@/stores/assignment-history';
     import { useAssignmentSelector } from '@/stores/assignment-selector';
@@ -60,7 +60,7 @@
     const a100Pos = ref<A100Position>('right')
 
 
-    const assignSelector = ref<HTMLElement | null>(null)
+    const assignSelector = useTemplateRef('assignSelector')
     const arrow = ref<HTMLElement | null>(null)
 
     onClickOutside(assignSelector, () => (selector.show = false));
@@ -371,31 +371,36 @@
     }
 
     function setMyTransform(): void {
-        if (!assignSelector.value) return
+        if (!assignSelector.value || !selector.rect) return
 
-        const rect = assignSelector.value.getBoundingClientRect() as DOMRect;
+        const scrollTop = window.scrollY || document.documentElement.scrollTop
+        const actualTop = selector.rect.top + scrollTop
 
-        const viewportHeight = window.innerHeight;
-        const bottomOverflowLimit = 30
-        const topOverflowLimit = 65
-        const hasBottomOverflow = (viewportHeight - rect.bottom) < bottomOverflowLimit
+        assignSelector.value.style.top = `${actualTop}px`
 
-        if (hasBottomOverflow) {
-            const diff = viewportHeight - rect.bottom;
-            assignSelector.value.style.transform = `translateY(50%)`
-            assignSelector.value.style.bottom = `${-diff + bottomOverflowLimit}px`;
-            const rectAfter = assignSelector.value.getBoundingClientRect() as DOMRect;
-            moveWrapperArrow(rectAfter.y + rectAfter.height)
-            return
-        }
+        // const viewportHeight = window.innerHeight;
+        // const bottomOverflowLimit = 30
+        // const topOverflowLimit = 65
+        // const hasBottomOverflow = (viewportHeight - selector.rect.bottom) < bottomOverflowLimit
 
-        const isBelowTopLimit = (rect.y < topOverflowLimit)
-        if (isBelowTopLimit) {
-            const diff = rect.y - topOverflowLimit
-            assignSelector.value.style.transform = `translateY(-50%) translateY(${-diff}px)`;
-            const rectAfter = assignSelector.value.getBoundingClientRect() as DOMRect;
-            moveWrapperArrow(rectAfter.y + rectAfter.height)
-        }
+        // if (hasBottomOverflow) {
+        //     const diff = viewportHeight - selector.rect.bottom;
+        //     console.log(diff);
+
+        //     assignSelector.value.style.transform = `translateY(50%)`
+        //     assignSelector.value.style.bottom = `${-diff + bottomOverflowLimit}px`;
+        //     const rectAfter = assignSelector.value.getBoundingClientRect() as DOMRect;
+        //     moveWrapperArrow(rectAfter.y + rectAfter.height)
+        //     return
+        // }
+
+        // const isBelowTopLimit = (selector.rect.y < topOverflowLimit)
+        // if (isBelowTopLimit) {
+        //     const diff = selector.rect.y - topOverflowLimit
+        //     assignSelector.value.style.transform = `translateY(-50%) translateY(${-diff}px)`;
+        //     const rectAfter = assignSelector.value.getBoundingClientRect() as DOMRect;
+        //     moveWrapperArrow(rectAfter.y + rectAfter.height)
+        // }
     }
 
     function moveWrapperArrow(parentY: number) {
@@ -431,9 +436,12 @@
 
     watch(
         () => selector.part,
-        () => {
+        async () => {
             prepAssignment()
             loadAssigned()
+            // wait for DOM to update so the template ref is populated
+            await nextTick()
+            setMyTransform()
         },
         {
             immediate: true,
