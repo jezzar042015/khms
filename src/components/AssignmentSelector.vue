@@ -374,32 +374,88 @@
      * AssignmentSelector positioning is relative to #s140 
      * */
     function setMyTransform(): void {
-        if (!assignSelector.value || !selector.rect) return
+        if (!assignSelector.value || !selector.rect) return;
 
-        // Account for scrolling
-        const scrollTop = window.scrollY || document.documentElement.scrollTop
-        const actualTop = selector.rect.top + scrollTop
+        const container = document.getElementById('template-bg');
+        if (!container) return;
 
-        // Horizontal Positioning 
-        const isAuxilliary = selector.part?.id.endsWith('.ax1')
-        const rightOffset = isAuxilliary ?
-            selector.rect.width * 2 :
-            selector.rect.width;
+        const containerRect = container.getBoundingClientRect();
+        const scrollTop = container.scrollTop;
+        const containerHeight = container.clientHeight;
 
-        // Get selector dimensions
-        const selectorRect = assignSelector.value.getBoundingClientRect()
-        const selectorHeight = selectorRect.height
+        // --- Compute actual top position inside the container ---
+        const actualTop = selector.rect.top - containerRect.top + scrollTop;
+
+        // --- Horizontal positioning ---
+        const isAuxiliary = selector.part?.id.endsWith('.ax1');
+        const rightOffset = isAuxiliary
+            ? selector.rect.width * 2
+            : selector.rect.width;
 
         const gapX = 10;
+        assignSelector.value.style.right = `${rightOffset + gapX}px`;
 
-        const top = Math.max(0, actualTop - selectorHeight)
+        // --- Get selector height for placement ---
+        const selectorHeight = assignSelector.value.offsetHeight;
+        let top = Math.max(0, actualTop - selectorHeight);
 
-        assignSelector.value.style.right = `${rightOffset + gapX}px`
-        assignSelector.value.style.top = `${top}px`
+        // --- Handle Y-overflow (bottom + top) ---
+        const bottomOverflowLimit = 50;
+        const topOverflowLimit = 65;
 
-        console.log(assignSelector.value.style.top, selector.rect.top, scrollTop);
+        // Position of target bottom relative to container
+        const selectorBottomInContainer = selector.rect.bottom - containerRect.top;
 
+        const hasBottomOverflow =
+            (containerHeight - selectorBottomInContainer) < bottomOverflowLimit;
+        const hasTopOverflow = (selector.rect.top - containerRect.top) < topOverflowLimit;
+
+        // Reset any previous transforms before applying new ones
+        assignSelector.value.style.transform = '';
+
+        if (hasBottomOverflow) {
+            const viewportHeight = window.innerHeight;
+            const containerRect = container.getBoundingClientRect();
+
+            // The element’s current position relative to the viewport
+            const targetBottomInViewport = selector.rect.bottom;
+
+            // Calculate how much space is left between the target and the viewport bottom
+            const spaceBelow = viewportHeight - targetBottomInViewport;
+
+            // How much we need to shift upward so it stays 10px above screen bottom
+            const overflowOffset = 10 - spaceBelow;
+
+            // Compute the top position inside the container
+            const correctedTop =
+                selector.rect.top - containerRect.top + scrollTop - overflowOffset - 0;
+
+            assignSelector.value.style.top = `${correctedTop}px`;
+            assignSelector.value.style.bottom = '';
+            assignSelector.value.style.transform = 'translateY(-100%)';
+        } else if (hasTopOverflow) {
+            // Push slightly downward if too close to top
+            const correctedTop = scrollTop + topOverflowLimit;
+            assignSelector.value.style.top = `${correctedTop}px`;
+            assignSelector.value.style.transform = 'translateY(10%)';
+        } else {
+            // Normal position
+            assignSelector.value.style.top = `${top}px`;
+        }
+
+        // --- Debug info ---
+        console.log({
+            scrollTop,
+            containerHeight,
+            actualTop,
+            hasBottomOverflow,
+            hasTopOverflow,
+            appliedTop: assignSelector.value.style.top,
+            transform: assignSelector.value.style.transform,
+        });
     }
+
+
 
     function moveWrapperArrow(parentY: number) {
         if (!arrow.value) return
@@ -463,7 +519,7 @@
         background: #ffff;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         padding: 15px 15px;
-        z-index: 10;
+        z-index: 2;
         overflow: visible;
         font-size: 16px;
         border-radius: 3px;

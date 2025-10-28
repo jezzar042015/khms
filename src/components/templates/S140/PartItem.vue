@@ -277,7 +277,7 @@
         const target = e.currentTarget as HTMLElement | null
         if (!target) return
 
-        const rect = target.getBoundingClientRect()
+        const rect = target.getBoundingClientRect();
 
         // selects part to assign to selector by default or auxillary
         const p: S140PartItem | undefined = targetPart === 'def' ? part : partAux1.value
