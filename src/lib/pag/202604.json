@@ -241,10 +241,11 @@
             "title": "7. Paliwawa",
             "class": "part-title-ministry",
             "reference": "th leksion 14",
-            "thumbnail": "th",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026087/univ/art/202026087_univ_cnt_3_lg.jpg",
             "roles": [
               "talk"
-            ]
+            ],
+            "thumbnailMode": "sqr-r"
           }
         ],
         "living": [
