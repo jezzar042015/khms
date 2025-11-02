@@ -374,76 +374,114 @@
      * AssignmentSelector positioning is relative to #s140 
      * */
     function setMyTransform(): void {
+        // Early exit if selector or its target rectangle is missing
         if (!assignSelector.value || !selector.rect) return;
 
+        // Get the scrollable container element (where positioning is relative)
         const container = document.getElementById('template-bg');
         if (!container) return;
 
+        // Get container's position relative to viewport
         const containerRect = container.getBoundingClientRect();
+
+        // Current vertical scroll within the container
         const scrollTop = container.scrollTop;
+
+        // Visible height of the container
         const containerHeight = container.clientHeight;
 
-        // --- Compute actual top position inside the container ---
+        // --- Compute actual top position of target inside the scrollable container ---
+        // selector.rect.top is relative to viewport, so we remove containerRect.top
+        // to get position relative to the container, then add scrollTop to account for scrolling.
         const actualTop = selector.rect.top - containerRect.top + scrollTop;
 
-        // --- Horizontal positioning ---
+        // --- Horizontal positioning (X-axis) ---
+        // Determine if the target belongs to an auxiliary part
         const isAuxiliary = selector.part?.id.endsWith('.ax1');
+
+        // Determine how far from the right side the selector should appear.
+        // If it's auxiliary, place it farther (2× the width of the target element).
         const rightOffset = isAuxiliary
             ? selector.rect.width * 2
             : selector.rect.width;
 
+        // Add small gap between selector and target element
         const gapX = 10;
+
+        // Apply computed horizontal position (distance from container's right edge)
         assignSelector.value.style.right = `${rightOffset + gapX}px`;
 
-        // --- Get selector height for placement ---
+        // --- Get selector height to determine Y positioning ---
         const selectorHeight = assignSelector.value.offsetHeight;
+
+        // Start with default top position: place selector right above the target
+        // Ensures it doesn't go above 0 (container top)
         let top = Math.max(0, actualTop - selectorHeight);
 
-        // --- Handle Y-overflow (bottom + top) ---
-        const bottomOverflowLimit = 50;
-        const topOverflowLimit = 65;
+        // --- Overflow limits (for adjusting near edges) ---
+        const bottomOverflowLimit = 50; // If closer than this to bottom, adjust upward
+        const topOverflowLimit = 65;    // If closer than this to top, adjust downward
 
-        // Position of target bottom relative to container
+        // Distance from container’s top to target’s bottom
         const selectorBottomInContainer = selector.rect.bottom - containerRect.top;
 
+        // Detect if selector would overflow the container’s bottom or top bounds
         const hasBottomOverflow =
             (containerHeight - selectorBottomInContainer) < bottomOverflowLimit;
         const hasTopOverflow = (selector.rect.top - containerRect.top) < topOverflowLimit;
 
-        // Reset any previous transforms before applying new ones
+        // Reset transform to prevent previous adjustments from accumulating
         assignSelector.value.style.transform = '';
 
+        // --- CASE 1: Bottom overflow — near bottom of screen ---
         if (hasBottomOverflow) {
+            // Get full viewport height (not just container)
             const viewportHeight = window.innerHeight;
+
+            // Recalculate container position (in case of scroll)
             const containerRect = container.getBoundingClientRect();
 
-            // The element’s current position relative to the viewport
+            // Position of the target’s bottom relative to viewport
             const targetBottomInViewport = selector.rect.bottom;
 
-            // Calculate how much space is left between the target and the viewport bottom
+            // Available space between target bottom and viewport bottom
             const spaceBelow = viewportHeight - targetBottomInViewport;
 
-            // How much we need to shift upward so it stays 10px above screen bottom
+            // Compute how far we need to shift up to keep selector visible
+            // “10” means we want it to stay at least 10px above screen bottom
             const overflowOffset = 10 - spaceBelow;
 
-            // Compute the top position inside the container
+            // Compute corrected top position inside container
+            // Shift upward by overflowOffset so it stays on-screen
             const correctedTop =
                 selector.rect.top - containerRect.top + scrollTop - overflowOffset - 0;
 
+            // Apply corrected top and remove any conflicting bottom positioning
             assignSelector.value.style.top = `${correctedTop}px`;
             assignSelector.value.style.bottom = '';
+
+            // Move selector upward relative to target
             assignSelector.value.style.transform = 'translateY(-100%)';
-        } else if (hasTopOverflow) {
-            // Push slightly downward if too close to top
+        }
+        // --- CASE 2: Top overflow — near top of screen ---
+        else if (hasTopOverflow) {
+            // Force position slightly below top edge
             const correctedTop = scrollTop + topOverflowLimit;
+
+            // Apply top offset
             assignSelector.value.style.top = `${correctedTop}px`;
+
+            // Add slight downward offset for better visual spacing
             assignSelector.value.style.transform = 'translateY(10%)';
-        } else {
-            // Normal position
+        }
+        // --- CASE 3: Normal position (no overflow) ---
+        else {
+            // Just place selector at calculated “top” above the target
             assignSelector.value.style.top = `${top}px`;
         }
 
-        // --- Debug info ---
+        // --- Debug info (for developer logging) ---
+        // Shows all the computed values that affect final selector position
         console.log({
             scrollTop,
             containerHeight,
@@ -454,6 +492,7 @@
             transform: assignSelector.value.style.transform,
         });
     }
+
 
 
 

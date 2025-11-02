@@ -64,6 +64,7 @@ body
   background-color: rgb(182, 182, 182);
   overflow: auto;
   height: 100%;
+  position: relative;
 }
 
 #fsl-mwb
