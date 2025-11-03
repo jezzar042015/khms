@@ -419,15 +419,16 @@
         let top = Math.max(0, actualTop - selectorHeight);
 
         // --- Overflow limits (for adjusting near edges) ---
-        const bottomOverflowLimit = 50; // If closer than this to bottom, adjust upward
-        const topOverflowLimit = 65;    // If closer than this to top, adjust downward
+        const bottomOverflowLimit = 100; // If closer than this to bottom, adjust upward
+        const topOverflowLimit = 300;    // If closer than this to top, adjust downward
 
         // Distance from container’s top to target’s bottom
-        const selectorBottomInContainer = selector.rect.bottom - containerRect.top;
+        const selectorBottomInContainer = selector.rect.bottom + containerRect.top;
 
         // Detect if selector would overflow the container’s bottom or top bounds
         const hasBottomOverflow =
             (containerHeight - selectorBottomInContainer) < bottomOverflowLimit;
+
         const hasTopOverflow = (selector.rect.top - containerRect.top) < topOverflowLimit;
 
         // Reset transform to prevent previous adjustments from accumulating
@@ -435,38 +436,22 @@
 
         // --- CASE 1: Bottom overflow — near bottom of screen ---
         if (hasBottomOverflow) {
-            // Get full viewport height (not just container)
-            const viewportHeight = window.innerHeight;
-
-            // Recalculate container position (in case of scroll)
-            const containerRect = container.getBoundingClientRect();
-
-            // Position of the target’s bottom relative to viewport
-            const targetBottomInViewport = selector.rect.bottom;
-
-            // Available space between target bottom and viewport bottom
-            const spaceBelow = viewportHeight - targetBottomInViewport;
-
-            // Compute how far we need to shift up to keep selector visible
-            // “10” means we want it to stay at least 10px above screen bottom
-            const overflowOffset = 10 - spaceBelow;
 
             // Compute corrected top position inside container
             // Shift upward by overflowOffset so it stays on-screen
             const correctedTop =
-                selector.rect.top - containerRect.top + scrollTop - overflowOffset - 0;
+                scrollTop + containerHeight - selectorHeight - 150
 
             // Apply corrected top and remove any conflicting bottom positioning
             assignSelector.value.style.top = `${correctedTop}px`;
             assignSelector.value.style.bottom = '';
 
-            // Move selector upward relative to target
-            assignSelector.value.style.transform = 'translateY(-100%)';
         }
         // --- CASE 2: Top overflow — near top of screen ---
         else if (hasTopOverflow) {
+
             // Force position slightly below top edge
-            const correctedTop = scrollTop + topOverflowLimit;
+            const correctedTop = scrollTop - 110;
 
             // Apply top offset
             assignSelector.value.style.top = `${correctedTop}px`;
@@ -482,15 +467,15 @@
 
         // --- Debug info (for developer logging) ---
         // Shows all the computed values that affect final selector position
-        console.log({
-            scrollTop,
-            containerHeight,
-            actualTop,
-            hasBottomOverflow,
-            hasTopOverflow,
-            appliedTop: assignSelector.value.style.top,
-            transform: assignSelector.value.style.transform,
-        });
+        // console.log({
+        //     scrollTop,
+        //     containerHeight,
+        //     actualTop,
+        //     hasBottomOverflow,
+        //     hasTopOverflow,
+        //     appliedTop: assignSelector.value.style.top,
+        //     transform: assignSelector.value.style.transform,
+        // });
     }
 
 
