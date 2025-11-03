@@ -55,7 +55,6 @@
         pid: '', a: ''
     })
 
-    const mouseYpos = ref<number>(0)
     const mouseXpos = ref<number>(0)
     const a100Pos = ref<A100Position>('right')
 
