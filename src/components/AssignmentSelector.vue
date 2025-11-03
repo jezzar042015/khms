@@ -405,7 +405,7 @@
             ? selector.rect.width * 2
             : selector.rect.width;
 
-        // Add small gap between selector and target element
+        // Add small horizontal gap between selector and target element
         const gapX = 10;
 
         // Apply computed horizontal position (distance from container's right edge)
