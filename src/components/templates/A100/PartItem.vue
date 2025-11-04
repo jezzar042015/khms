@@ -45,6 +45,7 @@
     import { computed, nextTick, ref, watch } from 'vue';
     import { onClickOutside } from '@vueuse/core';
     import { useAssignmentStore } from '@/stores/assignment';
+    import { useAssignmentSelector } from '@/stores/assignment-selector';
     import { useCongregationStore } from '@/stores/congregation';
     import { useOverridesStore } from '@/stores/overrides';
     import { usePublisherStore } from '@/stores/publisher';
@@ -67,10 +68,9 @@
     )
 
     const emits = defineEmits(['insert-item', 'remove-item'])
+    const selector = useAssignmentSelector()
 
     const timerAdjuster = ref(false)
-    const selector = ref(false)
-    const triggered = ref(false)
 
     const updatePartTime = (time: number) => {
 
@@ -188,9 +188,12 @@
         return isTreauresPart || isGemsPart || isTitledLiving
     })
 
-    function showSelector(): void {
-        triggered.value = true
-        selector.value = true
+    function showSelector(e: MouseEvent): void {
+        const target = e.currentTarget as HTMLElement | null
+        if (!target) return
+
+        const rect = target.getBoundingClientRect();
+        selector.setTargetRect(rect, part)
     }
 
     // title handling

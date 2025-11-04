@@ -42,6 +42,7 @@
     import { computed, ref, watch, onMounted } from 'vue';
     import { useFilesStore } from '@/stores/files';
     import { useAssignmentStore } from '@/stores/assignment';
+    import { useAssignmentSelector } from '@/stores/assignment-selector';
     import { usePublisherStore } from '@/stores/publisher';
     import { useWeeklyDate } from '@/composables/weeklyDate';
     import { onClickOutside } from '@vueuse/core';
@@ -53,8 +54,7 @@
     import IconPraying from '../../icons/IconPraying.vue';
     import WeekdaySelector from '@/components/WeekdaySelector.vue';
 
-    const selector = ref(false)
-    const triggered = ref(false)
+    const selector = useAssignmentSelector()
 
     const fileStore = useFilesStore()
     const assignStore = useAssignmentStore();
@@ -98,9 +98,12 @@
         return { background: fileStore.loadedMonth.content.theme }
     })
 
-    function showSelector(): void {
-        triggered.value = true
-        selector.value = true
+    function showSelector(e: MouseEvent): void {
+        const target = e.currentTarget as HTMLElement | null
+        if (!target) return
+
+        const rect = target.getBoundingClientRect();
+        selector.setTargetRect(rect, prayer.value)
     }
 
     // week day selector
