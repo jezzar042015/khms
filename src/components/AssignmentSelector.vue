@@ -55,7 +55,6 @@
         pid: '', a: ''
     })
 
-    const mouseXpos = ref<number>(0)
     const a100Pos = ref<A100Position>('right')
 
 
@@ -348,31 +347,38 @@
         }
     }
 
-    function blurredSelector(event: MouseEvent): void {
-        //     if (triggered) {
-        //         emits("trigger-off");
-        //         mouseYpos.value = event.clientY
-        //         mouseXpos.value = event.clientX
-        //         setOnA100Position()
-        //         setMyTransform()
-        //         return;
-        //     }
-
-        //     if (assignSelector.value && !assignSelector.value.contains(event.target as HTMLElement)) {
-        //         emits('hide')
-        //     }
-    };
-
     function setOnA100Position(): void {
-        const viewportWidth = window.innerWidth;
-        const per = Math.round(mouseXpos.value / viewportWidth * 100)
-        a100Pos.value = per > 60 ? 'right' : 'left'
+        // const viewportWidth = window.innerWidth;
+        // const per = Math.round(selector.rect. / viewportWidth * 100)
+        // a100Pos.value = per > 60 ? 'right' : 'left'
+        a100Pos.value = 'right'
+    }
+
+    /**
+     * AssignmentSelector positioning handler 
+     * */
+
+    function setMyTransform(): void {
+        const is140 = congStore.congregation.mwbTemplate == 's-140'
+
+        if (is140) {
+            setMyTransformOnS140()
+        } else {
+            setMyTransformOnA100()
+        }
     }
 
     /**
      * AssignmentSelector positioning is relative to #s140 
      * */
-    function setMyTransform(): void {
+    function setMyTransformOnA100(): void {
+        console.log('setMyTransformOnA100');
+    }
+
+    /**
+     * AssignmentSelector positioning is relative to #s140 
+     * */
+    function setMyTransformOnS140(): void {
 
         if (!assignSelector.value || !selector.rect) return;
 
@@ -412,8 +418,7 @@
         assignSelector.value.style.transform = '';
 
         if (hasBottomOverflow) {
-            const correctedTop =
-                scrollTop + containerHeight - selectorHeight - 132
+            const correctedTop = scrollTop + containerHeight - selectorHeight - 132
 
             assignSelector.value.style.top = `${correctedTop}px`;
             assignSelector.value.style.bottom = '';
@@ -460,8 +465,8 @@
 
             prepAssignment()
             loadAssigned()
-            // wait for DOM to update so the template ref is populated
-            await nextTick()
+            await nextTick() // wait for DOM to update so the template ref is populated
+            setOnA100Position()
             setMyTransform()
             moveWrapperArrow()
         },
@@ -491,11 +496,6 @@
         font-size: 16px;
         border-radius: 3px;
         transition: fade 1s;
-    }
-
-    .ons140
-    {
-        /* right: 0; */
     }
 
     .ona100-left
