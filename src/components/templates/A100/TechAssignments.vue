@@ -7,8 +7,6 @@
 
             <div class="assignee" @click="showCamOpSelector">
                 <div :class="camOpClasses">{{ displayCamOpAssignee }}</div>
-                <AssignmentSelector v-if="camOpSelector" :part="cameraOp" :triggered="triggered"
-                    @hide="hideCamOpSelector" @trigger-off="triggerOff" />
             </div>
         </div>
         <div class="grid">
@@ -17,8 +15,6 @@
             </div>
             <div class="assignee" @click="showInterpreterSelector">
                 <div :class="interpretersClasses"> {{ displayInterpreterAssignee }}</div>
-                <AssignmentSelector v-if="interpreterSelector" :part="interpreters" :triggered="triggered"
-                    @hide="hideIntrepreterSelector" @trigger-off="triggerOff" />
             </div>
         </div>
     </div>
@@ -31,8 +27,7 @@
     import { usePublisherStore } from '@/stores/publisher';
     import IconVideoCam from '@/components/icons/IconVideoCam.vue';
     import IconInterpreter from '@/components/icons/IconInterpreter.vue';
-    import AssignmentSelector from '@/components/AssignmentSelector.vue';
-
+=
     const { weekId } = defineProps<{
         weekId: string
     }>()
@@ -103,22 +98,11 @@
         camOpSelector.value = true
     }
 
-    function hideCamOpSelector(): void {
-        camOpSelector.value = false
-    }
 
     function showInterpreterSelector(): void {
         triggered.value = true
         if (camOpSelector.value) camOpSelector.value = false
         interpreterSelector.value = true
-    }
-
-    function hideIntrepreterSelector(): void {
-        interpreterSelector.value = false
-    }
-
-    function triggerOff(): void {
-        triggered.value = false
     }
 </script>
 

@@ -25,8 +25,6 @@
                 <div class="generic-label">{{ part.reference }}</div>
                 <div class="assignee" @click="showSelector">
                     <div :class="assignClasses">{{ displayAssignee }}</div>
-                    <AssignmentSelector v-if="selector" :part="partItem" :triggered="triggered" @hide="hideSelector"
-                        @trigger-off="triggerOff" />
                 </div>
             </span>
         </div>
@@ -54,7 +52,6 @@
     import type { PartItem } from '@/types/files';
 
     import thumbnails from '@/assets/utils/thumbnails';
-    import AssignmentSelector from '@/components/AssignmentSelector.vue';
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
     import IconPlus from '@/components/icons/IconPlus.vue';
     import IconMinus from '@/components/icons/IconMinus.vue';
@@ -194,14 +191,6 @@
     function showSelector(): void {
         triggered.value = true
         selector.value = true
-    }
-
-    function hideSelector(): void {
-        selector.value = false
-    }
-
-    function triggerOff(): void {
-        triggered.value = false
     }
 
     // title handling

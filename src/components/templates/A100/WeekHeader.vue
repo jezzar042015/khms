@@ -33,8 +33,6 @@
                 <div class="assignee" @click="showSelector">
                     {{ displayAssignee }}
                 </div>
-                <AssignmentSelector v-if="selector" :part="prayer" :triggered="triggered" @hide="hideSelector"
-                    @trigger-off="triggerOff" />
             </span>
         </div>
     </div>
@@ -53,7 +51,6 @@
     import IconBible from '@/components/icons/IconBible.vue';
     import IconMusicNotes from '../../icons/IconMusicNotes.vue';
     import IconPraying from '../../icons/IconPraying.vue';
-    import AssignmentSelector from '@/components/AssignmentSelector.vue';
     import WeekdaySelector from '@/components/WeekdaySelector.vue';
 
     const selector = ref(false)
@@ -104,14 +101,6 @@
     function showSelector(): void {
         triggered.value = true
         selector.value = true
-    }
-
-    function hideSelector(): void {
-        selector.value = false
-    }
-
-    function triggerOff(): void {
-        triggered.value = false
     }
 
     // week day selector
