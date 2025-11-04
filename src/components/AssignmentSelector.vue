@@ -69,8 +69,7 @@
     */
     const selectorClasses = computed<string>(() => {
         const is140 = congStore.congregation.mwbTemplate == 's-140'
-        const a100Class = a100Pos.value === 'left' ? ' ona100-right' : ' ona100-left';
-        return 'assign-selector' + (is140 ? ' ons140' : a100Class)
+        return 'assign-selector' + (is140 ? ' ons140' : 'ona100')
     })
 
     /**
@@ -348,10 +347,10 @@
     }
 
     function setOnA100Position(): void {
-        // const viewportWidth = window.innerWidth;
-        // const per = Math.round(selector.rect. / viewportWidth * 100)
-        // a100Pos.value = per > 60 ? 'right' : 'left'
-        a100Pos.value = 'right'
+        const viewportWidth = window.innerWidth;
+        const parentX = selector.rect?.x ?? 0
+        const per = Math.round(parentX / viewportWidth * 100)
+        a100Pos.value = per > 60 ? 'right' : 'left'
     }
 
     /**
@@ -372,7 +371,19 @@
      * AssignmentSelector positioning is relative to #s140 
      * */
     function setMyTransformOnA100(): void {
-        console.log('setMyTransformOnA100');
+        if (!assignSelector.value || !selector.rect) return;
+
+        const container = document.getElementById('template-bg');
+        if (!container) return;
+
+        const containerRect = container.getBoundingClientRect();
+        const scrollTop = container.scrollTop;
+        const containerHeight = container.clientHeight;
+        const actualTop = selector.rect.top - containerRect.top + scrollTop;
+
+        // check which column for normal-part, prayers, technical
+        setOnA100Position()
+        // console.log('setMyTransformOnA100');
     }
 
     /**
@@ -466,7 +477,6 @@
             prepAssignment()
             loadAssigned()
             await nextTick() // wait for DOM to update so the template ref is populated
-            setOnA100Position()
             setMyTransform()
             moveWrapperArrow()
         },
@@ -496,16 +506,6 @@
         font-size: 16px;
         border-radius: 3px;
         transition: fade 1s;
-    }
-
-    .ona100-left
-    {
-        right: calc(108%);
-    }
-
-    .ona100-right
-    {
-        left: calc(108%);
     }
 
     .wrapper
