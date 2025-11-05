@@ -69,7 +69,7 @@
     */
     const selectorClasses = computed<string>(() => {
         const is140 = congStore.congregation.mwbTemplate == 's-140'
-        return 'assign-selector' + (is140 ? ' ons140' : 'ona100')
+        return 'assign-selector' + (is140 ? ' ons140' : ' ona100')
     })
 
     /**
@@ -387,7 +387,19 @@
 
         // check which column for normal-part, prayers, technical
         setOnA100Position()
-        // console.log('setMyTransformOnA100');
+
+        assignSelector.value.style.top = `${actualTop}px`;
+        assignSelector.value.style.transform = 'translateY(-50%)';
+
+        if (a100Pos.value == 'left') {
+            assignSelector.value.style.right = '';
+            assignSelector.value.style.left = `${selector.rect.left + selector.rect.width}px`;
+        } else if (a100Pos.value == 'right') {
+            assignSelector.value.style.left = '';
+            assignSelector.value.style.right = `${selector.rect.width + 10}px`;
+            assignSelector.value.style.transform = 'translateY(-50%) translateX(-50%)';
+        }
+
     }
 
     /**
@@ -452,10 +464,15 @@
     function moveWrapperArrow() {
         if (!arrow.value) return
 
+        const is140 = congStore.congregation.mwbTemplate == 's-140'
         const selectorRect = assignSelector.value?.getBoundingClientRect()
         const parentY = (selector.rect?.y ?? 0) - (selectorRect?.top ?? 0)
 
-        arrow.value.style.top = `${parentY - 10}px`
+        if (is140) {
+            arrow.value.style.top = `${parentY - 10}px`
+        } else {
+            arrow.value.style.top = `${parentY - 15}px`
+        }
     }
 
 
