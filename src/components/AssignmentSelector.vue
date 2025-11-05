@@ -398,6 +398,10 @@
             assignSelector.value.style.left = '';
             assignSelector.value.style.right = `${selector.rect.width + 10}px`;
             assignSelector.value.style.transform = 'translateY(-50%) translateX(-50%)';
+
+            if (arePrayers.value) {
+                assignSelector.value.style.right = `${300}px`;
+            }
         }
 
     }
