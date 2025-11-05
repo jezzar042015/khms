@@ -95,58 +95,58 @@
      * @description the return is an array sorted by names
      * @returns (Publisher[])
     */
-    const assignables = computed<Publisher[]>(() => {
-        if (!selector.part) return []
-        if (!selector.part.roles) return pubStore.publishers
-
-        const list = pubStore.publishers.filter(publisher =>
-            publisher.roles.some(role => selector.part ? selector.part.roles?.includes(role) : [])
+    function filterByRoles(publishers: Publisher[]): Publisher[] {
+        if (!selector.part?.roles) return publishers
+        return publishers.filter(publisher =>
+            publisher.roles.some(role => selector.part?.roles?.includes(role))
         )
+    }
 
-        const studentparts = new Set(["demo", "br", "talk"])
-        const isStudentPart = selector.part.roles.some(r => studentparts.has(r))
-
-        // Exclude publishers who already have assignments this week for student parts
-        const filteredList = isStudentPart
-            ? list.filter(p => !hasAssignments.value.includes(p.id ?? ''))
-            : list
-
-        // Here assign the number of weeks from previous assignment
-        const weekId = assignment.value.pid.substring(0, 8)
-        if (isStudentPart) {
-            for (const item of filteredList) {
-                if (item.id) {
-                    const prevParts = isBibleReading.value ? historyStore.bibleReaders[item.id] : historyStore.ayfmStudents[item.id]
-                    item.weeksSinceLastAssignment = prevParts ? weeksBetween(prevParts[0], weekId) : undefined
-                }
+    function updateWeeksSinceLastAssignment(publishers: Publisher[], weekId: string): void {
+        for (const item of publishers) {
+            if (item.id) {
+                const prevParts = isBibleReading.value ? historyStore.bibleReaders[item.id] : historyStore.ayfmStudents[item.id]
+                item.weeksSinceLastAssignment = prevParts ? weeksBetween(prevParts[0], weekId) : undefined
             }
         }
+    }
 
-        return filteredList.sort((a, b) => {
-            const assignedIds = assignment.value.a || []
+    function comparePublishers(a: Publisher, b: Publisher, assignedIds: string[]): number {
+        // Step 1: prioritize those currently assigned
+        const aIndex = assignedIds.indexOf(a.id || '')
+        const bIndex = assignedIds.indexOf(b.id || '')
+        const aAssigned = aIndex !== -1
+        const bAssigned = bIndex !== -1
 
-            // Step 1: prioritize those currently assigned
-            const aIndex = assignedIds.indexOf(a.id || '')
-            const bIndex = assignedIds.indexOf(b.id || '')
-            const aAssigned = aIndex !== -1
-            const bAssigned = bIndex !== -1
+        if (aAssigned !== bAssigned) return bAssigned ? 1 : -1
+        if (aAssigned && bAssigned) return aIndex - bIndex
 
-            if (aAssigned && !bAssigned) return -1
-            if (!aAssigned && bAssigned) return 1
+        // Step 2: bring those with weeksSinceLastAssignment == undefined to the top
+        const aSpecial = a.weeksSinceLastAssignment === undefined ? 1 : 0
+        const bSpecial = b.weeksSinceLastAssignment === undefined ? 1 : 0
+        if (bSpecial !== aSpecial) return bSpecial - aSpecial
 
-            // ✅ If both are assigned, follow the order in assignedIds array
-            if (aAssigned && bAssigned) return aIndex - bIndex
+        // Step 3: sort remaining by weeksSinceLastAssignment descending
+        const wa = a.weeksSinceLastAssignment ?? -Infinity
+        const wb = b.weeksSinceLastAssignment ?? -Infinity
+        return wb - wa
+    }
 
-            // Step 2: bring those with weeksSinceLastAssignment == undefined to the top
-            const aSpecial = a.weeksSinceLastAssignment === undefined ? 1 : 0
-            const bSpecial = b.weeksSinceLastAssignment === undefined ? 1 : 0
-            if (bSpecial !== aSpecial) return bSpecial - aSpecial
+    const assignables = computed<Publisher[]>(() => {
+        if (!selector.part) return []
 
-            // Step 3: sort remaining by weeksSinceLastAssignment descending
-            const wa = a.weeksSinceLastAssignment ?? -Infinity
-            const wb = b.weeksSinceLastAssignment ?? -Infinity
-            return wb - wa
-        })
+        let filteredList = filterByRoles(pubStore.publishers)
+        const studentparts = new Set(["demo", "br", "talk"])
+        const isStudentPart = selector.part.roles?.some(r => studentparts.has(r)) ?? false
+
+        if (isStudentPart) {
+            filteredList = filteredList.filter(p => !hasAssignments.value.includes(p.id ?? ''))
+            const weekId = assignment.value.pid.substring(0, 8)
+            updateWeeksSinceLastAssignment(filteredList, weekId)
+        }
+
+        const assignedIds = assignment.value.a || []
+        return filteredList.sort((a, b) => comparePublishers(a, b, Array.isArray(assignedIds) ? assignedIds : [assignedIds]))
     })
 
     function weeksBetween(targetCode: string, baseCode: string): number {
@@ -291,21 +291,31 @@
     /**
      * Handling prayer assignment on S-140 template
     */
-    async function handleS140Prayer(id: string, isAdded: boolean): Promise<void> {
+    function getS140PrayerAssignment(weekId: string): MWBAssignment {
+        const existing = assignStore.get.find(p => p.pid == weekId)
+        return existing ?? { pid: weekId || '', a: ['', ''] }
+    }
 
-        if (isOpenPrayer.value || isClosingPrayer.value) {
-            const weekId = getWeekId(selector.part?.id || '')
-            let a100Prayer = assignStore.get.find(p => p.pid == weekId)
+    function updateS140PrayerSlots(prayer: MWBAssignment, id: string, isAdded: boolean): void {
+        if (!Array.isArray(prayer.a)) return
 
-            if (!a100Prayer)
-                a100Prayer = { pid: weekId || '', a: ['', ''] }
-
-            if (Array.isArray(a100Prayer.a)) {
-                if (isOpenPrayer.value) a100Prayer.a[0] = isAdded ? id ?? '' : ''
-                if (isClosingPrayer.value && isAdded) a100Prayer.a[1] = isAdded ? id ?? '' : ''
-            }
-            await assignStore.upsert(a100Prayer);
+        if (isOpenPrayer.value) {
+            prayer.a[0] = isAdded ? id : ''
         }
+        if (isClosingPrayer.value && isAdded) {
+            prayer.a[1] = id
+        }
+    }
+
+    async function handleS140Prayer(id: string, isAdded: boolean): Promise<void> {
+        if (!isOpenPrayer.value && !isClosingPrayer.value) return
+
+        const weekId = getWeekId(selector.part?.id || '')
+        if (!weekId) return
+
+        const prayer = getS140PrayerAssignment(weekId)
+        updateS140PrayerSlots(prayer, id, isAdded)
+        await assignStore.upsert(prayer)
     }
 
     /**
