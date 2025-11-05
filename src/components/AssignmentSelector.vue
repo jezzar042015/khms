@@ -385,7 +385,7 @@
         const containerHeight = container.clientHeight;
         const actualTop = selector.rect.top - containerRect.top + scrollTop;
 
-        // check which column for normal-part, prayers, technical
+        // check which side for normal-part, prayers, technical
         setOnA100Position()
 
         assignSelector.value.style.top = `${actualTop}px`;
@@ -396,12 +396,14 @@
             assignSelector.value.style.left = `${selector.rect.left + selector.rect.width}px`;
         } else if (a100Pos.value == 'right') {
             assignSelector.value.style.left = '';
-            assignSelector.value.style.right = `${selector.rect.width + 10}px`;
-            assignSelector.value.style.transform = 'translateY(-50%) translateX(-50%)';
+            const rightOffset = window.innerWidth - selector.rect.right;
+            assignSelector.value.style.right = `${rightOffset + 10}px`;
+            assignSelector.value.style.transform = 'translateY(-50%) translateX(-60%)';
 
-            if (arePrayers.value) {
-                assignSelector.value.style.right = `${300}px`;
-            }
+        }
+
+        if (arePrayers.value) {
+            assignSelector.value.style.transform = 'translateY(-50%) translateX(-40%)';
         }
 
     }
