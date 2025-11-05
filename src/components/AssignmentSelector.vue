@@ -346,6 +346,10 @@
         }
     }
 
+    /**
+     * Assigns ref a100Pos wether right or left position of the selector,
+     *  
+    */
     function setOnA100Position(): void {
         const viewportWidth = window.innerWidth;
         const parentX = selector.rect?.x ?? 0
