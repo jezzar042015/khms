@@ -392,7 +392,7 @@
 
         const containerRect = container.getBoundingClientRect();
         const scrollTop = container.scrollTop;
-        const containerHeight = container.clientHeight;
+
         const actualTop = selector.rect.top - containerRect.top + scrollTop;
 
         // check which side for normal-part, prayers, technical
@@ -401,26 +401,60 @@
         assignSelector.value.style.top = `${actualTop}px`;
         assignSelector.value.style.transform = 'translateY(-50%)';
 
-        if (a100Pos.value == 'left') {
-            assignSelector.value.style.right = '';
-            assignSelector.value.style.left = `${selector.rect.left + selector.rect.width}px`;
-        } else if (a100Pos.value == 'right') {
-            assignSelector.value.style.left = '';
-            const rightOffset = window.innerWidth - selector.rect.right;
-            assignSelector.value.style.right = `${rightOffset + 10}px`;
-            assignSelector.value.style.transform = 'translateY(-50%) translateX(-60%)';
+        handleA100HorizontalPosition()
+        handleA100VerticalOverflows(container, actualTop)
+    }
 
-        }
+    /**
+     * Handles the horizontal positioning of the A100 selector element based on viewport constraints.
+     * 
+     * Adjusts the selector's left/right positioning and applies appropriate CSS transforms
+     * to prevent overflow and ensure optimal placement within the viewport.
+     * 
+     * @description
+     * - If prayers are being displayed, positions the selector to the right with offset
+     * - If already positioned left, maintains left alignment relative to the trigger element
+     * - Otherwise, positions to the right with a 60% horizontal translation for centering 
+     */
+    function handleA100HorizontalPosition() {
+        if (!assignSelector.value || !selector.rect) return;
+
+        const rightOffset = window.innerWidth - selector.rect.right;
 
         if (arePrayers.value) {
             a100Pos.value = 'right'
             assignSelector.value.style.left = '';
-            const rightOffset = window.innerWidth - selector.rect.right;
             assignSelector.value.style.right = `${rightOffset + 10}px`;
-
             assignSelector.value.style.transform = `translateY(-50%) translateX(-${selector.rect.width}px)`;
+        } else if (a100Pos.value === 'left') {
+            assignSelector.value.style.right = '';
+            assignSelector.value.style.left = `${selector.rect.left + selector.rect.width}px`;
+            assignSelector.value.style.transform = 'translateY(-50%)';
+        } else {
+            assignSelector.value.style.left = '';
+            assignSelector.value.style.right = `${rightOffset + 10}px`;
+            assignSelector.value.style.transform = 'translateY(-50%) translateX(-60%)';
+        }
+    }
+
+    function handleA100VerticalOverflows(container: HTMLElement, actualTop: number) {
+        if (!assignSelector.value || !selector.rect) return;
+        const rect = assignSelector.value.getBoundingClientRect()
+        const containerHeight = container.clientHeight;
+
+        const isTopOverflow = rect.top <= 65
+        if (isTopOverflow) {
+            const computedTop = actualTop + (rect.height / 2)
+            assignSelector.value.style.top = `${computedTop}px`
+            return
         }
 
+        const isBottomOverflow = rect.bottom > containerHeight
+        if (isBottomOverflow) {
+            const allowedBottom = containerHeight - 50
+            assignSelector.value.style.bottom = `${allowedBottom}px`
+            return
+        }
     }
 
     /**
