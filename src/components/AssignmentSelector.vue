@@ -58,7 +58,7 @@
     const a100Pos = ref<A100Position>('right')
 
 
-    const assignSelector = useTemplateRef('assignSelector')
+    const assignSelector = useTemplateRef<HTMLElement>('assignSelector')
     const arrow = ref<HTMLElement | null>(null)
 
     onClickOutside(assignSelector, () => (selector.show = false));
@@ -386,6 +386,7 @@
      * */
     function setMyTransformOnA100(): void {
         if (!assignSelector.value || !selector.rect) return;
+        if (!(assignSelector.value instanceof HTMLElement)) return
 
         const container = document.getElementById('template-bg');
         if (!container) return;
@@ -421,6 +422,8 @@
 
         const rightOffset = window.innerWidth - selector.rect.right;
 
+        if (!(assignSelector.value instanceof HTMLElement)) return
+
         if (arePrayers.value) {
             a100Pos.value = 'right'
             assignSelector.value.style.left = '';
@@ -435,10 +438,13 @@
             assignSelector.value.style.right = `${rightOffset + 10}px`;
             assignSelector.value.style.transform = 'translateY(-50%) translateX(-60%)';
         }
+
     }
 
     function handleA100VerticalOverflows(container: HTMLElement) {
         if (!assignSelector.value || !selector.rect) return;
+        if (!(assignSelector.value instanceof HTMLElement)) return
+
         const rect = assignSelector.value.getBoundingClientRect()
         const containerHeight = container.clientHeight;
 
@@ -463,6 +469,7 @@
     function setMyTransformOnS140(): void {
 
         if (!assignSelector.value || !selector.rect) return;
+        if (!(assignSelector.value instanceof HTMLElement)) return
 
         const container = document.getElementById('template-bg');
         if (!container) return;
@@ -518,6 +525,7 @@
 
     function moveWrapperArrow() {
         if (!arrow.value) return
+        if (!(assignSelector.value instanceof HTMLElement)) return
 
         const is140 = congStore.congregation.mwbTemplate == 's-140'
         const selectorRect = assignSelector.value?.getBoundingClientRect()
