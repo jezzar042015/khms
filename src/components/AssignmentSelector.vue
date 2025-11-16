@@ -413,7 +413,12 @@
         }
 
         if (arePrayers.value) {
-            assignSelector.value.style.transform = 'translateY(-50%) translateX(-40%)';
+            a100Pos.value = 'right'
+            assignSelector.value.style.left = '';
+            const rightOffset = window.innerWidth - selector.rect.right;
+            assignSelector.value.style.right = `${rightOffset + 10}px`;
+
+            assignSelector.value.style.transform = `translateY(-50%) translateX(-${selector.rect.width}px)`;
         }
 
     }
@@ -530,6 +535,7 @@
     {
         position: absolute;
         min-width: 325px;
+        max-width: 350px;
         width: auto;
         color: black;
         height: 350px;
