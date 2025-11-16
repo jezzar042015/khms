@@ -44,6 +44,7 @@
     type A100Position = 'right' | 'left'
     const pubStore = usePublisherStore()
     const assignStore = useAssignmentStore()
+    const historyStore = useAssignmentHistoryStore()
     const congStore = useCongregationStore()
     const fileStore = useFilesStore()
     const selector = useAssignmentSelector()
@@ -148,6 +149,42 @@
         return filteredList.sort((a, b) => comparePublishers(a, b, Array.isArray(assignedIds) ? assignedIds : [assignedIds]))
     })
 
+    function weeksBetween(targetCode: string, baseCode: string): number {
+
+        const targetMonday = getMonday(targetCode);
+        const baseMonday = getMonday(baseCode);
+
+        // Difference in full weeks (no +1)
+        const diffDays = Math.floor(
+            (baseMonday.getTime() - targetMonday.getTime()) / (1000 * 60 * 60 * 24)
+        );
+        const diffWeeks = Math.floor(diffDays / 7);
+
+        return diffWeeks;
+    }
+
+    /**
+     * Get's the first monday of the given week id code
+     * */
+    const getMonday = (code: string): Date => {
+        const [ym, wStr] = code.split(".");
+        const year = Number.parseInt(ym.slice(0, 4), 10);
+        const month = Number.parseInt(ym.slice(4, 6), 10) - 1;
+        const week = Number.parseInt(wStr, 10);
+
+        const firstDay = new Date(year, month, 1);
+        const dayOfWeek = firstDay.getDay();
+        const firstMonday =
+            dayOfWeek === 1
+                ? new Date(year, month, 1)
+                : new Date(year, month, 1 + ((8 - dayOfWeek) % 7));
+
+        const monday = new Date(firstMonday);
+        monday.setDate(firstMonday.getDate() + (week - 1) * 7);
+
+        return monday;
+    }
+
     /**
      * @description array of publishers already has assigned part this week
      * @returns (string[])
@@ -156,17 +193,26 @@
         if (!selector.part) return []
         const weekId = selector.part.id.substring(0, 8) ?? ''
 
-        const currentAssigned = Array.isArray(assignment.value.a)
-            ? assignment.value.a.filter(Boolean)
-            : (assignment.value.a ? [assignment.value.a] : [])
+        const studentPartIds = new Set(
+            fileStore.studentsParts
+                .filter(s => s.id.startsWith(weekId))
+                .map(m => m.id)
+        );
+
+        let currentAssigned: string[] = [];
+        if (Array.isArray(assignment.value.a)) {
+            currentAssigned = assignment.value.a.filter(Boolean);
+        } else if (assignment.value.a) {
+            currentAssigned = [assignment.value.a];
+        }
 
         return Array.from(new Set(
             assignStore.get
-                .filter(s => studentPartIds.includes(s.pid))
+                .filter(s => studentPartIds.has(s.pid))
                 .flatMap(s => Array.isArray(s.a) ? s.a : [s.a])
                 .filter(Boolean)
                 .filter(id => !currentAssigned.includes(id as string))
-        ))
+        ));
     })
 
 
@@ -227,6 +273,8 @@
             await handleAutofills(id);
             await handleS140Prayer(id, added);
         }
+
+        historyStore.read()
     }
 
 
