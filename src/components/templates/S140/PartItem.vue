@@ -1,18 +1,15 @@
 <template>
-    <div :class="['inserter-wrapper', gridColumns]">
-        <div v-if="part.isInsertable && !hasInserted" class="item-inserter">
-            <div class="insert-btn" @click="insertPartItem">
-                <IconPlus style="height: 20px; width: 20px; stroke: white;" />
-            </div>
-        </div>
-        <div v-if="isRemovableInsert" class="remover-btn" @click="removePartItem">
-            <IconMinus style="height: 15px; width: 15px; stroke: white;" />
-        </div>
+    <div :class="gridColumns">
+
         <div class="s140-grid-titles">
+
+            <!-- Part Runtime Display -->
             <span v-show="part?.time" @click="showTimeAdjuster"
                 :class="['s140-runtime', { 'time-adjustable': part.timeAdjustable }]">
                 {{ runTime }}
             </span>
+
+            <!-- Part Title -->
             <span v-show="part?.time">
                 <span v-if="!overriding" @click="startOverride" :class="[{ writtable: part?.writtable }]">
                     {{ displayTitle }} {{ isOverride ? '' : timeLimit }}
@@ -22,25 +19,27 @@
                 </span>
             </span>
         </div>
+
+        <!-- Handling Auxiliary Class Parts -->
         <div class="assignee" v-if="hasAux1Class">
             <span class="s140-part-label" v-show="showLabel">{{ part?.label }}:</span>
-            <div :class="assignAux1Classes" v-if="isAux1Part" @click="showAux1Selector">
+            <div :class="assignAux1Classes" v-if="isAux1Part" @click.stop="showSelector($event, 'aux')">
                 {{ displayAux1Assignee }}
             </div>
             <AudienceGroup :is-auxi-chairman="isAuxiChairman" :part-id="part.id" />
-            <AssignmentSelector v-if="selectorAux1 && partAux1" :part="partAux1" :triggered="triggeredSelector"
-                @hide="hideSelector" @trigger-off="triggerOff" />
         </div>
-        <div class="assignee" v-show="isAssignable" @click="showSelector">
+
+        <!-- Handling Normal Parts -->
+        <div class="assignee" v-show="isAssignable" @click.stop="showSelector">
             <span class="s140-part-label" v-show="showLabel" v-if="!hasAux1Class">
                 {{ part?.label }}:
             </span>
             <div :class="assignClasses">
                 {{ displayAssignee }}
             </div>
-            <AssignmentSelector v-if="selector" :part="part" :triggered="triggeredSelector" @hide="hideSelector"
-                @trigger-off="triggerOff" />
         </div>
+
+        <!-- Handling Time Adjustments -->
         <TimeAdjuster style="margin-left: 50px;" v-if="timeAdjuster" :part="part" :part-item="part"
             @close="updatePartTime" />
     </div>
@@ -55,9 +54,9 @@
     import { useOverridesStore } from '@/stores/overrides';
     import { usePublisherStore } from '@/stores/publisher';
     import { useTimeOverrides } from '@/stores/overrides-time';
+    import { useAssignmentSelector } from '@/stores/assignment-selector';
     import type { S140PartItem } from '@/types/files';
 
-    import AssignmentSelector from '@/components/AssignmentSelector.vue'
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
     import AudienceGroup from '@/components/AudienceGroup.vue'
     import IconPlus from '@/components/icons/IconPlus.vue';
@@ -70,6 +69,7 @@
     const fileStore = useFilesStore();
     const overrides = useOverridesStore();
     const timeOverrides = useTimeOverrides()
+    const selector = useAssignmentSelector()
 
     const { part, hasInserted } = defineProps<{
         part: S140PartItem
@@ -100,10 +100,6 @@
     }
 
     const partAux1 = ref<S140PartItem | undefined>()
-
-    const selector = ref(false);
-    const selectorAux1 = ref(false);
-    const triggeredSelector = ref(false);
 
     const isDemo = computed(() => part.roles?.includes('demo'))
     const isBibleReading = computed(() => part.roles?.includes('br'))
@@ -173,8 +169,6 @@
             overrides.remove(part.id)
             return
         }
-
-
 
         overrides.save({
             id: part.id,
@@ -284,23 +278,18 @@
         return (hasLabel && !hasVisit)
     })
 
-    function showSelector(): void {
-        triggeredSelector.value = true
-        selector.value = true
-    }
+    function showSelector(e: MouseEvent, targetPart: 'aux' | 'def' = 'def'): void {
+        const target = e.currentTarget as HTMLElement | null
+        if (!target) return
 
-    function showAux1Selector(): void {
-        triggeredSelector.value = true
-        selectorAux1.value = true
-    }
+        const rect = target.getBoundingClientRect();
 
-    function triggerOff(): void {
-        triggeredSelector.value = false
-    }
+        // selects part to assign to selector by default or auxillary
+        const p: S140PartItem | undefined = targetPart === 'def' ? part : partAux1.value
 
-    function hideSelector(): void {
-        selector.value = false
-        selectorAux1.value = false
+        if (!p) return
+
+        selector.setTargetRect(rect, p)
     }
 
     function displayTime(startingTime: string, minutesToAdd: number) {

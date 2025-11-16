@@ -33,8 +33,6 @@
                 <div class="assignee" @click="showSelector">
                     {{ displayAssignee }}
                 </div>
-                <AssignmentSelector v-if="selector" :part="prayer" :triggered="triggered" @hide="hideSelector"
-                    @trigger-off="triggerOff" />
             </span>
         </div>
     </div>
@@ -44,6 +42,7 @@
     import { computed, ref, watch, onMounted } from 'vue';
     import { useFilesStore } from '@/stores/files';
     import { useAssignmentStore } from '@/stores/assignment';
+    import { useAssignmentSelector } from '@/stores/assignment-selector';
     import { usePublisherStore } from '@/stores/publisher';
     import { useWeeklyDate } from '@/composables/weeklyDate';
     import { onClickOutside } from '@vueuse/core';
@@ -53,11 +52,9 @@
     import IconBible from '@/components/icons/IconBible.vue';
     import IconMusicNotes from '../../icons/IconMusicNotes.vue';
     import IconPraying from '../../icons/IconPraying.vue';
-    import AssignmentSelector from '@/components/AssignmentSelector.vue';
     import WeekdaySelector from '@/components/WeekdaySelector.vue';
 
-    const selector = ref(false)
-    const triggered = ref(false)
+    const selector = useAssignmentSelector()
 
     const fileStore = useFilesStore()
     const assignStore = useAssignmentStore();
@@ -101,17 +98,12 @@
         return { background: fileStore.loadedMonth.content.theme }
     })
 
-    function showSelector(): void {
-        triggered.value = true
-        selector.value = true
-    }
+    function showSelector(e: MouseEvent): void {
+        const target = e.currentTarget as HTMLElement | null
+        if (!target) return
 
-    function hideSelector(): void {
-        selector.value = false
-    }
-
-    function triggerOff(): void {
-        triggered.value = false
+        const rect = target.getBoundingClientRect();
+        selector.setTargetRect(rect, prayer.value)
     }
 
     // week day selector

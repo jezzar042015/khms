@@ -64,6 +64,7 @@ body
   background-color: rgb(182, 182, 182);
   overflow: auto;
   height: 100%;
+  position: relative;
 }
 
 #fsl-mwb
@@ -616,6 +617,7 @@ section
 {
   font-size: 18px;
   height: fit-content;
+  position: relative;
 }
 
 .s140-header

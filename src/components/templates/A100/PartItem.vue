@@ -25,8 +25,6 @@
                 <div class="generic-label">{{ part.reference }}</div>
                 <div class="assignee" @click="showSelector">
                     <div :class="assignClasses">{{ displayAssignee }}</div>
-                    <AssignmentSelector v-if="selector" :part="partItem" :triggered="triggered" @hide="hideSelector"
-                        @trigger-off="triggerOff" />
                 </div>
             </span>
         </div>
@@ -47,6 +45,7 @@
     import { computed, nextTick, ref, watch } from 'vue';
     import { onClickOutside } from '@vueuse/core';
     import { useAssignmentStore } from '@/stores/assignment';
+    import { useAssignmentSelector } from '@/stores/assignment-selector';
     import { useCongregationStore } from '@/stores/congregation';
     import { useOverridesStore } from '@/stores/overrides';
     import { usePublisherStore } from '@/stores/publisher';
@@ -54,7 +53,6 @@
     import type { PartItem } from '@/types/files';
 
     import thumbnails from '@/assets/utils/thumbnails';
-    import AssignmentSelector from '@/components/AssignmentSelector.vue';
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
     import IconPlus from '@/components/icons/IconPlus.vue';
     import IconMinus from '@/components/icons/IconMinus.vue';
@@ -70,10 +68,9 @@
     )
 
     const emits = defineEmits(['insert-item', 'remove-item'])
+    const selector = useAssignmentSelector()
 
     const timerAdjuster = ref(false)
-    const selector = ref(false)
-    const triggered = ref(false)
 
     const updatePartTime = (time: number) => {
 
@@ -191,17 +188,12 @@
         return isTreauresPart || isGemsPart || isTitledLiving
     })
 
-    function showSelector(): void {
-        triggered.value = true
-        selector.value = true
-    }
+    function showSelector(e: MouseEvent): void {
+        const target = e.currentTarget as HTMLElement | null
+        if (!target) return
 
-    function hideSelector(): void {
-        selector.value = false
-    }
-
-    function triggerOff(): void {
-        triggered.value = false
+        const rect = target.getBoundingClientRect();
+        selector.setTargetRect(rect, part)
     }
 
     // title handling
