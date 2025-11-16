@@ -444,15 +444,15 @@
 
         const isTopOverflow = rect.top <= 65
         if (isTopOverflow) {
-            const computedTop = 80 + container.scrollTop + (rect.height / 2)
+            const computedTop = 65 + container.scrollTop + (rect.height / 2)
             assignSelector.value.style.top = `${computedTop}px`
             return
         }
 
         const isBottomOverflow = rect.bottom > containerHeight
         if (isBottomOverflow) {
-            const allowedBottom = containerHeight - 50
-            assignSelector.value.style.bottom = `${allowedBottom}px`
+            const computedTop = container.scrollTop + containerHeight + (rect.height / 2) - rect.height - 10
+            assignSelector.value.style.top = `${computedTop}px`
             return
         }
     }
@@ -523,10 +523,21 @@
         const selectorRect = assignSelector.value?.getBoundingClientRect()
         const parentY = (selector.rect?.y ?? 0) - (selectorRect?.top ?? 0)
 
-        if (is140) {
-            arrow.value.style.top = `${parentY - 10}px`
+        const arrowOffset = is140 ? 10 : 15
+        const arrowTop = parentY - arrowOffset
+
+        // Hide arrow if it's above the selector top
+        if (arrowTop < 0) {
+            arrow.value.style.display = 'none'
+            return
+        }
+
+        // Hide arrow if it's below the selector height
+        if ((arrowTop + 30) > (selectorRect?.height ?? 0)) {
+            arrow.value.style.display = 'none'
         } else {
-            arrow.value.style.top = `${parentY - 15}px`
+            arrow.value.style.display = ''
+            arrow.value.style.top = `${arrowTop}px`
         }
     }
 
@@ -579,7 +590,7 @@
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         padding: 15px 15px;
         z-index: 2;
-        overflow: visible;
+        overflow-x: visible;
         font-size: 16px;
         border-radius: 3px;
         transition: fade 1s;
