@@ -1,42 +1,42 @@
 {
-  "period": "202510",
-  "display": "Oktubre 2025",
-  "title": "Eskediul ti Gimong iti Tengnga ti Lawas",
-  "theme": "#1a356c",
+  "period": "202603",
+  "display": "Marso 2026",
+  "title": "Eskedyul sa Ating Buhay at Ministeryong Kristianong Pulong",
+  "theme": "#1a4538",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202509/univ/art/mwb_univ_202509_lg.jpg",
-  "firstMonday": "2025-10-06",
-  "language": "ilo",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202603/E/pt/mwb_E_202603_lg.jpg",
+  "firstMonday": "2026-03-02",
+  "language": "tl",
   "weeks": [
     {
       "order": 1,
-      "id": "202510.1",
-      "week": "OKTUBRE 6-12",
-      "bibleReading": "ECLESIASTES 5-6",
+      "id": "202603.1",
+      "week": "MARSO 2-8",
+      "bibleReading": "ISAIAS 41-42",
       "songs": [
-        "42",
-        "160",
-        "34"
+        "8",
+        "19",
+        "110"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202510.1.0",
+            "id": "202603.1.0",
             "time": 1,
-            "reference": "Panglukat a Sasao",
+            "reference": "Pambungad na Komento",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202510.1.10"
+              "202603.1.10"
             ]
           },
           {
-            "id": "202510.1.1",
+            "id": "202603.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_sqs_lg.jpg",
-            "title": "1. Ipakitatayo ti Panagraem iti Naindaklan a Diostayo",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026081/univ/art/202026081_univ_sqs_lg.jpg",
+            "title": "1. “Huwag Kang Matakot”",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -44,10 +44,10 @@
             ]
           },
           {
-            "id": "202510.1.2",
+            "id": "202603.1.2",
             "time": 10,
             "reference": "",
-            "title": "2. Panagkali iti Naespirituan a Gameng",
+            "title": "2. Espirituwal na Hiyas",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -55,10 +55,10 @@
             ]
           },
           {
-            "id": "202510.1.3",
+            "id": "202603.1.3",
             "time": 4,
-            "reference": "Ec 5:1-17 (th adalen 12)",
-            "title": "3. Panagbasa iti Biblia",
+            "reference": "Isa 42:1-13 (th aralin 11)",
+            "title": "3. Pagbabasa ng Bibliya",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -67,45 +67,34 @@
         ],
         "ministry": [
           {
-            "id": "202510.1.4",
-            "time": 1,
-            "title": "4. Panangirugi iti Saritaan",
-            "class": "part-title-ministry",
-            "reference": "lmd leksion 4 punto 5",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202510.1.5",
-            "time": 2,
-            "title": "5. Panangirugi iti Saritaan",
-            "class": "part-title-ministry",
-            "reference": "lmd leksion 1 punto 3",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202510.1.6",
+            "id": "202603.1.4",
             "time": 3,
-            "title": "6. Panagsarungkar",
+            "title": "4. Pagpapasimula ng Pakikipag-usap",
             "class": "part-title-ministry",
-            "reference": "lmd leksion 7 punto 3",
+            "reference": "lmd aralin 6: #4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.1.7",
-            "time": 5,
-            "title": "7. Panagaramid iti Adalan",
+            "id": "202603.1.5",
+            "time": 4,
+            "title": "5. Pagpapasimula ng Pakikipag-usap",
             "class": "part-title-ministry",
-            "reference": "lmd leksion 11 punto 3",
+            "reference": "lmd aralin 3: #5",
             "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202603.1.6",
+            "time": 5,
+            "title": "6. Ipaliwanag ang Paniniwala Mo",
+            "class": "part-title-ministry",
+            "reference": "th aralin 1",
+            "thumbnail": "th",
             "roles": [
               "demo"
             ]
@@ -113,11 +102,11 @@
         ],
         "living": [
           {
-            "id": "202510.1.8",
-            "time": 15,
-            "title": "8. Us-usarenyo Kadi “Dagiti Kinapudno a Kaykayattayo nga Isuro”?",
+            "id": "202603.1.7",
+            "time": 5,
+            "title": "7. Magsisimula ang Kampanya Para sa Memoryal sa Sabado, Marso 7",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025326/univ/art/202025326_univ_cnt_3_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026081/univ/art/202026081_univ_cnt_1_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -125,28 +114,40 @@
             "thumbnailMode": "sqr-c"
           },
           {
-            "id": "202510.1.9",
+            "id": "202603.1.8",
+            "time": 10,
+            "title": "8. Mga Nagawa ng Organisasyon Para sa Marso",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202603.1.9",
             "time": 30,
-            "title": "9. Panagadal ti Kongregasion iti Biblia",
+            "title": "9. Pag-aaral ng Kongregasyon sa Bibliya",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksion 24-25",
+            "reference": "lfb aral 66-67",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202510.1.9.r",
+            "id": "202603.1.9.r",
             "class": "accessory",
-            "alt": "Reader:",
+            "alt": "Tagabasa:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202510.1.10",
+            "id": "202603.1.10",
             "time": 3,
-            "reference": "Pangserra a Sasao",
+            "reference": "Pangwakas na Komento",
             "roles": [
               "elder",
               "ms"
@@ -157,33 +158,33 @@
     },
     {
       "order": 2,
-      "id": "202510.2",
-      "week": "OKTUBRE 13-19",
-      "bibleReading": "ECLESIASTES 7-8",
+      "id": "202603.2",
+      "week": "MARSO 9-15",
+      "bibleReading": "ISAIAS 43-44",
       "songs": [
-        "39",
-        "151",
-        "124"
+        "63",
+        "69",
+        "137"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202510.2.0",
+            "id": "202603.2.0",
             "time": 1,
-            "reference": "Panglukat a Sasao",
+            "reference": "Pambungad na Komento",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202510.2.10"
+              "202603.2.10"
             ]
           },
           {
-            "id": "202510.2.1",
+            "id": "202603.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_sqs_lg.jpg",
-            "title": "1. ‘Mapanka iti Balay ti Natayan’",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026082/univ/art/202026082_univ_sqs_lg.jpg",
+            "title": "1. Isang Hula na Natupad Pagkalipas ng 200 Taon",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -191,10 +192,10 @@
             ]
           },
           {
-            "id": "202510.2.2",
+            "id": "202603.2.2",
             "time": 10,
             "reference": "",
-            "title": "2. Panagkali iti Naespirituan a Gameng",
+            "title": "2. Espirituwal na Hiyas",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -202,10 +203,10 @@
             ]
           },
           {
-            "id": "202510.2.3",
+            "id": "202603.2.3",
             "time": 4,
-            "reference": "Ec 8:1-13 (th adalen 10)",
-            "title": "3. Panagbasa iti Biblia",
+            "reference": "Isa 44:9-20 (th aralin 10)",
+            "title": "3. Pagbabasa ng Bibliya",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -214,45 +215,45 @@
         ],
         "ministry": [
           {
-            "id": "202510.2.4",
-            "time": 2,
-            "title": "4. Panangirugi iti Saritaan",
+            "id": "202603.2.4",
+            "time": 1,
+            "title": "4. Pagpapasimula ng Pakikipag-usap",
             "class": "part-title-ministry",
-            "reference": "lmd leksion 2 punto 4",
+            "reference": "lmd aralin 4: #3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.2.5",
-            "time": 2,
-            "title": "5. Panangirugi iti Saritaan",
+            "id": "202603.2.5",
+            "time": 3,
+            "title": "5. Pagpapasimula ng Pakikipag-usap",
             "class": "part-title-ministry",
-            "reference": "lmd leksion 2 punto 3",
+            "reference": "lmd aralin 3: #4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.2.6",
-            "time": 2,
-            "title": "6. Panagsarungkar",
+            "id": "202603.2.6",
+            "time": 3,
+            "title": "6. Pagpapasimula ng Pakikipag-usap",
             "class": "part-title-ministry",
-            "reference": "lmd leksion 9 punto 4",
+            "reference": "lmd aralin 6: #3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.2.7",
-            "time": 5,
-            "title": "7. Panangilawlawag iti Patpatien",
+            "id": "202603.2.7",
+            "time": 4,
+            "title": "7. Pakikipag-usap Muli",
             "class": "part-title-ministry",
-            "reference": "th adalen 17",
-            "thumbnail": "th",
+            "reference": "lmd aralin 7: #4",
+            "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
@@ -260,40 +261,39 @@
         ],
         "living": [
           {
-            "id": "202510.2.8",
+            "id": "202603.2.8",
             "time": 15,
-            "title": "8. Pabilgem ti Pammatim iti Panagungar",
+            "title": "8. Lokal na Pangangailangan",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025327/univ/art/202025327_univ_cnt_2_lg.jpg",
+            "thumbnail": "",
             "roles": [
-              "elder",
-              "ms"
+              "elder"
             ],
-            "thumbnailMode": "sqr-c"
+            "writtable": true
           },
           {
-            "id": "202510.2.9",
+            "id": "202603.2.9",
             "time": 30,
-            "title": "9. Panagadal ti Kongregasion iti Biblia",
+            "title": "9. Pag-aaral ng Kongregasyon sa Bibliya",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksion 26-27",
+            "reference": "lfb intro sa seksiyon 11 at aral 68-69",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202510.2.9.r",
+            "id": "202603.2.9.r",
             "class": "accessory",
-            "alt": "Reader:",
+            "alt": "Tagabasa:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202510.2.10",
+            "id": "202603.2.10",
             "time": 3,
-            "reference": "Pangserra a Sasao",
+            "reference": "Pangwakas na Komento",
             "roles": [
               "elder",
               "ms"
@@ -304,33 +304,33 @@
     },
     {
       "order": 3,
-      "id": "202510.3",
-      "week": "OKTUBRE 20-26",
-      "bibleReading": "ECLESIASTES 9-10",
+      "id": "202603.3",
+      "week": "MARSO 16-22",
+      "bibleReading": "ISAIAS 45-47",
       "songs": [
-        "30",
-        "47",
-        "28"
+        "2",
+        "38",
+        "148"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202510.3.0",
+            "id": "202603.3.0",
             "time": 1,
-            "reference": "Panglukat a Sasao",
+            "reference": "Pambungad na Komento",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202510.3.9"
+              "202603.3.10"
             ]
           },
           {
-            "id": "202510.3.1",
+            "id": "202603.3.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025328/univ/art/202025328_univ_sqs_lg.jpg",
-            "title": "1. Umiso Koma ti Panangmatmatmo Kadagiti Pakasuotam",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026083/univ/art/202026083_univ_sqs_lg.jpg",
+            "title": "1. “Ako ang Diyos, at Walang Ibang Gaya Ko”",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -338,10 +338,10 @@
             ]
           },
           {
-            "id": "202510.3.2",
+            "id": "202603.3.2",
             "time": 10,
             "reference": "",
-            "title": "2. Panagkali iti Naespirituan a Gameng",
+            "title": "2. Espirituwal na Hiyas",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -349,10 +349,10 @@
             ]
           },
           {
-            "id": "202510.3.3",
+            "id": "202603.3.3",
             "time": 4,
-            "reference": "Ec 10:1-20 (th adalen 11)",
-            "title": "3. Panagbasa iti Biblia",
+            "reference": "Isa 45:1-11 (th aralin 5)",
+            "title": "3. Pagbabasa ng Bibliya",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -361,33 +361,33 @@
         ],
         "ministry": [
           {
-            "id": "202510.3.4",
+            "id": "202603.3.4",
             "time": 3,
-            "title": "4. Panangirugi iti Saritaan",
+            "title": "4. Pagpapasimula ng Pakikipag-usap",
             "class": "part-title-ministry",
-            "reference": "lmd leksion 3 punto 4",
+            "reference": "lmd aralin 5: #3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.3.5",
+            "id": "202603.3.5",
             "time": 4,
-            "title": "5. Panangirugi iti Saritaan",
+            "title": "5. Pakikipag-usap Muli",
             "class": "part-title-ministry",
-            "reference": "lmd leksion 4 punto 4",
+            "reference": "lmd aralin 9: #5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.3.6",
+            "id": "202603.3.6",
             "time": 5,
-            "title": "6. Panagaramid iti Adalan",
+            "title": "6. Paggawa ng mga Alagad",
             "class": "part-title-ministry",
-            "reference": "lmd leksion 12 punto 3",
+            "reference": "lmd aralin 11: #3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -396,11 +396,11 @@
         ],
         "living": [
           {
-            "id": "202510.3.7",
-            "time": 15,
-            "title": "7. Posible nga Agbalinka a Natibker Uray no Maipasangoka iti Trahedia",
+            "id": "202603.3.7",
+            "time": 7,
+            "title": "7. Kay Jehova Lang Tayo Makakaasa ng Tulong",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025328/univ/art/202025328_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026083/univ/art/202026083_univ_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -408,28 +408,40 @@
             "thumbnailMode": "sqr-r"
           },
           {
-            "id": "202510.3.8",
+            "id": "202603.3.8",
+            "time": 8,
+            "title": "8. 2026 Update sa Local Design/Construction Program",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": ""
+          },
+          {
+            "id": "202603.3.9",
             "time": 30,
-            "title": "8. Panagadal ti Kongregasion iti Biblia",
+            "title": "9. Pag-aaral ng Kongregasyon sa Bibliya",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksion 28, intro ti seksion 6, ken leksion 29",
+            "reference": "lfb aral 70-71",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202510.3.8.r",
+            "id": "202603.3.9.r",
             "class": "accessory",
-            "alt": "Reader:",
+            "alt": "Tagabasa:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202510.3.9",
+            "id": "202603.3.10",
             "time": 3,
-            "reference": "Pangserra a Sasao",
+            "reference": "Pangwakas na Komento",
             "roles": [
               "elder",
               "ms"
@@ -440,33 +452,33 @@
     },
     {
       "order": 4,
-      "id": "202510.4",
-      "week": "OKTUBRE 27–NOBIEMBRE 2",
-      "bibleReading": "ECLESIASTES 11-12",
+      "id": "202603.4",
+      "week": "MARSO 23-29",
+      "bibleReading": "ISAIAS 48-49",
       "songs": [
-        "155",
-        "111",
-        "8"
+        "89",
+        "107",
+        "134"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202510.4.0",
+            "id": "202603.4.0",
             "time": 1,
-            "reference": "Panglukat a Sasao",
+            "reference": "Pambungad na Komento",
             "roles": [
               "elder",
               "ms"
             ],
             "autofills": [
-              "202510.4.9"
+              "202603.4.9"
             ]
           },
           {
-            "id": "202510.4.1",
+            "id": "202603.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202025329/univ/art/202025329_univ_sqs_lg.jpg",
-            "title": "1. Agtalinaedka a Nasalun-at ken Enjoy-em ti Biag",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026084/univ/art/202026084_univ_sqs_lg.jpg",
+            "title": "1. Alamin at Isabuhay ang Itinuturo sa Iyo ni Jehova",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -474,10 +486,10 @@
             ]
           },
           {
-            "id": "202510.4.2",
+            "id": "202603.4.2",
             "time": 10,
             "reference": "",
-            "title": "2. Panagkali iti Naespirituan a Gameng",
+            "title": "2. Espirituwal na Hiyas",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -485,10 +497,10 @@
             ]
           },
           {
-            "id": "202510.4.3",
+            "id": "202603.4.3",
             "time": 4,
-            "reference": "Ec 12:1-14 (th adalen 12)",
-            "title": "3. Panagbasa iti Biblia",
+            "reference": "Isa 48:9-20 (th aralin 11)",
+            "title": "3. Pagbabasa ng Bibliya",
             "class": "part-title-gems",
             "roles": [
               "br"
@@ -497,74 +509,75 @@
         ],
         "ministry": [
           {
-            "id": "202510.4.4",
+            "id": "202603.4.4",
             "time": 3,
-            "title": "4. Panagsarungkar",
+            "title": "4. Pagpapasimula ng Pakikipag-usap",
             "class": "part-title-ministry",
-            "reference": "lmd leksion 8 punto 3",
+            "reference": "lmd aralin 5: #3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.4.5",
+            "id": "202603.4.5",
             "time": 4,
-            "title": "5. Panagsarungkar",
+            "title": "5. Pakikipag-usap Muli",
             "class": "part-title-ministry",
-            "reference": "lmd leksion 9 punto 3",
+            "reference": "lmd aralin 9: #3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202510.4.6",
+            "id": "202603.4.6",
             "time": 5,
-            "title": "6. Palawag",
+            "title": "6. Pakikipag-usap Muli",
             "class": "part-title-ministry",
-            "reference": "th adalen 20",
-            "thumbnail": "th",
+            "reference": "lmd aralin 8: #3",
+            "thumbnail": "lmd",
             "roles": [
-              "talk"
+              "demo"
             ]
           }
         ],
         "living": [
           {
-            "id": "202510.4.7",
+            "id": "202603.4.7",
             "time": 15,
-            "title": "7. Lokal a Kasapulan",
+            "title": "7. Makinabang sa Pinakamahalagang Araw ng Taon",
             "class": "part-title-living",
-            "thumbnail": "",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026084/univ/art/202026084_univ_cnt_2_lg.jpg",
             "roles": [
-              "elder"
+              "elder",
+              "ms"
             ],
-            "writtable": true
+            "thumbnailMode": "sqr-r"
           },
           {
-            "id": "202510.4.8",
+            "id": "202603.4.8",
             "time": 30,
-            "title": "8. Panagadal ti Kongregasion iti Biblia",
+            "title": "8. Pag-aaral ng Kongregasyon sa Bibliya",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksion 30-31",
+            "reference": "lfb aral 72-73",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202510.4.8.r",
+            "id": "202603.4.8.r",
             "class": "accessory",
-            "alt": "Reader:",
+            "alt": "Tagabasa:",
             "roles": [
               "rdr"
             ]
           },
           {
-            "id": "202510.4.9",
+            "id": "202603.4.9",
             "time": 3,
-            "reference": "Pangserra a Sasao",
+            "reference": "Pangwakas na Komento",
             "roles": [
               "elder",
               "ms"

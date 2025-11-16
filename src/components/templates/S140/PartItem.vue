@@ -59,6 +59,8 @@
 
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
     import AudienceGroup from '@/components/AudienceGroup.vue'
+    import IconPlus from '@/components/icons/IconPlus.vue';
+    import IconMinus from '@/components/icons/IconMinus.vue';
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
@@ -69,9 +71,12 @@
     const timeOverrides = useTimeOverrides()
     const selector = useAssignmentSelector()
 
-    const { part } = defineProps<{
+    const { part, hasInserted } = defineProps<{
         part: S140PartItem
+        hasInserted?: boolean
     }>()
+
+    const emits = defineEmits(['insert-item', 'remove-item'])
 
     const timeAdjuster = ref(false)
     const showTimeAdjuster = () => {
@@ -81,7 +86,9 @@
     }
 
     const updatePartTime = (time: number) => {
+
         timeAdjuster.value = false
+
         if (Number(time) == 0) return
 
         if (time !== part.time) {
@@ -89,11 +96,6 @@
                 id: part.id,
                 time: time
             })
-        }
-
-        if (time === part.time) {
-            const storedOverride = timeOverrides.read(part.id)?.time ?? 0
-            if (storedOverride > 0) timeOverrides.remove(part.id)
         }
     }
 
@@ -255,6 +257,9 @@
         return displayTime(startTime, part?.runtime)
     })
 
+    /**
+     * @description Handles the classes assignment to manage columns display based on the number of classes
+     * */
     const gridColumns = computed<string>(() => {
         const minClasses = congStore.congregation.classId;
 
@@ -303,6 +308,16 @@
         const formattedMinutes = newMinutes.toString().padStart(2, '0');
 
         return `${formattedHours}:${formattedMinutes}`;
+    }
+
+    const isRemovableInsert = computed(() => part.id.endsWith('.nsrt'))
+
+    const insertPartItem = () => {
+        emits('insert-item', part.id)
+    }
+
+    const removePartItem = () => {
+        emits('remove-item', part.id)
     }
 
     function loadAux1Part(): void {
@@ -364,4 +379,78 @@
         cursor: pointer;
     }
 
+    .inserter-wrapper
+    {
+        position: relative;
+    }
+
+    .item-inserter
+    {
+        position: absolute;
+        display: flex;
+        justify-content: flex-start;
+        height: 5px;
+        bottom: -2px;
+        left: -20px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .item-inserter:hover
+    {
+        border-bottom: 1px dotted rgb(189, 189, 189);
+        border-bottom-left-radius: 50%;
+    }
+
+    .insert-btn,
+    .remover-btn
+    {
+        display: flex;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s, transform 0.3s;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    .insert-btn
+    {
+        background-color: #3DA8EA;
+        margin-top: -12px;
+        margin-right: -12px;
+        transform: scale(0.8);
+        height: 30px;
+        width: 30px;
+    }
+
+    .remover-btn
+    {
+        background-color: rgba(219, 2, 2, 0.322);
+        position: absolute;
+        transform: scale(0.5);
+        left: -25px;
+        top: 3px;
+        height: 25px;
+        width: 25px;
+        transition: ease-in-out .3s
+    }
+
+    .item-inserter:hover .insert-btn
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .inserter-wrapper:hover .remover-btn
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .remover-btn:hover
+    {
+        background-color: rgb(219, 2, 2);
+    }
 </style>

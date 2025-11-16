@@ -1,27 +1,27 @@
 {
-  "period": "202601",
-  "display": "Enero 2026",
+  "period": "202603",
+  "display": "Marso 2026",
   "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
-  "theme": "#a16d3c",
+  "theme": "#1a4538",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026008/univ/art/202026008_univ_sqs_lg.jpg",
-  "firstMonday": "2026-01-05",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202603/E/pt/mwb_E_202603_lg.jpg",
+  "firstMonday": "2026-03-02",
   "language": "war",
   "weeks": [
     {
       "order": 1,
-      "id": "202601.1",
-      "week": "ENERO 5-11",
-      "bibleReading": "ISAIAS 17-20",
+      "id": "202603.1",
+      "week": "MARSO 2-8",
+      "bibleReading": "ISAIAS 41-42",
       "songs": [
-        "153",
-        "148",
-        "73"
+        "8",
+        "19",
+        "110"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202601.1.0",
+            "id": "202603.1.0",
             "time": 1,
             "reference": "Introduksyon",
             "roles": [
@@ -29,14 +29,14 @@
               "ms"
             ],
             "autofills": [
-              "202601.1.10"
+              "202603.1.10"
             ]
           },
           {
-            "id": "202601.1.1",
+            "id": "202603.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026001/univ/art/202026001_univ_sqs_lg.jpg",
-            "title": "1. “An Bahín han mga Naninikas ha Aton”",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026081/univ/art/202026081_univ_sqs_lg.jpg",
+            "title": "1. “Ayaw Kahadlok”",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -44,7 +44,7 @@
             ]
           },
           {
-            "id": "202601.1.2",
+            "id": "202603.1.2",
             "time": 10,
             "reference": "",
             "title": "2. Espirituwal nga mga Hiyas",
@@ -55,9 +55,9 @@
             ]
           },
           {
-            "id": "202601.1.3",
+            "id": "202603.1.3",
             "time": 4,
-            "reference": "Isa 19:​1-12 (th aradman 11)",
+            "reference": "Isa 42:​1-13 (th aradman 11)",
             "title": "3. Pagbasa ha Biblia",
             "class": "part-title-gems",
             "roles": [
@@ -67,58 +67,46 @@
         ],
         "ministry": [
           {
-            "id": "202601.1.4",
+            "id": "202603.1.4",
             "time": 3,
             "title": "4. Pagtikang ha Pakiistorya",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 2 punto 3",
+            "reference": "lmd leksyon 6 punto 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202601.1.5",
+            "id": "202603.1.5",
             "time": 4,
-            "title": "5. Pakiistorya Utro",
+            "title": "5. Pagtikang ha Pakiistorya",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 8 punto 4",
+            "reference": "lmd leksyon 3 punto 5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202601.1.6",
+            "id": "202603.1.6",
             "time": 5,
-            "title": "6. Pahayag",
+            "title": "6. Pagsaysay han Imo mga Gintotoohan",
             "class": "part-title-ministry",
-            "reference": "th aradman 8",
+            "reference": "th aradman 1",
             "thumbnail": "th",
             "roles": [
-              "talk"
+              "demo"
             ]
           }
         ],
         "living": [
           {
-            "id": "202601.1.7",
-            "time": 10,
-            "title": "7. “Hinumdumi an Bato, an Imo Kuta”",
-            "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026001/univ/art/202026001_univ_cnt_2_lg.jpg",
-            "roles": [
-              "elder",
-              "ms"
-            ],
-            "thumbnailMode": "w-50"
-          },
-          {
-            "id": "202601.1.8",
+            "id": "202603.1.7",
             "time": 5,
-            "title": "8. Paghatag hin Panahon Kada Adlaw Basi Mahibaro Tikang ha mga Sangkay ni Jehova",
+            "title": "7. Kampanya Para ha Memoryal nga Magtitikang ha Sabado, Marso 7",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026001/univ/art/202026001_univ_cnt_3_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026081/univ/art/202026081_univ_cnt_1_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -126,18 +114,30 @@
             "thumbnailMode": "sqr-c"
           },
           {
-            "id": "202601.1.9",
+            "id": "202603.1.8",
+            "time": 10,
+            "title": "8. Mga Nahimo han Organisasyon Para ha Marso",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202603.1.9",
             "time": 30,
             "title": "9. Pag-aram ha Biblia han Kongregasyon",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksyon 50, introduksyon ha seksyon 9, ngan leksyon 51",
+            "reference": "lfb leksyon 66-67",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202601.1.9.r",
+            "id": "202603.1.9.r",
             "class": "accessory",
             "alt": "Magbabasa:",
             "roles": [
@@ -145,7 +145,7 @@
             ]
           },
           {
-            "id": "202601.1.10",
+            "id": "202603.1.10",
             "time": 3,
             "reference": "Konklusyon",
             "roles": [
@@ -158,18 +158,18 @@
     },
     {
       "order": 2,
-      "id": "202601.2",
-      "week": "ENERO 12-18",
-      "bibleReading": "ISAIAS 21-23",
+      "id": "202603.2",
+      "week": "MARSO 9-15",
+      "bibleReading": "ISAIAS 43-44",
       "songs": [
-        "120",
-        "124",
-        "3"
+        "63",
+        "69",
+        "137"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202601.2.0",
+            "id": "202603.2.0",
             "time": 1,
             "reference": "Introduksyon",
             "roles": [
@@ -177,14 +177,14 @@
               "ms"
             ],
             "autofills": [
-              "202601.2.10"
+              "202603.2.10"
             ]
           },
           {
-            "id": "202601.2.1",
+            "id": "202603.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026002/univ/art/202026002_univ_sqs_lg.jpg",
-            "title": "1. Mga Leksyon Tikang ha Nahitabo kan Sebna",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026082/univ/art/202026082_univ_sqs_lg.jpg",
+            "title": "1. Tagna nga Iginsurat mga 200 ka Tuig Antes Ito Matuman",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -192,7 +192,7 @@
             ]
           },
           {
-            "id": "202601.2.2",
+            "id": "202603.2.2",
             "time": 10,
             "reference": "",
             "title": "2. Espirituwal nga mga Hiyas",
@@ -203,9 +203,9 @@
             ]
           },
           {
-            "id": "202601.2.3",
+            "id": "202603.2.3",
             "time": 4,
-            "reference": "Isa 23:​1-14 (th aradman 5)",
+            "reference": "Isa 44:​9-20 (th aradman 10)",
             "title": "3. Pagbasa ha Biblia",
             "class": "part-title-gems",
             "roles": [
@@ -215,53 +215,53 @@
         ],
         "ministry": [
           {
-            "id": "202601.2.4",
+            "id": "202603.2.4",
             "time": 1,
             "title": "4. Pagtikang ha Pakiistorya",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 2 punto 4",
+            "reference": "lmd leksyon 4 punto 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202601.2.5",
+            "id": "202603.2.5",
             "time": 3,
             "title": "5. Pagtikang ha Pakiistorya",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 1 punto 3",
+            "reference": "lmd leksyon 3 punto 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202601.2.6",
-            "time": 2,
-            "title": "6. Pakiistorya Utro",
+            "id": "202603.2.6",
+            "time": 3,
+            "title": "6. Pagtikang ha Pakiistorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksyon 6 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202603.2.7",
+            "time": 4,
+            "title": "7. Pakiistorya Utro",
             "class": "part-title-ministry",
             "reference": "lmd leksyon 7 punto 4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
-          },
-          {
-            "id": "202601.2.7",
-            "time": 5,
-            "title": "7. Pahayag",
-            "class": "part-title-ministry",
-            "reference": "th aradman 9",
-            "thumbnail": "th",
-            "roles": [
-              "talk"
-            ]
           }
         ],
         "living": [
           {
-            "id": "202601.2.8",
+            "id": "202603.2.8",
             "time": 15,
             "title": "8. Lokal nga mga Panginahanglan",
             "class": "part-title-living",
@@ -272,18 +272,18 @@
             "writtable": true
           },
           {
-            "id": "202601.2.9",
+            "id": "202603.2.9",
             "time": 30,
             "title": "9. Pag-aram ha Biblia han Kongregasyon",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksyon 52-53",
+            "reference": "lfb introduksyon ha seksyon 11 ngan leksyon 68-69",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202601.2.9.r",
+            "id": "202603.2.9.r",
             "class": "accessory",
             "alt": "Magbabasa:",
             "roles": [
@@ -291,7 +291,7 @@
             ]
           },
           {
-            "id": "202601.2.10",
+            "id": "202603.2.10",
             "time": 3,
             "reference": "Konklusyon",
             "roles": [
@@ -304,18 +304,18 @@
     },
     {
       "order": 3,
-      "id": "202601.3",
-      "week": "ENERO 19-25",
-      "bibleReading": "ISAIAS 24-27",
+      "id": "202603.3",
+      "week": "MARSO 16-22",
+      "bibleReading": "ISAIAS 45-47",
       "songs": [
-        "159",
-        "144",
-        "53"
+        "2",
+        "38",
+        "148"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202601.3.0",
+            "id": "202603.3.0",
             "time": 1,
             "reference": "Introduksyon",
             "roles": [
@@ -323,14 +323,14 @@
               "ms"
             ],
             "autofills": [
-              "202601.3.9"
+              "202603.3.10"
             ]
           },
           {
-            "id": "202601.3.1",
+            "id": "202603.3.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026003/univ/art/202026003_univ_sqs_lg.jpg",
-            "title": "1. “Ini an Aton Dios!”",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026083/univ/art/202026083_univ_sqs_lg.jpg",
+            "title": "1. “Ako an Dios, Ngan Waray Pariho ha Akon”",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -338,7 +338,7 @@
             ]
           },
           {
-            "id": "202601.3.2",
+            "id": "202603.3.2",
             "time": 10,
             "reference": "",
             "title": "2. Espirituwal nga mga Hiyas",
@@ -349,9 +349,9 @@
             ]
           },
           {
-            "id": "202601.3.3",
+            "id": "202603.3.3",
             "time": 4,
-            "reference": "Isa 25:​1-9 (th aradman 10)",
+            "reference": "Isa 45:​1-11 (th aradman 5)",
             "title": "3. Pagbasa ha Biblia",
             "class": "part-title-gems",
             "roles": [
@@ -361,34 +361,34 @@
         ],
         "ministry": [
           {
-            "id": "202601.3.4",
+            "id": "202603.3.4",
             "time": 3,
             "title": "4. Pagtikang ha Pakiistorya",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 1 punto 3",
+            "reference": "lmd leksyon 5 punto 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202601.3.5",
+            "id": "202603.3.5",
             "time": 4,
             "title": "5. Pakiistorya Utro",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 9 punto 4",
+            "reference": "lmd leksyon 9 punto 5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202601.3.6",
+            "id": "202603.3.6",
             "time": 5,
-            "title": "6. Pagsaysay han Imo mga Gintotoohan",
+            "title": "6. Panhimo hin Disipulo",
             "class": "part-title-ministry",
-            "reference": "th aradman 3",
-            "thumbnail": "th",
+            "reference": "lmd leksyon 11 punto 3",
+            "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
@@ -396,11 +396,23 @@
         ],
         "living": [
           {
-            "id": "202601.3.7",
-            "time": 15,
-            "title": "7. Sarig hin Bug-os kan Jehova Kon Nangangandam Para ha Medikal nga Pagtambal o Operasyon",
+            "id": "202603.3.7",
+            "time": 7,
+            "title": "7. An Aton La Masasarigan nga Parabulig",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026003/univ/art/202026003_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026083/univ/art/202026083_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-r"
+          },
+          {
+            "id": "202603.3.8",
+            "time": 8,
+            "title": "8. 2026 nga Update han Local Design/Construction Program",
+            "class": "part-title-living",
+            "thumbnail": "",
             "roles": [
               "elder",
               "ms"
@@ -408,18 +420,18 @@
             "thumbnailMode": ""
           },
           {
-            "id": "202601.3.8",
+            "id": "202603.3.9",
             "time": 30,
-            "title": "8. Pag-aram ha Biblia han Kongregasyon",
+            "title": "9. Pag-aram ha Biblia han Kongregasyon",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksyon 54-55",
+            "reference": "lfb leksyon 70-71",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202601.3.8.r",
+            "id": "202603.3.9.r",
             "class": "accessory",
             "alt": "Magbabasa:",
             "roles": [
@@ -427,7 +439,7 @@
             ]
           },
           {
-            "id": "202601.3.9",
+            "id": "202603.3.10",
             "time": 3,
             "reference": "Konklusyon",
             "roles": [
@@ -440,18 +452,18 @@
     },
     {
       "order": 4,
-      "id": "202601.4",
-      "week": "ENERO 26–PEBRERO 1",
-      "bibleReading": "ISAIAS 28-29",
+      "id": "202603.4",
+      "week": "MARSO 23-29",
+      "bibleReading": "ISAIAS 48-49",
       "songs": [
-        "28",
         "89",
-        "55"
+        "107",
+        "134"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202601.4.0",
+            "id": "202603.4.0",
             "time": 1,
             "reference": "Introduksyon",
             "roles": [
@@ -459,14 +471,14 @@
               "ms"
             ],
             "autofills": [
-              "202601.4.11"
+              "202603.4.9"
             ]
           },
           {
-            "id": "202601.4.1",
+            "id": "202603.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026004/univ/art/202026004_univ_sqs_lg.jpg",
-            "title": "1. Pasidunggi hi Jehova Pinaagi han Imo Im-im Ngan han Imo Kasingkasing",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026084/univ/art/202026084_univ_sqs_lg.jpg",
+            "title": "1. Magpahimulos ha Pagtutdo ni Jehova",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -474,7 +486,7 @@
             ]
           },
           {
-            "id": "202601.4.2",
+            "id": "202603.4.2",
             "time": 10,
             "reference": "",
             "title": "2. Espirituwal nga mga Hiyas",
@@ -485,9 +497,9 @@
             ]
           },
           {
-            "id": "202601.4.3",
+            "id": "202603.4.3",
             "time": 4,
-            "reference": "Isa 29:​13-24 (th aradman 2)",
+            "reference": "Isa 48:​9-20 (th aradman 11)",
             "title": "3. Pagbasa ha Biblia",
             "class": "part-title-gems",
             "roles": [
@@ -497,19 +509,19 @@
         ],
         "ministry": [
           {
-            "id": "202601.4.4",
-            "time": 2,
+            "id": "202603.4.4",
+            "time": 3,
             "title": "4. Pagtikang ha Pakiistorya",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 1 punto 5",
+            "reference": "lmd leksyon 5 punto 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202601.4.5",
-            "time": 3,
+            "id": "202603.4.5",
+            "time": 4,
             "title": "5. Pakiistorya Utro",
             "class": "part-title-ministry",
             "reference": "lmd leksyon 9 punto 3",
@@ -519,22 +531,11 @@
             ]
           },
           {
-            "id": "202601.4.6",
-            "time": 2,
-            "title": "6. Panhimo hin Disipulo",
+            "id": "202603.4.6",
+            "time": 5,
+            "title": "6. Pakiistorya Utro",
             "class": "part-title-ministry",
-            "reference": "lmd leksyon 10 punto 3",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202601.4.7",
-            "time": 4,
-            "title": "7. Panhimo hin Disipulo",
-            "class": "part-title-ministry",
-            "reference": "lmd leksyon 11 punto 3",
+            "reference": "lmd leksyon 8 punto 3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -543,41 +544,30 @@
         ],
         "living": [
           {
-            "id": "202601.4.8",
-            "time": 8,
-            "title": "8. “Ginbubuhat Ko Pirme an mga Butang nga Nakakapalipay ha Iya”",
+            "id": "202603.4.7",
+            "time": 15,
+            "title": "7. Magpahimulos ha Pinakaimportante nga Adlaw han Tuig",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026004/univ/art/202026004_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026084/univ/art/202026084_univ_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
             ],
-            "thumbnailMode": "sqr-c"
+            "thumbnailMode": "sqr-r"
           },
           {
-            "id": "202601.4.9",
-            "time": 7,
-            "title": "9. Lokal nga mga Panginahanglan",
-            "class": "part-title-living",
-            "thumbnail": "",
-            "roles": [
-              "elder"
-            ],
-            "writtable": true
-          },
-          {
-            "id": "202601.4.10",
+            "id": "202603.4.8",
             "time": 30,
-            "title": "10. Pag-aram ha Biblia han Kongregasyon",
+            "title": "8. Pag-aram ha Biblia han Kongregasyon",
             "class": "part-title-living",
             "thumbnail": "lfb",
-            "reference": "lfb leksyon 56, introduksyon ha seksyon 10, ngan leksyon 57",
+            "reference": "lfb leksyon 72-73",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202601.4.10.r",
+            "id": "202603.4.8.r",
             "class": "accessory",
             "alt": "Magbabasa:",
             "roles": [
@@ -585,7 +575,7 @@
             ]
           },
           {
-            "id": "202601.4.11",
+            "id": "202603.4.9",
             "time": 3,
             "reference": "Konklusyon",
             "roles": [

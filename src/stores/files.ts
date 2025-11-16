@@ -386,7 +386,8 @@ export const useFilesStore = defineStore('files', () => {
         templates, s140PartItems, weekOptions,
         activeMonthIds,
         insertLivingItem,
-        removeLivingItem
+        removeLivingItem,
+        composeS140
     }
 })
 

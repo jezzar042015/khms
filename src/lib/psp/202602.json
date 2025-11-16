@@ -4,9 +4,9 @@
   "title": "Our Christian Life and Ministry Meeting Schedule",
   "theme": "#9d6c38",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026008/univ/art/202026008_univ_sqs_lg.jpg",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202601/univ/art/mwb_univ_202601_lg.jpg",
   "firstMonday": "2026-02-02",
-  "language": "en",
+  "language": "psp",
   "weeks": [
     {
       "order": 1,
@@ -57,7 +57,7 @@
           {
             "id": "202602.1.3",
             "time": 4,
-            "reference": "Isa 31:1-9 (th study 10)",
+            "reference": "Isa 31:1-9 (th 10)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -71,7 +71,7 @@
             "time": 4,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 2 point 5",
+            "reference": "lmd 2:5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -82,7 +82,7 @@
             "time": 4,
             "title": "5. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 5 point 5",
+            "reference": "lmd 5:5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -93,7 +93,7 @@
             "time": 4,
             "title": "6. Following Up",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 7 point 3",
+            "reference": "lmd 7:3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -118,18 +118,10 @@
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "lfb",
-            "reference": "lfb lessons 58-59",
+            "thumbnail": "bt",
+            "reference": "bt 16:1-5, Box 1",
             "roles": [
               "cbs"
-            ]
-          },
-          {
-            "id": "202602.1.8.r",
-            "class": "accessory",
-            "alt": "Reader:",
-            "roles": [
-              "rdr"
             ]
           },
           {
@@ -193,7 +185,7 @@
           {
             "id": "202602.2.3",
             "time": 4,
-            "reference": "Isa 35:1-10 (th study 12)",
+            "reference": "Isa 35:1-10 (th 12)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -207,7 +199,7 @@
             "time": 3,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 3 point 3",
+            "reference": "lmd 3:3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -218,7 +210,7 @@
             "time": 4,
             "title": "5. Following Up",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 9 point 5",
+            "reference": "lmd 9:5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -229,7 +221,7 @@
             "time": 5,
             "title": "6. Talk",
             "class": "part-title-ministry",
-            "reference": "th study 14",
+            "reference": "th 14",
             "thumbnail": "th",
             "roles": [
               "talk"
@@ -253,18 +245,10 @@
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "lfb",
-            "reference": "lfb lessons 60-61",
+            "thumbnail": "bt",
+            "reference": "bt 16:6-9, Box 2",
             "roles": [
               "cbs"
-            ]
-          },
-          {
-            "id": "202602.2.8.r",
-            "class": "accessory",
-            "alt": "Reader:",
-            "roles": [
-              "rdr"
             ]
           },
           {
@@ -328,7 +312,7 @@
           {
             "id": "202602.3.3",
             "time": 4,
-            "reference": "Isa 37:14-23 (th study 2)",
+            "reference": "Isa 37:14-23 (th 2)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -342,7 +326,7 @@
             "time": 3,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 1 point 4",
+            "reference": "lmd 1:4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -353,7 +337,7 @@
             "time": 4,
             "title": "5. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 3 point 5",
+            "reference": "lmd 3:5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -364,7 +348,7 @@
             "time": 5,
             "title": "6. Explaining Your Beliefs",
             "class": "part-title-ministry",
-            "reference": "th study 17",
+            "reference": "th 17",
             "thumbnail": "th",
             "roles": [
               "demo"
@@ -389,18 +373,10 @@
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "lfb",
-            "reference": "lfb lessons 62-63",
+            "thumbnail": "bt",
+            "reference": "bt 16:10-18",
             "roles": [
               "cbs"
-            ]
-          },
-          {
-            "id": "202602.3.8.r",
-            "class": "accessory",
-            "alt": "Reader:",
-            "roles": [
-              "rdr"
             ]
           },
           {
@@ -464,7 +440,7 @@
           {
             "id": "202602.4.3",
             "time": 4,
-            "reference": "Isa 40:21-31 (th study 11)",
+            "reference": "Isa 40:21-31 (th 11)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -478,7 +454,7 @@
             "time": 2,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 4 point 3",
+            "reference": "lmd 4:3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -489,7 +465,7 @@
             "time": 2,
             "title": "5. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 4 point 4",
+            "reference": "lmd 4:4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -500,7 +476,7 @@
             "time": 2,
             "title": "6. Following Up",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 7 point 5",
+            "reference": "lmd 7:5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -511,7 +487,7 @@
             "time": 5,
             "title": "7. Making Disciples",
             "class": "part-title-ministry",
-            "reference": "lmd lesson 11 point 3",
+            "reference": "lmd 11:3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -536,18 +512,10 @@
             "time": 30,
             "title": "9. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "lfb",
-            "reference": "lfb lessons 64-65",
+            "thumbnail": "bt",
+            "reference": "bt 17:1-7",
             "roles": [
               "cbs"
-            ]
-          },
-          {
-            "id": "202602.4.9.r",
-            "class": "accessory",
-            "alt": "Reader:",
-            "roles": [
-              "rdr"
             ]
           },
           {

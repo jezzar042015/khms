@@ -4,6 +4,5 @@ export interface Publisher {
     id?: string,
     name: string,
     roles: PubRole['code'][]
-    weeksSinceLastAssignment?: number
 }
 
