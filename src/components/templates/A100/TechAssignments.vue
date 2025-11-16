@@ -5,20 +5,16 @@
                 <IconVideoCam />
             </div>
 
-            <div class="assignee" @click="showCamOpSelector">
+            <div class="assignee" @click="showSelector($event, 'cam')">
                 <div :class="camOpClasses">{{ displayCamOpAssignee }}</div>
-                <AssignmentSelector v-if="camOpSelector" :part="cameraOp" :triggered="triggered"
-                    @hide="hideCamOpSelector" @trigger-off="triggerOff" />
             </div>
         </div>
         <div class="grid">
             <div class="icons">
                 <IconInterpreter />
             </div>
-            <div class="assignee" @click="showInterpreterSelector">
+            <div class="assignee" @click="showSelector($event, 'int')">
                 <div :class="interpretersClasses"> {{ displayInterpreterAssignee }}</div>
-                <AssignmentSelector v-if="interpreterSelector" :part="interpreters" :triggered="triggered"
-                    @hide="hideIntrepreterSelector" @trigger-off="triggerOff" />
             </div>
         </div>
     </div>
@@ -28,10 +24,10 @@
     import type { PartItem } from '@/types/files';
     import { computed, ref } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
+    import { useAssignmentSelector } from '@/stores/assignment-selector';
     import { usePublisherStore } from '@/stores/publisher';
     import IconVideoCam from '@/components/icons/IconVideoCam.vue';
     import IconInterpreter from '@/components/icons/IconInterpreter.vue';
-    import AssignmentSelector from '@/components/AssignmentSelector.vue';
 
     const { weekId } = defineProps<{
         weekId: string
@@ -39,10 +35,7 @@
 
     const assignmentStore = useAssignmentStore()
     const pubStore = usePublisherStore()
-    const camOpSelector = ref(false);
-    const interpreterSelector = ref(false);
-    const triggered = ref(false);
-
+    const selector = useAssignmentSelector()
 
     const cameraOp = ref<PartItem>({
         id: `${weekId}.cam`,
@@ -57,27 +50,33 @@
         title: 'Reverse Interpreting'
     })
 
-    const displayCamOpAssignee = computed(() => {
+    const camOpAssigned = computed(() => {
         const partid: string = cameraOp.value.id
-        const assigned = assignmentStore.get.find(a => a.pid == partid);
-        if (!assigned) return 'Not Assigned!'
+        return assignmentStore.get.find(a => a.pid == partid);
+    })
 
-        if (typeof assigned.a === 'string') {
-            const pub = pubStore.publishers.find(p => p.id == (assigned?.a));
+    const interpretersAssigned = computed(() => {
+        const partid: string = interpreters.value.id
+        return assignmentStore.get.find(a => a.pid == partid);
+    })
+
+    const displayCamOpAssignee = computed(() => {
+        if (!camOpAssigned.value) return 'Not Assigned!'
+
+        if (typeof camOpAssigned.value.a === 'string') {
+            const pub = pubStore.publishers.find(p => p.id == (camOpAssigned.value?.a));
             return pub?.name || 'Not Assigned!';
         }
         return 'Not Assigned!'
     })
 
     const displayInterpreterAssignee = computed(() => {
-        const partid: string = interpreters.value.id
-        const assigned = assignmentStore.get.find(a => a.pid == partid);
 
-        if (!assigned) return 'Not Assigned!'
+        if (!interpretersAssigned.value) return 'Not Assigned!'
 
         const p = [];
-        const pub1 = pubStore.publishers.find(p => p.id == (assigned.a[0]));
-        const pub2 = pubStore.publishers.find(p => p.id == (assigned.a[1]));
+        const pub1 = pubStore.publishers.find(p => p.id == (interpretersAssigned.value?.a[0]));
+        const pub2 = pubStore.publishers.find(p => p.id == (interpretersAssigned.value?.a[1]));
         if (pub1) p.push(pub1.name);
         if (pub2) p.push(pub2.name);
         return p.length > 0 ? p.join(' & ') : 'Not Assigned!';
@@ -97,29 +96,15 @@
         ]
     })
 
-    function showCamOpSelector(): void {
-        triggered.value = true
-        if (interpreterSelector.value) interpreterSelector.value = false
-        camOpSelector.value = true
+    function showSelector(e: MouseEvent, tech: 'cam' | 'int'): void {
+        const target = e.currentTarget as HTMLElement | null
+        if (!target) return
+
+        const rect = target.getBoundingClientRect();
+        const part = tech === 'cam' ? cameraOp.value : interpreters.value
+        selector.setTargetRect(rect, part)
     }
 
-    function hideCamOpSelector(): void {
-        camOpSelector.value = false
-    }
-
-    function showInterpreterSelector(): void {
-        triggered.value = true
-        if (camOpSelector.value) camOpSelector.value = false
-        interpreterSelector.value = true
-    }
-
-    function hideIntrepreterSelector(): void {
-        interpreterSelector.value = false
-    }
-
-    function triggerOff(): void {
-        triggered.value = false
-    }
 </script>
 
 <style scoped>

@@ -1,5 +1,6 @@
 <template>
     <div id="s140">
+        <AssignmentSelector />
         <div>
             <template v-for="(w, i) in weeks" :key="w.id">
                 <HeaderTitle v-if="i % 2 == 0" />
@@ -20,6 +21,7 @@
     import HeaderTitle from '@/components/templates/S140/HeaderTitle.vue';
     import WeekItem from '@/components/templates/S140/WeekItem.vue';
     import EventPlaceholder from './EventPlaceholder.vue';
+    import AssignmentSelector from '@/components/AssignmentSelector.vue'
 
     const fileStore = useFilesStore()
 

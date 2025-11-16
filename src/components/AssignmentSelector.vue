@@ -1,10 +1,10 @@
 <template>
-    <div :class="selectorClasses" ref="assignSelector" @click.stop>
+    <div v-show="selector.show" :class="selectorClasses" ref="assignSelector" @click.stop>
         <div class="wrapper">
             <span :class="arrowClasses" ref="arrow"></span>
 
-            <assignment-selector-header :part :is-closing-prayer="isClosingPrayer" :is-open-prayer="isOpenPrayer"
-                :no-assignables="noAssignables" />
+            <assignment-selector-header v-if="selector.part" :part="selector.part" :is-closing-prayer="isClosingPrayer"
+                :is-open-prayer="isOpenPrayer" :no-assignables="noAssignables" />
 
             <div v-if="longList">
                 <input type="text" class="filter" placeholder="Filter" v-model="filter">
@@ -27,24 +27,27 @@
      * @description modal pane component that allows the user to select publisher(s) to handle parts
     */
 
-    import { computed, onMounted, onUnmounted, ref } from 'vue';
+    import { computed, nextTick, ref, useTemplateRef, watch } from 'vue';
     import { useAssignmentStore } from '@/stores/assignment';
+    import { useAssignmentHistoryStore } from '@/stores/assignment-history';
+    import { useAssignmentSelector } from '@/stores/assignment-selector';
     import { useCongregationStore } from '@/stores/congregation';
     import { useFilesStore } from '@/stores/files';
     import { usePublisherStore } from '@/stores/publisher';
     import { useToast } from 'vue-toast-notification';
-    import type { S140PartItem, PartItem } from '@/types/files';
+    import { onClickOutside } from '@vueuse/core';
     import type { Publisher } from '@/types/publisher';
     import type { MWBAssignment } from '@/types/mwb';
     import AssignmentSelectorItem from './AssignmentSelectorItem.vue'
     import AssignmentSelectorHeader from './AssignmentSelectorHeader.vue'
 
     type A100Position = 'right' | 'left'
-    const emits = defineEmits(['hide', 'trigger-off'])
     const pubStore = usePublisherStore()
     const assignStore = useAssignmentStore()
+    const historyStore = useAssignmentHistoryStore()
     const congStore = useCongregationStore()
     const fileStore = useFilesStore()
+    const selector = useAssignmentSelector()
 
     const $toast = useToast();
     const filter = ref('')
@@ -52,17 +55,13 @@
         pid: '', a: ''
     })
 
-    const mouseYpos = ref<number>(0)
-    const mouseXpos = ref<number>(0)
     const a100Pos = ref<A100Position>('right')
 
-    const { part, triggered } = defineProps<{
-        part: S140PartItem | PartItem,
-        triggered: boolean,
-    }>()
 
-    const assignSelector = ref<HTMLElement | null>(null)
+    const assignSelector = useTemplateRef('assignSelector')
     const arrow = ref<HTMLElement | null>(null)
+
+    onClickOutside(assignSelector, () => (selector.show = false));
 
     /**
      * @description provides classes that will the basis of the pane position in relation to PartItem
@@ -70,8 +69,7 @@
     */
     const selectorClasses = computed<string>(() => {
         const is140 = congStore.congregation.mwbTemplate == 's-140'
-        const a100Class = a100Pos.value === 'left' ? ' ona100-right' : ' ona100-left';
-        return 'assign-selector' + (is140 ? ' ons140' : a100Class)
+        return 'assign-selector' + (is140 ? ' ons140' : ' ona100')
     })
 
     /**
@@ -85,11 +83,11 @@
     })
 
     const isOpenPrayer = computed<boolean>(() => {
-        return part.id.endsWith('.op')
+        return selector.part ? selector.part.id.endsWith('.op') : false
     })
 
     const isClosingPrayer = computed<boolean>(() => {
-        return part.id.endsWith('.cp')
+        return selector.part ? selector.part.id.endsWith('.cp') : false
     })
 
     /**
@@ -97,49 +95,124 @@
      * @description the return is an array sorted by names
      * @returns (Publisher[])
     */
-    const assignables = computed<Publisher[]>(() => {
-        if (!part.roles) return pubStore.publishers
-
-        const list = pubStore.publishers.filter(publisher =>
-            publisher.roles.some(role => part.roles?.includes(role))
+    function filterByRoles(publishers: Publisher[]): Publisher[] {
+        if (!selector.part?.roles) return publishers
+        return publishers.filter(publisher =>
+            publisher.roles.some(role => selector.part?.roles?.includes(role))
         )
+    }
 
-        const studentparts: string[] = ["demo", "br", "talk"]
-        const isStudentPart = part.roles.some(r => studentparts.includes(r))
+    function updateWeeksSinceLastAssignment(publishers: Publisher[], weekId: string): void {
+        for (const item of publishers) {
+            if (item.id) {
+                const prevParts = isBibleReading.value ? historyStore.bibleReaders[item.id] : historyStore.ayfmStudents[item.id]
+                item.weeksSinceLastAssignment = prevParts ? weeksBetween(prevParts[0], weekId) : undefined
+            }
+        }
+    }
 
-        // Exclude publishers who already have assignments this week for student parts
-        const filteredList = isStudentPart
-            ? list.filter(p => !hasAssignments.value.includes(p.id ?? ''))
-            : list
+    function comparePublishers(a: Publisher, b: Publisher, assignedIds: string[]): number {
+        // Step 1: prioritize those currently assigned
+        const aIndex = assignedIds.indexOf(a.id || '')
+        const bIndex = assignedIds.indexOf(b.id || '')
+        const aAssigned = aIndex !== -1
+        const bAssigned = bIndex !== -1
 
-        return filteredList.sort((a, b) => {
-            const pa = +(assignment.value.a?.includes(a.id || '') || false)
-            const pb = +(assignment.value.a?.includes(b.id || '') || false)
-            return pb - pa
-        })
+        if (aAssigned !== bAssigned) return bAssigned ? 1 : -1
+        if (aAssigned && bAssigned) return aIndex - bIndex
+
+        // Step 2: bring those with weeksSinceLastAssignment == undefined to the top
+        const aSpecial = a.weeksSinceLastAssignment === undefined ? 1 : 0
+        const bSpecial = b.weeksSinceLastAssignment === undefined ? 1 : 0
+        if (bSpecial !== aSpecial) return bSpecial - aSpecial
+
+        // Step 3: sort remaining by weeksSinceLastAssignment descending
+        const wa = a.weeksSinceLastAssignment ?? -Infinity
+        const wb = b.weeksSinceLastAssignment ?? -Infinity
+        return wb - wa
+    }
+
+    const assignables = computed<Publisher[]>(() => {
+        if (!selector.part) return []
+
+        let filteredList = filterByRoles(pubStore.publishers)
+        const studentparts = new Set(["demo", "br", "talk"])
+        const isStudentPart = selector.part.roles?.some(r => studentparts.has(r)) ?? false
+
+        if (isStudentPart) {
+            filteredList = filteredList.filter(p => !hasAssignments.value.includes(p.id ?? ''))
+            const weekId = assignment.value.pid.substring(0, 8)
+            updateWeeksSinceLastAssignment(filteredList, weekId)
+        }
+
+        const assignedIds = assignment.value.a || []
+        return filteredList.sort((a, b) => comparePublishers(a, b, Array.isArray(assignedIds) ? assignedIds : [assignedIds]))
     })
+
+    function weeksBetween(targetCode: string, baseCode: string): number {
+
+        const targetMonday = getMonday(targetCode);
+        const baseMonday = getMonday(baseCode);
+
+        // Difference in full weeks (no +1)
+        const diffDays = Math.floor(
+            (baseMonday.getTime() - targetMonday.getTime()) / (1000 * 60 * 60 * 24)
+        );
+        const diffWeeks = Math.floor(diffDays / 7);
+
+        return diffWeeks;
+    }
+
+    /**
+     * Get's the first monday of the given week id code
+     * */
+    const getMonday = (code: string): Date => {
+        const [ym, wStr] = code.split(".");
+        const year = Number.parseInt(ym.slice(0, 4), 10);
+        const month = Number.parseInt(ym.slice(4, 6), 10) - 1;
+        const week = Number.parseInt(wStr, 10);
+
+        const firstDay = new Date(year, month, 1);
+        const dayOfWeek = firstDay.getDay();
+        const firstMonday =
+            dayOfWeek === 1
+                ? new Date(year, month, 1)
+                : new Date(year, month, 1 + ((8 - dayOfWeek) % 7));
+
+        const monday = new Date(firstMonday);
+        monday.setDate(firstMonday.getDate() + (week - 1) * 7);
+
+        return monday;
+    }
 
     /**
      * @description array of publishers already has assigned part this week
      * @returns (string[])
     */
     const hasAssignments = computed(() => {
-        const weekId = part.id.substring(0, 8) ?? ''
-        const studentPartIds = fileStore.studentsParts
-            .filter(s => s.id.startsWith(weekId))
-            .map(m => m.id)
+        if (!selector.part) return []
+        const weekId = selector.part.id.substring(0, 8) ?? ''
 
-        const currentAssigned = Array.isArray(assignment.value.a)
-            ? assignment.value.a.filter(Boolean)
-            : (assignment.value.a ? [assignment.value.a] : [])
+        const studentPartIds = new Set(
+            fileStore.studentsParts
+                .filter(s => s.id.startsWith(weekId))
+                .map(m => m.id)
+        );
+
+        let currentAssigned: string[] = [];
+        if (Array.isArray(assignment.value.a)) {
+            currentAssigned = assignment.value.a.filter(Boolean);
+        } else if (assignment.value.a) {
+            currentAssigned = [assignment.value.a];
+        }
 
         return Array.from(new Set(
             assignStore.get
-                .filter(s => studentPartIds.includes(s.pid))
+                .filter(s => studentPartIds.has(s.pid))
                 .flatMap(s => Array.isArray(s.a) ? s.a : [s.a])
                 .filter(Boolean)
                 .filter(id => !currentAssigned.includes(id as string))
-        ))
+        ));
     })
 
 
@@ -162,11 +235,11 @@
         return assignables.value.length > minimumLongList
     })
 
-    const isDemo = computed(() => part.roles?.includes('demo'))
-    const isBibleReading = computed(() => part.roles?.includes('br'))
-    const isTalk = computed(() => part.roles?.includes('talk'))
-    const arePrayers = computed(() => part.roles?.includes('prayers') ?? false)
-    const areInterpreters = computed(() => part.roles?.includes('intr') ?? false)
+    const isDemo = computed(() => selector.part?.roles?.includes('demo'))
+    const isBibleReading = computed(() => selector.part?.roles?.includes('br'))
+    const isTalk = computed(() => selector.part?.roles?.includes('talk'))
+    const arePrayers = computed(() => selector.part?.roles?.includes('prayers') ?? false)
+    const areInterpreters = computed(() => selector.part?.roles?.includes('intr') ?? false)
 
     /**
      * @description handles assigning or removing the assignment to or from a publisher
@@ -200,12 +273,14 @@
             await handleAutofills(id);
             await handleS140Prayer(id, added);
         }
+
+        historyStore.read()
     }
 
 
     async function handleAutofills(id: string): Promise<void> {
-        if (part.autofills) {
-            for (const af of part.autofills) {
+        if (selector.part?.autofills) {
+            for (const af of selector.part.autofills) {
                 await assignStore.upsert({
                     pid: af, a: id,
                 })
@@ -216,21 +291,31 @@
     /**
      * Handling prayer assignment on S-140 template
     */
-    async function handleS140Prayer(id: string, isAdded: boolean): Promise<void> {
+    function getS140PrayerAssignment(weekId: string): MWBAssignment {
+        const existing = assignStore.get.find(p => p.pid == weekId)
+        return existing ?? { pid: weekId || '', a: ['', ''] }
+    }
 
-        if (isOpenPrayer.value || isClosingPrayer.value) {
-            const weekId = getWeekId(part.id)
-            let a100Prayer = assignStore.get.find(p => p.pid == weekId)
+    function updateS140PrayerSlots(prayer: MWBAssignment, id: string, isAdded: boolean): void {
+        if (!Array.isArray(prayer.a)) return
 
-            if (!a100Prayer)
-                a100Prayer = { pid: weekId || '', a: ['', ''] }
-
-            if (Array.isArray(a100Prayer.a)) {
-                if (isOpenPrayer.value) a100Prayer.a[0] = isAdded ? id ?? '' : ''
-                if (isClosingPrayer.value && isAdded) a100Prayer.a[1] = isAdded ? id ?? '' : ''
-            }
-            await assignStore.upsert(a100Prayer);
+        if (isOpenPrayer.value) {
+            prayer.a[0] = isAdded ? id : ''
         }
+        if (isClosingPrayer.value && isAdded) {
+            prayer.a[1] = id
+        }
+    }
+
+    async function handleS140Prayer(id: string, isAdded: boolean): Promise<void> {
+        if (!isOpenPrayer.value && !isClosingPrayer.value) return
+
+        const weekId = getWeekId(selector.part?.id || '')
+        if (!weekId) return
+
+        const prayer = getS140PrayerAssignment(weekId)
+        updateS140PrayerSlots(prayer, id, isAdded)
+        await assignStore.upsert(prayer)
     }
 
     /**
@@ -238,7 +323,7 @@
     */
     async function handlePrayers(id: string, isAdded: boolean): Promise<void> {
         if (arePrayers.value) {
-            const weekId = getWeekId(part.id + '.1')
+            const weekId = getWeekId(selector.part?.id + '.1')
             const i = assignment.value.a.indexOf(id)
             const prayer = { pid: '', a: '' }
 
@@ -265,79 +350,200 @@
     */
     function prepAssignment(): void {
         if (isDemo.value || areInterpreters.value || isBibleReading.value || isTalk.value || arePrayers.value) {
-            assignment.value = { pid: part.id, a: [] }
+            assignment.value = { pid: selector.part?.id ?? '', a: [] }
         } else {
-            assignment.value = { pid: part.id, a: '' }
+            assignment.value = { pid: selector.part?.id ?? '', a: '' }
         }
     }
 
-    function blurredSelector(event: MouseEvent): void {
-        if (triggered) {
-            emits("trigger-off");
-            mouseYpos.value = event.clientY
-            mouseXpos.value = event.clientX
-            setOnA100Position()
-            setMyTransform()
-            return;
-        }
-
-        if (assignSelector.value && !assignSelector.value.contains(event.target as HTMLElement)) {
-            emits('hide')
-        }
-    };
-
+    /**
+     * Assigns ref a100Pos wether right or left position of the selector,
+     *  
+    */
     function setOnA100Position(): void {
         const viewportWidth = window.innerWidth;
-        const per = Math.round(mouseXpos.value / viewportWidth * 100)
+        const parentX = selector.rect?.x ?? 0
+        const per = Math.round(parentX / viewportWidth * 100)
         a100Pos.value = per > 60 ? 'right' : 'left'
     }
 
+    /**
+     * AssignmentSelector positioning handler 
+     * */
+
     function setMyTransform(): void {
-        if (!assignSelector.value) return
+        const is140 = congStore.congregation.mwbTemplate == 's-140'
 
-        const rect = assignSelector.value.getBoundingClientRect() as DOMRect;
-
-        const viewportHeight = window.innerHeight;
-        const bottomOverflowLimit = 30
-        const topOverflowLimit = 65
-        const hasBottomOverflow = (viewportHeight - rect.bottom) < bottomOverflowLimit
-
-        if (hasBottomOverflow) {
-            const diff = viewportHeight - rect.bottom;
-            assignSelector.value.style.transform = `translateY(50%)`
-            assignSelector.value.style.bottom = `${-diff + bottomOverflowLimit}px`;
-            const rectAfter = assignSelector.value.getBoundingClientRect() as DOMRect;
-            moveWrapperArrow(rectAfter.y + rectAfter.height)
-            return
-        }
-
-        const isBelowTopLimit = (rect.y < topOverflowLimit)
-        if (isBelowTopLimit) {
-            const diff = rect.y - topOverflowLimit
-            assignSelector.value.style.transform = `translateY(-50%) translateY(${-diff}px)`;
-            const rectAfter = assignSelector.value.getBoundingClientRect() as DOMRect;
-            moveWrapperArrow(rectAfter.y + rectAfter.height)
+        if (is140) {
+            setMyTransformOnS140()
+        } else {
+            setMyTransformOnA100()
         }
     }
 
-    function moveWrapperArrow(parentY: number) {
+    /**
+     * AssignmentSelector positioning is relative to #s140 
+     * */
+    function setMyTransformOnA100(): void {
+        if (!assignSelector.value || !selector.rect) return;
+
+        const container = document.getElementById('template-bg');
+        if (!container) return;
+
+        const containerRect = container.getBoundingClientRect();
+        const scrollTop = container.scrollTop;
+
+        const actualTop = selector.rect.top - containerRect.top + scrollTop;
+
+        // check which side for normal-part, prayers, technical
+        setOnA100Position()
+
+        assignSelector.value.style.top = `${actualTop}px`;
+        assignSelector.value.style.transform = 'translateY(-50%)';
+
+        handleA100HorizontalPosition()
+        handleA100VerticalOverflows(container)
+    }
+
+    /**
+     * Handles the horizontal positioning of the A100 selector element based on viewport constraints.
+     * 
+     * Adjusts the selector's left/right positioning and applies appropriate CSS transforms
+     * to prevent overflow and ensure optimal placement within the viewport.
+     * 
+     * @description
+     * - If prayers are being displayed, positions the selector to the right with offset
+     * - If already positioned left, maintains left alignment relative to the trigger element
+     * - Otherwise, positions to the right with a 60% horizontal translation for centering 
+     */
+    function handleA100HorizontalPosition() {
+        if (!assignSelector.value || !selector.rect) return;
+
+        const rightOffset = window.innerWidth - selector.rect.right;
+
+        if (arePrayers.value) {
+            a100Pos.value = 'right'
+            assignSelector.value.style.left = '';
+            assignSelector.value.style.right = `${rightOffset + 10}px`;
+            assignSelector.value.style.transform = `translateY(-50%) translateX(-${selector.rect.width}px)`;
+        } else if (a100Pos.value === 'left') {
+            assignSelector.value.style.right = '';
+            assignSelector.value.style.left = `${selector.rect.left + selector.rect.width}px`;
+            assignSelector.value.style.transform = 'translateY(-50%)';
+        } else {
+            assignSelector.value.style.left = '';
+            assignSelector.value.style.right = `${rightOffset + 10}px`;
+            assignSelector.value.style.transform = 'translateY(-50%) translateX(-60%)';
+        }
+    }
+
+    function handleA100VerticalOverflows(container: HTMLElement) {
+        if (!assignSelector.value || !selector.rect) return;
+        const rect = assignSelector.value.getBoundingClientRect()
+        const containerHeight = container.clientHeight;
+
+        const isTopOverflow = rect.top <= 65
+        if (isTopOverflow) {
+            const computedTop = 65 + container.scrollTop + (rect.height / 2)
+            assignSelector.value.style.top = `${computedTop}px`
+            return
+        }
+
+        const isBottomOverflow = rect.bottom > containerHeight
+        if (isBottomOverflow) {
+            const computedTop = container.scrollTop + containerHeight + (rect.height / 2) - rect.height - 10
+            assignSelector.value.style.top = `${computedTop}px`
+            return
+        }
+    }
+
+    /**
+     * AssignmentSelector positioning is relative to #s140 
+     * */
+    function setMyTransformOnS140(): void {
+
+        if (!assignSelector.value || !selector.rect) return;
+
+        const container = document.getElementById('template-bg');
+        if (!container) return;
+
+        const containerRect = container.getBoundingClientRect();
+        const scrollTop = container.scrollTop;
+        const containerHeight = container.clientHeight;
+
+        const actualTop = selector.rect.top - containerRect.top + scrollTop;
+
+        const isAuxiliary = selector.part?.id.endsWith('.ax1');
+
+        const rightOffset = isAuxiliary
+            ? selector.rect.width * 2
+            : selector.rect.width;
+
+        const gapX = 10;
+
+        assignSelector.value.style.right = `${rightOffset + gapX}px`;
+
+        const selectorHeight = assignSelector.value.offsetHeight;
+
+        let top = Math.max(0, actualTop - selectorHeight);
+
+        const bottomOverflowLimit = 100;
+        const topOverflowLimit = 300;
+
+        const selectorBottomInContainer = selector.rect.bottom + containerRect.top;
+
+        const hasBottomOverflow =
+            (containerHeight - selectorBottomInContainer) < bottomOverflowLimit;
+
+        const hasTopOverflow = (selector.rect.top - containerRect.top) < topOverflowLimit;
+
+        assignSelector.value.style.transform = '';
+
+        if (hasBottomOverflow) {
+            const correctedTop = scrollTop + containerHeight - selectorHeight - 132
+
+            assignSelector.value.style.top = `${correctedTop}px`;
+            assignSelector.value.style.bottom = '';
+
+        }
+        else if (hasTopOverflow && scrollTop > 0) {
+            const correctedTop = scrollTop - 110;
+            assignSelector.value.style.top = `${correctedTop}px`;
+            assignSelector.value.style.transform = 'translateY(10%)';
+        }
+        else {
+            assignSelector.value.style.top = `${top}px`;
+        }
+    }
+
+    function moveWrapperArrow() {
         if (!arrow.value) return
 
-        const rect = arrow.value.getBoundingClientRect() as DOMRect;
-        const arrMidPos = rect.top + (rect.height / 2)
-        const difFromMouse = arrMidPos - (mouseYpos.value ?? 0)
-        arrow.value.style.top = `calc(43% + ${-difFromMouse}px)`
+        const is140 = congStore.congregation.mwbTemplate == 's-140'
+        const selectorRect = assignSelector.value?.getBoundingClientRect()
+        const parentY = (selector.rect?.y ?? 0) - (selectorRect?.top ?? 0)
 
-        const afterRect = arrow.value.getBoundingClientRect() as DOMRect;
-        const newArrowBottom = afterRect.y - afterRect.height + 50
+        const arrowOffset = is140 ? 10 : 15
+        const arrowTop = parentY - arrowOffset
 
-        if (newArrowBottom > parentY || (mouseYpos.value ?? 0) < 85)
+        // Hide arrow if it's above the selector top
+        if (arrowTop < 0) {
             arrow.value.style.display = 'none'
+            return
+        }
+
+        // Hide arrow if it's below the selector height
+        if ((arrowTop + 30) > (selectorRect?.height ?? 0)) {
+            arrow.value.style.display = 'none'
+        } else {
+            arrow.value.style.display = ''
+            arrow.value.style.top = `${arrowTop}px`
+        }
     }
 
 
     function loadAssigned(): void {
-        const partId: string = part?.id ?? '';
+        const partId: string = selector.part?.id ?? '';
         const assigned = assignStore.get.find(a => a.pid == partId);
         if (assigned) {
             // makes sure that missing pubs are removed
@@ -347,19 +553,26 @@
                     if (!pubExist) assigned.a = assigned.a.filter(i => i != id)
                 }
             }
-            assignment.value = { pid: part.id, a: assigned.a }
+            assignment.value = { pid: selector.part?.id ?? '', a: assigned.a }
         }
     }
 
-    onMounted(() => {
-        prepAssignment()
-        loadAssigned()
-        document.addEventListener('click', blurredSelector);
-    })
+    watch(
+        () => selector.part?.id,
+        async () => {
 
-    onUnmounted(() => {
-        document.removeEventListener('click', blurredSelector);
-    })
+            prepAssignment()
+            loadAssigned()
+            await nextTick() // wait for DOM to update so the template ref is populated
+            setMyTransform()
+            moveWrapperArrow()
+        },
+        {
+            immediate: true,
+            deep: true
+        }
+    )
+
 </script>
 
 <style scoped>
@@ -367,6 +580,7 @@
     {
         position: absolute;
         min-width: 325px;
+        max-width: 350px;
         width: auto;
         color: black;
         height: 350px;
@@ -375,27 +589,11 @@
         background: #ffff;
         box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
         padding: 15px 15px;
-        z-index: 1;
-        transform: translateY(-50%);
-        overflow: visible;
+        z-index: 2;
+        overflow-x: visible;
         font-size: 16px;
         border-radius: 3px;
         transition: fade 1s;
-    }
-
-    .ons140
-    {
-        right: calc(100%);
-    }
-
-    .ona100-left
-    {
-        right: calc(108%);
-    }
-
-    .ona100-right
-    {
-        left: calc(108%);
     }
 
     .wrapper
