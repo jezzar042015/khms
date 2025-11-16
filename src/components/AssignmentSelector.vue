@@ -402,7 +402,7 @@
         assignSelector.value.style.transform = 'translateY(-50%)';
 
         handleA100HorizontalPosition()
-        handleA100VerticalOverflows(container, actualTop)
+        handleA100VerticalOverflows(container)
     }
 
     /**
@@ -437,14 +437,14 @@
         }
     }
 
-    function handleA100VerticalOverflows(container: HTMLElement, actualTop: number) {
+    function handleA100VerticalOverflows(container: HTMLElement) {
         if (!assignSelector.value || !selector.rect) return;
         const rect = assignSelector.value.getBoundingClientRect()
         const containerHeight = container.clientHeight;
 
         const isTopOverflow = rect.top <= 65
         if (isTopOverflow) {
-            const computedTop = actualTop + (rect.height / 2)
+            const computedTop = 80 + container.scrollTop + (rect.height / 2)
             assignSelector.value.style.top = `${computedTop}px`
             return
         }
