@@ -60,6 +60,7 @@
     import { useViewStore } from '@/stores/views';
     import { ref } from 'vue';
     import type { AlertSettings } from '@/types/vforms';
+    import { usePdfCapture } from "@/composables/usePdfCapture";
     import IconPrinter from '../icons/IconPrinter.vue';
     import TemplateSettings from '../TemplateSettings.vue';
     import IconHelp from '../icons/IconHelp.vue';
@@ -67,6 +68,8 @@
 
     const fileStore = useFilesStore();
     const viewStore = useViewStore();
+    const { captureAsPdf } = usePdfCapture();
+
     const congSettingsDisplay = ref(false);
     const alert = ref<AlertSettings>({});
 
@@ -84,13 +87,16 @@
     }
 
     function confirmPrinting(): void {
-        alert.value.msg = `To remove the "Headers and footers", uncheck the "Headers and footers" checkbox on the printing Settings.`
-        alert.value.confirm = true
-        alert.value.confirmText = "OK"
-        alert.value.header = "Printing Tip"
-        alert.value.cancel = true
-        alert.value.cancelText = "See Tutorial"
-        viewStore.setPopAlert(true)
+        const element = document.getElementById("fsl-mwb");
+        captureAsPdf(element);
+        return
+        // alert.value.msg = `To remove the "Headers and footers", uncheck the "Headers and footers" checkbox on the printing Settings.`
+        // alert.value.confirm = true
+        // alert.value.confirmText = "OK"
+        // alert.value.header = "Printing Tip"
+        // alert.value.cancel = true
+        // alert.value.cancelText = "See Tutorial"
+        // viewStore.setPopAlert(true)
     }
 
     function toStudents(): void {
