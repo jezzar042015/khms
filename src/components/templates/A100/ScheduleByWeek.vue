@@ -1,5 +1,5 @@
 <template>
-    <section :class="pagebreaker">
+    <section>
         <WeekHeader :w="w" />
         <div class="assignments">
             <div>
@@ -23,6 +23,7 @@
             </div>
         </div>
     </section>
+    <div v-if="isFourthWeek" :class="pagebreaker"></div>
 </template>
 
 <script setup lang="ts">
