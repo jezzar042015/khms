@@ -568,7 +568,7 @@
     watch(
         () => selector.part?.id,
         async () => {
-
+            filter.value = ''
             prepAssignment()
             loadAssigned()
             await nextTick() // wait for DOM to update so the template ref is populated
@@ -580,6 +580,7 @@
             deep: true
         }
     )
+
 
 </script>
 
