@@ -683,14 +683,14 @@ section
   display: grid;
   grid-template-columns: 50px 1fr;
   font-weight: 500;
-  color: #555;
+  color: #202020;
   align-items: flex-start;
 }
 
 .s140-runtime
 {
   font-size: .85em;
-  color: rgb(163, 163, 163);
+  color: rgb(58, 58, 58);
   align-self: flex-start;
   padding-top: 2px;
 }
