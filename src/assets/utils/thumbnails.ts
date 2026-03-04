@@ -31,6 +31,10 @@ const thumbnails: Thumbnail = {
         desc: "Live Forever Brochure",
         thumbnail: "https://cms-imgp.jw-cdn.org/img/p/lffi/FSL/pt/lffi_FSL_lg.jpg",
     },
+    wcg: {
+        desc: "Walk Courageously With God",
+        thumbnail: "https://cms-imgp.jw-cdn.org/img/p/wcg/univ/art/wcg_univ_lg.jpg",
+    },
 }
 
 export default thumbnails;
