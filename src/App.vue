@@ -22,6 +22,7 @@
   import { useSurveysStore } from './stores/survey';
   import { useRouterStore } from './stores/router';
   import { useOverridesStore } from './stores/overrides';
+  import { useTracker } from './stores/tracker';
 
   import SmallScreen from './components/layouts/SmallScreen.vue';
   import AppWelcome from './components/AppWelcome.vue';
@@ -40,6 +41,7 @@
   const router = useRouterStore()
   const overrides = useOverridesStore()
   const assignmentHistory = useAssignmentHistoryStore()
+  const tracker = useTracker()
 
   async function loadLocals() {
     await congStore.loadLocal();
@@ -61,7 +63,9 @@
     router.pruneParams()
     await overrides.prune();
     assignmentHistory.read()
-    // console.log(JSON.parse(JSON.stringify(assignmentHistory.ayfmStudents)));
+
+    if (tracker.shouldTrack) await tracker.track()
+
 
   })
 
