@@ -505,7 +505,8 @@
               "elder",
               "ms"
             ],
-            "thumbnailMode": "sqr-r"
+            "thumbnailMode": "sqr-r",
+            "writtable": true
           },
           {
             "id": "202605.4.9",
