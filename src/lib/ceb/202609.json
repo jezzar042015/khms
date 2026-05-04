@@ -1,0 +1,577 @@
+{
+  "period": "202609",
+  "display": "Septiyembre 2026",
+  "title": "Eskedyul sa Atong Kristohanong Kinabuhi ug Ministeryo nga Tigom",
+  "theme": "#a0411b",
+  "publish": true,
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202609/E/pt/mwb_E_202609_lg.jpg",
+  "firstMonday": "2026-09-07",
+  "language": "ceb",
+  "weeks": [
+    {
+      "order": 1,
+      "id": "202609.1",
+      "week": "SEPTIYEMBRE 7-13",
+      "bibleReading": "JEREMIAS 32-33",
+      "songs": [
+        "1",
+        "128",
+        "143"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202609.1.0",
+            "time": 1,
+            "reference": "Introduksiyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202609.1.9"
+            ]
+          },
+          {
+            "id": "202609.1.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026252/univ/art/202026252_univ_sqs_lg.jpg",
+            "title": "1. Ang Pagpamalandong sa mga Hiyas ni Jehova Makapalig-on sa Pagtuo",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.1.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Bahandi",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.1.3",
+            "time": 4,
+            "reference": "Jer 32:​6-18 (th tun-anan 2)",
+            "title": "3. Pagbasa sa Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202609.1.4",
+            "time": 3,
+            "title": "4. Dihang Magsugod ug Panag-estorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 4 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.1.5",
+            "time": 4,
+            "title": "5. Dihang Magsugod ug Panag-estorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 4 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.1.6",
+            "time": 5,
+            "title": "6. Dihang Makig-estorya Pag-usab",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 8 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202609.1.7",
+            "time": 15,
+            "title": "7. Pahimusli Pag-ayo ang mga Kahigayonan Panahon sa Kampanya",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026252/univ/art/202026252_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202609.1.8",
+            "time": 30,
+            "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kap. 7",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202609.1.8.r",
+            "class": "accessory",
+            "alt": "Tigbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202609.1.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "id": "202609.2",
+      "week": "SEPTIYEMBRE 14-20",
+      "bibleReading": "JEREMIAS 34-35",
+      "songs": [
+        "161",
+        "121",
+        "28"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202609.2.0",
+            "time": 1,
+            "reference": "Introduksiyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202609.2.11"
+            ]
+          },
+          {
+            "id": "202609.2.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026253/univ/art/202026253_univ_sqs_lg.jpg",
+            "title": "1. Gantihan ni Jehova Kadtong Masinugtanon",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.2.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Bahandi",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.2.3",
+            "time": 4,
+            "reference": "Jer 35:​1-14 (th tun-anan 5)",
+            "title": "3. Pagbasa sa Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202609.2.4",
+            "time": 2,
+            "title": "4. Dihang Magsugod ug Panag-estorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 3 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.2.5",
+            "time": 2,
+            "title": "5. Dihang Magsugod ug Panag-estorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 3 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.2.6",
+            "time": 3,
+            "title": "6. Dihang Makig-estorya Pag-usab",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 7 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.2.7",
+            "time": 4,
+            "title": "7. Dihang Maghimog Tinun-an",
+            "class": "part-title-ministry",
+            "reference": "th tun-anan 11",
+            "thumbnail": "th",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202609.2.8",
+            "time": 6,
+            "title": "8. Ang Pagpugong sa Kaugalingon Makatabang Nato nga Magmasinugtanon",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026253/univ/art/202026253_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202609.2.9",
+            "time": 9,
+            "title": "9. Mga Nalampos sa Organisasyon Para sa Septiyembre",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202609.2.10",
+            "time": 30,
+            "title": "10. Pagtuon sa Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kap. 8",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202609.2.10.r",
+            "class": "accessory",
+            "alt": "Tigbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202609.2.11",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "id": "202609.3",
+      "week": "SEPTIYEMBRE 21-27",
+      "bibleReading": "JEREMIAS 36-37",
+      "songs": [
+        "74",
+        "142",
+        "134"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202609.3.0",
+            "time": 1,
+            "reference": "Introduksiyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202609.3.9"
+            ]
+          },
+          {
+            "id": "202609.3.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026254/univ/art/202026254_univ_sqs_lg.jpg",
+            "title": "1. Tabangan ni Jehova Kadtong Maunongon sa Iyang Gingharian",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.3.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Bahandi",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.3.3",
+            "time": 4,
+            "reference": "Jer 36:​1-13 (th tun-anan 10)",
+            "title": "3. Pagbasa sa Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202609.3.4",
+            "time": 3,
+            "title": "4. Dihang Magsugod ug Panag-estorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 5 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.3.5",
+            "time": 4,
+            "title": "5. Dihang Makig-estorya Pag-usab",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 9 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.3.6",
+            "time": 6,
+            "title": "6. Unsay Imong Isulti?",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202609.3.7",
+            "time": 15,
+            "title": "7. Magpabiling Neyutral Diha sa Atong Kasingkasing",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026254/univ/art/202026254_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202609.3.8",
+            "time": 30,
+            "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kap. 9",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202609.3.8.r",
+            "class": "accessory",
+            "alt": "Tigbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202609.3.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "id": "202609.4",
+      "week": "SEPTIYEMBRE 28–OKTUBRE 4",
+      "bibleReading": "JEREMIAS 38-39",
+      "songs": [
+        "102",
+        "90",
+        "56"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202609.4.0",
+            "time": 1,
+            "reference": "Introduksiyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202609.4.9"
+            ]
+          },
+          {
+            "id": "202609.4.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026255/univ/art/202026255_univ_sqs_lg.jpg",
+            "title": "1. Padayong Tabangi ang Usag Usa",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.4.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Bahandi",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.4.3",
+            "time": 4,
+            "reference": "Jer 38:​1-13 (th tun-anan 12)",
+            "title": "3. Pagbasa sa Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202609.4.4",
+            "time": 3,
+            "title": "4. Dihang Magsugod ug Panag-estorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 9 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.4.5",
+            "time": 4,
+            "title": "5. Dihang Makig-estorya Pag-usab",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 9 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.4.6",
+            "time": 6,
+            "title": "6. Unsay Imong Isulti?",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202609.4.7",
+            "time": 15,
+            "title": "7. ‘Kinsay Mihikap Nako?’",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026255/univ/art/202026255_univ_cnt_4_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202609.4.8",
+            "time": 30,
+            "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kap. 10",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202609.4.8.r",
+            "class": "accessory",
+            "alt": "Tigbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202609.4.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,577 @@
+{
+  "period": "202609",
+  "display": "Setyembre 2026",
+  "title": "Eskedyul sa Ating Buhay at Ministeryong Kristianong Pulong",
+  "theme": "#a0411b",
+  "publish": true,
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202609/E/pt/mwb_E_202609_lg.jpg",
+  "firstMonday": "2026-09-07",
+  "language": "tl",
+  "weeks": [
+    {
+      "order": 1,
+      "id": "202609.1",
+      "week": "SETYEMBRE 7-13",
+      "bibleReading": "JEREMIAS 32-33",
+      "songs": [
+        "1",
+        "128",
+        "143"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202609.1.0",
+            "time": 1,
+            "reference": "Pambungad na Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202609.1.9"
+            ]
+          },
+          {
+            "id": "202609.1.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026252/univ/art/202026252_univ_sqs_lg.jpg",
+            "title": "1. Pag-isipan ang mga Katangian ni Jehova Para Tumibay ang Pananampalataya Mo",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.1.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal na Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.1.3",
+            "time": 4,
+            "reference": "Jer 32:6-18 (th aralin 2)",
+            "title": "3. Pagbabasa ng Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202609.1.4",
+            "time": 3,
+            "title": "4. Pagpapasimula ng Pakikipag-usap",
+            "class": "part-title-ministry",
+            "reference": "lmd aralin 4: #3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.1.5",
+            "time": 4,
+            "title": "5. Pagpapasimula ng Pakikipag-usap",
+            "class": "part-title-ministry",
+            "reference": "lmd aralin 4: #4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.1.6",
+            "time": 5,
+            "title": "6. Pakikipag-usap Muli",
+            "class": "part-title-ministry",
+            "reference": "lmd aralin 8: #3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202609.1.7",
+            "time": 15,
+            "title": "7. Sulitin ang Panahon ng Kampanya Para Makapagpasimula ng Bible Study",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026252/univ/art/202026252_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202609.1.8",
+            "time": 30,
+            "title": "8. Pag-aaral ng Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kab. 7",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202609.1.8.r",
+            "class": "accessory",
+            "alt": "Tagabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202609.1.9",
+            "time": 3,
+            "reference": "Pangwakas na Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "id": "202609.2",
+      "week": "SETYEMBRE 14-20",
+      "bibleReading": "JEREMIAS 34-35",
+      "songs": [
+        "161",
+        "121",
+        "28"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202609.2.0",
+            "time": 1,
+            "reference": "Pambungad na Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202609.2.11"
+            ]
+          },
+          {
+            "id": "202609.2.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026253/univ/art/202026253_univ_sqs_lg.jpg",
+            "title": "1. Ginagantimpalaan ni Jehova ang mga Tapat at Masunurin sa Kaniya",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.2.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal na Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.2.3",
+            "time": 4,
+            "reference": "Jer 35:1-14 (th aralin 5)",
+            "title": "3. Pagbabasa ng Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202609.2.4",
+            "time": 2,
+            "title": "4. Pagpapasimula ng Pakikipag-usap",
+            "class": "part-title-ministry",
+            "reference": "lmd aralin 3: #3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.2.5",
+            "time": 2,
+            "title": "5. Pagpapasimula ng Pakikipag-usap",
+            "class": "part-title-ministry",
+            "reference": "lmd aralin 3: #5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.2.6",
+            "time": 3,
+            "title": "6. Pakikipag-usap Muli",
+            "class": "part-title-ministry",
+            "reference": "lmd aralin 7: #4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.2.7",
+            "time": 4,
+            "title": "7. Paggawa ng mga Alagad",
+            "class": "part-title-ministry",
+            "reference": "th aralin 11",
+            "thumbnail": "th",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202609.2.8",
+            "time": 6,
+            "title": "8. Matutulungan Tayo ng Pagpipigil sa Sarili na Maging Masunurin",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026253/univ/art/202026253_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202609.2.9",
+            "time": 9,
+            "title": "9. Mga Nagawa ng Organisasyon Para sa Setyembre",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202609.2.10",
+            "time": 30,
+            "title": "10. Pag-aaral ng Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kab. 8",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202609.2.10.r",
+            "class": "accessory",
+            "alt": "Tagabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202609.2.11",
+            "time": 3,
+            "reference": "Pangwakas na Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "id": "202609.3",
+      "week": "SETYEMBRE 21-27",
+      "bibleReading": "JEREMIAS 36-37",
+      "songs": [
+        "74",
+        "142",
+        "134"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202609.3.0",
+            "time": 1,
+            "reference": "Pambungad na Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202609.3.9"
+            ]
+          },
+          {
+            "id": "202609.3.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026254/univ/art/202026254_univ_sqs_lg.jpg",
+            "title": "1. Tinutulungan ni Jehova ang mga Sumusuporta sa Kaharian Niya",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.3.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal na Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.3.3",
+            "time": 4,
+            "reference": "Jer 36:1-13 (th aralin 10)",
+            "title": "3. Pagbabasa ng Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202609.3.4",
+            "time": 3,
+            "title": "4. Pagpapasimula ng Pakikipag-usap",
+            "class": "part-title-ministry",
+            "reference": "lmd aralin 5: #5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.3.5",
+            "time": 4,
+            "title": "5. Pakikipag-usap Muli",
+            "class": "part-title-ministry",
+            "reference": "lmd aralin 9: #4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.3.6",
+            "time": 6,
+            "title": "6. Ano ang Sasabihin Mo?",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202609.3.7",
+            "time": 15,
+            "title": "7. Manatiling Neutral Kahit sa Puso",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026254/univ/art/202026254_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202609.3.8",
+            "time": 30,
+            "title": "8. Pag-aaral ng Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kab. 9",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202609.3.8.r",
+            "class": "accessory",
+            "alt": "Tagabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202609.3.9",
+            "time": 3,
+            "reference": "Pangwakas na Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "id": "202609.4",
+      "week": "SETYEMBRE 28–OKTUBRE 4",
+      "bibleReading": "JEREMIAS 38-39",
+      "songs": [
+        "102",
+        "90",
+        "56"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202609.4.0",
+            "time": 1,
+            "reference": "Pambungad na Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202609.4.9"
+            ]
+          },
+          {
+            "id": "202609.4.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026255/univ/art/202026255_univ_sqs_lg.jpg",
+            "title": "1. Patuloy Nating Tulungan ang Isa’t Isa",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.4.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal na Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202609.4.3",
+            "time": 4,
+            "reference": "Jer 38:1-13 (th aralin 12)",
+            "title": "3. Pagbabasa ng Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202609.4.4",
+            "time": 3,
+            "title": "4. Pagpapasimula ng Pakikipag-usap",
+            "class": "part-title-ministry",
+            "reference": "lmd aralin 9: #3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.4.5",
+            "time": 4,
+            "title": "5. Pakikipag-usap Muli",
+            "class": "part-title-ministry",
+            "reference": "lmd aralin 9: #5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202609.4.6",
+            "time": 6,
+            "title": "6. Ano ang Sasabihin Mo?",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202609.4.7",
+            "time": 15,
+            "title": "7. “Sino ang Humipo sa Akin?”",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026255/univ/art/202026255_univ_cnt_4_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202609.4.8",
+            "time": 30,
+            "title": "8. Pag-aaral ng Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kab. 10",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202609.4.8.r",
+            "class": "accessory",
+            "alt": "Tagabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202609.4.9",
+            "time": 3,
+            "reference": "Pangwakas na Komento",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
