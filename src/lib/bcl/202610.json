@@ -242,7 +242,8 @@
             "class": "part-title-ministry",
             "reference": null,
             "roles": [
-              "demo"
+              "elder",
+              "ms"
             ]
           }
         ],
