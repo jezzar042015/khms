@@ -163,6 +163,7 @@ function ministry(src: WeekItem, week: S140PartItem[]) {
             title: pattern.title ?? '',
             autofills: [...pattern.autofills ?? []],
             roles: [...pattern.roles ?? []],
+            section: 'ministry'
         }
 
         if ((part.roles ?? []).includes('demo')) {
@@ -198,7 +199,8 @@ function living(src: WeekItem, week: S140PartItem[]) {
             roles: [...pattern.roles ?? []],
             writtable: pattern.writtable ?? false,
             timeAdjustable: true,
-            isInsertable: !isLast
+            isInsertable: !isLast,
+            section: i+1 < parts.length  ? 'living' : ''
         }
 
         if (part.roles?.includes('cbs')) {

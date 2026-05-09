@@ -19,10 +19,7 @@
 
         <template v-for="part in composedParts" :key="part.id">
             <template v-if="part.type == 'header'">
-                <div :class="gridColumns">
-                    <div :class="part.classNames">{{ part.title }}</div>
-                    <div></div>
-                </div>
+                <MeetingSectionHeader :part :grid-columns="gridColumns" />
             </template>
             <template v-else>
                 <PartItem :part="part" :key="part.id" :has-inserted="hasInserted" @insert-item="insertLivingPartItem"
@@ -30,9 +27,9 @@
             </template>
         </template>
 
-        <div class="s140-yspacer no-print"></div>
-        <div class="s140-yspacer no-print"></div>
-        <div class="s140-yspacer no-print"></div>
+        <div v-if="!isDisplayOnFilters" class="s140-yspacer no-print"></div>
+        <div v-if="!isDisplayOnFilters" class="s140-yspacer no-print"></div>
+        <div v-if="!isDisplayOnFilters" class="s140-yspacer no-print"></div>
     </div>
 </template>
 
@@ -45,6 +42,8 @@
     import { onClickOutside } from '@vueuse/core'
     import PartItem from './PartItem.vue';
     import WeekdaySelector from '@/components/WeekdaySelector.vue';
+    import MeetingSectionHeader from './MeetingSectionHeader.vue';
+    import { useViewStore } from '@/stores/views';
 
     const { w, i } = defineProps<{
         w: WeekItemFeed
@@ -52,6 +51,7 @@
     }>()
     const congStore = useCongregationStore()
     const fileStore = useFilesStore()
+    const viewStore = useViewStore()
 
     const hasAuxClass = computed<boolean>(() => {
         return congStore.congregation.classId == 2
@@ -60,6 +60,10 @@
     const midweekDate = computed(() => {
         if (!w.id) return ''
         return useWeeklyDate(w.id, w.week)
+    })
+
+    const isDisplayOnFilters = computed(()=> {
+        return viewStore.currentDisplayFilter !== "**"
     })
 
     const hasMeetingDemos = computed<boolean>(() => {
