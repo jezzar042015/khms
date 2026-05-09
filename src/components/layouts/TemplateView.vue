@@ -1,16 +1,25 @@
 <template>
     <div class="headbar no-print">
         <div class="set-wrappers">
-            <div class="setters">
-                <span>Month</span>
-                <select v-model="fileStore.currentPeriod">
-                    <template v-if="fileStore.langMonths">
-                        <option :value="f.content.period" v-for="f in fileStore.langMonths" :key="f.content.period">
-                            {{ f.content.display }}
-                        </option>
-                    </template>
-                </select>
+            <div class="setters-wrapper">
+                <div class="setters">
+                    <span>Month</span>
+                    <select v-model="fileStore.currentPeriod">
+                        <template v-if="fileStore.langMonths">
+                            <option :value="f.content.period" v-for="f in fileStore.langMonths" :key="f.content.period">
+                                {{ f.content.display }}
+                            </option>
+                        </template>
+                    </select>
+                </div>
+                <div class="setters" v-if="congStore.congregation.mwbTemplate === 's-140'">
+                    <span>Display</span>
+                    <select v-model="viewStore.currentDisplayFilter">
+                        <option v-for="(v, k) in viewStore.displayFilters" :value="k">{{ v }}</option>
+                    </select>
+                </div>
             </div>
+
             <div class="actions">
                 <div id="printer">
                     <button @click="confirmPrinting">
@@ -64,9 +73,11 @@
     import TemplateSettings from '../TemplateSettings.vue';
     import IconHelp from '../icons/IconHelp.vue';
     import AlertMessage from '../AlertMessage.vue';
+    import { useCongregationStore } from '@/stores/congregation';
 
     const fileStore = useFilesStore();
     const viewStore = useViewStore();
+    const congStore = useCongregationStore()
     const congSettingsDisplay = ref(false);
     const alert = ref<AlertSettings>({});
 
@@ -140,6 +151,12 @@
         font-size: 14px;
     }
 
+    .setters-wrapper
+    {
+        display: flex;
+        gap: 15px;
+    }
+
     .actions
     {
         display: flex;
@@ -150,7 +167,7 @@
     .setters
     {
         display: flex;
-        gap: 0px;
+        gap: 5px;
         align-items: center;
         outline: none;
     }
@@ -158,7 +175,7 @@
     .setters span
     {
         color: rgb(192, 192, 192);
-        width: 60px;
+        min-width: 60px;
     }
 
     select

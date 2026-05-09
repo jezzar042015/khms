@@ -1,5 +1,5 @@
 <template>
-    <div :class="gridColumns">
+    <div :class="gridColumns" v-if="shouldPartLineDisplay">
 
         <div class="s140-grid-titles">
 
@@ -59,8 +59,7 @@
 
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
     import AudienceGroup from '@/components/AudienceGroup.vue'
-    import IconPlus from '@/components/icons/IconPlus.vue';
-    import IconMinus from '@/components/icons/IconMinus.vue';
+    import { useViewStore } from '@/stores/views';
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
@@ -70,6 +69,7 @@
     const overrides = useOverridesStore();
     const timeOverrides = useTimeOverrides()
     const selector = useAssignmentSelector()
+    const viewStore = useViewStore()
 
     const { part, hasInserted } = defineProps<{
         part: S140PartItem
@@ -336,6 +336,18 @@
         const match = partId.match(regex);
         return match ? match[1] : null;
     }
+
+    const shouldPartLineDisplay = computed(() => {
+        if (viewStore.currentDisplayFilter === '**') return true
+        if (viewStore.currentDisplayFilter === 'ca' && part.id.endsWith('.0')) return true
+        if (viewStore.currentDisplayFilter === 'ta' && (part.id.endsWith('.1') || part.id.endsWith('.2'))) return true
+        if (viewStore.currentDisplayFilter === 'sa' && part.id.endsWith('.3')) return true
+        if (viewStore.currentDisplayFilter === 'sa' && part.section == 'ministry') return true
+        if (viewStore.currentDisplayFilter === 'lc' && part.section == 'living') return true
+        if (viewStore.currentDisplayFilter === 'pa' && (part.id.endsWith('.op') || part.id.endsWith('.cp'))) return true
+
+        return false
+    })
 
     onMounted(() => {
         loadAux1Part()

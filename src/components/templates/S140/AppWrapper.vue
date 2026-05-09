@@ -6,7 +6,7 @@
                 <HeaderTitle v-if="i % 2 == 0" />
                 <WeekItem :w="w" :i="i" v-if="!w.hasEvent" />
                 <EventPlaceholder v-else />
-                <div v-if="i % 2 == 1 && weeks.length > i + 1" class="page-break relative">
+                <div v-if="!isDisplayOnFilter && i % 2 == 1 && weeks.length > i + 1" class="page-break relative">
                     <div class="s140-break no-print"></div>
                 </div>
             </template>
@@ -22,8 +22,14 @@
     import WeekItem from '@/components/templates/S140/WeekItem.vue';
     import EventPlaceholder from './EventPlaceholder.vue';
     import AssignmentSelector from '@/components/AssignmentSelector.vue'
+    import { useViewStore } from '@/stores/views';
 
     const fileStore = useFilesStore()
+    const viewStore = useViewStore()
+
+    const isDisplayOnFilter = computed(()=> {
+        return viewStore.currentDisplayFilter !== "**"
+    })
 
     const weeks = computed<WeekItemFeed[]>(() => {
         if (!fileStore.loadedMonth) return []

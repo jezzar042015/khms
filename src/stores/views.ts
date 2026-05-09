@@ -20,6 +20,17 @@ export const useViewStore = defineStore('views', () => {
     const eventStore = useEventStore()
     const fileStore = useFilesStore()
 
+    const displayFilters = ref<Record<string, string>>({
+        "**": "All Parts",
+        "ca": "Chairman Assignments",
+        "ta": "Treasure Assignments",
+        "sa": "Student Assignments",
+        "lc": "Living as Christians Assignments",
+        "pa": "Prayer Assignments",
+    })
+
+    const currentDisplayFilter = ref('**')
+    
     const welcomePage = computed<boolean>(() => {
         return view.value == 'welcome'
     })
@@ -75,6 +86,7 @@ export const useViewStore = defineStore('views', () => {
     return {
         welcomePage, mwbTemplate,
         pubsList, assignmentSlips,
+        displayFilters,currentDisplayFilter,
         init, exitWelcome,
         setView, popUpAlert, setPopAlert, cams,
         survey, help, exitSurvey,
