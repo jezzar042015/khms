@@ -8,15 +8,20 @@ export const useTracker = defineStore('tracker', () => {
     const ts = useStorage<string>('khmsts-track-ts', '')
 
     const shouldTrack = computed(() => {
-        if (!ts.value) return true // no timestamp yet → allow tracking
+        if (!cong.congregation.name || !cong.congregation.lang) return false
 
-        const last = new Date(ts.value).getTime()
-        const now = Date.now()
+        // no timestamp yet → allow tracking
+        if (!ts.value) return true
 
-        const diff = now - last
-        const hours24 = 24 * 60 * 60 * 1000
+        const lastDate = new Date(ts.value)
+        const today = new Date()
 
-        return diff >= hours24
+        const isSameDate =
+            lastDate.getFullYear() === today.getFullYear() &&
+            lastDate.getMonth() === today.getMonth() &&
+            lastDate.getDate() === today.getDate()
+
+        return !isSameDate
     })
 
     const track = async () => {
