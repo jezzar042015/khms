@@ -1,0 +1,555 @@
+{
+  "period": "202612",
+  "display": "Disyembre 2026",
+  "title": "Eskedyul sa Atong Kristohanong Kinabuhi ug Ministeryo nga Tigom",
+  "theme": "#004538",
+  "publish": true,
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202611/univ/art/mwb_univ_202611_lg.jpg",
+  "firstMonday": "2026-12-07",
+  "language": "ceb",
+  "weeks": [
+    {
+      "order": 1,
+      "id": "202612.1",
+      "week": "DISYEMBRE 7-13",
+      "bibleReading": "EZEQUIEL 3–4",
+      "songs": [
+        "71",
+        "161",
+        "7"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202612.1.0",
+            "time": 1,
+            "reference": "Introduksiyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202612.1.9"
+            ]
+          },
+          {
+            "id": "202612.1.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026406/univ/art/202026406_univ_sqs_lg.jpg",
+            "title": "1. Kon Nganong Dili Ta Mahadlok Mosangyaw",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202612.1.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Bahandi",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202612.1.3",
+            "time": 4,
+            "reference": "Eze 3:​16-27 (th tun-anan 2)",
+            "title": "3. Pagbasa sa Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202612.1.4",
+            "time": 3,
+            "title": "4. Dihang Magsugod ug Panag-estorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 1 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202612.1.5",
+            "time": 4,
+            "title": "5. Dihang Magsugod ug Panag-estorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 4 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202612.1.6",
+            "time": 5,
+            "title": "6. Dihang Maghimog Tinun-an",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 12 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202612.1.7",
+            "time": 15,
+            "title": "7. Lokal nga mga Panginahanglan",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder"
+            ],
+            "writtable": true
+          },
+          {
+            "id": "202612.1.8",
+            "time": 30,
+            "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kap. 20",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202612.1.8.r",
+            "class": "accessory",
+            "alt": "Tigbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202612.1.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "id": "202612.2",
+      "week": "DISYEMBRE 14-20",
+      "bibleReading": "EZEQUIEL 5–6",
+      "songs": [
+        "49",
+        "153",
+        "133"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202612.2.0",
+            "time": 1,
+            "reference": "Introduksiyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202612.2.9"
+            ]
+          },
+          {
+            "id": "202612.2.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026407/univ/art/202026407_univ_sqs_lg.jpg",
+            "title": "1. Nasakitan si Jehova Dihang ang Iyang Katawhan Misimbag mga Idolo",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202612.2.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Bahandi",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202612.2.3",
+            "time": 4,
+            "reference": "Eze 6:​1-10 (th tun-anan 5)",
+            "title": "3. Pagbasa sa Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202612.2.4",
+            "time": 3,
+            "title": "4. Dihang Magsugod ug Panag-estorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 4 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202612.2.5",
+            "time": 4,
+            "title": "5. Dihang Makig-estorya Pag-usab",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 9 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202612.2.6",
+            "time": 5,
+            "title": "6. Unsay Imong Isulti?",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202612.2.7",
+            "time": 15,
+            "title": "7. Nganong Dili Ta Moapil sa Nasyonalistikong mga Seremonya?",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026407/univ/art/202026407_univ_cnt_3_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202612.2.8",
+            "time": 30,
+            "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kap. 21",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202612.2.8.r",
+            "class": "accessory",
+            "alt": "Tigbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202612.2.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "id": "202612.3",
+      "week": "DISYEMBRE 21-27",
+      "bibleReading": "EZEQUIEL 7-8",
+      "songs": [
+        "128",
+        "139",
+        "154"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202612.3.0",
+            "time": 1,
+            "reference": "Introduksiyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202612.3.9"
+            ]
+          },
+          {
+            "id": "202612.3.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026408/univ/art/202026408_univ_sqs_lg.jpg",
+            "title": "1. Ang Adlaw ni Jehova Moabot Gyod sa Iyang Gitakdang Panahon",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202612.3.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Bahandi",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202612.3.3",
+            "time": 4,
+            "reference": "Eze 8:​7-18 (th tun-anan 2)",
+            "title": "3. Pagbasa sa Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202612.3.4",
+            "time": 3,
+            "title": "4. Dihang Magsugod ug Panag-estorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 1 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202612.3.5",
+            "time": 4,
+            "title": "5. Dihang Makig-estorya Pag-usab",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 9 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202612.3.6",
+            "time": 5,
+            "title": "6. Dihang Maghimog Tinun-an",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 12 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202612.3.7",
+            "time": 15,
+            "title": "7. Hunahunaa ang Resulta",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026408/univ/art/202026408_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202612.3.8",
+            "time": 30,
+            "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg intro sa seksiyon 2, timeline, ug kap. 22",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202612.3.8.r",
+            "class": "accessory",
+            "alt": "Tigbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202612.3.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "id": "202612.4",
+      "week": "DISYEMBRE 28, 2026–ENERO 3, 2027",
+      "bibleReading": "EZEQUIEL 9–10",
+      "songs": [
+        "119",
+        "60",
+        "135"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202612.4.0",
+            "time": 1,
+            "reference": "Introduksiyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202612.4.9"
+            ]
+          },
+          {
+            "id": "202612.4.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026409/univ/art/202026409_univ_sqs_lg.jpg",
+            "title": "1. Tabangi ang Uban nga Maluwas sa Armagedon",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202612.4.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Bahandi",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202612.4.3",
+            "time": 4,
+            "reference": "Eze 9:​1-11 (th tun-anan 5)",
+            "title": "3. Pagbasa sa Bibliya",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202612.4.4",
+            "time": 3,
+            "title": "4. Dihang Magsugod ug Panag-estorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 3 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202612.4.5",
+            "time": 4,
+            "title": "5. Dihang Makig-estorya Pag-usab",
+            "class": "part-title-ministry",
+            "reference": "lmd leksiyon 9 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202612.4.6",
+            "time": 5,
+            "title": "6. Pagpatin-aw sa Imong Tinuohan",
+            "class": "part-title-ministry",
+            "reference": "th tun-anan 2",
+            "thumbnail": "th",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202612.4.7",
+            "time": 15,
+            "title": "7. Maluwas Nimo ang Imong Kaugalingon ug Kadtong Maminaw Nimo",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026409/univ/art/202026409_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-r"
+          },
+          {
+            "id": "202612.4.8",
+            "time": 30,
+            "title": "8. Pagtuon sa Kongregasyon sa Bibliya",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kap. 23",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202612.4.8.r",
+            "class": "accessory",
+            "alt": "Tigbasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202612.4.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
