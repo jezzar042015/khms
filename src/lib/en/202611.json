@@ -1,0 +1,691 @@
+{
+  "period": "202611",
+  "display": "November 2026",
+  "title": "Our Christian Life and Ministry Meeting Schedule",
+  "theme": "#004538",
+  "publish": true,
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202611/univ/art/mwb_univ_202611_lg.jpg",
+  "firstMonday": "2026-11-02",
+  "language": "en",
+  "weeks": [
+    {
+      "order": 1,
+      "id": "202611.1",
+      "week": "NOVEMBER 2-8",
+      "bibleReading": "JEREMIAH 49-50",
+      "songs": [
+        "1",
+        "44",
+        "33"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202611.1.0",
+            "time": 1,
+            "reference": "Opening Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202611.1.9"
+            ]
+          },
+          {
+            "id": "202611.1.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026401/univ/art/202026401_univ_sqs_lg.jpg",
+            "title": "1. Help Others Benefit From Jehovah’s Mercy",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202611.1.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Spiritual Gems",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202611.1.3",
+            "time": 4,
+            "reference": "Jer 50:24-40 (th study 11)",
+            "title": "3. Bible Reading",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202611.1.4",
+            "time": 3,
+            "title": "4. Starting a Conversation",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 1 point 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202611.1.5",
+            "time": 4,
+            "title": "5. Following Up",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 9 point 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202611.1.6",
+            "time": 5,
+            "title": "6. Making Disciples",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 11 point 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202611.1.7",
+            "time": 15,
+            "title": "7. Never Forget What Jehovah Remembers",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202611.1.8",
+            "time": 30,
+            "title": "8. Congregation Bible Study",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg chap. 15",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202611.1.8.r",
+            "class": "accessory",
+            "alt": "Reader:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202611.1.9",
+            "time": 3,
+            "reference": "Concluding Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "id": "202611.2",
+      "week": "NOVEMBER 9-15",
+      "bibleReading": "JEREMIAH 51-52",
+      "songs": [
+        "98",
+        "10",
+        "150"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202611.2.0",
+            "time": 1,
+            "reference": "Opening Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202611.2.9"
+            ]
+          },
+          {
+            "id": "202611.2.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026402/univ/art/202026402_univ_sqs_lg.jpg",
+            "title": "1. Learn From the Warning Example of Zedekiah",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202611.2.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Spiritual Gems",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202611.2.3",
+            "time": 4,
+            "reference": "Jer 52:6-20 (th study 5)",
+            "title": "3. Bible Reading",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202611.2.4",
+            "time": 3,
+            "title": "4. Starting a Conversation",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 3 point 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202611.2.5",
+            "time": 4,
+            "title": "5. Starting a Conversation",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 3 point 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202611.2.6",
+            "time": 5,
+            "title": "6. Talk",
+            "class": "part-title-ministry",
+            "reference": "th study 7",
+            "thumbnail": "th",
+            "roles": [
+              "talk"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202611.2.7",
+            "time": 15,
+            "title": "7. Our Donations Glorify God’s Beautiful Name",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026402/univ/art/202026402_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "w-50"
+          },
+          {
+            "id": "202611.2.8",
+            "time": 30,
+            "title": "8. Congregation Bible Study",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg chap. 16",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202611.2.8.r",
+            "class": "accessory",
+            "alt": "Reader:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202611.2.9",
+            "time": 3,
+            "reference": "Concluding Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "id": "202611.3",
+      "week": "NOVEMBER 16-22",
+      "bibleReading": "LAMENTATIONS 1-2",
+      "songs": [
+        "28",
+        "90",
+        "75"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202611.3.0",
+            "time": 1,
+            "reference": "Opening Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202611.3.9"
+            ]
+          },
+          {
+            "id": "202611.3.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026403/univ/art/202026403_univ_sqs_lg.jpg",
+            "title": "1. An Understandable Response to a Terrible Loss",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202611.3.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Spiritual Gems",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202611.3.3",
+            "time": 4,
+            "reference": "La 1:8-18 (th study 10)",
+            "title": "3. Bible Reading",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202611.3.4",
+            "time": 3,
+            "title": "4. Starting a Conversation",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 2 point 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202611.3.5",
+            "time": 4,
+            "title": "5. Following Up",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 9 point 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202611.3.6",
+            "time": 5,
+            "title": "6. What Would You Say?",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202611.3.7",
+            "time": 15,
+            "title": "7. Do Not Forget Our Inactive Brothers and Sisters",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026403/univ/art/202026403_univ_cnt_3_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202611.3.8",
+            "time": 30,
+            "title": "8. Congregation Bible Study",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg chap. 17",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202611.3.8.r",
+            "class": "accessory",
+            "alt": "Reader:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202611.3.9",
+            "time": 3,
+            "reference": "Concluding Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "id": "202611.4",
+      "week": "NOVEMBER 23-29",
+      "bibleReading": "LAMENTATIONS 3-5",
+      "songs": [
+        "158",
+        "109",
+        "74"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202611.4.0",
+            "time": 1,
+            "reference": "Opening Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202611.4.9"
+            ]
+          },
+          {
+            "id": "202611.4.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026404/univ/art/202026404_univ_sqs_lg.jpg",
+            "title": "1. Do Not Give Out When Experiencing Trials",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202611.4.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Spiritual Gems",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202611.4.3",
+            "time": 4,
+            "reference": "La 3:19-42 (th study 12)",
+            "title": "3. Bible Reading",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202611.4.4",
+            "time": 3,
+            "title": "4. Starting a Conversation",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 5 point 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202611.4.5",
+            "time": 4,
+            "title": "5. Starting a Conversation",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 4 point 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202611.4.6",
+            "time": 5,
+            "title": "6. Talk",
+            "class": "part-title-ministry",
+            "reference": "th study 16",
+            "thumbnail": "th",
+            "roles": [
+              "talk"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202611.4.7",
+            "time": 15,
+            "title": "7. Help Caregivers Not to Give Out",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026404/univ/art/202026404_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202611.4.8",
+            "time": 30,
+            "title": "8. Congregation Bible Study",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg chap. 18",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202611.4.8.r",
+            "class": "accessory",
+            "alt": "Reader:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202611.4.9",
+            "time": 3,
+            "reference": "Concluding Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "id": "202611.5",
+      "week": "NOVEMBER 30–DECEMBER 6",
+      "bibleReading": "EZEKIEL 1-2",
+      "songs": [
+        "65",
+        "63",
+        "134"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202611.5.0",
+            "time": 1,
+            "reference": "Opening Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202611.5.9"
+            ]
+          },
+          {
+            "id": "202611.5.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026405/univ/art/202026405_univ_sqs_lg.jpg",
+            "title": "1. Keep Pace With Jehovah’s Celestial Chariot",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202611.5.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Spiritual Gems",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202611.5.3",
+            "time": 4,
+            "reference": "Eze 2:1-10 (th study 2)",
+            "title": "3. Bible Reading",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202611.5.4",
+            "time": 3,
+            "title": "4. Starting a Conversation",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 3 point 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202611.5.5",
+            "time": 5,
+            "title": "5. Making Disciples",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 11 point 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202611.5.6",
+            "time": 4,
+            "title": "6. Talk",
+            "class": "part-title-ministry",
+            "reference": "th study 6",
+            "thumbnail": "th",
+            "roles": [
+              "talk"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202611.5.7",
+            "time": 15,
+            "title": "7. Local Needs",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder"
+            ],
+            "writtable": true
+          },
+          {
+            "id": "202611.5.8",
+            "time": 30,
+            "title": "8. Congregation Bible Study",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg chap. 19",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202611.5.8.r",
+            "class": "accessory",
+            "alt": "Reader:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202611.5.9",
+            "time": 3,
+            "reference": "Concluding Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
