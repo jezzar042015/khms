@@ -1,10 +1,10 @@
-import { defineStore } from "pinia";
 import { computed, ref } from "vue";
+import { defineStore } from "pinia";
+import { prefs } from "@/assets/utils/prefs";
 import { useCongregationStore } from "./congregation";
-import { useVisitStore } from "./visits";
 import { useEventStore } from "./events";
 import { useFilesStore } from "./files";
-import { prefs } from "@/assets/utils/prefs";
+import { useVisitStore } from "./visits";
 
 export const useViewStore = defineStore('views', () => {
 
