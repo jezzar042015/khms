@@ -20,6 +20,7 @@ async function setCams(camsMode: string | null) {
     let mode = false;
     if (camsMode === 'on') mode = true;
     if (camsMode === 'off') mode = false;
+    
     const viewStore = useViewStore()
 
     viewStore.cams = mode

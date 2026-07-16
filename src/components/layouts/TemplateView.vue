@@ -65,15 +65,15 @@
 </template>
 
 <script setup lang="ts">
+    import type { AlertSettings } from '@/types/vforms';
     import { useFilesStore } from '@/stores/files';
     import { useViewStore } from '@/stores/views';
     import { ref } from 'vue';
-    import type { AlertSettings } from '@/types/vforms';
+    import { useCongregationStore } from '@/stores/congregation';
     import IconPrinter from '../icons/IconPrinter.vue';
     import TemplateSettings from '../TemplateSettings.vue';
     import IconHelp from '../icons/IconHelp.vue';
     import AlertMessage from '../AlertMessage.vue';
-    import { useCongregationStore } from '@/stores/congregation';
 
     const fileStore = useFilesStore();
     const viewStore = useViewStore();
