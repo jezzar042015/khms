@@ -13,7 +13,7 @@ const thumbnails: Thumbnail = {
     },
     lmd: {
         desc: "Love People Make Desciples",
-        thumbnail: "https://assetsnffrgf-a.akamaihd.net/assets/a/lmd/univ/wpub/lmd_univ_lg.jpg",
+        thumbnail: "https://cms-imgp.jw-cdn.org/img/p/lmd/univ/pt/lmd_univ_lg.jpg",
     },
     th: {
         desc: "Apply Yourself to Reading and Teaching",
