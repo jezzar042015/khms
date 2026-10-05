@@ -1,27 +1,27 @@
 {
-  "period": "202609",
-  "display": "September 2026",
+  "period": "202612",
+  "display": "December 2026",
   "title": "Our Christian Life and Ministry Meeting Schedule",
-  "theme": "#a0411b",
+  "theme": "#004538",
   "publish": true,
-  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202609/univ/art/mwb_univ_202609_lg.jpg",
-  "firstMonday": "2026-09-07",
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202611/univ/art/mwb_univ_202611_lg.jpg",
+  "firstMonday": "2026-12-07",
   "language": "psp",
   "weeks": [
     {
       "order": 1,
-      "id": "202609.1",
-      "week": "SEPTEMBER 7-13",
-      "bibleReading": "JEREMIAH 32-33",
+      "id": "202612.1",
+      "week": "DECEMBER 7-13",
+      "bibleReading": "EZEKIEL 3-4",
       "songs": [
-        "1",
-        "128",
-        "143"
+        "71",
+        "161",
+        "7"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202609.1.0",
+            "id": "202612.1.0",
             "time": 1,
             "reference": "Opening Comments",
             "roles": [
@@ -29,14 +29,14 @@
               "ms"
             ],
             "autofills": [
-              "202609.1.9"
+              "202612.1.9"
             ]
           },
           {
-            "id": "202609.1.1",
+            "id": "202612.1.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026252/univ/art/202026252_univ_sqs_lg.jpg",
-            "title": "1. Reflecting on Jehovah’s Qualities Builds Faith",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026406/univ/art/202026406_univ_sqs_lg.jpg",
+            "title": "1. Why We Preach Fearlessly",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -44,7 +44,7 @@
             ]
           },
           {
-            "id": "202609.1.2",
+            "id": "202612.1.2",
             "time": 10,
             "reference": "",
             "title": "2. Spiritual Gems",
@@ -55,9 +55,9 @@
             ]
           },
           {
-            "id": "202609.1.3",
+            "id": "202612.1.3",
             "time": 4,
-            "reference": "Jer 32:6-18 (th 2)",
+            "reference": "Eze 3:16-27 (th 2)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -67,18 +67,18 @@
         ],
         "ministry": [
           {
-            "id": "202609.1.4",
+            "id": "202612.1.4",
             "time": 3,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd 4:3",
+            "reference": "lmd 1:5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202609.1.5",
+            "id": "202612.1.5",
             "time": 4,
             "title": "5. Starting a Conversation",
             "class": "part-title-ministry",
@@ -89,11 +89,11 @@
             ]
           },
           {
-            "id": "202609.1.6",
+            "id": "202612.1.6",
             "time": 5,
-            "title": "6. Following Up",
+            "title": "6. Making Disciples",
             "class": "part-title-ministry",
-            "reference": "lmd 8:3",
+            "reference": "lmd 12:4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
@@ -102,30 +102,29 @@
         ],
         "living": [
           {
-            "id": "202609.1.7",
+            "id": "202612.1.7",
             "time": 15,
-            "title": "7. Make Your Blows Count During the Campaign",
+            "title": "7. Local Needs",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026252/univ/art/202026252_univ_cnt_2_lg.jpg",
+            "thumbnail": "",
             "roles": [
-              "elder",
-              "ms"
+              "elder"
             ],
-            "thumbnailMode": "sqr-c"
+            "writtable": true
           },
           {
-            "id": "202609.1.8",
+            "id": "202612.1.8",
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "bt",
-            "reference": "bt 25:14-21",
+            "thumbnail": "wcg",
+            "reference": "wcg 2",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202609.1.9",
+            "id": "202612.1.9",
             "time": 3,
             "reference": "Concluding Comments",
             "roles": [
@@ -138,18 +137,18 @@
     },
     {
       "order": 2,
-      "id": "202609.2",
-      "week": "SEPTEMBER 14-20",
-      "bibleReading": "JEREMIAH 34-35",
+      "id": "202612.2",
+      "week": "DECEMBER 14-20",
+      "bibleReading": "EZEKIEL 5-6",
       "songs": [
-        "161",
-        "121",
-        "28"
+        "49",
+        "153",
+        "133"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202609.2.0",
+            "id": "202612.2.0",
             "time": 1,
             "reference": "Opening Comments",
             "roles": [
@@ -157,14 +156,14 @@
               "ms"
             ],
             "autofills": [
-              "202609.2.11"
+              "202612.2.9"
             ]
           },
           {
-            "id": "202609.2.1",
+            "id": "202612.2.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026253/univ/art/202026253_univ_sqs_lg.jpg",
-            "title": "1. Jehovah Rewards Faithful Obedience",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026407/univ/art/202026407_univ_sqs_lg.jpg",
+            "title": "1. Idolaters Break Jehovah’s Heart",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -172,7 +171,7 @@
             ]
           },
           {
-            "id": "202609.2.2",
+            "id": "202612.2.2",
             "time": 10,
             "reference": "",
             "title": "2. Spiritual Gems",
@@ -183,9 +182,9 @@
             ]
           },
           {
-            "id": "202609.2.3",
+            "id": "202612.2.3",
             "time": 4,
-            "reference": "Jer 35:1-11 (th 5)",
+            "reference": "Eze 6:1-10 (th 5)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -195,57 +194,46 @@
         ],
         "ministry": [
           {
-            "id": "202609.2.4",
-            "time": 2,
+            "id": "202612.2.4",
+            "time": 3,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd 3:3",
+            "reference": "lmd 4:5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202609.2.5",
-            "time": 2,
-            "title": "5. Starting a Conversation",
-            "class": "part-title-ministry",
-            "reference": "lmd 3:5",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202609.2.6",
-            "time": 3,
-            "title": "6. Following Up",
-            "class": "part-title-ministry",
-            "reference": "lmd 7:4",
-            "thumbnail": "lmd",
-            "roles": [
-              "demo"
-            ]
-          },
-          {
-            "id": "202609.2.7",
+            "id": "202612.2.5",
             "time": 4,
-            "title": "7. Making Disciples",
+            "title": "5. Following Up",
             "class": "part-title-ministry",
-            "reference": "th 11",
-            "thumbnail": "th",
+            "reference": "lmd 9:4",
+            "thumbnail": "lmd",
             "roles": [
               "demo"
+            ]
+          },
+          {
+            "id": "202612.2.6",
+            "time": 5,
+            "title": "6. What Would You Say?",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "elder",
+              "ms"
             ]
           }
         ],
         "living": [
           {
-            "id": "202609.2.8",
-            "time": 6,
-            "title": "8. Self-Control Helps Us to Obey",
+            "id": "202612.2.7",
+            "time": 15,
+            "title": "7. Why Refrain From Nationalistic Ceremonies?",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026253/univ/art/202026253_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026407/univ/art/202026407_univ_cnt_3_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -253,30 +241,18 @@
             "thumbnailMode": "sqr-c"
           },
           {
-            "id": "202609.2.9",
-            "time": 9,
-            "title": "9. Organizational Accomplishments for September",
-            "class": "part-title-living",
-            "thumbnail": "",
-            "roles": [
-              "elder",
-              "ms"
-            ],
-            "thumbnailMode": "sqr-c"
-          },
-          {
-            "id": "202609.2.10",
+            "id": "202612.2.8",
             "time": 30,
-            "title": "10. Congregation Bible Study",
+            "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "bt",
-            "reference": "bt 26:1-8, Box 1, Box 2",
+            "thumbnail": "wcg",
+            "reference": "wcg 3:1-7, Dig Deeper",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202609.2.11",
+            "id": "202612.2.9",
             "time": 3,
             "reference": "Concluding Comments",
             "roles": [
@@ -289,18 +265,18 @@
     },
     {
       "order": 3,
-      "id": "202609.3",
-      "week": "SEPTEMBER 21-27",
-      "bibleReading": "JEREMIAH 36-37",
+      "id": "202612.3",
+      "week": "DECEMBER 21-27",
+      "bibleReading": "EZEKIEL 7-8",
       "songs": [
-        "74",
-        "142",
-        "134"
+        "128",
+        "139",
+        "154"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202609.3.0",
+            "id": "202612.3.0",
             "time": 1,
             "reference": "Opening Comments",
             "roles": [
@@ -308,14 +284,14 @@
               "ms"
             ],
             "autofills": [
-              "202609.3.9"
+              "202612.3.9"
             ]
           },
           {
-            "id": "202609.3.1",
+            "id": "202612.3.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026254/univ/art/202026254_univ_sqs_lg.jpg",
-            "title": "1. Jehovah Supports Those Who Support His Kingdom",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026408/univ/art/202026408_univ_sqs_lg.jpg",
+            "title": "1. Jehovah’s Day Will Come on Time",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -323,7 +299,7 @@
             ]
           },
           {
-            "id": "202609.3.2",
+            "id": "202612.3.2",
             "time": 10,
             "reference": "",
             "title": "2. Spiritual Gems",
@@ -334,9 +310,9 @@
             ]
           },
           {
-            "id": "202609.3.3",
+            "id": "202612.3.3",
             "time": 4,
-            "reference": "Jer 36:1-10 (th 10)",
+            "reference": "Eze 8:7-18 (th 2)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -346,46 +322,46 @@
         ],
         "ministry": [
           {
-            "id": "202609.3.4",
+            "id": "202612.3.4",
             "time": 3,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd 5:5",
+            "reference": "lmd 1:4",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202609.3.5",
+            "id": "202612.3.5",
             "time": 4,
             "title": "5. Following Up",
             "class": "part-title-ministry",
-            "reference": "lmd 9:4",
+            "reference": "lmd 9:3",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202609.3.6",
-            "time": 6,
-            "title": "6. What Would You Say?",
+            "id": "202612.3.6",
+            "time": 5,
+            "title": "6. Making Disciples",
             "class": "part-title-ministry",
-            "reference": null,
+            "reference": "lmd 12:3",
+            "thumbnail": "lmd",
             "roles": [
-              "elder",
-              "ms"
+              "demo"
             ]
           }
         ],
         "living": [
           {
-            "id": "202609.3.7",
+            "id": "202612.3.7",
             "time": 15,
-            "title": "7. Remaining Neutral in Our Hearts",
+            "title": "7. Imagine the Outcome",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026254/univ/art/202026254_univ_cnt_2_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026408/univ/art/202026408_univ_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
@@ -393,18 +369,18 @@
             "thumbnailMode": "sqr-c"
           },
           {
-            "id": "202609.3.8",
+            "id": "202612.3.8",
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "bt",
-            "reference": "bt 26:9-17",
+            "thumbnail": "wcg",
+            "reference": "wcg 3:Read, Reflect, Meditate",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202609.3.9",
+            "id": "202612.3.9",
             "time": 3,
             "reference": "Concluding Comments",
             "roles": [
@@ -417,18 +393,18 @@
     },
     {
       "order": 4,
-      "id": "202609.4",
-      "week": "SEPTEMBER 28–OCTOBER 4",
-      "bibleReading": "JEREMIAH 38-39",
+      "id": "202612.4",
+      "week": "DECEMBER 28, 2026–JANUARY 3, 2027",
+      "bibleReading": "EZEKIEL 9-10",
       "songs": [
-        "102",
-        "90",
-        "56"
+        "119",
+        "60",
+        "135"
       ],
       "parts": {
         "gems": [
           {
-            "id": "202609.4.0",
+            "id": "202612.4.0",
             "time": 1,
             "reference": "Opening Comments",
             "roles": [
@@ -436,14 +412,14 @@
               "ms"
             ],
             "autofills": [
-              "202609.4.9"
+              "202612.4.9"
             ]
           },
           {
-            "id": "202609.4.1",
+            "id": "202612.4.1",
             "time": 10,
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026255/univ/art/202026255_univ_sqs_lg.jpg",
-            "title": "1. Continue Supporting One Another",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026409/univ/art/202026409_univ_sqs_lg.jpg",
+            "title": "1. Help Others to Survive Armageddon",
             "class": "part-title-gems",
             "roles": [
               "elder",
@@ -451,7 +427,7 @@
             ]
           },
           {
-            "id": "202609.4.2",
+            "id": "202612.4.2",
             "time": 10,
             "reference": "",
             "title": "2. Spiritual Gems",
@@ -462,9 +438,9 @@
             ]
           },
           {
-            "id": "202609.4.3",
+            "id": "202612.4.3",
             "time": 4,
-            "reference": "Jer 38:1-13 (th 12)",
+            "reference": "Eze 9:1-10 (th 5)",
             "title": "3. Bible Reading",
             "class": "part-title-gems",
             "roles": [
@@ -474,18 +450,18 @@
         ],
         "ministry": [
           {
-            "id": "202609.4.4",
+            "id": "202612.4.4",
             "time": 3,
             "title": "4. Starting a Conversation",
             "class": "part-title-ministry",
-            "reference": "lmd 9:3",
+            "reference": "lmd 3:5",
             "thumbnail": "lmd",
             "roles": [
               "demo"
             ]
           },
           {
-            "id": "202609.4.5",
+            "id": "202612.4.5",
             "time": 4,
             "title": "5. Following Up",
             "class": "part-title-ministry",
@@ -496,43 +472,43 @@
             ]
           },
           {
-            "id": "202609.4.6",
-            "time": 6,
-            "title": "6. What Would You Say?",
+            "id": "202612.4.6",
+            "time": 5,
+            "title": "6. Explaining Your Beliefs",
             "class": "part-title-ministry",
-            "reference": null,
+            "reference": "th 2",
+            "thumbnail": "th",
             "roles": [
-              "elder",
-              "ms"
+              "demo"
             ]
           }
         ],
         "living": [
           {
-            "id": "202609.4.7",
+            "id": "202612.4.7",
             "time": 15,
-            "title": "7. “Who Touched Me?”",
+            "title": "7. Save Yourself and Those Who Listen to You",
             "class": "part-title-living",
-            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026255/univ/art/202026255_univ_cnt_4_lg.jpg",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202026409/univ/art/202026409_univ_cnt_2_lg.jpg",
             "roles": [
               "elder",
               "ms"
             ],
-            "thumbnailMode": "sqr-c"
+            "thumbnailMode": "sqr-r"
           },
           {
-            "id": "202609.4.8",
+            "id": "202612.4.8",
             "time": 30,
             "title": "8. Congregation Bible Study",
             "class": "part-title-living",
-            "thumbnail": "bt",
-            "reference": "bt 26:18-22, Box 3",
+            "thumbnail": "wcg",
+            "reference": "wcg 4",
             "roles": [
               "cbs"
             ]
           },
           {
-            "id": "202609.4.9",
+            "id": "202612.4.9",
             "time": 3,
             "reference": "Concluding Comments",
             "roles": [
