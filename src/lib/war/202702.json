@@ -1,0 +1,576 @@
+{
+  "period": "202702",
+  "display": "Pebrero 2027",
+  "title": "Eskedyul ha Kristiano nga Pagkinabuhi ngan Ministeryo nga Katirok",
+  "theme": "#393e8e",
+  "publish": true,
+  "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/mwb/202701/E/pt/mwb_E_202701_lg.jpg",
+  "firstMonday": "2027-02-01",
+  "language": "war",
+  "weeks": [
+    {
+      "order": 1,
+      "id": "202702.1",
+      "week": "PEBRERO 1-7",
+      "bibleReading": "EZEKIEL 19-20",
+      "songs": [
+        "11",
+        "76",
+        "128"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202702.1.0",
+            "time": 1,
+            "reference": "Introduksyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202702.1.9"
+            ]
+          },
+          {
+            "id": "202702.1.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202027005/univ/art/202027005_univ_sqs_lg.jpg",
+            "title": "1. “Ginios Ako Para ha Akon Ngaran”",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.1.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.1.3",
+            "time": 4,
+            "reference": "Eze 20:​1-10 (th aradman 11)",
+            "title": "3. Pagbasa ha Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202702.1.4",
+            "time": 5,
+            "title": "4. Ano an Imo Isisiring?",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.1.5",
+            "time": 2,
+            "title": "5. Pakiistorya Utro",
+            "class": "part-title-ministry",
+            "reference": "lmd leksyon 9 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.1.6",
+            "time": 5,
+            "title": "6. Pahayag",
+            "class": "part-title-ministry",
+            "reference": "th aradman 18",
+            "thumbnail": "th",
+            "roles": [
+              "talk"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202702.1.7",
+            "time": 15,
+            "title": "7. Kon Paonan-o Matitipigan an Aton Kadasig ha Ministeryo",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202027005/univ/art/202027005_univ_cnt_3_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202702.1.8",
+            "time": 30,
+            "title": "8. Pag-aram ha Biblia han Kongregasyon",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kap. 24",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202702.1.8.r",
+            "class": "accessory",
+            "alt": "Magbabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202702.1.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "id": "202702.2",
+      "week": "PEBRERO 8-14",
+      "bibleReading": "EZEKIEL 21-22",
+      "songs": [
+        "122",
+        "104",
+        "114"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202702.2.0",
+            "time": 1,
+            "reference": "Introduksyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202702.2.9"
+            ]
+          },
+          {
+            "id": "202702.2.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202027006/univ/art/202027006_univ_sqs_lg.jpg",
+            "title": "1. Magpabilin nga Limpyo ha Kalibotan nga Mahugaw ha Moral",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.2.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.2.3",
+            "time": 4,
+            "reference": "Eze 22:​1-12 (th aradman 5)",
+            "title": "3. Pagbasa ha Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202702.2.4",
+            "time": 3,
+            "title": "4. Pagtikang ha Pakiistorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksyon 4 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.2.5",
+            "time": 4,
+            "title": "5. Pakiistorya Utro",
+            "class": "part-title-ministry",
+            "reference": "lmd leksyon 8 punto 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.2.6",
+            "time": 5,
+            "title": "6. Pagsaysay han Imo mga Gintotoohan",
+            "class": "part-title-ministry",
+            "reference": "th aradman 12",
+            "thumbnail": "th",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202702.2.7",
+            "time": 15,
+            "title": "7. Ayaw Tuguti an Bisan Ano nga Makaulang ha Imo ha Pag-alagad kan Jehova nga May Limpyo nga Konsensya",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202027006/univ/art/202027006_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202702.2.8",
+            "time": 30,
+            "title": "8. Pag-aram ha Biblia han Kongregasyon",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kap. 25",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202702.2.8.r",
+            "class": "accessory",
+            "alt": "Magbabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202702.2.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "id": "202702.3",
+      "week": "PEBRERO 15-21",
+      "bibleReading": "EZEKIEL 23-24",
+      "songs": [
+        "49",
+        "73",
+        "124"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202702.3.0",
+            "time": 1,
+            "reference": "Introduksyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202702.3.9"
+            ]
+          },
+          {
+            "id": "202702.3.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202027007/univ/art/202027007_univ_sqs_lg.jpg",
+            "title": "1. Mahibaro hin Leksyon Parte Kanda Ohola Ngan Oholiba",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.3.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.3.3",
+            "time": 4,
+            "reference": "Eze 23:​36-45 (th aradman 2)",
+            "title": "3. Pagbasa ha Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202702.3.4",
+            "time": 3,
+            "title": "4. Pagtikang ha Pakiistorya",
+            "class": "part-title-ministry",
+            "reference": "lmd leksyon 1 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.3.5",
+            "time": 4,
+            "title": "5. Pakiistorya Utro",
+            "class": "part-title-ministry",
+            "reference": "lmd leksyon 9 punto 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.3.6",
+            "time": 5,
+            "title": "6. Pahayag",
+            "class": "part-title-ministry",
+            "reference": "th aradman 9",
+            "thumbnail": "th",
+            "roles": [
+              "talk"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202702.3.7",
+            "time": 15,
+            "title": "7. Tinuig nga Report han Pag-alagad",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202027007/univ/art/202027007_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "w-50"
+          },
+          {
+            "id": "202702.3.8",
+            "time": 30,
+            "title": "8. Pag-aram ha Biblia han Kongregasyon",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kap. 26",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202702.3.8.r",
+            "class": "accessory",
+            "alt": "Magbabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202702.3.9",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "id": "202702.4",
+      "week": "PEBRERO 22-28",
+      "bibleReading": "EZEKIEL 25-26",
+      "songs": [
+        "107",
+        "64",
+        "35"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202702.4.0",
+            "time": 1,
+            "reference": "Introduksyon",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202702.4.11"
+            ]
+          },
+          {
+            "id": "202702.4.1",
+            "time": 10,
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202027008/univ/art/202027008_univ_sqs_lg.jpg",
+            "title": "1. Mahibaro hin Leksyon Tikang ha Pagtratar han Israel ha Iba nga mga Nasud",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.4.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Espirituwal nga mga Hiyas",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.4.3",
+            "time": 4,
+            "reference": "Eze 25:​1-11 (th aradman 5)",
+            "title": "3. Pagbasa ha Biblia",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202702.4.4",
+            "time": 2,
+            "title": "4. Panhimo hin Disipulo",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.4.5",
+            "time": 3,
+            "title": "5. Panhimo hin Disipulo",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.4.6",
+            "time": 3,
+            "title": "6. Panhimo hin Disipulo",
+            "class": "part-title-ministry",
+            "reference": "lmd leksyon 11 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.4.7",
+            "time": 4,
+            "title": "7. Panhimo hin Disipulo",
+            "class": "part-title-ministry",
+            "reference": "lmd leksyon 11 punto 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202702.4.8",
+            "time": 10,
+            "title": "8. Lokal nga mga Panginahanglan",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder"
+            ],
+            "writtable": true
+          },
+          {
+            "id": "202702.4.9",
+            "time": 5,
+            "title": "9. Kampanya Para ha Memoryal nga Magtitikang ha Sabado, Pebrero 27",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202702.4.10",
+            "time": 30,
+            "title": "10. Pag-aram ha Biblia han Kongregasyon",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg kap. 27",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202702.4.10.r",
+            "class": "accessory",
+            "alt": "Magbabasa:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202702.4.11",
+            "time": 3,
+            "reference": "Konklusyon",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,576 @@
+{
+  "period": "202702",
+  "display": "February 2027",
+  "title": "Our Christian Life and Ministry Meeting Schedule",
+  "theme": "#393e8e",
+  "publish": true,
+  "thumbnail": "",
+  "firstMonday": "2027-02-01",
+  "language": "en",
+  "weeks": [
+    {
+      "order": 1,
+      "id": "202702.1",
+      "week": "FEBRUARY 1-7",
+      "bibleReading": "EZEKIEL 19-20",
+      "songs": [
+        "11",
+        "76",
+        "128"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202702.1.0",
+            "time": 1,
+            "reference": "Opening Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202702.1.9"
+            ]
+          },
+          {
+            "id": "202702.1.1",
+            "time": 10,
+            "thumbnail": "",
+            "title": "1. “I Acted for the Sake of My Name”",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.1.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Spiritual Gems",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.1.3",
+            "time": 4,
+            "reference": "Eze 20:1-10 (th study 11)",
+            "title": "3. Bible Reading",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202702.1.4",
+            "time": 5,
+            "title": "4. What Would You Say?",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.1.5",
+            "time": 2,
+            "title": "5. Following Up",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 9 point 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.1.6",
+            "time": 5,
+            "title": "6. Talk",
+            "class": "part-title-ministry",
+            "reference": "th study 18",
+            "thumbnail": "th",
+            "roles": [
+              "talk"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202702.1.7",
+            "time": 15,
+            "title": "7. How to Maintain Our Zeal for the Ministry",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202027005/univ/art/202027005_univ_cnt_3_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202702.1.8",
+            "time": 30,
+            "title": "8. Congregation Bible Study",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg chap. 24",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202702.1.8.r",
+            "class": "accessory",
+            "alt": "Reader:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202702.1.9",
+            "time": 3,
+            "reference": "Concluding Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "id": "202702.2",
+      "week": "FEBRUARY 8-14",
+      "bibleReading": "EZEKIEL 21-22",
+      "songs": [
+        "122",
+        "104",
+        "114"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202702.2.0",
+            "time": 1,
+            "reference": "Opening Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202702.2.9"
+            ]
+          },
+          {
+            "id": "202702.2.1",
+            "time": 10,
+            "thumbnail": "",
+            "title": "1. Remain Morally Clean in a Morally Corrupt World",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.2.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Spiritual Gems",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.2.3",
+            "time": 4,
+            "reference": "Eze 22:1-12 (th study 5)",
+            "title": "3. Bible Reading",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202702.2.4",
+            "time": 3,
+            "title": "4. Starting a Conversation",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 4 point 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.2.5",
+            "time": 4,
+            "title": "5. Following Up",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 8 point 3",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.2.6",
+            "time": 5,
+            "title": "6. Explaining Your Beliefs",
+            "class": "part-title-ministry",
+            "reference": "th study 12",
+            "thumbnail": "th",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202702.2.7",
+            "time": 15,
+            "title": "7. Don’t Let Anything Prevent You From Serving Jehovah With a Clean Conscience",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202027006/univ/art/202027006_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202702.2.8",
+            "time": 30,
+            "title": "8. Congregation Bible Study",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg chap. 25",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202702.2.8.r",
+            "class": "accessory",
+            "alt": "Reader:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202702.2.9",
+            "time": 3,
+            "reference": "Concluding Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "id": "202702.3",
+      "week": "FEBRUARY 15-21",
+      "bibleReading": "EZEKIEL 23-24",
+      "songs": [
+        "49",
+        "73",
+        "124"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202702.3.0",
+            "time": 1,
+            "reference": "Opening Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202702.3.9"
+            ]
+          },
+          {
+            "id": "202702.3.1",
+            "time": 10,
+            "thumbnail": "",
+            "title": "1. Learn From the Illustration of Oholah and Oholibah",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.3.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Spiritual Gems",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.3.3",
+            "time": 4,
+            "reference": "Eze 23:36-45 (th study 2)",
+            "title": "3. Bible Reading",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202702.3.4",
+            "time": 3,
+            "title": "4. Starting a Conversation",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 1 point 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.3.5",
+            "time": 4,
+            "title": "5. Following Up",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 9 point 5",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.3.6",
+            "time": 5,
+            "title": "6. Talk",
+            "class": "part-title-ministry",
+            "reference": "th study 9",
+            "thumbnail": "th",
+            "roles": [
+              "talk"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202702.3.7",
+            "time": 15,
+            "title": "7. Annual Service Report",
+            "class": "part-title-living",
+            "thumbnail": "https://cms-imgp.jw-cdn.org/img/p/202027007/univ/art/202027007_univ_cnt_2_lg.jpg",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "w-50"
+          },
+          {
+            "id": "202702.3.8",
+            "time": 30,
+            "title": "8. Congregation Bible Study",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg chap. 26",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202702.3.8.r",
+            "class": "accessory",
+            "alt": "Reader:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202702.3.9",
+            "time": 3,
+            "reference": "Concluding Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "id": "202702.4",
+      "week": "FEBRUARY 22-28",
+      "bibleReading": "EZEKIEL 25-26",
+      "songs": [
+        "107",
+        "64",
+        "35"
+      ],
+      "parts": {
+        "gems": [
+          {
+            "id": "202702.4.0",
+            "time": 1,
+            "reference": "Opening Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "autofills": [
+              "202702.4.11"
+            ]
+          },
+          {
+            "id": "202702.4.1",
+            "time": 10,
+            "thumbnail": "",
+            "title": "1. Learn From Israel’s Dealings With Other Nations",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.4.2",
+            "time": 10,
+            "reference": "",
+            "title": "2. Spiritual Gems",
+            "class": "part-title-gems",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          },
+          {
+            "id": "202702.4.3",
+            "time": 4,
+            "reference": "Eze 25:1-11 (th study 5)",
+            "title": "3. Bible Reading",
+            "class": "part-title-gems",
+            "roles": [
+              "br"
+            ]
+          }
+        ],
+        "ministry": [
+          {
+            "id": "202702.4.4",
+            "time": 2,
+            "title": "4. Making Disciples",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.4.5",
+            "time": 3,
+            "title": "5. Making Disciples",
+            "class": "part-title-ministry",
+            "reference": null,
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.4.6",
+            "time": 3,
+            "title": "6. Making Disciples",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 11 point 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          },
+          {
+            "id": "202702.4.7",
+            "time": 4,
+            "title": "7. Making Disciples",
+            "class": "part-title-ministry",
+            "reference": "lmd lesson 11 point 4",
+            "thumbnail": "lmd",
+            "roles": [
+              "demo"
+            ]
+          }
+        ],
+        "living": [
+          {
+            "id": "202702.4.8",
+            "time": 10,
+            "title": "8. Local Needs",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder"
+            ],
+            "writtable": true
+          },
+          {
+            "id": "202702.4.9",
+            "time": 5,
+            "title": "9. Memorial Campaign to Begin Saturday, February 27",
+            "class": "part-title-living",
+            "thumbnail": "",
+            "roles": [
+              "elder",
+              "ms"
+            ],
+            "thumbnailMode": "sqr-c"
+          },
+          {
+            "id": "202702.4.10",
+            "time": 30,
+            "title": "10. Congregation Bible Study",
+            "class": "part-title-living",
+            "thumbnail": "wcg",
+            "reference": "wcg chap. 27",
+            "roles": [
+              "cbs"
+            ]
+          },
+          {
+            "id": "202702.4.10.r",
+            "class": "accessory",
+            "alt": "Reader:",
+            "roles": [
+              "rdr"
+            ]
+          },
+          {
+            "id": "202702.4.11",
+            "time": 3,
+            "reference": "Concluding Comments",
+            "roles": [
+              "elder",
+              "ms"
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
