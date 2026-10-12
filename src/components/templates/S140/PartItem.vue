@@ -1,5 +1,15 @@
 <template>
-    <div :class="gridColumns" v-if="shouldPartLineDisplay">
+    <div :class="[gridColumns, 'inserter-wrapper']" v-if="shouldPartLineDisplay">
+
+        <div v-if="showInserterBtn" class="item-inserter">
+            <div class="insert-btn" @click="insertPartItem">
+                <IconPlus style="height: 20px; width: 20px; stroke: white;" />
+            </div>
+        </div>
+
+        <div v-if="showRemoverBtn" class="remover-btn" @click="removePartItem">
+            <IconMinus style="height: 15px; width: 15px; stroke: white;" />
+        </div>
 
         <div class="s140-grid-titles">
 
@@ -15,7 +25,7 @@
                     {{ displayTitle }} {{ isOverride ? '' : timeLimit }}
                 </span>
                 <span v-else class="override-title">
-                    <input type="text" v-model="overrideText" @blur="endOverride" ref="editor" placeholder="" />
+                    <input type="text" id="" v-model="overrideText" @blur="endOverride" ref="editor" placeholder="" />
                 </span>
             </span>
         </div>
@@ -60,6 +70,8 @@
     import TimeAdjuster from '@/components/TimeAdjuster.vue';
     import AudienceGroup from '@/components/AudienceGroup.vue'
     import { useViewStore } from '@/stores/views';
+    import IconPlus from '@/components/icons/IconPlus.vue';
+    import IconMinus from '@/components/icons/IconMinus.vue';
 
     const AUX1CLASSIDSUFFIX = '.ax1'
     const assignmentStore = useAssignmentStore();
@@ -310,7 +322,23 @@
         return `${formattedHours}:${formattedMinutes}`;
     }
 
-    const isRemovableInsert = computed(() => part.id.endsWith('.nsrt'))
+    // Match PartItem's insertion rules for living-section parts.
+    const showInserterBtn = computed(() => {
+        const roles = part.roles ?? []
+        const isLiving = part.section === 'living'
+        const isFslCBS = roles.includes('cbs') && congStore.congregation.lang === 'psp'
+        const isNonFslCBS = roles.includes('cbs') && congStore.congregation.lang !== 'psp'
+        const isCbsReader = roles.includes('rdr')
+        const hasTitle = Boolean(part.title)
+
+        if (!isLiving || hasInserted) return false
+        if (isFslCBS || isCbsReader) return true
+        return !isNonFslCBS && hasTitle
+    })
+
+    const showRemoverBtn = computed(() =>
+        part.section === 'living' && part.id.endsWith('.nsrt') && Boolean(hasInserted)
+    )
 
     const insertPartItem = () => {
         emits('insert-item', part.id)
@@ -449,7 +477,8 @@
         transition: ease-in-out .3s
     }
 
-    .item-inserter:hover .insert-btn
+    .item-inserter:hover .insert-btn,
+    .inserter-wrapper:hover .item-inserter .insert-btn
     {
         opacity: 1;
         transform: scale(1);
