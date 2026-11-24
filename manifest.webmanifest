@@ -1,0 +1,22 @@
+{
+  "name": "KH Schedules",
+  "short_name": "KH Schedules",
+  "description": "Create and manage Kingdom Hall schedules.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f6ba6",
+  "icons": [
+    {
+      "src": "./app-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./app-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
