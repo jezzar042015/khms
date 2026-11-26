@@ -40,7 +40,7 @@ export const usePublisherStore = defineStore('publisher', () => {
         let mode = ''
 
         if (!publisher.id && publisher.name) {
-            publisher.id = uid.generate()
+            publisher.id = generateUniqueId()
             mode = 'insert'
         } else if (publisher.name) {
             mode = 'update'
@@ -50,14 +50,28 @@ export const usePublisherStore = defineStore('publisher', () => {
             pubs.value.push(publisher)
         } else if (mode === 'update') {
             const pubIndex = pubs.value.findIndex(p => p.id === publisher.id)
-            pubs.value.splice(pubIndex, 1, publisher)
+            if (pubIndex === -1) {
+                // unknown id: add it instead of overwriting the last publisher
+                pubs.value.push(publisher)
+                mode = 'insert'
+            } else {
+                pubs.value.splice(pubIndex, 1, publisher)
+            }
         }
 
         return mode
     }
 
+    function generateUniqueId(): string {
+        const existing = new Set(pubs.value.map(p => p.id))
+        let id = uid.generate()
+        while (existing.has(id)) id = uid.generate()
+        return id
+    }
+
     async function remove(id: string): Promise<void> {
         const pubIndex = pubs.value.findIndex(p => p.id === id)
+        if (pubIndex === -1) return
         pubs.value.splice(pubIndex, 1)
     }
 

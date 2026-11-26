@@ -240,6 +240,11 @@ export const useFilesStore = defineStore('files', () => {
 
     async function loadMonthTemplate(monthCode?: string): Promise<void> {
 
+        if (langMonths.value.length === 0) {
+            console.warn('No published workbook months for the selected language.')
+            return
+        }
+
         if (!monthCode) {
             const period = langMonths.value[0].content.period;
             currentPeriod.value = period
@@ -270,10 +275,13 @@ export const useFilesStore = defineStore('files', () => {
         if (partsOverrideOnCurrentPeriod.length == 0) return
         for (const part of partsOverrideOnCurrentPeriod) {
             const weekNum = Number(part.id.split('.')[1])
+            const week = loadedMonth.value.content.weeks[weekNum - 1]
+            if (!week) continue
             const beforeToId = part.id.replace('.nsrt', '')
-            const refIdPosition = loadedMonth.value.content.weeks[weekNum - 1].parts.living.findIndex(p => p.id === beforeToId)
-            if (refIdPosition == -1 || refIdPosition == undefined) return
-            loadedMonth.value?.content.weeks[weekNum - 1].parts.living.splice(refIdPosition + 1, 0, part)
+            const refIdPosition = week.parts.living.findIndex(p => p.id === beforeToId)
+            // skip a stale override instead of aborting the remaining ones
+            if (refIdPosition === -1) continue
+            week.parts.living.splice(refIdPosition + 1, 0, part)
         }
     }
 
@@ -344,16 +352,19 @@ export const useFilesStore = defineStore('files', () => {
         }
 
         const weekNum = Number(id.split('.')[1])
-        const refIdPosition = loadedMonth.value.content.weeks[weekNum - 1].parts.living.findIndex(p => p.id === id)
-        if (refIdPosition == -1 || refIdPosition == undefined) return
-        loadedMonth.value?.content.weeks[weekNum - 1].parts.living.splice(refIdPosition + 1, 0, newPart)
+        const week = loadedMonth.value.content.weeks[weekNum - 1]
+        if (!week) return
+        const refIdPosition = week.parts.living.findIndex(p => p.id === id)
+        if (refIdPosition === -1) return
+        week.parts.living.splice(refIdPosition + 1, 0, newPart)
         partOverride.save(newPart)
     }
 
     async function removeLivingItem(id: string): Promise<void> {
         if (!loadedMonth.value) return
         const weekNum = Number(id.split('.')[1])
-        loadedMonth.value.content.weeks[weekNum - 1].parts.living = loadedMonth.value.content.weeks[weekNum - 1].parts.living.filter(i => i.id !== id)
+        const week = loadedMonth.value.content.weeks[weekNum - 1]
+        if (week) week.parts.living = week.parts.living.filter(i => i.id !== id)
         partOverride.remove(id)
     }
 

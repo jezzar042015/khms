@@ -32,12 +32,9 @@ export const useOverridesStore = defineStore('overrides', () => {
     const prune = async () => {
         const ids = await fileStore.activeMonthIds()
 
-        for (const override of stored.value) {
-            const overrideMonth = override.id.split('.')[0]
-            if (!ids.includes(overrideMonth)) {
-                remove(override.id)
-            }
-        }
+        // Filter instead of removing while iterating (which skips elements)
+        const kept = stored.value.filter(o => ids.includes(o.id.split('.')[0]))
+        if (kept.length !== stored.value.length) stored.value = kept
     }
 
     return {

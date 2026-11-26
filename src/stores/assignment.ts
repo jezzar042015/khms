@@ -50,8 +50,8 @@ export const useAssignmentStore = defineStore('assignments', () => {
 
     async function loadLocal(): Promise<void> {
         const stored = localStorage.getItem(loadedKeyCode.value)
-        if (stored != null || stored != 'null') {
-            assignments.value = JSON.parse(stored ?? '')
+        if (stored != null && stored != 'null') {
+            assignments.value = JSON.parse(stored)
         } else {
             assignments.value = []
             storeLocal()
@@ -77,15 +77,16 @@ export const useAssignmentStore = defineStore('assignments', () => {
     }
 
     async function resetAll(): Promise<void> {
+        // Collect keys first: removing while iterating shifts the indexes and skips keys
+        const keys: string[] = []
         for (let i = 0; i < localStorage.length; i++) {
             const key = localStorage.key(i);
-            if (!key) continue;
-            if (!key.includes(LOCAL_KEY_PREF)) continue;
-            localStorage.removeItem(key)
+            if (key?.includes(LOCAL_KEY_PREF)) keys.push(key)
         }
+        keys.forEach(key => localStorage.removeItem(key))
     }
 
-    async function restore(data: { key: string, stored: string }[]): Promise<void> {
+    async function restore(data: { key: string, stored: unknown }[]): Promise<void> {
         for (const record of data) {
             localStorage.setItem(record.key, JSON.stringify(record.stored));
         }

@@ -17,6 +17,6 @@
     const congStore = useCongregationStore()
 
     const title = computed(() => {
-        return translations.mwbs140[congStore.congregation.lang].title
+        return translations.mwbs140[congStore.congregation.lang]?.title ?? ''
     })
 </script>
