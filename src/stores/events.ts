@@ -37,7 +37,7 @@ export const useEventStore = defineStore('events', () => {
             details.value[key] = detail
         } else {
             const i = months.value.indexOf(key)
-            months.value.splice(i, 1)
+            if (i !== -1) months.value.splice(i, 1)
             delete details.value[key]
         }
         storeLocal()

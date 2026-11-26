@@ -13,6 +13,9 @@ export async function s140Builder(): Promise<S140PartWeeks> {
     const congStore = useCongregationStore()
     const fileStore = useFilesStore()
     if (!fileStore.loadedMonth) return weeks
+    // No language selected (e.g. right after a data reset) or no translations for it:
+    // nothing can be composed yet.
+    if (!translations.mwbs140[congStore.congregation.lang]) return weeks
     const sourceWeeks = fileStore.loadedMonth.content.weeks
     lang = congStore.congregation.lang
 
@@ -183,6 +186,8 @@ function ministry(src: WeekItem, week: S140PartItem[]) {
 
 function living(src: WeekItem, week: S140PartItem[]) {
     const parts = src.parts.living;
+    // reset per week so a CO visit in one week doesn't leak into the next
+    cbsPart = null
 
     for (let i = 0; i < parts.length; i++) {
         const pattern = parts[i];

@@ -211,8 +211,17 @@
     }
 
     async function restore($evt: Event) {
-        await Restore($evt)
-        $toast.success('Backup Restored!', { position: 'top-right' })
+        const input = $evt.target as HTMLInputElement
+        try {
+            const restored = await Restore($evt)
+            if (restored) $toast.success('Backup Restored!', { position: 'top-right' })
+        } catch (error) {
+            console.error('Restore failed:', error)
+            $toast.error('Restore failed: the selected file is not a valid backup.', { position: 'top-right' })
+        } finally {
+            // allow re-selecting the same file
+            if (input) input.value = ''
+        }
     }
 
     async function execConfirm() {

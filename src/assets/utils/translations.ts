@@ -115,7 +115,7 @@ const translations: Translations = {
             prayer: 'Kararag',
             demo: 'Estudiante/Katulongan',
             student: 'Estudiante',
-            chairman: 'Estudiante',
+            chairman: 'Chairman',
             coCounselor: 'Mamalbalakad iti Kanayonan a Klase',
             conductor: 'Conductor'
         }
